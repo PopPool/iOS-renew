@@ -15,6 +15,16 @@
 		BDCA41D82CF35AC1005EECF6 /* PoppoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41D72CF35AC1005EECF6 /* PoppoolTests.swift */; };
 		BDCA41E22CF35AC1005EECF6 /* PoppoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41E12CF35AC1005EECF6 /* PoppoolUITests.swift */; };
 		BDCA41E42CF35AC1005EECF6 /* PoppoolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41E32CF35AC1005EECF6 /* PoppoolUITestsLaunchTests.swift */; };
+		BDCA41F22CF35D0D005EECF6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA41F12CF35D0D005EECF6 /* SnapKit */; };
+		BDCA41F52CF35D33005EECF6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA41F42CF35D33005EECF6 /* Kingfisher */; };
+		BDCA41F82CF35D9A005EECF6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA41F72CF35D9A005EECF6 /* RxSwift */; };
+		BDCA41FE2CF35EE7005EECF6 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA41FD2CF35EE7005EECF6 /* ReactorKit */; };
+		BDCA42012CF35EFE005EECF6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA42002CF35EFE005EECF6 /* RxKeyboard */; };
+		BDCA42042CF35F76005EECF6 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA42032CF35F76005EECF6 /* PanModal */; };
+		BDCA42072CF35FA6005EECF6 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA42062CF35FA6005EECF6 /* Tabman */; };
+		BDCA420A2CF35FB1005EECF6 /* Pageboy in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA42092CF35FB1005EECF6 /* Pageboy */; };
+		BDCA420D2CF35FD2005EECF6 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA420C2CF35FD2005EECF6 /* RxGesture */; };
+		BDCA42102CF35FF5005EECF6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BDCA420F2CF35FF5005EECF6 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +64,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCA41F82CF35D9A005EECF6 /* RxSwift in Frameworks */,
+				BDCA420D2CF35FD2005EECF6 /* RxGesture in Frameworks */,
+				BDCA41F52CF35D33005EECF6 /* Kingfisher in Frameworks */,
+				BDCA42072CF35FA6005EECF6 /* Tabman in Frameworks */,
+				BDCA42042CF35F76005EECF6 /* PanModal in Frameworks */,
+				BDCA42102CF35FF5005EECF6 /* Lottie in Frameworks */,
+				BDCA41FE2CF35EE7005EECF6 /* ReactorKit in Frameworks */,
+				BDCA41F22CF35D0D005EECF6 /* SnapKit in Frameworks */,
+				BDCA420A2CF35FB1005EECF6 /* Pageboy in Frameworks */,
+				BDCA42012CF35EFE005EECF6 /* RxKeyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +160,18 @@
 			dependencies = (
 			);
 			name = Poppool;
+			packageProductDependencies = (
+				BDCA41F12CF35D0D005EECF6 /* SnapKit */,
+				BDCA41F42CF35D33005EECF6 /* Kingfisher */,
+				BDCA41F72CF35D9A005EECF6 /* RxSwift */,
+				BDCA41FD2CF35EE7005EECF6 /* ReactorKit */,
+				BDCA42002CF35EFE005EECF6 /* RxKeyboard */,
+				BDCA42032CF35F76005EECF6 /* PanModal */,
+				BDCA42062CF35FA6005EECF6 /* Tabman */,
+				BDCA42092CF35FB1005EECF6 /* Pageboy */,
+				BDCA420C2CF35FD2005EECF6 /* RxGesture */,
+				BDCA420F2CF35FF5005EECF6 /* Lottie */,
+			);
 			productName = Poppool;
 			productReference = BDCA41BD2CF35AC0005EECF6 /* Poppool.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +244,19 @@
 				Base,
 			);
 			mainGroup = BDCA41B42CF35AC0005EECF6;
+			packageReferences = (
+				BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BDCA41F32CF35D33005EECF6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BDCA41F62CF35D9A005EECF6 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				BDCA41F92CF35EC0005EECF6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */,
+				BDCA41FC2CF35EE7005EECF6 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				BDCA41FF2CF35EFE005EECF6 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
+				BDCA42022CF35F76005EECF6 /* XCRemoteSwiftPackageReference "PanModal" */,
+				BDCA42052CF35FA6005EECF6 /* XCRemoteSwiftPackageReference "Tabman" */,
+				BDCA42082CF35FB1005EECF6 /* XCRemoteSwiftPackageReference "Pageboy" */,
+				BDCA420B2CF35FD2005EECF6 /* XCRemoteSwiftPackageReference "RxGesture" */,
+				BDCA420E2CF35FF5005EECF6 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = BDCA41BE2CF35AC0005EECF6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -435,7 +480,7 @@
 				INFOPLIST_FILE = Poppool/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -464,7 +509,7 @@
 				INFOPLIST_FILE = Poppool/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -597,6 +642,150 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		BDCA41F32CF35D33005EECF6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
+		BDCA41F62CF35D9A005EECF6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.8.0;
+			};
+		};
+		BDCA41F92CF35EC0005EECF6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk-rx";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.23.0;
+			};
+		};
+		BDCA41FC2CF35EE7005EECF6 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+		BDCA41FF2CF35EFE005EECF6 /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxKeyboard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+		BDCA42022CF35F76005EECF6 /* XCRemoteSwiftPackageReference "PanModal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/slackhq/PanModal.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.7;
+			};
+		};
+		BDCA42052CF35FA6005EECF6 /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+		BDCA42082CF35FB1005EECF6 /* XCRemoteSwiftPackageReference "Pageboy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Pageboy.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		BDCA420B2CF35FD2005EECF6 /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
+			};
+		};
+		BDCA420E2CF35FF5005EECF6 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDCA41F12CF35D0D005EECF6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		BDCA41F42CF35D33005EECF6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA41F32CF35D33005EECF6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		BDCA41F72CF35D9A005EECF6 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA41F62CF35D9A005EECF6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		BDCA41FD2CF35EE7005EECF6 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA41FC2CF35EE7005EECF6 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		BDCA42002CF35EFE005EECF6 /* RxKeyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA41FF2CF35EFE005EECF6 /* XCRemoteSwiftPackageReference "RxKeyboard" */;
+			productName = RxKeyboard;
+		};
+		BDCA42032CF35F76005EECF6 /* PanModal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA42022CF35F76005EECF6 /* XCRemoteSwiftPackageReference "PanModal" */;
+			productName = PanModal;
+		};
+		BDCA42062CF35FA6005EECF6 /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA42052CF35FA6005EECF6 /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
+		};
+		BDCA42092CF35FB1005EECF6 /* Pageboy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA42082CF35FB1005EECF6 /* XCRemoteSwiftPackageReference "Pageboy" */;
+			productName = Pageboy;
+		};
+		BDCA420C2CF35FD2005EECF6 /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA420B2CF35FD2005EECF6 /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
+		BDCA420F2CF35FF5005EECF6 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA420E2CF35FF5005EECF6 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BDCA41B52CF35AC0005EECF6 /* Project object */;
 }
