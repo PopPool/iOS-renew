@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
+		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
+		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
+		BDCA41CA2CF35AC1005EECF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDCA41C92CF35AC1005EECF6 /* Assets.xcassets */; };
+		BDCA41CD2CF35AC1005EECF6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BDCA41CC2CF35AC1005EECF6 /* Base */; };
+		BDCA41D82CF35AC1005EECF6 /* PoppoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41D72CF35AC1005EECF6 /* PoppoolTests.swift */; };
+		BDCA41E22CF35AC1005EECF6 /* PoppoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41E12CF35AC1005EECF6 /* PoppoolUITests.swift */; };
+		BDCA41E42CF35AC1005EECF6 /* PoppoolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41E32CF35AC1005EECF6 /* PoppoolUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDCA41D42CF35AC1005EECF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDCA41B52CF35AC0005EECF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDCA41BC2CF35AC0005EECF6;
+			remoteInfo = Poppool;
+		};
+		BDCA41DE2CF35AC1005EECF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDCA41B52CF35AC0005EECF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDCA41BC2CF35AC0005EECF6;
+			remoteInfo = Poppool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BDCA41C92CF35AC1005EECF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDCA41CC2CF35AC1005EECF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDCA41CE2CF35AC1005EECF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDCA41D32CF35AC1005EECF6 /* PoppoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoppoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCA41D72CF35AC1005EECF6 /* PoppoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppoolTests.swift; sourceTree = "<group>"; };
+		BDCA41DD2CF35AC1005EECF6 /* PoppoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoppoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCA41E12CF35AC1005EECF6 /* PoppoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppoolUITests.swift; sourceTree = "<group>"; };
+		BDCA41E32CF35AC1005EECF6 /* PoppoolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppoolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDCA41BA2CF35AC0005EECF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCA41D02CF35AC1005EECF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCA41DA2CF35AC1005EECF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDCA41B42CF35AC0005EECF6 = {
+			isa = PBXGroup;
+			children = (
+				BDCA41BF2CF35AC0005EECF6 /* Poppool */,
+				BDCA41D62CF35AC1005EECF6 /* PoppoolTests */,
+				BDCA41E02CF35AC1005EECF6 /* PoppoolUITests */,
+				BDCA41BE2CF35AC0005EECF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDCA41BE2CF35AC0005EECF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA41BD2CF35AC0005EECF6 /* Poppool.app */,
+				BDCA41D32CF35AC1005EECF6 /* PoppoolTests.xctest */,
+				BDCA41DD2CF35AC1005EECF6 /* PoppoolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDCA41BF2CF35AC0005EECF6 /* Poppool */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */,
+				BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */,
+				BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */,
+				BDCA41C92CF35AC1005EECF6 /* Assets.xcassets */,
+				BDCA41CB2CF35AC1005EECF6 /* LaunchScreen.storyboard */,
+				BDCA41CE2CF35AC1005EECF6 /* Info.plist */,
+			);
+			path = Poppool;
+			sourceTree = "<group>";
+		};
+		BDCA41D62CF35AC1005EECF6 /* PoppoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA41D72CF35AC1005EECF6 /* PoppoolTests.swift */,
+			);
+			path = PoppoolTests;
+			sourceTree = "<group>";
+		};
+		BDCA41E02CF35AC1005EECF6 /* PoppoolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA41E12CF35AC1005EECF6 /* PoppoolUITests.swift */,
+				BDCA41E32CF35AC1005EECF6 /* PoppoolUITestsLaunchTests.swift */,
+			);
+			path = PoppoolUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDCA41BC2CF35AC0005EECF6 /* Poppool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDCA41E72CF35AC2005EECF6 /* Build configuration list for PBXNativeTarget "Poppool" */;
+			buildPhases = (
+				BDCA41B92CF35AC0005EECF6 /* Sources */,
+				BDCA41BA2CF35AC0005EECF6 /* Frameworks */,
+				BDCA41BB2CF35AC0005EECF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Poppool;
+			productName = Poppool;
+			productReference = BDCA41BD2CF35AC0005EECF6 /* Poppool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDCA41D22CF35AC1005EECF6 /* PoppoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDCA41EA2CF35AC2005EECF6 /* Build configuration list for PBXNativeTarget "PoppoolTests" */;
+			buildPhases = (
+				BDCA41CF2CF35AC1005EECF6 /* Sources */,
+				BDCA41D02CF35AC1005EECF6 /* Frameworks */,
+				BDCA41D12CF35AC1005EECF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDCA41D52CF35AC1005EECF6 /* PBXTargetDependency */,
+			);
+			name = PoppoolTests;
+			productName = PoppoolTests;
+			productReference = BDCA41D32CF35AC1005EECF6 /* PoppoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BDCA41DC2CF35AC1005EECF6 /* PoppoolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDCA41ED2CF35AC2005EECF6 /* Build configuration list for PBXNativeTarget "PoppoolUITests" */;
+			buildPhases = (
+				BDCA41D92CF35AC1005EECF6 /* Sources */,
+				BDCA41DA2CF35AC1005EECF6 /* Frameworks */,
+				BDCA41DB2CF35AC1005EECF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDCA41DF2CF35AC1005EECF6 /* PBXTargetDependency */,
+			);
+			name = PoppoolUITests;
+			productName = PoppoolUITests;
+			productReference = BDCA41DD2CF35AC1005EECF6 /* PoppoolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDCA41B52CF35AC0005EECF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					BDCA41BC2CF35AC0005EECF6 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					BDCA41D22CF35AC1005EECF6 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = BDCA41BC2CF35AC0005EECF6;
+					};
+					BDCA41DC2CF35AC1005EECF6 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = BDCA41BC2CF35AC0005EECF6;
+					};
+				};
+			};
+			buildConfigurationList = BDCA41B82CF35AC0005EECF6 /* Build configuration list for PBXProject "Poppool" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDCA41B42CF35AC0005EECF6;
+			productRefGroup = BDCA41BE2CF35AC0005EECF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDCA41BC2CF35AC0005EECF6 /* Poppool */,
+				BDCA41D22CF35AC1005EECF6 /* PoppoolTests */,
+				BDCA41DC2CF35AC1005EECF6 /* PoppoolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDCA41BB2CF35AC0005EECF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCA41CA2CF35AC1005EECF6 /* Assets.xcassets in Resources */,
+				BDCA41CD2CF35AC1005EECF6 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCA41D12CF35AC1005EECF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCA41DB2CF35AC1005EECF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDCA41B92CF35AC0005EECF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
+				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
+				BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCA41CF2CF35AC1005EECF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCA41D82CF35AC1005EECF6 /* PoppoolTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCA41D92CF35AC1005EECF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCA41E42CF35AC1005EECF6 /* PoppoolUITestsLaunchTests.swift in Sources */,
+				BDCA41E22CF35AC1005EECF6 /* PoppoolUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDCA41D52CF35AC1005EECF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDCA41BC2CF35AC0005EECF6 /* Poppool */;
+			targetProxy = BDCA41D42CF35AC1005EECF6 /* PBXContainerItemProxy */;
+		};
+		BDCA41DF2CF35AC1005EECF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDCA41BC2CF35AC0005EECF6 /* Poppool */;
+			targetProxy = BDCA41DE2CF35AC1005EECF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BDCA41CB2CF35AC1005EECF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDCA41CC2CF35AC1005EECF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDCA41E52CF35AC2005EECF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDCA41E62CF35AC2005EECF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDCA41E82CF35AC2005EECF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U86LHQK8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Poppool/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.Poppool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDCA41E92CF35AC2005EECF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U86LHQK8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Poppool/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.Poppool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BDCA41EB2CF35AC2005EECF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U86LHQK8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.PoppoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poppool.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Poppool";
+			};
+			name = Debug;
+		};
+		BDCA41EC2CF35AC2005EECF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U86LHQK8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.PoppoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poppool.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Poppool";
+			};
+			name = Release;
+		};
+		BDCA41EE2CF35AC2005EECF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U86LHQK8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.PoppoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Poppool;
+			};
+			name = Debug;
+		};
+		BDCA41EF2CF35AC2005EECF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U86LHQK8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.PoppoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Poppool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDCA41B82CF35AC0005EECF6 /* Build configuration list for PBXProject "Poppool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDCA41E52CF35AC2005EECF6 /* Debug */,
+				BDCA41E62CF35AC2005EECF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDCA41E72CF35AC2005EECF6 /* Build configuration list for PBXNativeTarget "Poppool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDCA41E82CF35AC2005EECF6 /* Debug */,
+				BDCA41E92CF35AC2005EECF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDCA41EA2CF35AC2005EECF6 /* Build configuration list for PBXNativeTarget "PoppoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDCA41EB2CF35AC2005EECF6 /* Debug */,
+				BDCA41EC2CF35AC2005EECF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDCA41ED2CF35AC2005EECF6 /* Build configuration list for PBXNativeTarget "PoppoolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDCA41EE2CF35AC2005EECF6 /* Debug */,
+				BDCA41EF2CF35AC2005EECF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDCA41B52CF35AC0005EECF6 /* Project object */;
+}
