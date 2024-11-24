@@ -1,8 +1,8 @@
 //
-//  ControllerConvention.swift
-//  MomsVillage
+//  LoginController.swift
+//  Poppool
 //
-//  Created by SeoJunYoung on 9/20/24.
+//  Created by SeoJunYoung on 11/24/24.
 //
 
 import UIKit
@@ -12,18 +12,18 @@ import RxCocoa
 import RxSwift
 import ReactorKit
 
-final class ControllerConvention: BaseViewController, View {
+final class LoginController: BaseViewController, View {
     
-    typealias Reactor = ReactorConvention
+    typealias Reactor = LoginReactor
     
     // MARK: - Properties
     var disposeBag = DisposeBag()
     
-    private var mainView = ViewConvention()
+    private var mainView = LoginView()
 }
 
 // MARK: - Life Cycle
-extension ControllerConvention {
+extension LoginController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -31,7 +31,7 @@ extension ControllerConvention {
 }
 
 // MARK: - SetUp
-private extension ControllerConvention {
+private extension LoginController {
     func setUp() {
         view.addSubview(mainView)
         mainView.snp.makeConstraints { make in
@@ -41,7 +41,7 @@ private extension ControllerConvention {
 }
 
 // MARK: - Methods
-extension ControllerConvention {
+extension LoginController {
     func bind(reactor: Reactor) {
     }
 }

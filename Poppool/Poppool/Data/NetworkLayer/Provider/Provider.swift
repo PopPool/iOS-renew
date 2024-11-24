@@ -8,7 +8,6 @@
 import Foundation
 
 import RxSwift
-import RxAlamofire
 import Alamofire
 
 protocol Provider {

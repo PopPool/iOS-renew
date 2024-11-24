@@ -33,6 +33,15 @@
 		083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25AF2CF362670099B58E /* ProviderImpl.swift */; };
 		083A25BF2CF362770099B58E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25BD2CF362770099B58E /* Logger.swift */; };
 		083A25C12CF362A50099B58E /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C02CF362A50099B58E /* Domain.swift */; };
+		083A25C62CF363AC0099B58E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C52CF363AC0099B58E /* SignUp.swift */; };
+		083A25C82CF363C00099B58E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C72CF363C00099B58E /* LoginController.swift */; };
+		083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C92CF363C60099B58E /* LoginReactor.swift */; };
+		083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25CB2CF363CB0099B58E /* LoginView.swift */; };
+		083A25D02CF364B70099B58E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 083A25CF2CF364B70099B58E /* Alamofire */; };
+		08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191342CF366670057BC04 /* UICollectionViewCell+.swift */; };
+		08B191382CF366680057BC04 /* UICollectionReusableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191352CF366670057BC04 /* UICollectionReusableView+.swift */; };
+		08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191362CF366670057BC04 /* UITableViewCell+.swift */; };
+		08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1913A2CF366A00057BC04 /* UIApplication+.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -97,6 +106,14 @@
 		083A25AF2CF362670099B58E /* ProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderImpl.swift; sourceTree = "<group>"; };
 		083A25BD2CF362770099B58E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		083A25C02CF362A50099B58E /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		083A25C52CF363AC0099B58E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		083A25C72CF363C00099B58E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		083A25C92CF363C60099B58E /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
+		083A25CB2CF363CB0099B58E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		08B191342CF366670057BC04 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
+		08B191352CF366670057BC04 /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
+		08B191362CF366670057BC04 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		08B1913A2CF366A00057BC04 /* UIApplication+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +138,7 @@
 				BDCA41F52CF35D33005EECF6 /* Kingfisher in Frameworks */,
 				BDCA42072CF35FA6005EECF6 /* Tabman in Frameworks */,
 				BDCA42042CF35F76005EECF6 /* PanModal in Frameworks */,
+				083A25D02CF364B70099B58E /* Alamofire in Frameworks */,
 				BDCA42102CF35FF5005EECF6 /* Lottie in Frameworks */,
 				BDCA41FE2CF35EE7005EECF6 /* ReactorKit in Frameworks */,
 				BDCA41F22CF35D0D005EECF6 /* SnapKit in Frameworks */,
@@ -170,7 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				083A258B2CF361F90099B58E /* Convention */,
+				083A25C22CF3635B0099B58E /* Secne */,
 				083A259D2CF3620B0099B58E /* Utills */,
+				08B191332CF366500057BC04 /* Extension */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -316,6 +336,44 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		083A25C22CF3635B0099B58E /* Secne */ = {
+			isa = PBXGroup;
+			children = (
+				083A25C42CF363A10099B58E /* SignUp */,
+				083A25C32CF363650099B58E /* Login */,
+			);
+			path = Secne;
+			sourceTree = "<group>";
+		};
+		083A25C32CF363650099B58E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				083A25CB2CF363CB0099B58E /* LoginView.swift */,
+				083A25C72CF363C00099B58E /* LoginController.swift */,
+				083A25C92CF363C60099B58E /* LoginReactor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		083A25C42CF363A10099B58E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				083A25C52CF363AC0099B58E /* SignUp.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		08B191332CF366500057BC04 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				08B191352CF366670057BC04 /* UICollectionReusableView+.swift */,
+				08B191342CF366670057BC04 /* UICollectionViewCell+.swift */,
+				08B191362CF366670057BC04 /* UITableViewCell+.swift */,
+				08B1913A2CF366A00057BC04 /* UIApplication+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BDCA41B42CF35AC0005EECF6 = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +451,7 @@
 				BDCA42092CF35FB1005EECF6 /* Pageboy */,
 				BDCA420C2CF35FD2005EECF6 /* RxGesture */,
 				BDCA420F2CF35FF5005EECF6 /* Lottie */,
+				083A25CF2CF364B70099B58E /* Alamofire */,
 			);
 			productName = Poppool;
 			productReference = BDCA41BD2CF35AC0005EECF6 /* Poppool.app */;
@@ -478,6 +537,7 @@
 				BDCA42082CF35FB1005EECF6 /* XCRemoteSwiftPackageReference "Pageboy" */,
 				BDCA420B2CF35FD2005EECF6 /* XCRemoteSwiftPackageReference "RxGesture" */,
 				BDCA420E2CF35FF5005EECF6 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = BDCA41BE2CF35AC0005EECF6 /* Products */;
 			projectDirPath = "";
@@ -521,13 +581,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083A25C82CF363C00099B58E /* LoginController.swift in Sources */,
 				083A25B72CF362670099B58E /* RequestEndpoint.swift in Sources */,
 				083A25B82CF362670099B58E /* IndicatorMaker.swift in Sources */,
 				083A25B22CF362670099B58E /* NetworkError.swift in Sources */,
 				083A25832CF361EF0099B58E /* BaseViewController.swift in Sources */,
 				083A25922CF361F90099B58E /* ViewConvention.swift in Sources */,
+				08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */,
 				083A25B42CF362670099B58E /* Responsable.swift in Sources */,
 				083A25B32CF362670099B58E /* Requestable.swift in Sources */,
+				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
@@ -540,14 +603,19 @@
 				083A259C2CF362090099B58E /* InOutputable.swift in Sources */,
 				083A258D2CF361F90099B58E /* ConventionCollectionViewCell.swift in Sources */,
 				083A25C12CF362A50099B58E /* Domain.swift in Sources */,
+				083A25C62CF363AC0099B58E /* SignUp.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
+				083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */,
 				083A25BA2CF362670099B58E /* TokenInterceptor.swift in Sources */,
 				083A25B92CF362670099B58E /* FormDataInterceptor.swift in Sources */,
+				08B191382CF366680057BC04 /* UICollectionReusableView+.swift in Sources */,
 				083A25B52CF362670099B58E /* Endpoint.swift in Sources */,
 				BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */,
 				083A258E2CF361F90099B58E /* ConventionTableViewCell.swift in Sources */,
+				08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */,
 				083A25BB2CF362670099B58E /* Provider.swift in Sources */,
 				083A25822CF361EF0099B58E /* BaseTabmanController.swift in Sources */,
+				083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */,
 				083A259B2CF362090099B58E /* SectionSupplementaryItem.swift in Sources */,
 				083A25912CF361F90099B58E /* TestDynamicSection.swift in Sources */,
 			);
@@ -725,10 +793,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W5QTRMS954;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Poppool/Info.plist;
+				INFOPLIST_FILE = Poppool/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -739,9 +806,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.Poppool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -754,10 +825,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W5QTRMS954;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Poppool/Info.plist;
+				INFOPLIST_FILE = Poppool/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -768,9 +838,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.Poppool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -892,6 +966,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
 		BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -983,6 +1065,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		083A25CF2CF364B70099B58E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		BDCA41F12CF35D0D005EECF6 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */;
