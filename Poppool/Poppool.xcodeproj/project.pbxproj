@@ -84,6 +84,10 @@
 		BD8E262D2CF4AFF0001FDFE9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E262C2CF4AFF0001FDFE9 /* Category.swift */; };
 		BD8E262F2CF4B044001FDFE9 /* SignUpRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E262E2CF4B044001FDFE9 /* SignUpRequestDTO.swift */; };
 		BD8E26352CF4B10F001FDFE9 /* RequestTokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E26342CF4B10F001FDFE9 /* RequestTokenInterceptor.swift */; };
+		BD8E26382CF4B9EC001FDFE9 /* TryLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E26372CF4B9EC001FDFE9 /* TryLoginUseCase.swift */; };
+		BD8E263A2CF4BA09001FDFE9 /* SignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E26392CF4BA09001FDFE9 /* SignUpUseCase.swift */; };
+		BD8E263C2CF4BA44001FDFE9 /* TryLoginUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E263B2CF4BA44001FDFE9 /* TryLoginUseCaseImpl.swift */; };
+		BD8E263E2CF4BA52001FDFE9 /* SignUpUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E263D2CF4BA52001FDFE9 /* SignUpUseCaseImpl.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -198,6 +202,10 @@
 		BD8E262C2CF4AFF0001FDFE9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BD8E262E2CF4B044001FDFE9 /* SignUpRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestDTO.swift; sourceTree = "<group>"; };
 		BD8E26342CF4B10F001FDFE9 /* RequestTokenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenInterceptor.swift; sourceTree = "<group>"; };
+		BD8E26372CF4B9EC001FDFE9 /* TryLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryLoginUseCase.swift; sourceTree = "<group>"; };
+		BD8E26392CF4BA09001FDFE9 /* SignUpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUseCase.swift; sourceTree = "<group>"; };
+		BD8E263B2CF4BA44001FDFE9 /* TryLoginUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryLoginUseCaseImpl.swift; sourceTree = "<group>"; };
+		BD8E263D2CF4BA52001FDFE9 /* SignUpUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUseCaseImpl.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -339,6 +347,7 @@
 		083A259E2CF362310099B58E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BD8E26362CF4B9D6001FDFE9 /* UseCase */,
 				BD5E67CE2CF49783001837A7 /* Entities */,
 				BD5E67CD2CF49723001837A7 /* Repository */,
 				083A25C02CF362A50099B58E /* Domain.swift */,
@@ -612,6 +621,17 @@
 			path = SignUpAPI;
 			sourceTree = "<group>";
 		};
+		BD8E26362CF4B9D6001FDFE9 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				BD8E26372CF4B9EC001FDFE9 /* TryLoginUseCase.swift */,
+				BD8E263B2CF4BA44001FDFE9 /* TryLoginUseCaseImpl.swift */,
+				BD8E26392CF4BA09001FDFE9 /* SignUpUseCase.swift */,
+				BD8E263D2CF4BA52001FDFE9 /* SignUpUseCaseImpl.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		BDCA41B42CF35AC0005EECF6 = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +855,7 @@
 				BD8E262F2CF4B044001FDFE9 /* SignUpRequestDTO.swift in Sources */,
 				083A25B82CF362670099B58E /* IndicatorMaker.swift in Sources */,
 				083A25B22CF362670099B58E /* NetworkError.swift in Sources */,
+				BD8E263E2CF4BA52001FDFE9 /* SignUpUseCaseImpl.swift in Sources */,
 				083A25832CF361EF0099B58E /* BaseViewController.swift in Sources */,
 				083A25922CF361F90099B58E /* ViewConvention.swift in Sources */,
 				BD8E26292CF4AF8D001FDFE9 /* CheckNickNameRequestDTO.swift in Sources */,
@@ -844,6 +865,7 @@
 				BD8E26242CF49D31001FDFE9 /* SignUpRepository.swift in Sources */,
 				08B191782CF442230057BC04 /* UIImage+.swift in Sources */,
 				08B191612CF430E70057BC04 /* PPProgressView.swift in Sources */,
+				BD8E263C2CF4BA44001FDFE9 /* TryLoginUseCaseImpl.swift in Sources */,
 				083A25B32CF362670099B58E /* Requestable.swift in Sources */,
 				08B1916A2CF434B80057BC04 /* SignUpStep1Controller.swift in Sources */,
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
@@ -867,6 +889,7 @@
 				08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */,
 				083A25C12CF362A50099B58E /* Domain.swift in Sources */,
 				08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */,
+				BD8E263A2CF4BA09001FDFE9 /* SignUpUseCase.swift in Sources */,
 				BD8E26272CF4AF60001FDFE9 /* SignUpAPIEndpoint.swift in Sources */,
 				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
@@ -888,6 +911,7 @@
 				08B1917F2CF46DF20057BC04 /* TermsDetailView.swift in Sources */,
 				08B191412CF367FF0057BC04 /* UIFont+.swift in Sources */,
 				083A258E2CF361F90099B58E /* ConventionTableViewCell.swift in Sources */,
+				BD8E26382CF4B9EC001FDFE9 /* TryLoginUseCase.swift in Sources */,
 				08B191592CF41E610057BC04 /* SignUpMainController.swift in Sources */,
 				08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */,
 				08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */,
