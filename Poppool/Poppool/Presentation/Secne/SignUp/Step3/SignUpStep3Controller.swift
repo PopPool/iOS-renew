@@ -20,7 +20,7 @@ final class SignUpStep3Controller: BaseViewController, View {
     // MARK: - Properties
     var disposeBag = DisposeBag()
     
-    private var mainView = SignUpStep3View()
+    var mainView = SignUpStep3View()
     
     private var sections: [any Sectionable] = []
     

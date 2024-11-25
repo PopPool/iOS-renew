@@ -108,7 +108,7 @@ extension SignUpMainController {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
-        // step1 button tap 이벤트
+        // step2 button tap 이벤트
         step2Controller.mainView.completeButton.rx.tap
             .withUnretained(self)
             .map { (owner, _) in
@@ -117,6 +117,27 @@ extension SignUpMainController {
             }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
+        
+        // step3 button tap 이벤트
+        step3Controller.mainView.completeButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                owner.mainView.progressIndicator.increaseIndicator()
+                return Reactor.Action.step3ButtonTapped(controller: owner, currentIndex: owner.currentIndex ?? 0)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // step3 Skip button tap 이벤트
+        step3Controller.mainView.skipButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                owner.mainView.progressIndicator.increaseIndicator()
+                return Reactor.Action.step3SkipButtonTapped(controller: owner, currentIndex: owner.currentIndex ?? 0)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
         
         reactor.state
             .withUnretained(self)
