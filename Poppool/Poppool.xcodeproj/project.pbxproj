@@ -33,7 +33,6 @@
 		083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25AF2CF362670099B58E /* ProviderImpl.swift */; };
 		083A25BF2CF362770099B58E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25BD2CF362770099B58E /* Logger.swift */; };
 		083A25C12CF362A50099B58E /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C02CF362A50099B58E /* Domain.swift */; };
-		083A25C62CF363AC0099B58E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C52CF363AC0099B58E /* SignUp.swift */; };
 		083A25C82CF363C00099B58E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C72CF363C00099B58E /* LoginController.swift */; };
 		083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C92CF363C60099B58E /* LoginReactor.swift */; };
 		083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25CB2CF363CB0099B58E /* LoginView.swift */; };
@@ -55,6 +54,19 @@
 		08B191522CF41D690057BC04 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B191492CF41D680057BC04 /* Poppins-Regular.ttf */; };
 		08B191552CF41D6F0057BC04 /* PP_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B191532CF41D6F0057BC04 /* PP_loading.json */; };
 		08B191562CF41D6F0057BC04 /* PP_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B191542CF41D6F0057BC04 /* PP_splash.json */; };
+		08B191592CF41E610057BC04 /* SignUpMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191582CF41E610057BC04 /* SignUpMainController.swift */; };
+		08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1915A2CF41E690057BC04 /* SignUpMainReactor.swift */; };
+		08B1915D2CF41E6F0057BC04 /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1915C2CF41E6F0057BC04 /* SignUpMainView.swift */; };
+		08B191612CF430E70057BC04 /* PPProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191602CF430E70057BC04 /* PPProgressView.swift */; };
+		08B191632CF430F30057BC04 /* PPProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191622CF430F30057BC04 /* PPProgressIndicator.swift */; };
+		08B191672CF432220057BC04 /* PPCancelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191662CF432220057BC04 /* PPCancelHeaderView.swift */; };
+		08B1916A2CF434B80057BC04 /* SignUpStep1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191692CF434B80057BC04 /* SignUpStep1Controller.swift */; };
+		08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1916B2CF434C30057BC04 /* SignUpStep1View.swift */; };
+		08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1916D2CF434CF0057BC04 /* SignUpStep1Reactor.swift */; };
+		08B191712CF4398D0057BC04 /* PPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191702CF4398D0057BC04 /* PPLabel.swift */; };
+		08B191742CF43DF40057BC04 /* SignUpCheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191732CF43DF40057BC04 /* SignUpCheckBoxButton.swift */; };
+		08B191762CF440C40057BC04 /* PPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191752CF440C40057BC04 /* PPButton.swift */; };
+		08B191782CF442230057BC04 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191772CF442230057BC04 /* UIImage+.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -119,7 +131,6 @@
 		083A25AF2CF362670099B58E /* ProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderImpl.swift; sourceTree = "<group>"; };
 		083A25BD2CF362770099B58E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		083A25C02CF362A50099B58E /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
-		083A25C52CF363AC0099B58E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		083A25C72CF363C00099B58E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		083A25C92CF363C60099B58E /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
 		083A25CB2CF363CB0099B58E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -140,6 +151,19 @@
 		08B191492CF41D680057BC04 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		08B191532CF41D6F0057BC04 /* PP_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PP_loading.json; sourceTree = "<group>"; };
 		08B191542CF41D6F0057BC04 /* PP_splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PP_splash.json; sourceTree = "<group>"; };
+		08B191582CF41E610057BC04 /* SignUpMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainController.swift; sourceTree = "<group>"; };
+		08B1915A2CF41E690057BC04 /* SignUpMainReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainReactor.swift; sourceTree = "<group>"; };
+		08B1915C2CF41E6F0057BC04 /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
+		08B191602CF430E70057BC04 /* PPProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPProgressView.swift; sourceTree = "<group>"; };
+		08B191622CF430F30057BC04 /* PPProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPProgressIndicator.swift; sourceTree = "<group>"; };
+		08B191662CF432220057BC04 /* PPCancelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPCancelHeaderView.swift; sourceTree = "<group>"; };
+		08B191692CF434B80057BC04 /* SignUpStep1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1Controller.swift; sourceTree = "<group>"; };
+		08B1916B2CF434C30057BC04 /* SignUpStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1View.swift; sourceTree = "<group>"; };
+		08B1916D2CF434CF0057BC04 /* SignUpStep1Reactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1Reactor.swift; sourceTree = "<group>"; };
+		08B191702CF4398D0057BC04 /* PPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPLabel.swift; sourceTree = "<group>"; };
+		08B191732CF43DF40057BC04 /* SignUpCheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCheckBoxButton.swift; sourceTree = "<group>"; };
+		08B191752CF440C40057BC04 /* PPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPButton.swift; sourceTree = "<group>"; };
+		08B191772CF442230057BC04 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				083A258B2CF361F90099B58E /* Convention */,
+				08B1915F2CF430D40057BC04 /* Components */,
 				083A25C22CF3635B0099B58E /* Secne */,
 				083A259D2CF3620B0099B58E /* Utills */,
 				08B191332CF366500057BC04 /* Extension */,
@@ -388,7 +413,8 @@
 		083A25C42CF363A10099B58E /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				083A25C52CF363AC0099B58E /* SignUp.swift */,
+				08B191572CF41E550057BC04 /* Main */,
+				08B191682CF434A10057BC04 /* Step1 */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -402,6 +428,7 @@
 				08B191342CF366670057BC04 /* UICollectionViewCell+.swift */,
 				08B191362CF366670057BC04 /* UITableViewCell+.swift */,
 				08B1913A2CF366A00057BC04 /* UIApplication+.swift */,
+				08B191772CF442230057BC04 /* UIImage+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -419,6 +446,63 @@
 				08B191492CF41D680057BC04 /* Poppins-Regular.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		08B191572CF41E550057BC04 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				08B1915E2CF430C00057BC04 /* View */,
+				08B191582CF41E610057BC04 /* SignUpMainController.swift */,
+				08B1915A2CF41E690057BC04 /* SignUpMainReactor.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		08B1915E2CF430C00057BC04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B1915C2CF41E6F0057BC04 /* SignUpMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08B1915F2CF430D40057BC04 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				08B191702CF4398D0057BC04 /* PPLabel.swift */,
+				08B191752CF440C40057BC04 /* PPButton.swift */,
+				08B191662CF432220057BC04 /* PPCancelHeaderView.swift */,
+				08B191642CF430F80057BC04 /* PPProgressIndicator */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		08B191642CF430F80057BC04 /* PPProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				08B191602CF430E70057BC04 /* PPProgressView.swift */,
+				08B191622CF430F30057BC04 /* PPProgressIndicator.swift */,
+			);
+			path = PPProgressIndicator;
+			sourceTree = "<group>";
+		};
+		08B191682CF434A10057BC04 /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				08B191722CF43D900057BC04 /* View */,
+				08B191692CF434B80057BC04 /* SignUpStep1Controller.swift */,
+				08B1916D2CF434CF0057BC04 /* SignUpStep1Reactor.swift */,
+			);
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		08B191722CF43D900057BC04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B1916B2CF434C30057BC04 /* SignUpStep1View.swift */,
+				08B191732CF43DF40057BC04 /* SignUpCheckBoxButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BDCA41B42CF35AC0005EECF6 = {
@@ -647,7 +731,10 @@
 				083A25922CF361F90099B58E /* ViewConvention.swift in Sources */,
 				08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */,
 				083A25B42CF362670099B58E /* Responsable.swift in Sources */,
+				08B191782CF442230057BC04 /* UIImage+.swift in Sources */,
+				08B191612CF430E70057BC04 /* PPProgressView.swift in Sources */,
 				083A25B32CF362670099B58E /* Requestable.swift in Sources */,
+				08B1916A2CF434B80057BC04 /* SignUpStep1Controller.swift in Sources */,
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
@@ -658,23 +745,32 @@
 				083A258F2CF361F90099B58E /* ReactorConvention.swift in Sources */,
 				083A25B62CF362670099B58E /* MultipartEndPoint.swift in Sources */,
 				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
+				08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */,
 				083A259C2CF362090099B58E /* InOutputable.swift in Sources */,
 				083A258D2CF361F90099B58E /* ConventionCollectionViewCell.swift in Sources */,
+				08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */,
 				083A25C12CF362A50099B58E /* Domain.swift in Sources */,
 				08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */,
-				083A25C62CF363AC0099B58E /* SignUp.swift in Sources */,
+				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
 				083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */,
 				083A25BA2CF362670099B58E /* TokenInterceptor.swift in Sources */,
+				08B191672CF432220057BC04 /* PPCancelHeaderView.swift in Sources */,
+				08B191712CF4398D0057BC04 /* PPLabel.swift in Sources */,
 				083A25B92CF362670099B58E /* FormDataInterceptor.swift in Sources */,
+				08B191632CF430F30057BC04 /* PPProgressIndicator.swift in Sources */,
+				08B191742CF43DF40057BC04 /* SignUpCheckBoxButton.swift in Sources */,
 				08B191382CF366680057BC04 /* UICollectionReusableView+.swift in Sources */,
+				08B1915D2CF41E6F0057BC04 /* SignUpMainView.swift in Sources */,
 				083A25B52CF362670099B58E /* Endpoint.swift in Sources */,
 				BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */,
 				08B191412CF367FF0057BC04 /* UIFont+.swift in Sources */,
 				083A258E2CF361F90099B58E /* ConventionTableViewCell.swift in Sources */,
+				08B191592CF41E610057BC04 /* SignUpMainController.swift in Sources */,
 				08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */,
 				083A25BB2CF362670099B58E /* Provider.swift in Sources */,
 				083A25822CF361EF0099B58E /* BaseTabmanController.swift in Sources */,
+				08B191762CF440C40057BC04 /* PPButton.swift in Sources */,
 				083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */,
 				083A259B2CF362090099B58E /* SectionSupplementaryItem.swift in Sources */,
 				083A25912CF361F90099B58E /* TestDynamicSection.swift in Sources */,

@@ -17,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         
-        let rootViewController = LoginController()
-        rootViewController.reactor = LoginReactor()
+        let rootViewController = SignUpMainController()
+        rootViewController.reactor = SignUpMainReactor()
         
         let navigationController = UINavigationController(rootViewController: rootViewController)
         window?.rootViewController = navigationController
