@@ -29,12 +29,30 @@ final class SignUpMainController: BaseTabmanController, View {
         return controller
     }()
     
-    var temp2: BaseViewController = {
-        let temp = BaseViewController()
-        return temp
+    var step2Controller: SignUpStep2Controller = {
+        let controller = SignUpStep2Controller()
+        controller.reactor = SignUpStep2Reactor()
+        return controller
     }()
     
-    lazy var controllers = [step1Controller, temp2]
+    var step3Controller: SignUpStep3Controller = {
+        let controller = SignUpStep3Controller()
+        controller.reactor = SignUpStep3Reactor()
+        return controller
+    }()
+    
+    var step4Controller: SignUpStep4Controller = {
+        let controller = SignUpStep4Controller()
+        controller.reactor = SignUpStep4Reactor()
+        return controller
+    }()
+    
+    lazy var controllers = [
+        step1Controller,
+        step2Controller,
+        step3Controller,
+        step4Controller
+    ]
 }
 
 // MARK: - Life Cycle
@@ -53,6 +71,7 @@ private extension SignUpMainController {
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
         }
         self.dataSource = self
+        self.isScrollEnabled = false
     }
 }
 
@@ -85,6 +104,16 @@ extension SignUpMainController {
             .map { (owner, _) in
                 owner.mainView.progressIndicator.increaseIndicator()
                 return Reactor.Action.step1ButtonTapped(controller: owner, currentIndex: owner.currentIndex ?? 0)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // step1 button tap 이벤트
+        step2Controller.mainView.completeButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                owner.mainView.progressIndicator.increaseIndicator()
+                return Reactor.Action.step2ButtonTapped(controller: owner, currentIndex: owner.currentIndex ?? 0)
             }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)

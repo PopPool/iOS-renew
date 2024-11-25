@@ -30,7 +30,7 @@ class PPButton: UIButton {
             case .primary:
                 return .w100
             case .secondary:
-                return .g50
+                return .blu500
             case .tertiary:
                 return .blu500
             }

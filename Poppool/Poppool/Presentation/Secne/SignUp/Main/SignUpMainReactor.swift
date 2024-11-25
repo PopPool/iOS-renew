@@ -16,6 +16,7 @@ final class SignUpMainReactor: Reactor {
         case cancelButtonTapped(controller: BaseTabmanController)
         case backButtonTapped(controller: BaseTabmanController, currentIndex: Int)
         case step1ButtonTapped(controller: BaseTabmanController, currentIndex: Int)
+        case step2ButtonTapped(controller: BaseTabmanController, currentIndex: Int)
     }
     
     enum Mutation {
@@ -46,6 +47,8 @@ final class SignUpMainReactor: Reactor {
         case .backButtonTapped(let controller, let currentIndex):
             return Observable.just(.decreasePageIndex(controller: controller, currentIndex: currentIndex))
         case .step1ButtonTapped(let controller, let currentIndex):
+            return Observable.just(.increasePageIndex(controller: controller, currentIndex: currentIndex))
+        case .step2ButtonTapped(let controller, let currentIndex):
             return Observable.just(.increasePageIndex(controller: controller, currentIndex: currentIndex))
         }
     }
