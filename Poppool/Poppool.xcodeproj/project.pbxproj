@@ -70,6 +70,20 @@
 		08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191792CF452B30057BC04 /* SignUpTermsView.swift */; };
 		08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */; };
 		08B1917F2CF46DF20057BC04 /* TermsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */; };
+		08B191822CF48A7B0057BC04 /* SignUpStep2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191812CF48A7B0057BC04 /* SignUpStep2Controller.swift */; };
+		08B191842CF48A820057BC04 /* SignUpStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191832CF48A820057BC04 /* SignUpStep2View.swift */; };
+		08B191862CF48A8B0057BC04 /* SignUpStep2Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191852CF48A8B0057BC04 /* SignUpStep2Reactor.swift */; };
+		08B191882CF48FAE0057BC04 /* NickNameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191872CF48FAE0057BC04 /* NickNameState.swift */; };
+		08B1918D2CF49FF70057BC04 /* SignUpStep3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1918C2CF49FF70057BC04 /* SignUpStep3View.swift */; };
+		08B1918F2CF4A0020057BC04 /* SignUpStep3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1918E2CF4A0020057BC04 /* SignUpStep3Controller.swift */; };
+		08B191912CF4A00E0057BC04 /* SignUpStep3Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191902CF4A00E0057BC04 /* SignUpStep3Reactor.swift */; };
+		08B191942CF4A0F00057BC04 /* SignUpStep4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191932CF4A0F00057BC04 /* SignUpStep4View.swift */; };
+		08B191962CF4A0FA0057BC04 /* SignUpStep4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191952CF4A0FA0057BC04 /* SignUpStep4Controller.swift */; };
+		08B191982CF4A1010057BC04 /* SignUpStep4Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191972CF4A1010057BC04 /* SignUpStep4Reactor.swift */; };
+		08B1919C2CF4A77C0057BC04 /* TagSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1919B2CF4A77C0057BC04 /* TagSection.swift */; };
+		08B1919E2CF4A7830057BC04 /* TagSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1919D2CF4A7830057BC04 /* TagSectionCell.swift */; };
+		08B191A02CF4AA0E0057BC04 /* Reactive+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1919F2CF4AA0E0057BC04 /* Reactive+.swift */; };
+		08B191A22CF4AE890057BC04 /* ToastMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191A12CF4AE890057BC04 /* ToastMaker.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -170,6 +184,20 @@
 		08B191792CF452B30057BC04 /* SignUpTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTermsView.swift; sourceTree = "<group>"; };
 		08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsDetailController.swift; sourceTree = "<group>"; };
 		08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsDetailView.swift; sourceTree = "<group>"; };
+		08B191812CF48A7B0057BC04 /* SignUpStep2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep2Controller.swift; sourceTree = "<group>"; };
+		08B191832CF48A820057BC04 /* SignUpStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep2View.swift; sourceTree = "<group>"; };
+		08B191852CF48A8B0057BC04 /* SignUpStep2Reactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep2Reactor.swift; sourceTree = "<group>"; };
+		08B191872CF48FAE0057BC04 /* NickNameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameState.swift; sourceTree = "<group>"; };
+		08B1918C2CF49FF70057BC04 /* SignUpStep3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep3View.swift; sourceTree = "<group>"; };
+		08B1918E2CF4A0020057BC04 /* SignUpStep3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep3Controller.swift; sourceTree = "<group>"; };
+		08B191902CF4A00E0057BC04 /* SignUpStep3Reactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep3Reactor.swift; sourceTree = "<group>"; };
+		08B191932CF4A0F00057BC04 /* SignUpStep4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep4View.swift; sourceTree = "<group>"; };
+		08B191952CF4A0FA0057BC04 /* SignUpStep4Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep4Controller.swift; sourceTree = "<group>"; };
+		08B191972CF4A1010057BC04 /* SignUpStep4Reactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep4Reactor.swift; sourceTree = "<group>"; };
+		08B1919B2CF4A77C0057BC04 /* TagSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSection.swift; sourceTree = "<group>"; };
+		08B1919D2CF4A7830057BC04 /* TagSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSectionCell.swift; sourceTree = "<group>"; };
+		08B1919F2CF4AA0E0057BC04 /* Reactive+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reactive+.swift"; sourceTree = "<group>"; };
+		08B191A12CF4AE890057BC04 /* ToastMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMaker.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -303,6 +331,7 @@
 				08B1913C2CF367EB0057BC04 /* Constants.swift */,
 				083A25982CF362090099B58E /* Interfaces */,
 				083A25812CF361EF0099B58E /* Controllers */,
+				08B191A12CF4AE890057BC04 /* ToastMaker.swift */,
 			);
 			path = Utills;
 			sourceTree = "<group>";
@@ -422,6 +451,9 @@
 				08B1917B2CF46DD40057BC04 /* TermsDetail */,
 				08B191572CF41E550057BC04 /* Main */,
 				08B191682CF434A10057BC04 /* Step1 */,
+				08B191802CF48A5C0057BC04 /* Step2 */,
+				08B191892CF49FDE0057BC04 /* Step3 */,
+				08B191922CF4A0E00057BC04 /* Step4 */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -429,6 +461,7 @@
 		08B191332CF366500057BC04 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				08B1919F2CF4AA0E0057BC04 /* Reactive+.swift */,
 				08B191402CF367FF0057BC04 /* UIFont+.swift */,
 				08B1913E2CF367FA0057BC04 /* UIColor+.swift */,
 				08B191352CF366670057BC04 /* UICollectionReusableView+.swift */,
@@ -520,6 +553,55 @@
 				08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */,
 			);
 			path = TermsDetail;
+			sourceTree = "<group>";
+		};
+		08B191802CF48A5C0057BC04 /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				08B191832CF48A820057BC04 /* SignUpStep2View.swift */,
+				08B191812CF48A7B0057BC04 /* SignUpStep2Controller.swift */,
+				08B191852CF48A8B0057BC04 /* SignUpStep2Reactor.swift */,
+				08B191872CF48FAE0057BC04 /* NickNameState.swift */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
+		08B191892CF49FDE0057BC04 /* Step3 */ = {
+			isa = PBXGroup;
+			children = (
+				08B191992CF4A63E0057BC04 /* View */,
+				08B1918E2CF4A0020057BC04 /* SignUpStep3Controller.swift */,
+				08B191902CF4A00E0057BC04 /* SignUpStep3Reactor.swift */,
+			);
+			path = Step3;
+			sourceTree = "<group>";
+		};
+		08B191922CF4A0E00057BC04 /* Step4 */ = {
+			isa = PBXGroup;
+			children = (
+				08B191932CF4A0F00057BC04 /* SignUpStep4View.swift */,
+				08B191952CF4A0FA0057BC04 /* SignUpStep4Controller.swift */,
+				08B191972CF4A1010057BC04 /* SignUpStep4Reactor.swift */,
+			);
+			path = Step4;
+			sourceTree = "<group>";
+		};
+		08B191992CF4A63E0057BC04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B1919A2CF4A7700057BC04 /* TagSection */,
+				08B1918C2CF49FF70057BC04 /* SignUpStep3View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08B1919A2CF4A7700057BC04 /* TagSection */ = {
+			isa = PBXGroup;
+			children = (
+				08B1919B2CF4A77C0057BC04 /* TagSection.swift */,
+				08B1919D2CF4A7830057BC04 /* TagSectionCell.swift */,
+			);
+			path = TagSection;
 			sourceTree = "<group>";
 		};
 		BDCA41B42CF35AC0005EECF6 = {
@@ -739,6 +821,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B191962CF4A0FA0057BC04 /* SignUpStep4Controller.swift in Sources */,
 				083A25C82CF363C00099B58E /* LoginController.swift in Sources */,
 				08B1913D2CF367EB0057BC04 /* Constants.swift in Sources */,
 				083A25B72CF362670099B58E /* RequestEndpoint.swift in Sources */,
@@ -754,25 +837,35 @@
 				08B1916A2CF434B80057BC04 /* SignUpStep1Controller.swift in Sources */,
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
+				08B1919C2CF4A77C0057BC04 /* TagSection.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
 				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
 				083A258C2CF361F90099B58E /* ControllerConvention.swift in Sources */,
+				08B191982CF4A1010057BC04 /* SignUpStep4Reactor.swift in Sources */,
+				08B1919E2CF4A7830057BC04 /* TagSectionCell.swift in Sources */,
+				08B191862CF48A8B0057BC04 /* SignUpStep2Reactor.swift in Sources */,
 				083A25BF2CF362770099B58E /* Logger.swift in Sources */,
 				083A259A2CF362090099B58E /* SectionDecorationItem.swift in Sources */,
 				083A258F2CF361F90099B58E /* ReactorConvention.swift in Sources */,
 				083A25B62CF362670099B58E /* MultipartEndPoint.swift in Sources */,
+				08B191942CF4A0F00057BC04 /* SignUpStep4View.swift in Sources */,
+				08B1918D2CF49FF70057BC04 /* SignUpStep3View.swift in Sources */,
 				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
 				08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */,
+				08B1918F2CF4A0020057BC04 /* SignUpStep3Controller.swift in Sources */,
+				08B191912CF4A00E0057BC04 /* SignUpStep3Reactor.swift in Sources */,
 				083A259C2CF362090099B58E /* InOutputable.swift in Sources */,
 				083A258D2CF361F90099B58E /* ConventionCollectionViewCell.swift in Sources */,
 				08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */,
+				08B191882CF48FAE0057BC04 /* NickNameState.swift in Sources */,
 				083A25C12CF362A50099B58E /* Domain.swift in Sources */,
 				08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */,
 				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
 				083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */,
 				083A25BA2CF362670099B58E /* TokenInterceptor.swift in Sources */,
+				08B191A02CF4AA0E0057BC04 /* Reactive+.swift in Sources */,
 				08B191672CF432220057BC04 /* PPCancelHeaderView.swift in Sources */,
 				08B191712CF4398D0057BC04 /* PPLabel.swift in Sources */,
 				083A25B92CF362670099B58E /* FormDataInterceptor.swift in Sources */,
@@ -787,13 +880,16 @@
 				083A258E2CF361F90099B58E /* ConventionTableViewCell.swift in Sources */,
 				08B191592CF41E610057BC04 /* SignUpMainController.swift in Sources */,
 				08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */,
+				08B191842CF48A820057BC04 /* SignUpStep2View.swift in Sources */,
 				08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */,
 				083A25BB2CF362670099B58E /* Provider.swift in Sources */,
 				083A25822CF361EF0099B58E /* BaseTabmanController.swift in Sources */,
 				08B191762CF440C40057BC04 /* PPButton.swift in Sources */,
 				083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */,
 				083A259B2CF362090099B58E /* SectionSupplementaryItem.swift in Sources */,
+				08B191822CF48A7B0057BC04 /* SignUpStep2Controller.swift in Sources */,
 				083A25912CF361F90099B58E /* TestDynamicSection.swift in Sources */,
+				08B191A22CF4AE890057BC04 /* ToastMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
