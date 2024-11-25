@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import RxSwift
+import RxCocoa
 
 final class SignUpCheckBoxButton: UIView {
     
@@ -31,10 +32,13 @@ final class SignUpCheckBoxButton: UIView {
     
     let disposeBag = DisposeBag()
     
+    let isSelected: BehaviorRelay<Bool> = .init(value: false)
+    
     // MARK: - init
     init() {
         super.init(frame: .zero)
         setUpConstraints()
+        bind()
         self.backgroundColor = .g50
         self.layer.cornerRadius = 4
         self.clipsToBounds = true
@@ -67,12 +71,20 @@ private extension SignUpCheckBoxButton {
         button.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
+    }
+    
+    func bind() {
         button.rx.tap
             .withUnretained(self)
             .subscribe { (owner, _) in
-                owner.button.isSelected.toggle()
-                if owner.button.isSelected {
+                owner.isSelected.accept(!owner.isSelected.value)
+            }
+            .disposed(by: disposeBag)
+        
+        isSelected
+            .withUnretained(self)
+            .subscribe { (owner, isSelected) in
+                if isSelected {
                     owner.checkImageView.image = UIImage(named: "icon_checkBox_fill")
                 } else {
                     owner.checkImageView.image = UIImage(named: "icon_checkBox")

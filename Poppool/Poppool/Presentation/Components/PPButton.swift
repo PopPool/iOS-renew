@@ -39,7 +39,7 @@ class PPButton: UIButton {
         var disabledBackgroundColor: UIColor {
             switch self {
             case .primary:
-                return .blu500
+                return .g100
             case .secondary:
                 return .g50
             case .tertiary:
@@ -50,7 +50,7 @@ class PPButton: UIButton {
         var disabledTextColor: UIColor {
             switch self {
             case .primary:
-                return .w100
+                return .g400
             case .secondary:
                 return .g50
             case .tertiary:
@@ -75,8 +75,8 @@ class PPButton: UIButton {
         self.setTitleColor(style.textColor, for: .normal)
         self.setTitleColor(style.disabledTextColor, for: .disabled)
         
-        self.setBackgroundImage(.init(color: style.backgroundColor), for: .normal)
-        self.setBackgroundImage(.init(color: style.disabledBackgroundColor), for: .disabled)
+        self.setBackgroundColor(style.backgroundColor, for: .normal)
+        self.setBackgroundColor(style.disabledBackgroundColor, for: .disabled)
     
         self.titleLabel?.font = font
         self.layer.cornerRadius = cornerRadius
@@ -85,5 +85,21 @@ class PPButton: UIButton {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    /// 버튼 배경색 설정
+    /// - Parameters:
+    ///   - color: 색상
+    ///   - state: 상태
+    func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
+        UIGraphicsBeginImageContext(CGSize(width: 1.0, height: 1.0))
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        context.setFillColor(color.cgColor)
+        context.fill(CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0))
+
+        let backgroundImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+         
+        self.setBackgroundImage(backgroundImage, for: state)
     }
 }

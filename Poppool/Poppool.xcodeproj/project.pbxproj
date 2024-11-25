@@ -67,6 +67,9 @@
 		08B191742CF43DF40057BC04 /* SignUpCheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191732CF43DF40057BC04 /* SignUpCheckBoxButton.swift */; };
 		08B191762CF440C40057BC04 /* PPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191752CF440C40057BC04 /* PPButton.swift */; };
 		08B191782CF442230057BC04 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191772CF442230057BC04 /* UIImage+.swift */; };
+		08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191792CF452B30057BC04 /* SignUpTermsView.swift */; };
+		08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */; };
+		08B1917F2CF46DF20057BC04 /* TermsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -164,6 +167,9 @@
 		08B191732CF43DF40057BC04 /* SignUpCheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCheckBoxButton.swift; sourceTree = "<group>"; };
 		08B191752CF440C40057BC04 /* PPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPButton.swift; sourceTree = "<group>"; };
 		08B191772CF442230057BC04 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		08B191792CF452B30057BC04 /* SignUpTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTermsView.swift; sourceTree = "<group>"; };
+		08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsDetailController.swift; sourceTree = "<group>"; };
+		08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsDetailView.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -413,6 +419,7 @@
 		083A25C42CF363A10099B58E /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				08B1917B2CF46DD40057BC04 /* TermsDetail */,
 				08B191572CF41E550057BC04 /* Main */,
 				08B191682CF434A10057BC04 /* Step1 */,
 			);
@@ -501,8 +508,18 @@
 			children = (
 				08B1916B2CF434C30057BC04 /* SignUpStep1View.swift */,
 				08B191732CF43DF40057BC04 /* SignUpCheckBoxButton.swift */,
+				08B191792CF452B30057BC04 /* SignUpTermsView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		08B1917B2CF46DD40057BC04 /* TermsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */,
+				08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */,
+			);
+			path = TermsDetail;
 			sourceTree = "<group>";
 		};
 		BDCA41B42CF35AC0005EECF6 = {
@@ -738,6 +755,7 @@
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
+				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
 				083A258C2CF361F90099B58E /* ControllerConvention.swift in Sources */,
 				083A25BF2CF362770099B58E /* Logger.swift in Sources */,
@@ -764,9 +782,11 @@
 				08B1915D2CF41E6F0057BC04 /* SignUpMainView.swift in Sources */,
 				083A25B52CF362670099B58E /* Endpoint.swift in Sources */,
 				BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */,
+				08B1917F2CF46DF20057BC04 /* TermsDetailView.swift in Sources */,
 				08B191412CF367FF0057BC04 /* UIFont+.swift in Sources */,
 				083A258E2CF361F90099B58E /* ConventionTableViewCell.swift in Sources */,
 				08B191592CF41E610057BC04 /* SignUpMainController.swift in Sources */,
+				08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */,
 				08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */,
 				083A25BB2CF362670099B58E /* Provider.swift in Sources */,
 				083A25822CF361EF0099B58E /* BaseTabmanController.swift in Sources */,
