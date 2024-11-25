@@ -20,13 +20,14 @@ final class TermsDetailView: UIView {
     let contentTextView: UITextView = {
         let view = UITextView()
         view.font = .KorFont(style: .regular, size: 15)
+        view.isSelectable = false
+        view.isEditable = false
         return view
     }()
     
     let xmarkButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "icon_xmark"), for: .normal)
-//        button.setBackgroundImage(UIImage(named: "icon_xmark"), for: .normal)
         return button
     }()
     
