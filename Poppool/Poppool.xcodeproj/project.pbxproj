@@ -70,6 +70,12 @@
 		08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191792CF452B30057BC04 /* SignUpTermsView.swift */; };
 		08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */; };
 		08B1917F2CF46DF20057BC04 /* TermsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */; };
+		BD5E67CA2CF4964D001837A7 /* AuthRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E67C92CF4964D001837A7 /* AuthRepositoryImpl.swift */; };
+		BD5E67CC2CF4971A001837A7 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E67CB2CF4971A001837A7 /* AuthRepository.swift */; };
+		BD5E67D02CF49797001837A7 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E67CF2CF49797001837A7 /* LoginResponse.swift */; };
+		BD5E67D22CF4980C001837A7 /* AuthAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E67D12CF4980C001837A7 /* AuthAPIEndPoint.swift */; };
+		BD5E67D42CF4982A001837A7 /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E67D32CF4982A001837A7 /* LoginResponseDTO.swift */; };
+		BD5E67D62CF4984F001837A7 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E67D52CF4984F001837A7 /* Secrets.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -170,6 +176,12 @@
 		08B191792CF452B30057BC04 /* SignUpTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTermsView.swift; sourceTree = "<group>"; };
 		08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsDetailController.swift; sourceTree = "<group>"; };
 		08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsDetailView.swift; sourceTree = "<group>"; };
+		BD5E67C92CF4964D001837A7 /* AuthRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryImpl.swift; sourceTree = "<group>"; };
+		BD5E67CB2CF4971A001837A7 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		BD5E67CF2CF49797001837A7 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		BD5E67D12CF4980C001837A7 /* AuthAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIEndPoint.swift; sourceTree = "<group>"; };
+		BD5E67D32CF4982A001837A7 /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		BD5E67D52CF4984F001837A7 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +245,7 @@
 		083A256C2CF361210099B58E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				BD5E67D52CF4984F001837A7 /* Secrets.swift */,
 				08B191532CF41D6F0057BC04 /* PP_loading.json */,
 				08B191542CF41D6F0057BC04 /* PP_splash.json */,
 				08B1914A2CF41D680057BC04 /* Font */,
@@ -310,6 +323,8 @@
 		083A259E2CF362310099B58E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BD5E67CE2CF49783001837A7 /* Entities */,
+				BD5E67CD2CF49723001837A7 /* Repository */,
 				083A25C02CF362A50099B58E /* Domain.swift */,
 			);
 			path = Domain;
@@ -318,7 +333,9 @@
 		083A259F2CF362360099B58E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BD8E261C2CF49A67001FDFE9 /* Network */,
 				083A25B12CF362670099B58E /* NetworkLayer */,
+				BD5E67C92CF4964D001837A7 /* AuthRepositoryImpl.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -520,6 +537,39 @@
 				08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */,
 			);
 			path = TermsDetail;
+			sourceTree = "<group>";
+		};
+		BD5E67CD2CF49723001837A7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E67CB2CF4971A001837A7 /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BD5E67CE2CF49783001837A7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E67CF2CF49797001837A7 /* LoginResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BD8E261C2CF49A67001FDFE9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD8E261D2CF49A82001FDFE9 /* AuthAPI */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BD8E261D2CF49A82001FDFE9 /* AuthAPI */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E67D12CF4980C001837A7 /* AuthAPIEndPoint.swift */,
+				BD5E67D32CF4982A001837A7 /* LoginResponseDTO.swift */,
+			);
+			path = AuthAPI;
 			sourceTree = "<group>";
 		};
 		BDCA41B42CF35AC0005EECF6 = {
@@ -755,15 +805,18 @@
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
+				BD5E67D62CF4984F001837A7 /* Secrets.swift in Sources */,
 				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
 				083A258C2CF361F90099B58E /* ControllerConvention.swift in Sources */,
 				083A25BF2CF362770099B58E /* Logger.swift in Sources */,
 				083A259A2CF362090099B58E /* SectionDecorationItem.swift in Sources */,
+				BD5E67CC2CF4971A001837A7 /* AuthRepository.swift in Sources */,
 				083A258F2CF361F90099B58E /* ReactorConvention.swift in Sources */,
 				083A25B62CF362670099B58E /* MultipartEndPoint.swift in Sources */,
 				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
 				08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */,
+				BD5E67CA2CF4964D001837A7 /* AuthRepositoryImpl.swift in Sources */,
 				083A259C2CF362090099B58E /* InOutputable.swift in Sources */,
 				083A258D2CF361F90099B58E /* ConventionCollectionViewCell.swift in Sources */,
 				08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */,
@@ -773,6 +826,7 @@
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
 				083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */,
 				083A25BA2CF362670099B58E /* TokenInterceptor.swift in Sources */,
+				BD5E67D02CF49797001837A7 /* LoginResponse.swift in Sources */,
 				08B191672CF432220057BC04 /* PPCancelHeaderView.swift in Sources */,
 				08B191712CF4398D0057BC04 /* PPLabel.swift in Sources */,
 				083A25B92CF362670099B58E /* FormDataInterceptor.swift in Sources */,
@@ -780,6 +834,7 @@
 				08B191742CF43DF40057BC04 /* SignUpCheckBoxButton.swift in Sources */,
 				08B191382CF366680057BC04 /* UICollectionReusableView+.swift in Sources */,
 				08B1915D2CF41E6F0057BC04 /* SignUpMainView.swift in Sources */,
+				BD5E67D22CF4980C001837A7 /* AuthAPIEndPoint.swift in Sources */,
 				083A25B52CF362670099B58E /* Endpoint.swift in Sources */,
 				BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */,
 				08B1917F2CF46DF20057BC04 /* TermsDetailView.swift in Sources */,
@@ -791,6 +846,7 @@
 				083A25BB2CF362670099B58E /* Provider.swift in Sources */,
 				083A25822CF361EF0099B58E /* BaseTabmanController.swift in Sources */,
 				08B191762CF440C40057BC04 /* PPButton.swift in Sources */,
+				BD5E67D42CF4982A001837A7 /* LoginResponseDTO.swift in Sources */,
 				083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */,
 				083A259B2CF362090099B58E /* SectionSupplementaryItem.swift in Sources */,
 				083A25912CF361F90099B58E /* TestDynamicSection.swift in Sources */,
