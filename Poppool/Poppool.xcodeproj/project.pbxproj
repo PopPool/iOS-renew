@@ -33,6 +33,43 @@
 		083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25AF2CF362670099B58E /* ProviderImpl.swift */; };
 		083A25BF2CF362770099B58E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25BD2CF362770099B58E /* Logger.swift */; };
 		083A25C12CF362A50099B58E /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C02CF362A50099B58E /* Domain.swift */; };
+		083A25C82CF363C00099B58E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C72CF363C00099B58E /* LoginController.swift */; };
+		083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C92CF363C60099B58E /* LoginReactor.swift */; };
+		083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25CB2CF363CB0099B58E /* LoginView.swift */; };
+		083A25D02CF364B70099B58E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 083A25CF2CF364B70099B58E /* Alamofire */; };
+		08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191342CF366670057BC04 /* UICollectionViewCell+.swift */; };
+		08B191382CF366680057BC04 /* UICollectionReusableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191352CF366670057BC04 /* UICollectionReusableView+.swift */; };
+		08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191362CF366670057BC04 /* UITableViewCell+.swift */; };
+		08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1913A2CF366A00057BC04 /* UIApplication+.swift */; };
+		08B1913D2CF367EB0057BC04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1913C2CF367EB0057BC04 /* Constants.swift */; };
+		08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1913E2CF367FA0057BC04 /* UIColor+.swift */; };
+		08B191412CF367FF0057BC04 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191402CF367FF0057BC04 /* UIFont+.swift */; };
+		08B1914B2CF41D690057BC04 /* GothicA1-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B191422CF41D680057BC04 /* GothicA1-Bold.ttf */; };
+		08B1914C2CF41D690057BC04 /* GothicA1-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B191432CF41D680057BC04 /* GothicA1-Light.ttf */; };
+		08B1914D2CF41D690057BC04 /* GothicA1-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B191442CF41D680057BC04 /* GothicA1-Medium.ttf */; };
+		08B1914E2CF41D690057BC04 /* GothicA1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B191452CF41D680057BC04 /* GothicA1-Regular.ttf */; };
+		08B1914F2CF41D690057BC04 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B191462CF41D680057BC04 /* Poppins-Bold.ttf */; };
+		08B191502CF41D690057BC04 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B191472CF41D680057BC04 /* Poppins-Light.ttf */; };
+		08B191512CF41D690057BC04 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B191482CF41D680057BC04 /* Poppins-Medium.ttf */; };
+		08B191522CF41D690057BC04 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B191492CF41D680057BC04 /* Poppins-Regular.ttf */; };
+		08B191552CF41D6F0057BC04 /* PP_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B191532CF41D6F0057BC04 /* PP_loading.json */; };
+		08B191562CF41D6F0057BC04 /* PP_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B191542CF41D6F0057BC04 /* PP_splash.json */; };
+		08B191592CF41E610057BC04 /* SignUpMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191582CF41E610057BC04 /* SignUpMainController.swift */; };
+		08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1915A2CF41E690057BC04 /* SignUpMainReactor.swift */; };
+		08B1915D2CF41E6F0057BC04 /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1915C2CF41E6F0057BC04 /* SignUpMainView.swift */; };
+		08B191612CF430E70057BC04 /* PPProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191602CF430E70057BC04 /* PPProgressView.swift */; };
+		08B191632CF430F30057BC04 /* PPProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191622CF430F30057BC04 /* PPProgressIndicator.swift */; };
+		08B191672CF432220057BC04 /* PPCancelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191662CF432220057BC04 /* PPCancelHeaderView.swift */; };
+		08B1916A2CF434B80057BC04 /* SignUpStep1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191692CF434B80057BC04 /* SignUpStep1Controller.swift */; };
+		08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1916B2CF434C30057BC04 /* SignUpStep1View.swift */; };
+		08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1916D2CF434CF0057BC04 /* SignUpStep1Reactor.swift */; };
+		08B191712CF4398D0057BC04 /* PPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191702CF4398D0057BC04 /* PPLabel.swift */; };
+		08B191742CF43DF40057BC04 /* SignUpCheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191732CF43DF40057BC04 /* SignUpCheckBoxButton.swift */; };
+		08B191762CF440C40057BC04 /* PPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191752CF440C40057BC04 /* PPButton.swift */; };
+		08B191782CF442230057BC04 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191772CF442230057BC04 /* UIImage+.swift */; };
+		08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191792CF452B30057BC04 /* SignUpTermsView.swift */; };
+		08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */; };
+		08B1917F2CF46DF20057BC04 /* TermsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -97,6 +134,42 @@
 		083A25AF2CF362670099B58E /* ProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderImpl.swift; sourceTree = "<group>"; };
 		083A25BD2CF362770099B58E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		083A25C02CF362A50099B58E /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		083A25C72CF363C00099B58E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		083A25C92CF363C60099B58E /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
+		083A25CB2CF363CB0099B58E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		08B191342CF366670057BC04 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
+		08B191352CF366670057BC04 /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
+		08B191362CF366670057BC04 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		08B1913A2CF366A00057BC04 /* UIApplication+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
+		08B1913C2CF367EB0057BC04 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		08B1913E2CF367FA0057BC04 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		08B191402CF367FF0057BC04 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		08B191422CF41D680057BC04 /* GothicA1-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothicA1-Bold.ttf"; sourceTree = "<group>"; };
+		08B191432CF41D680057BC04 /* GothicA1-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothicA1-Light.ttf"; sourceTree = "<group>"; };
+		08B191442CF41D680057BC04 /* GothicA1-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothicA1-Medium.ttf"; sourceTree = "<group>"; };
+		08B191452CF41D680057BC04 /* GothicA1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothicA1-Regular.ttf"; sourceTree = "<group>"; };
+		08B191462CF41D680057BC04 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		08B191472CF41D680057BC04 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		08B191482CF41D680057BC04 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		08B191492CF41D680057BC04 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		08B191532CF41D6F0057BC04 /* PP_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PP_loading.json; sourceTree = "<group>"; };
+		08B191542CF41D6F0057BC04 /* PP_splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PP_splash.json; sourceTree = "<group>"; };
+		08B191582CF41E610057BC04 /* SignUpMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainController.swift; sourceTree = "<group>"; };
+		08B1915A2CF41E690057BC04 /* SignUpMainReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainReactor.swift; sourceTree = "<group>"; };
+		08B1915C2CF41E6F0057BC04 /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
+		08B191602CF430E70057BC04 /* PPProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPProgressView.swift; sourceTree = "<group>"; };
+		08B191622CF430F30057BC04 /* PPProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPProgressIndicator.swift; sourceTree = "<group>"; };
+		08B191662CF432220057BC04 /* PPCancelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPCancelHeaderView.swift; sourceTree = "<group>"; };
+		08B191692CF434B80057BC04 /* SignUpStep1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1Controller.swift; sourceTree = "<group>"; };
+		08B1916B2CF434C30057BC04 /* SignUpStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1View.swift; sourceTree = "<group>"; };
+		08B1916D2CF434CF0057BC04 /* SignUpStep1Reactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1Reactor.swift; sourceTree = "<group>"; };
+		08B191702CF4398D0057BC04 /* PPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPLabel.swift; sourceTree = "<group>"; };
+		08B191732CF43DF40057BC04 /* SignUpCheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCheckBoxButton.swift; sourceTree = "<group>"; };
+		08B191752CF440C40057BC04 /* PPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPButton.swift; sourceTree = "<group>"; };
+		08B191772CF442230057BC04 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		08B191792CF452B30057BC04 /* SignUpTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTermsView.swift; sourceTree = "<group>"; };
+		08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsDetailController.swift; sourceTree = "<group>"; };
+		08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsDetailView.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +194,7 @@
 				BDCA41F52CF35D33005EECF6 /* Kingfisher in Frameworks */,
 				BDCA42072CF35FA6005EECF6 /* Tabman in Frameworks */,
 				BDCA42042CF35F76005EECF6 /* PanModal in Frameworks */,
+				083A25D02CF364B70099B58E /* Alamofire in Frameworks */,
 				BDCA42102CF35FF5005EECF6 /* Lottie in Frameworks */,
 				BDCA41FE2CF35EE7005EECF6 /* ReactorKit in Frameworks */,
 				BDCA41F22CF35D0D005EECF6 /* SnapKit in Frameworks */,
@@ -159,6 +233,9 @@
 		083A256C2CF361210099B58E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				08B191532CF41D6F0057BC04 /* PP_loading.json */,
+				08B191542CF41D6F0057BC04 /* PP_splash.json */,
+				08B1914A2CF41D680057BC04 /* Font */,
 				BDCA41C92CF35AC1005EECF6 /* Assets.xcassets */,
 				BDCA41CB2CF35AC1005EECF6 /* LaunchScreen.storyboard */,
 				BDCA41CE2CF35AC1005EECF6 /* Info.plist */,
@@ -170,7 +247,10 @@
 			isa = PBXGroup;
 			children = (
 				083A258B2CF361F90099B58E /* Convention */,
+				08B1915F2CF430D40057BC04 /* Components */,
+				083A25C22CF3635B0099B58E /* Secne */,
 				083A259D2CF3620B0099B58E /* Utills */,
+				08B191332CF366500057BC04 /* Extension */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -220,6 +300,7 @@
 		083A259D2CF3620B0099B58E /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				08B1913C2CF367EB0057BC04 /* Constants.swift */,
 				083A25982CF362090099B58E /* Interfaces */,
 				083A25812CF361EF0099B58E /* Controllers */,
 			);
@@ -316,6 +397,131 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		083A25C22CF3635B0099B58E /* Secne */ = {
+			isa = PBXGroup;
+			children = (
+				083A25C42CF363A10099B58E /* SignUp */,
+				083A25C32CF363650099B58E /* Login */,
+			);
+			path = Secne;
+			sourceTree = "<group>";
+		};
+		083A25C32CF363650099B58E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				083A25CB2CF363CB0099B58E /* LoginView.swift */,
+				083A25C72CF363C00099B58E /* LoginController.swift */,
+				083A25C92CF363C60099B58E /* LoginReactor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		083A25C42CF363A10099B58E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				08B1917B2CF46DD40057BC04 /* TermsDetail */,
+				08B191572CF41E550057BC04 /* Main */,
+				08B191682CF434A10057BC04 /* Step1 */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		08B191332CF366500057BC04 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				08B191402CF367FF0057BC04 /* UIFont+.swift */,
+				08B1913E2CF367FA0057BC04 /* UIColor+.swift */,
+				08B191352CF366670057BC04 /* UICollectionReusableView+.swift */,
+				08B191342CF366670057BC04 /* UICollectionViewCell+.swift */,
+				08B191362CF366670057BC04 /* UITableViewCell+.swift */,
+				08B1913A2CF366A00057BC04 /* UIApplication+.swift */,
+				08B191772CF442230057BC04 /* UIImage+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		08B1914A2CF41D680057BC04 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				08B191422CF41D680057BC04 /* GothicA1-Bold.ttf */,
+				08B191432CF41D680057BC04 /* GothicA1-Light.ttf */,
+				08B191442CF41D680057BC04 /* GothicA1-Medium.ttf */,
+				08B191452CF41D680057BC04 /* GothicA1-Regular.ttf */,
+				08B191462CF41D680057BC04 /* Poppins-Bold.ttf */,
+				08B191472CF41D680057BC04 /* Poppins-Light.ttf */,
+				08B191482CF41D680057BC04 /* Poppins-Medium.ttf */,
+				08B191492CF41D680057BC04 /* Poppins-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		08B191572CF41E550057BC04 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				08B1915E2CF430C00057BC04 /* View */,
+				08B191582CF41E610057BC04 /* SignUpMainController.swift */,
+				08B1915A2CF41E690057BC04 /* SignUpMainReactor.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		08B1915E2CF430C00057BC04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B1915C2CF41E6F0057BC04 /* SignUpMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08B1915F2CF430D40057BC04 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				08B191702CF4398D0057BC04 /* PPLabel.swift */,
+				08B191752CF440C40057BC04 /* PPButton.swift */,
+				08B191662CF432220057BC04 /* PPCancelHeaderView.swift */,
+				08B191642CF430F80057BC04 /* PPProgressIndicator */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		08B191642CF430F80057BC04 /* PPProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				08B191602CF430E70057BC04 /* PPProgressView.swift */,
+				08B191622CF430F30057BC04 /* PPProgressIndicator.swift */,
+			);
+			path = PPProgressIndicator;
+			sourceTree = "<group>";
+		};
+		08B191682CF434A10057BC04 /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				08B191722CF43D900057BC04 /* View */,
+				08B191692CF434B80057BC04 /* SignUpStep1Controller.swift */,
+				08B1916D2CF434CF0057BC04 /* SignUpStep1Reactor.swift */,
+			);
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		08B191722CF43D900057BC04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B1916B2CF434C30057BC04 /* SignUpStep1View.swift */,
+				08B191732CF43DF40057BC04 /* SignUpCheckBoxButton.swift */,
+				08B191792CF452B30057BC04 /* SignUpTermsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08B1917B2CF46DD40057BC04 /* TermsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				08B1917E2CF46DF20057BC04 /* TermsDetailView.swift */,
+				08B1917C2CF46DE30057BC04 /* TermsDetailController.swift */,
+			);
+			path = TermsDetail;
+			sourceTree = "<group>";
+		};
 		BDCA41B42CF35AC0005EECF6 = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +599,7 @@
 				BDCA42092CF35FB1005EECF6 /* Pageboy */,
 				BDCA420C2CF35FD2005EECF6 /* RxGesture */,
 				BDCA420F2CF35FF5005EECF6 /* Lottie */,
+				083A25CF2CF364B70099B58E /* Alamofire */,
 			);
 			productName = Poppool;
 			productReference = BDCA41BD2CF35AC0005EECF6 /* Poppool.app */;
@@ -478,6 +685,7 @@
 				BDCA42082CF35FB1005EECF6 /* XCRemoteSwiftPackageReference "Pageboy" */,
 				BDCA420B2CF35FD2005EECF6 /* XCRemoteSwiftPackageReference "RxGesture" */,
 				BDCA420E2CF35FF5005EECF6 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = BDCA41BE2CF35AC0005EECF6 /* Products */;
 			projectDirPath = "";
@@ -495,8 +703,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B191562CF41D6F0057BC04 /* PP_splash.json in Resources */,
+				08B1914B2CF41D690057BC04 /* GothicA1-Bold.ttf in Resources */,
+				08B1914D2CF41D690057BC04 /* GothicA1-Medium.ttf in Resources */,
+				08B1914F2CF41D690057BC04 /* Poppins-Bold.ttf in Resources */,
+				08B191502CF41D690057BC04 /* Poppins-Light.ttf in Resources */,
+				08B191552CF41D6F0057BC04 /* PP_loading.json in Resources */,
 				BDCA41CA2CF35AC1005EECF6 /* Assets.xcassets in Resources */,
 				BDCA41CD2CF35AC1005EECF6 /* Base in Resources */,
+				08B191512CF41D690057BC04 /* Poppins-Medium.ttf in Resources */,
+				08B1914C2CF41D690057BC04 /* GothicA1-Light.ttf in Resources */,
+				08B1914E2CF41D690057BC04 /* GothicA1-Regular.ttf in Resources */,
+				08B191522CF41D690057BC04 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,15 +739,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083A25C82CF363C00099B58E /* LoginController.swift in Sources */,
+				08B1913D2CF367EB0057BC04 /* Constants.swift in Sources */,
 				083A25B72CF362670099B58E /* RequestEndpoint.swift in Sources */,
 				083A25B82CF362670099B58E /* IndicatorMaker.swift in Sources */,
 				083A25B22CF362670099B58E /* NetworkError.swift in Sources */,
 				083A25832CF361EF0099B58E /* BaseViewController.swift in Sources */,
 				083A25922CF361F90099B58E /* ViewConvention.swift in Sources */,
+				08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */,
 				083A25B42CF362670099B58E /* Responsable.swift in Sources */,
+				08B191782CF442230057BC04 /* UIImage+.swift in Sources */,
+				08B191612CF430E70057BC04 /* PPProgressView.swift in Sources */,
 				083A25B32CF362670099B58E /* Requestable.swift in Sources */,
+				08B1916A2CF434B80057BC04 /* SignUpStep1Controller.swift in Sources */,
+				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
+				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
 				083A258C2CF361F90099B58E /* ControllerConvention.swift in Sources */,
 				083A25BF2CF362770099B58E /* Logger.swift in Sources */,
@@ -537,17 +763,35 @@
 				083A258F2CF361F90099B58E /* ReactorConvention.swift in Sources */,
 				083A25B62CF362670099B58E /* MultipartEndPoint.swift in Sources */,
 				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
+				08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */,
 				083A259C2CF362090099B58E /* InOutputable.swift in Sources */,
 				083A258D2CF361F90099B58E /* ConventionCollectionViewCell.swift in Sources */,
+				08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */,
 				083A25C12CF362A50099B58E /* Domain.swift in Sources */,
+				08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */,
+				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
+				083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */,
 				083A25BA2CF362670099B58E /* TokenInterceptor.swift in Sources */,
+				08B191672CF432220057BC04 /* PPCancelHeaderView.swift in Sources */,
+				08B191712CF4398D0057BC04 /* PPLabel.swift in Sources */,
 				083A25B92CF362670099B58E /* FormDataInterceptor.swift in Sources */,
+				08B191632CF430F30057BC04 /* PPProgressIndicator.swift in Sources */,
+				08B191742CF43DF40057BC04 /* SignUpCheckBoxButton.swift in Sources */,
+				08B191382CF366680057BC04 /* UICollectionReusableView+.swift in Sources */,
+				08B1915D2CF41E6F0057BC04 /* SignUpMainView.swift in Sources */,
 				083A25B52CF362670099B58E /* Endpoint.swift in Sources */,
 				BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */,
+				08B1917F2CF46DF20057BC04 /* TermsDetailView.swift in Sources */,
+				08B191412CF367FF0057BC04 /* UIFont+.swift in Sources */,
 				083A258E2CF361F90099B58E /* ConventionTableViewCell.swift in Sources */,
+				08B191592CF41E610057BC04 /* SignUpMainController.swift in Sources */,
+				08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */,
+				08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */,
 				083A25BB2CF362670099B58E /* Provider.swift in Sources */,
 				083A25822CF361EF0099B58E /* BaseTabmanController.swift in Sources */,
+				08B191762CF440C40057BC04 /* PPButton.swift in Sources */,
+				083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */,
 				083A259B2CF362090099B58E /* SectionSupplementaryItem.swift in Sources */,
 				083A25912CF361F90099B58E /* TestDynamicSection.swift in Sources */,
 			);
@@ -725,10 +969,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W5QTRMS954;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Poppool/Info.plist;
+				INFOPLIST_FILE = Poppool/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -739,9 +982,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.Poppool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -754,10 +1001,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W5QTRMS954;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Poppool/Info.plist;
+				INFOPLIST_FILE = Poppool/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -768,9 +1014,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.Poppool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -892,6 +1142,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
 		BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -983,6 +1241,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		083A25CF2CF364B70099B58E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		BDCA41F12CF35D0D005EECF6 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */;

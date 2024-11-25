@@ -1,5 +1,5 @@
 {
-  "originHash" : "393160335292055af014d5d4bbb0012d1afb32b18239d87552d7e3bfa7e8ccd3",
+  "originHash" : "4cd26777a9c8bd0a23770233510cd099119a33976f031dfe77033f13dcb8def9",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -13,7 +13,7 @@
     {
       "identity" : "kakao-ios-sdk",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kakao/kakao-ios-sdk",
+      "location" : "https://github.com/kakao/kakao-ios-sdk.git",
       "state" : {
         "revision" : "ab4309c1950550add307046ad1e08024c7514603",
         "version" : "2.23.0"
@@ -58,7 +58,7 @@
     {
       "identity" : "pageboy",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/uias/Pageboy",
+      "location" : "https://github.com/uias/Pageboy.git",
       "state" : {
         "revision" : "be0c1f6f1964cfb07f9d819b0863f2c3f255f612",
         "version" : "4.2.0"
