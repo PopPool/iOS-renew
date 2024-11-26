@@ -7,6 +7,10 @@
 
 import UIKit
 
+import RxKakaoSDKAuth
+import KakaoSDKAuth
+import RxSwift
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -17,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         
-        let rootViewController = SignUpMainController()
-        rootViewController.reactor = SignUpMainReactor()
+        let rootViewController = LoginController()
+        rootViewController.reactor = LoginReactor()
         
         let navigationController = UINavigationController(rootViewController: rootViewController)
         window?.rootViewController = navigationController
@@ -38,6 +42,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            if AuthApi.isKakaoTalkLoginUrl(url) {
+                _ = AuthController.rx.handleOpenUrl(url: url)
+            }
+        }
     }
 }
 

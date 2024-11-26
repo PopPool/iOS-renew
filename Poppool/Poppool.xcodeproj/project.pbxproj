@@ -90,6 +90,12 @@
 		08B191AE2CF5BFA60057BC04 /* AgeSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191AD2CF5BFA60057BC04 /* AgeSelectedView.swift */; };
 		08B191B02CF5BFAE0057BC04 /* AgeSelectedReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191AF2CF5BFAE0057BC04 /* AgeSelectedReactor.swift */; };
 		08B191B22CF5C0A60057BC04 /* PPPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191B12CF5C0A60057BC04 /* PPPicker.swift */; };
+		08B191B42CF609260057BC04 /* KakaoLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191B32CF609260057BC04 /* KakaoLoginService.swift */; };
+		08B191B62CF6092B0057BC04 /* AppleLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191B52CF6092B0057BC04 /* AppleLoginService.swift */; };
+		08B191B82CF6092F0057BC04 /* AuthServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191B72CF6092F0057BC04 /* AuthServiceable.swift */; };
+		08B191BA2CF609AE0057BC04 /* RxKakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 08B191B92CF609AE0057BC04 /* RxKakaoSDK */; };
+		08B191BC2CF609AE0057BC04 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 08B191BB2CF609AE0057BC04 /* RxKakaoSDKAuth */; };
+		08B191BE2CF609AE0057BC04 /* RxKakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 08B191BD2CF609AE0057BC04 /* RxKakaoSDKUser */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -210,6 +216,9 @@
 		08B191AD2CF5BFA60057BC04 /* AgeSelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeSelectedView.swift; sourceTree = "<group>"; };
 		08B191AF2CF5BFAE0057BC04 /* AgeSelectedReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeSelectedReactor.swift; sourceTree = "<group>"; };
 		08B191B12CF5C0A60057BC04 /* PPPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPPicker.swift; sourceTree = "<group>"; };
+		08B191B32CF609260057BC04 /* KakaoLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakaoLoginService.swift; sourceTree = "<group>"; };
+		08B191B52CF6092B0057BC04 /* AppleLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleLoginService.swift; sourceTree = "<group>"; };
+		08B191B72CF6092F0057BC04 /* AuthServiceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceable.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,11 +243,14 @@
 				BDCA41F52CF35D33005EECF6 /* Kingfisher in Frameworks */,
 				BDCA42072CF35FA6005EECF6 /* Tabman in Frameworks */,
 				BDCA42042CF35F76005EECF6 /* PanModal in Frameworks */,
+				08B191BA2CF609AE0057BC04 /* RxKakaoSDK in Frameworks */,
+				08B191BC2CF609AE0057BC04 /* RxKakaoSDKAuth in Frameworks */,
 				083A25D02CF364B70099B58E /* Alamofire in Frameworks */,
 				BDCA42102CF35FF5005EECF6 /* Lottie in Frameworks */,
 				BDCA41FE2CF35EE7005EECF6 /* ReactorKit in Frameworks */,
 				BDCA41F22CF35D0D005EECF6 /* SnapKit in Frameworks */,
 				BDCA420A2CF35FB1005EECF6 /* Pageboy in Frameworks */,
+				08B191BE2CF609AE0057BC04 /* RxKakaoSDKUser in Frameworks */,
 				BDCA42012CF35EFE005EECF6 /* RxKeyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +379,9 @@
 		083A25A02CF3623C0099B58E /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				08B191B72CF6092F0057BC04 /* AuthServiceable.swift */,
+				08B191B52CF6092B0057BC04 /* AppleLoginService.swift */,
+				08B191B32CF609260057BC04 /* KakaoLoginService.swift */,
 				083A25BE2CF362770099B58E /* Logger */,
 			);
 			path = Infrastructure;
@@ -724,6 +739,9 @@
 				BDCA420C2CF35FD2005EECF6 /* RxGesture */,
 				BDCA420F2CF35FF5005EECF6 /* Lottie */,
 				083A25CF2CF364B70099B58E /* Alamofire */,
+				08B191B92CF609AE0057BC04 /* RxKakaoSDK */,
+				08B191BB2CF609AE0057BC04 /* RxKakaoSDKAuth */,
+				08B191BD2CF609AE0057BC04 /* RxKakaoSDKUser */,
 			);
 			productName = Poppool;
 			productReference = BDCA41BD2CF35AC0005EECF6 /* Poppool.app */;
@@ -868,6 +886,7 @@
 				08B1913D2CF367EB0057BC04 /* Constants.swift in Sources */,
 				083A25B72CF362670099B58E /* RequestEndpoint.swift in Sources */,
 				083A25B82CF362670099B58E /* IndicatorMaker.swift in Sources */,
+				08B191B62CF6092B0057BC04 /* AppleLoginService.swift in Sources */,
 				083A25B22CF362670099B58E /* NetworkError.swift in Sources */,
 				083A25832CF361EF0099B58E /* BaseViewController.swift in Sources */,
 				083A25922CF361F90099B58E /* ViewConvention.swift in Sources */,
@@ -883,6 +902,7 @@
 				08B1919C2CF4A77C0057BC04 /* TagSection.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
 				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
+				08B191B82CF6092F0057BC04 /* AuthServiceable.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
 				083A258C2CF361F90099B58E /* ControllerConvention.swift in Sources */,
 				08B191982CF4A1010057BC04 /* SignUpStep4Reactor.swift in Sources */,
@@ -894,6 +914,7 @@
 				083A25B62CF362670099B58E /* MultipartEndPoint.swift in Sources */,
 				08B191942CF4A0F00057BC04 /* SignUpStep4View.swift in Sources */,
 				08B1918D2CF49FF70057BC04 /* SignUpStep3View.swift in Sources */,
+				08B191B42CF609260057BC04 /* KakaoLoginService.swift in Sources */,
 				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
 				08B191A42CF5A7030057BC04 /* PPSegmentedControl.swift in Sources */,
 				08B191AE2CF5BFA60057BC04 /* AgeSelectedView.swift in Sources */,
@@ -1389,6 +1410,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		08B191B92CF609AE0057BC04 /* RxKakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA41F92CF35EC0005EECF6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDK;
+		};
+		08B191BB2CF609AE0057BC04 /* RxKakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA41F92CF35EC0005EECF6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKAuth;
+		};
+		08B191BD2CF609AE0057BC04 /* RxKakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDCA41F92CF35EC0005EECF6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKUser;
 		};
 		BDCA41F12CF35D0D005EECF6 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
