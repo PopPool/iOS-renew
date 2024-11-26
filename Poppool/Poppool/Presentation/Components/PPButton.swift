@@ -13,6 +13,8 @@ class PPButton: UIButton {
         case primary
         case secondary
         case tertiary
+        case kakao
+        case apple
         
         var backgroundColor: UIColor {
             switch self {
@@ -22,6 +24,10 @@ class PPButton: UIButton {
                 return .g50
             case .tertiary:
                 return .blu500
+            case .kakao:
+                return .init(hexCode: "#F8E049")
+            case .apple:
+                return .g900
             }
         }
         
@@ -33,6 +39,10 @@ class PPButton: UIButton {
                 return .blu500
             case .tertiary:
                 return .blu500
+            case .kakao:
+                return .g1000
+            case .apple:
+                return .w100
             }
         }
         
@@ -42,7 +52,7 @@ class PPButton: UIButton {
                 return .g100
             case .secondary:
                 return .g50
-            case .tertiary:
+            case .tertiary, .apple, .kakao:
                 return .blu500
             }
         }
@@ -53,7 +63,7 @@ class PPButton: UIButton {
                 return .g400
             case .secondary:
                 return .g50
-            case .tertiary:
+            case .tertiary, .apple, .kakao:
                 return .blu500
             }
         }
