@@ -84,6 +84,7 @@
 		08B1919E2CF4A7830057BC04 /* TagSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1919D2CF4A7830057BC04 /* TagSectionCell.swift */; };
 		08B191A02CF4AA0E0057BC04 /* Reactive+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B1919F2CF4AA0E0057BC04 /* Reactive+.swift */; };
 		08B191A22CF4AE890057BC04 /* ToastMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191A12CF4AE890057BC04 /* ToastMaker.swift */; };
+		08B191A42CF5A7030057BC04 /* PPSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191A32CF5A7030057BC04 /* PPSegmentedControl.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -198,6 +199,7 @@
 		08B1919D2CF4A7830057BC04 /* TagSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSectionCell.swift; sourceTree = "<group>"; };
 		08B1919F2CF4AA0E0057BC04 /* Reactive+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reactive+.swift"; sourceTree = "<group>"; };
 		08B191A12CF4AE890057BC04 /* ToastMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMaker.swift; sourceTree = "<group>"; };
+		08B191A32CF5A7030057BC04 /* PPSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPSegmentedControl.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 				08B191702CF4398D0057BC04 /* PPLabel.swift */,
 				08B191752CF440C40057BC04 /* PPButton.swift */,
 				08B191662CF432220057BC04 /* PPCancelHeaderView.swift */,
+				08B191A32CF5A7030057BC04 /* PPSegmentedControl.swift */,
 				08B191642CF430F80057BC04 /* PPProgressIndicator */,
 			);
 			path = Components;
@@ -852,6 +855,7 @@
 				08B191942CF4A0F00057BC04 /* SignUpStep4View.swift in Sources */,
 				08B1918D2CF49FF70057BC04 /* SignUpStep3View.swift in Sources */,
 				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
+				08B191A42CF5A7030057BC04 /* PPSegmentedControl.swift in Sources */,
 				08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */,
 				08B1918F2CF4A0020057BC04 /* SignUpStep3Controller.swift in Sources */,
 				08B191912CF4A00E0057BC04 /* SignUpStep3Reactor.swift in Sources */,
