@@ -19,6 +19,7 @@ final class LoginReactor: Reactor {
     
     enum Mutation {
         case moveToSignUpScene(controller: BaseViewController)
+        case moveToHomeScene(controller: BaseViewController)
         case loadView
     }
     
@@ -32,6 +33,7 @@ final class LoginReactor: Reactor {
     
     private let kakaoLoginService = KakaoLoginService()
     private let appleLoginService = AppleLoginService()
+    private let authApiUseCase = TryLoginUseCaseImpl(repository: AuthRepositoryImpl(provider: ProviderImpl()))
     
     // MARK: - init
     init() {
@@ -42,38 +44,54 @@ final class LoginReactor: Reactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .kakaoButtonTapped(let controller):
-            return loginWithKakao()
+            return loginWithKakao(controller: controller)
         case .appleButtonTapped(let controller):
-            return loginWithApple()
+            return loginWithApple(controller: controller)
         }
     }
     
     func reduce(state: State, mutation: Mutation) -> State {
-        var newState = state
         switch mutation {
         case .moveToSignUpScene(let controller):
             let signUpController = SignUpMainController()
             signUpController.reactor = SignUpMainReactor()
             controller.navigationController?.pushViewController(signUpController, animated: true)
+        case .moveToHomeScene(let controller):
+            let homeTabbar = BaseViewController()
+            controller.view.window?.rootViewController = homeTabbar
         case .loadView:
             print(#function)
         }
-        return newState
+        return state
     }
     
-    func loginWithKakao() -> Observable<Mutation> {
-        kakaoLoginService.fetchUserCredential()
-            .map { authResponse in
-                print(authResponse)
-                return .loadView
+    func loginWithKakao(controller: BaseViewController) -> Observable<Mutation> {
+        return kakaoLoginService.fetchUserCredential()
+            .withUnretained(self)
+            .flatMap { owner, response in
+                owner.authApiUseCase.execute(userCredential: response, socialType: "kakao")
+            }
+            .map { loginResponse in
+                if loginResponse.isRegisteredUser {
+                    return .moveToHomeScene(controller: controller)
+                } else {
+                    return .moveToSignUpScene(controller: controller)
+                }
             }
     }
     
-    func loginWithApple() -> Observable<Mutation> {
-        appleLoginService.fetchUserCredential()
-            .map { authResponse in
-                print(authResponse)
-                return .loadView
+    func loginWithApple(controller: BaseViewController) -> Observable<Mutation> {
+        return appleLoginService.fetchUserCredential()
+            .withUnretained(self)
+            .flatMap { owner, response in
+                owner.authApiUseCase.execute(userCredential: response, socialType: "apple")
+            }
+            .map { loginResponse in
+                if loginResponse.isRegisteredUser {
+                    return .moveToHomeScene(controller: controller)
+                } else {
+                    return .moveToSignUpScene(controller: controller)
+                }
             }
     }
 }

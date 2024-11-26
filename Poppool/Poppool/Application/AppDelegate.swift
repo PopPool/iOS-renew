@@ -15,7 +15,7 @@ import RxKakaoSDKCommon
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        RxKakaoSDK.initSDK(appKey: "", loggingEnable: false)
+        RxKakaoSDK.initSDK(appKey: Secrets.kakaoAuthAppkey.rawValue, loggingEnable: false)
         return true
     }
 

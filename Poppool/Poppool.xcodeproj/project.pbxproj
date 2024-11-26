@@ -95,6 +95,7 @@
 		08B191BA2CF609AE0057BC04 /* RxKakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 08B191B92CF609AE0057BC04 /* RxKakaoSDK */; };
 		08B191BC2CF609AE0057BC04 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 08B191BB2CF609AE0057BC04 /* RxKakaoSDKAuth */; };
 		08B191BE2CF609AE0057BC04 /* RxKakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 08B191BD2CF609AE0057BC04 /* RxKakaoSDKUser */; };
+		08B191C22CF615CA0057BC04 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191C12CF615CA0057BC04 /* Secrets.swift */; };
 		BD9103612CF6149D00BBCCAE /* AuthAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91034E2CF6149D00BBCCAE /* AuthAPIEndPoint.swift */; };
 		BD9103622CF6149D00BBCCAE /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91034F2CF6149D00BBCCAE /* LoginResponseDTO.swift */; };
 		BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103512CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift */; };
@@ -247,6 +248,7 @@
 		08B191B32CF609260057BC04 /* KakaoLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakaoLoginService.swift; sourceTree = "<group>"; };
 		08B191B52CF6092B0057BC04 /* AppleLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleLoginService.swift; sourceTree = "<group>"; };
 		08B191B72CF6092F0057BC04 /* AuthServiceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceable.swift; sourceTree = "<group>"; };
+		08B191C12CF615CA0057BC04 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		BD91034E2CF6149D00BBCCAE /* AuthAPIEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPIEndPoint.swift; sourceTree = "<group>"; };
 		BD91034F2CF6149D00BBCCAE /* LoginResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
 		BD9103512CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerPopUpStoreDTO.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 		083A256C2CF361210099B58E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				08B191C12CF615CA0057BC04 /* Secrets.swift */,
 				08B191532CF41D6F0057BC04 /* PP_loading.json */,
 				08B191542CF41D6F0057BC04 /* PP_splash.json */,
 				08B1914A2CF41D680057BC04 /* Font */,
@@ -1081,6 +1084,7 @@
 				08B191B82CF6092F0057BC04 /* AuthServiceable.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
 				BD9103822CF614A900BBCCAE /* SignUpUseCase.swift in Sources */,
+				08B191C22CF615CA0057BC04 /* Secrets.swift in Sources */,
 				083A258C2CF361F90099B58E /* ControllerConvention.swift in Sources */,
 				08B191982CF4A1010057BC04 /* SignUpStep4Reactor.swift in Sources */,
 				08B1919E2CF4A7830057BC04 /* TagSectionCell.swift in Sources */,
