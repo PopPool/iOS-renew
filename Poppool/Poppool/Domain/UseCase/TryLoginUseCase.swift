@@ -8,7 +8,6 @@
 import Foundation
 import RxSwift
 
-/// 인증 관련 UseCase 프로토콜
 protocol TryLoginUseCase {
     
     /// 인증 관련 저장소
