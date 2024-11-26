@@ -123,6 +123,8 @@
 		BD91038B2CF614A900BBCCAE /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91037C2CF614A900BBCCAE /* AuthRepository.swift */; };
 		BD91038C2CF614A900BBCCAE /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91037D2CF614A900BBCCAE /* HomeRepository.swift */; };
 		BD91038D2CF614A900BBCCAE /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91037E2CF614A900BBCCAE /* SignUpRepository.swift */; };
+		BD9103922CF6166800BBCCAE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91038E2CF6166800BBCCAE /* SplashView.swift */; };
+		BD9103932CF6166800BBCCAE /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103902CF6166800BBCCAE /* SplashController.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -273,6 +275,8 @@
 		BD91037C2CF614A900BBCCAE /* AuthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		BD91037D2CF614A900BBCCAE /* HomeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		BD91037E2CF614A900BBCCAE /* SignUpRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
+		BD91038E2CF6166800BBCCAE /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		BD9103902CF6166800BBCCAE /* SplashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -515,6 +519,7 @@
 			children = (
 				083A25C42CF363A10099B58E /* SignUp */,
 				083A25C32CF363650099B58E /* Login */,
+				BD9103912CF6166800BBCCAE /* Splash */,
 			);
 			path = Secne;
 			sourceTree = "<group>";
@@ -806,6 +811,23 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		BD91038F2CF6166800BBCCAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD91038E2CF6166800BBCCAE /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD9103912CF6166800BBCCAE /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				BD91038F2CF6166800BBCCAE /* View */,
+				BD9103902CF6166800BBCCAE /* SplashController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		BDCA41B42CF35AC0005EECF6 = {
 			isa = PBXGroup;
 			children = (
@@ -1044,9 +1066,11 @@
 				BD9103612CF6149D00BBCCAE /* AuthAPIEndPoint.swift in Sources */,
 				08B191612CF430E70057BC04 /* PPProgressView.swift in Sources */,
 				083A25B32CF362670099B58E /* Requestable.swift in Sources */,
+				BD9103932CF6166800BBCCAE /* SplashController.swift in Sources */,
 				08B1916A2CF434B80057BC04 /* SignUpStep1Controller.swift in Sources */,
 				BD9103882CF614A900BBCCAE /* GetHomeInfoResponse.swift in Sources */,
 				BD9103622CF6149D00BBCCAE /* LoginResponseDTO.swift in Sources */,
+				BD9103922CF6166800BBCCAE /* SplashView.swift in Sources */,
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
 				08B191AC2CF5BF9D0057BC04 /* AgeSelectedController.swift in Sources */,
