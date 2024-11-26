@@ -43,6 +43,32 @@ final class SignUpStep4View: UIView {
         return label
     }()
     
+    private let genderTitleLabel: PPLabel = {
+        let label = PPLabel(style: .regular, fontSize: 13)
+        label.text = "성별"
+        return label
+    }()
+    
+    let genderSegmentControl: PPSegmentedControl = {
+        let control = PPSegmentedControl(
+            type: .base,
+            segments: ["남성", "여성", "선택안함"],
+            selectedSegmentIndex: 2
+        )
+        return control
+    }()
+    
+    private let ageTitleLabel: PPLabel = {
+        let label = PPLabel(style: .regular, fontSize: 13)
+        label.text = "나이"
+        return label
+    }()
+    
+    let ageSelectedButton: AgeSelectedButton = {
+        let button = AgeSelectedButton()
+        return button
+    }()
+    
     let skipButton: PPButton = {
         let button = PPButton(style: .secondary, text: "건너뛰기")
         return button
@@ -108,6 +134,33 @@ private extension SignUpStep4View {
             make.top.equalTo(subTitleLabel.snp.bottom)
             make.leading.equalToSuperview().inset(20)
             make.height.equalTo(18)
+        }
+        
+        self.addSubview(genderTitleLabel)
+        genderTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(subTitleDescriptionLabel.snp.bottom).offset(36)
+            make.leading.equalToSuperview().inset(20)
+            make.height.equalTo(20)
+        }
+        
+        self.addSubview(genderSegmentControl)
+        genderSegmentControl.snp.makeConstraints { make in
+            make.top.equalTo(genderTitleLabel.snp.bottom).offset(8)
+            make.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        self.addSubview(ageTitleLabel)
+        ageTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(genderSegmentControl.snp.bottom).offset(36)
+            make.leading.equalToSuperview().inset(20)
+            make.height.equalTo(20)
+        }
+        
+        self.addSubview(ageSelectedButton)
+        ageSelectedButton.snp.makeConstraints { make in
+            make.top.equalTo(ageTitleLabel.snp.bottom).offset(8)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(72)
         }
         
         self.addSubview(buttonStackView)

@@ -44,5 +44,26 @@ private extension SignUpStep4Controller {
 // MARK: - Methods
 extension SignUpStep4Controller {
     func bind(reactor: Reactor) {
+        mainView.genderSegmentControl.rx.selectedSegmentIndex
+            .map({ index in
+                Reactor.Action.selectedGender(index: index)
+            })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        mainView.ageSelectedButton.button.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                Reactor.Action.ageSelectedButtonTapped(controller: owner)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        reactor.state
+            .withUnretained(self)
+            .subscribe { (owner, state) in
+                owner.mainView.ageSelectedButton.injection(with: .init(age: state.age))
+            }
+            .disposed(by: disposeBag)
     }
 }
