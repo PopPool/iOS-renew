@@ -88,8 +88,6 @@
 		BD8E263A2CF4BA09001FDFE9 /* SignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E26392CF4BA09001FDFE9 /* SignUpUseCase.swift */; };
 		BD8E263C2CF4BA44001FDFE9 /* TryLoginUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E263B2CF4BA44001FDFE9 /* TryLoginUseCaseImpl.swift */; };
 		BD8E263E2CF4BA52001FDFE9 /* SignUpUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E263D2CF4BA52001FDFE9 /* SignUpUseCaseImpl.swift */; };
-		BD8E26412CF4C43D001FDFE9 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E26402CF4C43D001FDFE9 /* SplashView.swift */; };
-		BD8E26432CF4C928001FDFE9 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E26422CF4C928001FDFE9 /* SplashController.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
 		BDCA41C32CF35AC0005EECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */; };
 		BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C42CF35AC0005EECF6 /* TestViewController.swift */; };
@@ -208,8 +206,6 @@
 		BD8E26392CF4BA09001FDFE9 /* SignUpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUseCase.swift; sourceTree = "<group>"; };
 		BD8E263B2CF4BA44001FDFE9 /* TryLoginUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryLoginUseCaseImpl.swift; sourceTree = "<group>"; };
 		BD8E263D2CF4BA52001FDFE9 /* SignUpUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUseCaseImpl.swift; sourceTree = "<group>"; };
-		BD8E26402CF4C43D001FDFE9 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		BD8E26422CF4C928001FDFE9 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA41C22CF35AC0005EECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,7 +285,7 @@
 			children = (
 				083A258B2CF361F90099B58E /* Convention */,
 				08B1915F2CF430D40057BC04 /* Components */,
-				083A25C22CF3635B0099B58E /* Scene */,
+				083A25C22CF3635B0099B58E /* Secne */,
 				083A259D2CF3620B0099B58E /* Utills */,
 				08B191332CF366500057BC04 /* Extension */,
 			);
@@ -443,14 +439,13 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
-		083A25C22CF3635B0099B58E /* Scene */ = {
+		083A25C22CF3635B0099B58E /* Secne */ = {
 			isa = PBXGroup;
 			children = (
-				BD8E263F2CF4C3FD001FDFE9 /* Splash */,
 				083A25C42CF363A10099B58E /* SignUp */,
 				083A25C32CF363650099B58E /* Login */,
 			);
-			path = Scene;
+			path = Secne;
 			sourceTree = "<group>";
 		};
 		083A25C32CF363650099B58E /* Login */ = {
@@ -635,23 +630,6 @@
 				BD8E263D2CF4BA52001FDFE9 /* SignUpUseCaseImpl.swift */,
 			);
 			path = UseCase;
-			sourceTree = "<group>";
-		};
-		BD8E263F2CF4C3FD001FDFE9 /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				BD8E26442CF4C951001FDFE9 /* View */,
-				BD8E26422CF4C928001FDFE9 /* SplashController.swift */,
-			);
-			path = Splash;
-			sourceTree = "<group>";
-		};
-		BD8E26442CF4C951001FDFE9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BD8E26402CF4C43D001FDFE9 /* SplashView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		BDCA41B42CF35AC0005EECF6 = {
@@ -892,7 +870,6 @@
 				08B1916A2CF434B80057BC04 /* SignUpStep1Controller.swift in Sources */,
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
-				BD8E26412CF4C43D001FDFE9 /* SplashView.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
 				BD5E67D62CF4984F001837A7 /* Secrets.swift in Sources */,
 				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
@@ -915,7 +892,6 @@
 				BD8E263A2CF4BA09001FDFE9 /* SignUpUseCase.swift in Sources */,
 				BD8E26272CF4AF60001FDFE9 /* SignUpAPIEndpoint.swift in Sources */,
 				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
-				BD8E26432CF4C928001FDFE9 /* SplashController.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
 				BD8E26352CF4B10F001FDFE9 /* RequestTokenInterceptor.swift in Sources */,
 				083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */,
