@@ -34,6 +34,8 @@ final class LoginReactor: Reactor {
     private let kakaoLoginService = KakaoLoginService()
     private let appleLoginService = AppleLoginService()
     private let authApiUseCase = TryLoginUseCaseImpl(repository: AuthRepositoryImpl(provider: ProviderImpl()))
+    private let keyChainService = KeyChainService()
+    private let userDefaultService = UserDefaultService()
     
     // MARK: - init
     init() {
@@ -71,11 +73,20 @@ final class LoginReactor: Reactor {
             .flatMap { owner, response in
                 owner.authApiUseCase.execute(userCredential: response, socialType: "kakao")
             }
-            .map { loginResponse in
-                if loginResponse.isRegisteredUser {
-                    return .moveToHomeScene(controller: controller)
-                } else {
-                    return .moveToSignUpScene(controller: controller)
+            .withUnretained(self)
+            .map { (owner, loginResponse) in
+                owner.userDefaultService.save(key: "userID", value: loginResponse.userId)
+                owner.userDefaultService.save(key: "socialType", value: loginResponse.socialType)
+                let accessTokenResult = owner.keyChainService.saveToken(type: .accessToken, value: loginResponse.accessToken)
+                switch accessTokenResult {
+                case .success(let success):
+                    if loginResponse.isRegisteredUser {
+                        return .moveToHomeScene(controller: controller)
+                    } else {
+                        return .moveToSignUpScene(controller: controller)
+                    }
+                case .failure(let failure):
+                    return .loadView
                 }
             }
     }
@@ -86,11 +97,20 @@ final class LoginReactor: Reactor {
             .flatMap { owner, response in
                 owner.authApiUseCase.execute(userCredential: response, socialType: "apple")
             }
-            .map { loginResponse in
-                if loginResponse.isRegisteredUser {
-                    return .moveToHomeScene(controller: controller)
-                } else {
-                    return .moveToSignUpScene(controller: controller)
+            .withUnretained(self)
+            .map { (owner, loginResponse) in
+                owner.userDefaultService.save(key: "userID", value: loginResponse.userId)
+                owner.userDefaultService.save(key: "socialType", value: loginResponse.socialType)
+                let accessTokenResult = owner.keyChainService.saveToken(type: .accessToken, value: loginResponse.accessToken)
+                switch accessTokenResult {
+                case .success(let success):
+                    if loginResponse.isRegisteredUser {
+                        return .moveToHomeScene(controller: controller)
+                    } else {
+                        return .moveToSignUpScene(controller: controller)
+                    }
+                case .failure(let failure):
+                    return .loadView
                 }
             }
     }

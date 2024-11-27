@@ -19,7 +19,7 @@ final class SignUpStep4Controller: BaseViewController, View {
     // MARK: - Properties
     var disposeBag = DisposeBag()
     
-    private var mainView = SignUpStep4View()
+    var mainView = SignUpStep4View()
 }
 
 // MARK: - Life Cycle
@@ -63,6 +63,11 @@ extension SignUpStep4Controller {
             .withUnretained(self)
             .subscribe { (owner, state) in
                 owner.mainView.ageSelectedButton.injection(with: .init(age: state.age))
+                if state.age == nil {
+                    owner.mainView.completeButton.isEnabled = false
+                } else {
+                    owner.mainView.completeButton.isEnabled = true
+                }
             }
             .disposed(by: disposeBag)
     }

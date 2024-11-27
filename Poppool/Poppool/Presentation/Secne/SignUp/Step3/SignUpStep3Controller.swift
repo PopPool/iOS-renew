@@ -73,6 +73,7 @@ extension SignUpStep3Controller {
             .withUnretained(self)
             .subscribe { (owner, state) in
                 owner.sections = state.sections
+                owner.mainView.completeButton.isEnabled = !state.selectedCategory.isEmpty
                 owner.mainView.categoryCollectionView.reloadData()
             }
             .disposed(by: disposeBag)

@@ -39,6 +39,8 @@ final class SignUpStep2Reactor: Reactor {
     
     var initialState: State
     var disposeBag = DisposeBag()
+    private let signUpAPIUseCase = SignUpUseCaseImpl(repository: SignUpRepositoryImpl(provider: ProviderImpl()))
+    private var nickName: String?
     
     // MARK: - init
     init() {
@@ -55,7 +57,11 @@ final class SignUpStep2Reactor: Reactor {
         case .endNickNameInput:
             return Observable.just(.setActiveState(isActive: false))
         case .duplicatedButtonTapped:
-            return Observable.just(.setDuplicatedSet(isDuplicated: false))
+            let nickName = nickName ?? ""
+            return signUpAPIUseCase.checkNickName(nickName: nickName)
+                .map { isDuplicated in
+                    return .setDuplicatedSet(isDuplicated: isDuplicated)
+                }
         case .clearButtonTapped:
             return Observable.just(.resetNickName)
         }
@@ -66,6 +72,7 @@ final class SignUpStep2Reactor: Reactor {
         switch mutation {
         case .setNickNameState(let text):
             newState.nickName = text
+            nickName = text
             newState.nickNameState = checkNickNameState(text: newState.nickName, isActive: newState.isActiveInput)
         case .setActiveState(let isActive):
             newState.isActiveInput = isActive
