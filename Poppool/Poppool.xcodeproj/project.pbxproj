@@ -301,6 +301,7 @@
 		BDCA41DD2CF35AC1005EECF6 /* PoppoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoppoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA41E12CF35AC1005EECF6 /* PoppoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppoolUITests.swift; sourceTree = "<group>"; };
 		BDCA41E32CF35AC1005EECF6 /* PoppoolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppoolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BDE30CE02CF87A9700C21E08 /* Poppool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poppool.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -877,6 +878,7 @@
 		BDCA41BF2CF35AC0005EECF6 /* Poppool */ = {
 			isa = PBXGroup;
 			children = (
+				BDE30CE02CF87A9700C21E08 /* Poppool.entitlements */,
 				083A256B2CF361190099B58E /* Application */,
 				083A256D2CF3613C0099B58E /* Presentation */,
 				083A259E2CF362310099B58E /* Domain */,
@@ -1358,9 +1360,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Poppool/Poppool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W5QTRMS954;
+				DEVELOPMENT_TEAM = 2U86LHQK8Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Poppool/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1373,7 +1376,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.Poppool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PopPool.PopPool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1390,9 +1393,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Poppool/Poppool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W5QTRMS954;
+				DEVELOPMENT_TEAM = 2U86LHQK8Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Poppool/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1405,7 +1409,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.poppool.Poppool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PopPool.PopPool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
