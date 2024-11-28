@@ -105,12 +105,7 @@ extension HomePopUpViewController: UICollectionViewDelegate, UICollectionViewDat
             date: "날짜 날짜"))
         
         cell.bookmarkButton.rx.tap
-            .map { [weak self] in
-                if let currentIndex = self?.reactor.currentState.toggledBookmark.firstIndex(where: { $0.id == itemId }) {
-                    return Reactor.Action.bookmarkButtonTapped(indexPath: IndexPath(item: currentIndex, section: 0))
-                }
-                return Reactor.Action.bookmarkButtonTapped(indexPath: indexPath)
-            }
+            .map { Reactor.Action.bookmarkButtonTapped(indexPath: indexPath) }
             .bind(to: reactor.action)
             .disposed(by: cell.disposeBag)
         
