@@ -25,13 +25,15 @@ final class SignUpStep3Reactor: Reactor {
     
     struct State {
         var sections: [any Sectionable] = []
-        var selectedCategory: [String] = []
+        var selectedCategory: [Int64] = []
+        var selectedCategoryTitle: [String] = []
     }
     
     // MARK: - properties
     
     var initialState: State
     var disposeBag = DisposeBag()
+    private let signUpAPIUseCase = SignUpUseCaseImpl(repository: SignUpRepositoryImpl(provider: ProviderImpl()))
     
     lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         UICollectionViewCompositionalLayout { [weak self] section, env in
@@ -47,20 +49,7 @@ final class SignUpStep3Reactor: Reactor {
         }
     }()
     
-    var categorySection: TagSection = TagSection(inputDataList: [
-        .init(title: "게임", isSelected: false),
-        .init(title: "라이프스타일", isSelected: false),
-        .init(title: "반려동물", isSelected: false),
-        .init(title: "뷰티", isSelected: false),
-        .init(title: "스포츠", isSelected: false),
-        .init(title: "애니메이션", isSelected: false),
-        .init(title: "엔터테인먼트", isSelected: false),
-        .init(title: "여행", isSelected: false),
-        .init(title: "예술", isSelected: false),
-        .init(title: "음식/요리", isSelected: false),
-        .init(title: "키즈", isSelected: false),
-        .init(title: "패션", isSelected: false)
-    ])
+    private var categorySection: TagSection = TagSection(inputDataList: [])
     
     // MARK: - init
     init() {
@@ -71,7 +60,14 @@ final class SignUpStep3Reactor: Reactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .viewWillAppear:
-            return Observable.just(.loadView)
+            return signUpAPIUseCase.fetchCategoryList()
+                .withUnretained(self)
+                .map { (owner, categorys) in
+                    owner.categorySection.inputDataList = categorys.map({ category in
+                        return .init(title: category.category, isSelected: false, id: category.categoryId)
+                    })
+                    return .loadView
+                }
         case .selectedTag(let indexPath):
             let selectedCount = categorySection.inputDataList.map { $0.isSelected }.filter { $0 == true }.count
             if selectedCount >= 5 {
@@ -93,7 +89,8 @@ final class SignUpStep3Reactor: Reactor {
         switch mutation {
         case .loadView:
             newState.sections = getSection()
-            newState.selectedCategory = categorySection.inputDataList.filter { $0.isSelected == true }.compactMap { $0.title }
+            newState.selectedCategory = categorySection.inputDataList.filter { $0.isSelected == true }.compactMap { $0.id }
+            newState.selectedCategoryTitle = categorySection.inputDataList.filter { $0.isSelected == true }.compactMap { $0.title }
         }
         return newState
     }

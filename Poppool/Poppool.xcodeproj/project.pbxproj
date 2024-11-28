@@ -96,6 +96,11 @@
 		08B191BC2CF609AE0057BC04 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 08B191BB2CF609AE0057BC04 /* RxKakaoSDKAuth */; };
 		08B191BE2CF609AE0057BC04 /* RxKakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 08B191BD2CF609AE0057BC04 /* RxKakaoSDKUser */; };
 		08B191C22CF615CA0057BC04 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191C12CF615CA0057BC04 /* Secrets.swift */; };
+		08DC61F32CF75037002A2F44 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC61F22CF75037002A2F44 /* KeyChainService.swift */; };
+		08DC61F52CF765B5002A2F44 /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC61F42CF765B5002A2F44 /* UserDefaultService.swift */; };
+		08DC61F82CF76843002A2F44 /* SignUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC61F72CF76843002A2F44 /* SignUpCompleteView.swift */; };
+		08DC61FA2CF7684F002A2F44 /* SignUpCompleteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC61F92CF7684F002A2F44 /* SignUpCompleteController.swift */; };
+		08DC61FC2CF76862002A2F44 /* SignUpCompleteReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC61FB2CF76862002A2F44 /* SignUpCompleteReactor.swift */; };
 		BD9103612CF6149D00BBCCAE /* AuthAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91034E2CF6149D00BBCCAE /* AuthAPIEndPoint.swift */; };
 		BD9103622CF6149D00BBCCAE /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91034F2CF6149D00BBCCAE /* LoginResponseDTO.swift */; };
 		BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103512CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift */; };
@@ -249,6 +254,11 @@
 		08B191B52CF6092B0057BC04 /* AppleLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleLoginService.swift; sourceTree = "<group>"; };
 		08B191B72CF6092F0057BC04 /* AuthServiceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceable.swift; sourceTree = "<group>"; };
 		08B191C12CF615CA0057BC04 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		08DC61F22CF75037002A2F44 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		08DC61F42CF765B5002A2F44 /* UserDefaultService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
+		08DC61F72CF76843002A2F44 /* SignUpCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteView.swift; sourceTree = "<group>"; };
+		08DC61F92CF7684F002A2F44 /* SignUpCompleteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteController.swift; sourceTree = "<group>"; };
+		08DC61FB2CF76862002A2F44 /* SignUpCompleteReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteReactor.swift; sourceTree = "<group>"; };
 		BD91034E2CF6149D00BBCCAE /* AuthAPIEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPIEndPoint.swift; sourceTree = "<group>"; };
 		BD91034F2CF6149D00BBCCAE /* LoginResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
 		BD9103512CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerPopUpStoreDTO.swift; sourceTree = "<group>"; };
@@ -434,6 +444,7 @@
 		083A259F2CF362360099B58E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BD91035A2CF6149D00BBCCAE /* Repository */,
 				BD9103602CF6149D00BBCCAE /* Network */,
 				083A25B12CF362670099B58E /* NetworkLayer */,
 			);
@@ -443,6 +454,8 @@
 		083A25A02CF3623C0099B58E /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				08DC61F42CF765B5002A2F44 /* UserDefaultService.swift */,
+				08DC61F22CF75037002A2F44 /* KeyChainService.swift */,
 				08B191B72CF6092F0057BC04 /* AuthServiceable.swift */,
 				08B191B52CF6092B0057BC04 /* AppleLoginService.swift */,
 				08B191B32CF609260057BC04 /* KakaoLoginService.swift */,
@@ -546,6 +559,7 @@
 				08B191802CF48A5C0057BC04 /* Step2 */,
 				08B191892CF49FDE0057BC04 /* Step3 */,
 				08B191922CF4A0E00057BC04 /* Step4 */,
+				08DC61F62CF76831002A2F44 /* SignUpComplete */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -726,6 +740,16 @@
 			path = AgeSelectedModal;
 			sourceTree = "<group>";
 		};
+		08DC61F62CF76831002A2F44 /* SignUpComplete */ = {
+			isa = PBXGroup;
+			children = (
+				08DC61F72CF76843002A2F44 /* SignUpCompleteView.swift */,
+				08DC61F92CF7684F002A2F44 /* SignUpCompleteController.swift */,
+				08DC61FB2CF76862002A2F44 /* SignUpCompleteReactor.swift */,
+			);
+			path = SignUpComplete;
+			sourceTree = "<group>";
+		};
 		BD9103502CF6149D00BBCCAE /* AuthAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -773,7 +797,6 @@
 			children = (
 				BD9103502CF6149D00BBCCAE /* AuthAPI */,
 				BD9103562CF6149D00BBCCAE /* HomeAPI */,
-				BD91035A2CF6149D00BBCCAE /* Repository */,
 				BD91035F2CF6149D00BBCCAE /* SignUpAPI */,
 			);
 			path = Network;
@@ -1066,6 +1089,7 @@
 				083A25B42CF362670099B58E /* Responsable.swift in Sources */,
 				08B191782CF442230057BC04 /* UIImage+.swift in Sources */,
 				BD9103682CF6149D00BBCCAE /* AuthRepositoryImpl.swift in Sources */,
+				08DC61F82CF76843002A2F44 /* SignUpCompleteView.swift in Sources */,
 				BD9103612CF6149D00BBCCAE /* AuthAPIEndPoint.swift in Sources */,
 				08B191612CF430E70057BC04 /* PPProgressView.swift in Sources */,
 				083A25B32CF362670099B58E /* Requestable.swift in Sources */,
@@ -1080,6 +1104,7 @@
 				08B1919C2CF4A77C0057BC04 /* TagSection.swift in Sources */,
 				BD91038B2CF614A900BBCCAE /* AuthRepository.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
+				08DC61F32CF75037002A2F44 /* KeyChainService.swift in Sources */,
 				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
 				08B191B82CF6092F0057BC04 /* AuthServiceable.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
@@ -1093,6 +1118,7 @@
 				BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */,
 				BD91038A2CF614A900BBCCAE /* LoginResponse.swift in Sources */,
 				083A25BF2CF362770099B58E /* Logger.swift in Sources */,
+				08DC61FC2CF76862002A2F44 /* SignUpCompleteReactor.swift in Sources */,
 				BD9103832CF614A900BBCCAE /* SignUpUseCaseImpl.swift in Sources */,
 				083A259A2CF362090099B58E /* SectionDecorationItem.swift in Sources */,
 				BD9103892CF614A900BBCCAE /* HomePopUp.swift in Sources */,
@@ -1103,7 +1129,9 @@
 				BD9103642CF6149D00BBCCAE /* GetHomeInfoResponseDTO.swift in Sources */,
 				08B191B42CF609260057BC04 /* KakaoLoginService.swift in Sources */,
 				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
+				08DC61FA2CF7684F002A2F44 /* SignUpCompleteController.swift in Sources */,
 				08B191A42CF5A7030057BC04 /* PPSegmentedControl.swift in Sources */,
+				08DC61F52CF765B5002A2F44 /* UserDefaultService.swift in Sources */,
 				08B191AE2CF5BFA60057BC04 /* AgeSelectedView.swift in Sources */,
 				BD9103842CF614A900BBCCAE /* TryLoginUseCase.swift in Sources */,
 				08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */,

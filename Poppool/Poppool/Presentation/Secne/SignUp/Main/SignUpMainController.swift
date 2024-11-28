@@ -137,12 +137,81 @@ extension SignUpMainController {
             }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
+        
+        // step4 button tap 이벤트
+        step4Controller.mainView.completeButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                return Reactor.Action.step4ButtonTapped(controller: owner)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // step4 Skip button tap 이벤트
+        step4Controller.mainView.skipButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                return Reactor.Action.step4SkipButtonTapped(controller: owner)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+
+        // step1 Terms 이벤트
+        step1Controller.reactor?.state
+            .map({ (state) in
+                let isMarketingAgree = state.selectedIndex.contains(4)
+                return Reactor.Action.changeTerms(isMarketingAgree: isMarketingAgree)
+            })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // step2 nickName 이벤트
+        step2Controller.reactor?.state
+            .map({ state in
+                return Reactor.Action.changeNickName(nickName: state.nickName)
+            })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // step3 category 이벤트
+        step3Controller.reactor?.state
+            .map({ state in
+                return Reactor.Action.changeCategory(categorys: state.selectedCategory, categoryTitles: state.selectedCategoryTitle)
+            })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // step4 gender 이벤트
+        step4Controller.reactor?.state
+            .map({ state in
+                let gender =  state.selectedGenderIndex == 0
+                    ? "남성"
+                    : state.selectedGenderIndex == 1 ? "여성" : "선택암함"
+                return Reactor.Action.changeGender(gender: gender)
+            })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        // step4 age 이벤트
+        step4Controller.reactor?.state
+            .map({ state in
+                return Reactor.Action.changeAge(age: state.age)
+            })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
 
         
         reactor.state
             .withUnretained(self)
             .subscribe { (owner, state) in
-                
+                if state.currentIndex == 0 {
+                    owner.mainView.headerView.backButton.isHidden = true
+                } else {
+                    owner.mainView.headerView.backButton.isHidden = false
+                }
+                owner.step3Controller.mainView.setNickName(nickName: state.nickName)
+                owner.step4Controller.mainView.setNickName(nickName: state.nickName)
             }
             .disposed(by: disposeBag)
     }
