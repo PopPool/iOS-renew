@@ -15,7 +15,7 @@ protocol AuthServiceable: AnyObject {
     func fetchUserCredential() -> Observable<AuthServiceResponse>
 }
 
-struct AuthServiceResponse {
+struct AuthServiceResponse: Encodable {
     var idToken: String?
     var authorizationCode: String?
     var kakaoUserId: Int64?

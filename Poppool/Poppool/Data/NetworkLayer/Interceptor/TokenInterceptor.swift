@@ -11,12 +11,22 @@ import RxSwift
 
 final class TokenInterceptor: RequestInterceptor {
     
-    private var disposeBag = DisposeBag()
-    
     func adapt(
         _ urlRequest: URLRequest,
         for session: Session,
         completion: @escaping (Result<URLRequest, any Error>) -> Void) {
+            Logger.log(message: "TokenInterceptor Adapt Token", category: .network)
+            let keyChainService = KeyChainService()
+            var urlRequest = urlRequest
+            let accessTokenResult = keyChainService.fetchToken(type: .accessToken)
+            switch accessTokenResult {
+            case .success(let accessToken):
+                urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+                completion(.success(urlRequest))
+            case .failure(let failure):
+                completion(.failure(failure))
+            }
         }
     
     func retry(
@@ -26,5 +36,6 @@ final class TokenInterceptor: RequestInterceptor {
         completion: @escaping (RetryResult) -> Void
     ) {
         Logger.log(message: "TokenInterceptor Retry Start", category: .network)
+        completion(.doNotRetry)
     }
 }

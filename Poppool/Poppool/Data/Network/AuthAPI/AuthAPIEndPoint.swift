@@ -21,7 +21,8 @@ struct PopPoolAPIEndPoint {
             baseURL: Secrets.popPoolBaseUrl.rawValue,
             path: "/auth/\(path)",
             method: .post,
-            bodyParameters: userCredential
+            bodyParameters: userCredential,
+            headers: ["Content-Type": "application/json"]
         )
     }
 }
