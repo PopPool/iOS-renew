@@ -78,14 +78,15 @@ final class LoginReactor: Reactor {
                 owner.userDefaultService.save(key: "userID", value: loginResponse.userId)
                 owner.userDefaultService.save(key: "socialType", value: loginResponse.socialType)
                 let accessTokenResult = owner.keyChainService.saveToken(type: .accessToken, value: loginResponse.accessToken)
+                let refreshTokenResult = owner.keyChainService.saveToken(type: .refreshToken, value: loginResponse.refreshToken)
                 switch accessTokenResult {
-                case .success(let success):
+                case .success:
                     if loginResponse.isRegisteredUser {
                         return .moveToHomeScene(controller: controller)
                     } else {
                         return .moveToSignUpScene(controller: controller)
                     }
-                case .failure(let failure):
+                case .failure:
                     return .loadView
                 }
             }
@@ -102,14 +103,15 @@ final class LoginReactor: Reactor {
                 owner.userDefaultService.save(key: "userID", value: loginResponse.userId)
                 owner.userDefaultService.save(key: "socialType", value: loginResponse.socialType)
                 let accessTokenResult = owner.keyChainService.saveToken(type: .accessToken, value: loginResponse.accessToken)
+                let refreshTokenResult = owner.keyChainService.saveToken(type: .refreshToken, value: loginResponse.refreshToken)
                 switch accessTokenResult {
-                case .success(let success):
+                case .success:
                     if loginResponse.isRegisteredUser {
                         return .moveToHomeScene(controller: controller)
                     } else {
                         return .moveToSignUpScene(controller: controller)
                     }
-                case .failure(let failure):
+                case .failure:
                     return .loadView
                 }
             }
