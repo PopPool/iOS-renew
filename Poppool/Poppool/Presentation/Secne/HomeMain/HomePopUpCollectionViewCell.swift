@@ -23,6 +23,7 @@ final class HomePopUpCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "lasso")
         imageView.layer.cornerRadius = 4
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     
@@ -58,8 +59,13 @@ final class HomePopUpCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
     // MARK: - init
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -71,7 +77,7 @@ final class HomePopUpCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with item: CellItem) {
-        let image = item.isBookmarked ? UIImage(systemName: "bookmark") : UIImage(systemName: "bookmark.fill")
+        let image = item.isBookmarked ? UIImage(systemName: "bookmark.fill") : UIImage(systemName: "bookmark")
         bookmarkButton.setBackgroundImage(image, for: .normal)
     }
 }

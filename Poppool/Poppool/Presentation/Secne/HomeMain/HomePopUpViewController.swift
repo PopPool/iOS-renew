@@ -17,8 +17,6 @@ final class HomePopUpViewController: BaseViewController, View {
     
     // MARK: - Properties
     var disposeBag = DisposeBag()
-    let bookmarkRelay = PublishRelay<Int>()
-    
     let reactor = HomePopUpReactor()
     
     private var mainView = HomePopUpView()
@@ -58,10 +56,22 @@ private extension HomePopUpViewController {
 extension HomePopUpViewController {
     func bind(reactor: Reactor) {
         
+        Observable.just(Reactor.Action.viewWillAppear)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         mainView.header.backButton.rx.tap
             .debug("header backButton이 눌렸습니다.")
             .map { Reactor.Action.backButtonTapped }
             .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        reactor.state
+            .map { $0.toggledBookmark }
+            .withUnretained(self)
+            .subscribe(onNext: { (owner, bookmarks) in
+                owner.mainView.collectionView.reloadData()
+            })
             .disposed(by: disposeBag)
         
         reactor.state
@@ -77,18 +87,33 @@ extension HomePopUpViewController {
 
 extension HomePopUpViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return reactor.currentState.toggledBookmark.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomePopUpCollectionViewCell.identifiers, for: indexPath) as? HomePopUpCollectionViewCell else { return UICollectionViewCell() }
         
+        let item = reactor.currentState.toggledBookmark[indexPath.item]
+        let itemId = item.id
+        
+        cell.configure(with: item)
         cell.injection(with: HomePopUpCollectionViewCell.Input(
             image: UIImage(systemName: "photo"),
             category: "카테고리 더미",
             title: "팝업 이름팝업 이름팝업 이름팝업 이름팝업 이름팝업 이름팝업 이름팝업 이름",
             location: "팝업 지역 정보",
             date: "날짜 날짜"))
+        
+        cell.bookmarkButton.rx.tap
+            .map { [weak self] in
+                if let currentIndex = self?.reactor.currentState.toggledBookmark.firstIndex(where: { $0.id == itemId }) {
+                    return Reactor.Action.bookmarkButtonTapped(indexPath: IndexPath(item: currentIndex, section: 0))
+                }
+                return Reactor.Action.bookmarkButtonTapped(indexPath: indexPath)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: cell.disposeBag)
+        
         return cell
     }
 }
