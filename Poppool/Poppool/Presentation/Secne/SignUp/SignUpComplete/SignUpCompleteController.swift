@@ -44,6 +44,14 @@ private extension SignUpCompleteController {
 extension SignUpCompleteController {
     func bind(reactor: Reactor) {
         
+        mainView.bottomButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                Reactor.Action.completeButtonTapped(controller: owner)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         reactor.state
             .withUnretained(self)
             .subscribe { (owner, state) in

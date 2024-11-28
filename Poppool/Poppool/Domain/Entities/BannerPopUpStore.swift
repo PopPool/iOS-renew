@@ -8,7 +8,7 @@
 import Foundation
 
 struct BannerPopUpStore: Decodable {
-    var id: Int64
-    var name: String
-    var mainImageUrl: String
+    var id: Int64?
+    var name: String?
+    var mainImageUrl: String?
 }

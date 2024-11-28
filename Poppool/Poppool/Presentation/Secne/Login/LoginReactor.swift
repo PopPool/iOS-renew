@@ -59,7 +59,8 @@ final class LoginReactor: Reactor {
             signUpController.reactor = SignUpMainReactor()
             controller.navigationController?.pushViewController(signUpController, animated: true)
         case .moveToHomeScene(let controller):
-            let homeTabbar = BaseViewController()
+            let homeTabbar = HomeController()
+            homeTabbar.reactor = HomeReactor()
             controller.view.window?.rootViewController = homeTabbar
         case .loadView:
             print(#function)
