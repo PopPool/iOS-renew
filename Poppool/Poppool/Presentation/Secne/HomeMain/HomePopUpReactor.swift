@@ -27,7 +27,7 @@ final class HomePopUpReactor: Reactor {
     
     struct State {
         var dismissed: Bool = false
-        var toggledBookmark: [CellItem] = []
+        var cellViewModel: [CellViewModel] = []
     }
     
     // MARK: - properties
@@ -60,11 +60,23 @@ final class HomePopUpReactor: Reactor {
             newState.dismissed = true
             
         case .loadView(let items):
-            newState.toggledBookmark = items
+            newState.cellViewModel = displayRank(items: items)
             
         case .toggleBookmark(let indexPath):
-            newState.toggledBookmark[indexPath.item].isBookmarked.toggle()
+            var updatedVM = state.cellViewModel
+            updatedVM[indexPath.row].item.isBookmarked.toggle()
+            newState.cellViewModel = updatedVM
         }
         return newState
+    }
+    
+    private func displayRank(items: [CellItem]) -> [CellViewModel] {
+        return items.enumerated().map { index, item in
+            if index < 4 {
+                return CellViewModel(item: item, type: .popular(rank: index + 1))
+            } else {
+                return CellViewModel(item: item, type: .curation)
+            }
+        }
     }
 }

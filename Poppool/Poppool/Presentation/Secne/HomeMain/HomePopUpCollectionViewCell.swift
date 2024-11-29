@@ -9,9 +9,19 @@ import UIKit
 import SnapKit
 import RxSwift
 
+struct CellViewModel {
+    var item: CellItem
+    var type: PopUpCellType
+}
+
 struct CellItem {
     let id: Int
     var isBookmarked: Bool
+}
+
+enum PopUpCellType {
+    case curation
+    case popular(rank: Int)
 }
 
 final class HomePopUpCollectionViewCell: UICollectionViewCell {
@@ -27,33 +37,46 @@ final class HomePopUpCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    var bookmarkButton: UIButton = {
+    let bookmarkButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "bookmark"), for: .normal)
         return button
     }()
     
-    var categoryLabel: UILabel = {
+    let rankView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 5
+        view.backgroundColor = .green
+        return view
+    }()
+    
+    let rankLabel: UILabel = {
+        let label = UILabel()
+        label.font = .KorFont(style: .regular, size: 11)
+        return label
+    }()
+    
+    let categoryLabel: UILabel = {
         let label = UILabel()
         label.font = .KorFont(style: .bold, size: 11)
         label.textColor = .blu500
         return label
     }()
     
-    var popUpNameLabel: UILabel = {
+    let popUpNameLabel: UILabel = {
         let label = UILabel()
         label.font = .KorFont(style: .bold, size: 14)
         label.numberOfLines = 2
         return label
     }()
     
-    var locationLabel: UILabel = {
+    let locationLabel: UILabel = {
         let label = UILabel()
         label.font = .KorFont(style: .regular, size: 11)
         return label
     }()
     
-    var dateLabel: UILabel = {
+    let dateLabel: UILabel = {
         let label = UILabel()
         label.font = .KorFont(style: .regular, size: 11)
         return label
@@ -131,6 +154,16 @@ private extension HomePopUpCollectionViewCell {
             make.size.equalTo(24)
         }
         
+        imageView.addSubview(rankView)
+        rankView.snp.makeConstraints { make in
+            make.leading.bottom.equalToSuperview().inset(12)
+            make.size.equalTo(CGSize(width: 37, height: 24))
+        }
+        
+        rankView.addSubview(rankLabel)
+        rankLabel.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+        }
     }
 }
 
@@ -141,6 +174,7 @@ extension HomePopUpCollectionViewCell: Inputable {
         var title: String?
         var location: String?
         var date: String?
+        var rank: PopUpCellType
     }
     
     func injection(with input: Input) {
@@ -149,5 +183,13 @@ extension HomePopUpCollectionViewCell: Inputable {
         popUpNameLabel.text = input.title
         locationLabel.text = input.location
         dateLabel.text = input.date
+        
+        switch input.rank {
+        case .curation:
+            rankView.isHidden = true
+        case .popular(let rank):
+            rankView.isHidden = false
+            rankLabel.text = "\(rank)위"
+        }
     }
 }
