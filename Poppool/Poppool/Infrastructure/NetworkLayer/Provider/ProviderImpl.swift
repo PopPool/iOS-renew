@@ -37,7 +37,7 @@ final class ProviderImpl: Provider {
                         Logger.log(message: "\(urlRequest) 응답 시간 :\(Date.now)", category: .network)
                         switch response.result {
                         case .success(let data):
-                            Logger.log(message: "응답 데이터: \(String(data: data, encoding: .utf8) ?? "데이터가 없습니다.")", category: .network)
+//                            Logger.log(message: "응답 데이터: \(String(data: data, encoding: .utf8) ?? "데이터가 없습니다.")", category: .network)
                             do {
                                 let decodedData = try JSONDecoder().decode(R.self, from: data)
                                 observer.onNext(decodedData)

@@ -59,4 +59,31 @@ enum NickNameState {
             return .blu500
         }
     }
+    
+    var isHiddenClearButton: Bool {
+        switch self {
+        case .lengthActive , .korAndEngActive, .duplicatedActive, .validateActive, .checkActive:
+            return false
+        default:
+            return true
+        }
+    }
+    
+    var isHiddenCheckButton: Bool {
+        switch self {
+        case .length , .korAndEng, .duplicated, .validate, .check:
+            return false
+        default:
+            return true
+        }
+    }
+    
+    var isShakeAnimation: Bool {
+        switch self {
+        case .lengthActive, .korAndEngActive, .duplicatedActive:
+            return true
+        default:
+            return false
+        }
+    }
 }

@@ -14,6 +14,8 @@ final class HomeView: UIView {
     // MARK: - Components
     let contentCollectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: .init())
+        view.contentInsetAdjustmentBehavior = .never
+        view.backgroundColor = .g50
         return view
     }()
     

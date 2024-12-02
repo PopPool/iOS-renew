@@ -15,7 +15,7 @@ final class HomeUseCaseImpl {
         userId: String,
         page: Int32?,
         size: Int32?,
-        sort: [String]?
+        sort: String?
     ) -> Observable<GetHomeInfoResponse> {
         return repository.fetchHome(request: .init(userId: userId, page: page, size: size, sort: sort))
     }
@@ -24,7 +24,7 @@ final class HomeUseCaseImpl {
         userId: String,
         page: Int32?,
         size: Int32?,
-        sort: [String]?
+        sort: String?
     ) -> Observable<GetHomeInfoResponse> {
         return repository.fetchCustomPopUp(request: .init(userId: userId, page: page, size: size, sort: sort))
     }
@@ -33,7 +33,7 @@ final class HomeUseCaseImpl {
         userId: String,
         page: Int32?,
         size: Int32?,
-        sort: [String]?
+        sort: String?
     ) -> Observable<GetHomeInfoResponse> {
         return repository.fetchNewPopUp(request: .init(userId: userId, page: page, size: size, sort: sort))
     }
@@ -42,7 +42,7 @@ final class HomeUseCaseImpl {
         userId: String,
         page: Int32?,
         size: Int32?,
-        sort: [String]?
+        sort: String?
     ) -> Observable<GetHomeInfoResponse> {
         return repository.fetchPopularPopUp(request: .init(userId: userId, page: page, size: size, sort: sort))
     }

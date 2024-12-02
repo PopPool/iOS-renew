@@ -57,19 +57,29 @@ extension SignUpCompleteController {
             .subscribe { (owner, state) in
                 let paragraphStyle = NSMutableParagraphStyle()
                 paragraphStyle.lineHeightMultiple = 1.3
+                paragraphStyle.alignment = .center
                 owner.mainView.nickNameLabel.attributedText = NSMutableAttributedString(
                     string: state.nickName,
                     attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle]
                 )
+                let categoryString = state.categoryTitles.enumerated()
+                    .map { "#\($0.element)" }
+                    .joined(separator: ", ")
                 
-                if state.categoryTitles.isEmpty {
-                    owner.mainView.descriptionStackView.isHidden = true
-                } else {
-                    let transformedString = state.categoryTitles.enumerated()
-                        .map { "#\($0.element)" }
-                        .joined(separator: ", ")
-                    owner.mainView.categoryLabel.text = transformedString
-                }
+                let attributedText = NSMutableAttributedString(
+                    string: categoryString,
+                    attributes: [
+                        .font: UIFont.KorFont(style: .bold, size: 15)!,
+                        .foregroundColor: UIColor.g600,
+                        NSAttributedString.Key.paragraphStyle: paragraphStyle
+                    ]
+                )
+                attributedText.append(NSAttributedString(string: "와 연관된 팝업스토어 정보를 안내해드릴게요.", attributes: [
+                    .font: UIFont.KorFont(style: .regular, size: 15)!,
+                    .foregroundColor: UIColor.g600,
+                    NSAttributedString.Key.paragraphStyle: paragraphStyle
+                ]))
+                owner.mainView.descriptionLabel.attributedText = attributedText
             }
             .disposed(by: disposeBag)
     }

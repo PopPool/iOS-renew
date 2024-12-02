@@ -18,7 +18,7 @@ final class HomeAPIRepository {
     }
     
     func fetchHome(request: HomeAPIRequestDTO) -> Observable<GetHomeInfoResponse> {
-        let endPoint = HomeAPIEndpoint.fetchNewPopUp(request: request)
+        let endPoint = HomeAPIEndpoint.fetchHome(request: request)
         return provider.requestData(with: endPoint, interceptor: tokenInterceptor).map({ $0.toDomain() })
     }
     

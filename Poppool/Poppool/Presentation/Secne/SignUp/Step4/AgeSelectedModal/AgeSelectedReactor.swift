@@ -50,7 +50,6 @@ final class AgeSelectedReactor: Reactor {
         var newState = state
         switch mutation {
         case .moveToRecentScene(let controller):
-            newState.selectedAge = nil
             controller.dismiss(animated: true)
         case .setSelectedAge(let selectedAge, let controller):
             newState.selectedAge = selectedAge

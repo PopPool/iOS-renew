@@ -85,5 +85,7 @@ private extension SignUpStep1View {
             make.bottom.equalToSuperview()
             make.height.equalTo(52)
         }
+        
+        terms3Button.righticonButton.isHidden = true
     }
 }

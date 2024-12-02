@@ -7,7 +7,12 @@
 
 import UIKit
 
+import RxSwift
+
 struct TagSection: Sectionable {
+    
+    var currentPage: PublishSubject<Int> = .init()
+    
     typealias CellType = TagSectionCell
     
     var inputDataList: [CellType.Input]
