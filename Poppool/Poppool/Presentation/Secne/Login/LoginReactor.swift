@@ -15,6 +15,7 @@ final class LoginReactor: Reactor {
     enum Action {
         case kakaoButtonTapped(controller: BaseViewController)
         case appleButtonTapped(controller: BaseViewController)
+        case guestButtonTapped(controller: BaseViewController)
     }
     
     enum Mutation {
@@ -49,6 +50,10 @@ final class LoginReactor: Reactor {
             return loginWithKakao(controller: controller)
         case .appleButtonTapped(let controller):
             return loginWithApple(controller: controller)
+        case .guestButtonTapped(let controller):
+            let _ = keyChainService.deleteToken(type: .accessToken)
+            let _ = keyChainService.deleteToken(type: .refreshToken)
+            return Observable.just(.moveToHomeScene(controller: controller))
         }
     }
     
@@ -59,8 +64,7 @@ final class LoginReactor: Reactor {
             signUpController.reactor = SignUpMainReactor()
             controller.navigationController?.pushViewController(signUpController, animated: true)
         case .moveToHomeScene(let controller):
-            let homeTabbar = HomeController()
-            homeTabbar.reactor = HomeReactor()
+            let homeTabbar = WaveTabBarController()
             controller.view.window?.rootViewController = homeTabbar
         case .loadView:
             print(#function)

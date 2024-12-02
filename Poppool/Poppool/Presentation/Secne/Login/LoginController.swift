@@ -43,6 +43,14 @@ private extension LoginController {
 // MARK: - Methods
 extension LoginController {
     func bind(reactor: Reactor) {
+        mainView.guestButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                Reactor.Action.guestButtonTapped(controller: owner)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         mainView.kakaoButton.rx.tap
             .withUnretained(self)
             .map { (owner, _) in

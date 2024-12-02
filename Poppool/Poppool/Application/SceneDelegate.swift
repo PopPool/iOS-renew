@@ -21,16 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         
-        let rootViewController = SignUpCompleteController()
-        rootViewController.reactor = SignUpCompleteReactor(nickName: "하이", categoryTitles: [
-            "카테고리타이틀",
-            "카테고리타이틀",
-            "카테고리타이틀",
-            "카테고리타이틀",
-            "카테고리타이틀"
-        ])
-//        let rootViewController = SignUpMainController()
-//        rootViewController.reactor = SignUpMainReactor()
+        let rootViewController = LoginController()
+        rootViewController.reactor = LoginReactor()
         
 //        let rootViewController = HomeController()
 //        rootViewController.reactor = HomeReactor()

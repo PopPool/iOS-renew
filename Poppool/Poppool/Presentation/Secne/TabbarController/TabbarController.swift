@@ -21,9 +21,9 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupWaveTabBar()
-        setUp()
         addSomeTabItems()
+        setUp()
+        setupWaveTabBar()
         delegate = self
     }
     
@@ -100,10 +100,6 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         waveLayer.path = path.cgPath
     }
 
-
-
-
-    
     private func updateDotPosition(animated: Bool) {
         guard let items = tabBar.items else { return }
         let tabWidth = tabBar.bounds.width / CGFloat(items.count)
@@ -130,7 +126,7 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func setUp() {
-        self.selectedIndex = 0
+        self.selectedIndex = 1
         self.tabBar.barTintColor = .g200
         self.tabBar.tintColor = .blu500
     }
@@ -182,11 +178,11 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         )
         
         // 네비게이션 컨트롤러 설정
-        let village = UINavigationController(rootViewController: mapController)
-        let community = UINavigationController(rootViewController: homeController)
-        let store = UINavigationController(rootViewController: myPageController)
+        let map = UINavigationController(rootViewController: mapController)
+        let home = UINavigationController(rootViewController: homeController)
+        let myPage = UINavigationController(rootViewController: myPageController)
         
-        viewControllers = [village, community, store]
+        viewControllers = [map, home, myPage]
         
         // 폰트 설정
         if let items = tabBar.items {
