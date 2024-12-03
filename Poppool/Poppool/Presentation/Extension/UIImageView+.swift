@@ -18,10 +18,10 @@ extension UIImageView {
             let imageURL = URL(string: cenvertimageURL)
             self.kf.setImage(with: imageURL) { result in
                 switch result {
-                case .success:
-                    Logger.log(message: "\(path) image Load", category: .info)
                 case .failure(let error):
                     Logger.log(message: "\(path) image Load Fail: \(error.localizedDescription)", category: .error)
+                default:
+                    break
                 }
             }
         }

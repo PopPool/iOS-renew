@@ -25,6 +25,7 @@ final class HomeReactor: Reactor {
         case loadView
         case setHedaerState(isDarkMode: Bool)
         case moveToDetailScene(controller: BaseViewController, indexPath: IndexPath)
+        case reloadView(indexPath: IndexPath)
     }
     
     struct State {
@@ -101,39 +102,13 @@ final class HomeReactor: Reactor {
             return Observable.just(.moveToDetailScene(controller: controller, indexPath: indexPath))
         case .bookMarkButtonTapped(let indexPath):
             guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
-            let popUpData = getPopUpData(indexPath: indexPath)
+            var popUpData = getPopUpData(indexPath: indexPath)
             if popUpData.isBookmark {
-                return Observable.concat([
-                    userAPIUseCase.deleteBookmarkPopUp(userID: userID, popUpID: popUpData.id)
-                        .andThen(Observable.just(.loadView)),
-                    homeApiUseCase.fetchHome(userId: userID, page: 0, size: 6, sort: "viewCount,desc")
-                        .withUnretained(self)
-                        .map { (owner, response) in
-                            owner.setBannerSection(response: response)
-                            owner.setCurationTitleSection(response: response)
-                            owner.setCurationSection(response: response)
-                            owner.setPopularSection(response: response)
-                            owner.setNewSection(response: response)
-                            owner.isLoign = response.loginYn
-                            return .loadView
-                        }
-                ])
+                return userAPIUseCase.deleteBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                    .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             } else {
-                return Observable.concat([
-                    userAPIUseCase.postBookmarkPopUp(userID: userID, popUpID: popUpData.id)
-                        .andThen(Observable.just(.loadView)),
-                    homeApiUseCase.fetchHome(userId: userID, page: 0, size: 6, sort: "viewCount,desc")
-                        .withUnretained(self)
-                        .map { (owner, response) in
-                            owner.setBannerSection(response: response)
-                            owner.setCurationTitleSection(response: response)
-                            owner.setCurationSection(response: response)
-                            owner.setPopularSection(response: response)
-                            owner.setNewSection(response: response)
-                            owner.isLoign = response.loginYn
-                            return .loadView
-                        }
-                ])
+                return userAPIUseCase.postBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                    .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             }
         }
     }
@@ -150,6 +125,22 @@ final class HomeReactor: Reactor {
         case .moveToDetailScene(let controller, let indexPath):
             let nextController = getDetailController(indexPath: indexPath)
             controller.navigationController?.pushViewController(nextController, animated: true)
+        case .reloadView(let indexPath):
+            if isLoign {
+                switch indexPath.section {
+                case 4:
+                    curationSection.inputDataList[indexPath.row].isBookmark.toggle()
+                default:
+                    newSection.inputDataList[indexPath.row].isBookmark.toggle()
+                }
+            } else {
+                switch indexPath.section {
+                default:
+                    newSection.inputDataList[indexPath.row].isBookmark.toggle()
+                }
+            }
+            newState.isReloadView = true
+            newState.sections = getSection()
         }
         return newState
     }
