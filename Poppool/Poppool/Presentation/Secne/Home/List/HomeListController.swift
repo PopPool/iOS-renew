@@ -22,6 +22,8 @@ final class HomeListController: BaseViewController, View {
     private var mainView = HomeListView()
     
     private var sections: [any Sectionable] = []
+    
+    private let pageChange: PublishSubject<Void> = .init()
 }
 
 // MARK: - Life Cycle
@@ -76,12 +78,18 @@ extension HomeListController {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        pageChange
+            .throttle(.milliseconds(1000), scheduler: MainScheduler.asyncInstance)
+            .map { Reactor.Action.changePage }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         reactor.state
             .withUnretained(self)
             .subscribe { (owner, state) in
                 owner.mainView.headerView.headerLabel.text = state.popUpType.title
                 owner.sections = state.sections
-                owner.mainView.contentCollectionView.reloadData()
+                if state.isReloadView { owner.mainView.contentCollectionView.reloadData() }
             }
             .disposed(by: disposeBag)
     }
@@ -111,5 +119,14 @@ extension HomeListController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentHeight = scrollView.contentSize.height
+        let scrollViewHeight = scrollView.frame.size.height
+        let contentOffsetY = scrollView.contentOffset.y
+        if contentOffsetY + scrollViewHeight >= contentHeight {
+            pageChange.onNext(())
+        }
     }
 }

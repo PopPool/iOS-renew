@@ -18,17 +18,21 @@ final class HomeListReactor: Reactor {
         case viewWillAppear
         case backButtonTapped(controller: BaseViewController)
         case bookMarkButtonTapped(indexPath: IndexPath)
+        case changePage
     }
     
     enum Mutation {
         case moveToRecentScene(controller: BaseViewController)
         case loadView
         case reloadView(indexPath: IndexPath)
+        case skipAction
+        case appendData
     }
     
     struct State {
         var popUpType: HomePopUpType
         var sections: [any Sectionable] = []
+        var isReloadView: Bool = false
     }
     
     // MARK: - properties
@@ -40,6 +44,11 @@ final class HomeListReactor: Reactor {
     private let homeAPIUseCase = HomeUseCaseImpl()
     private let userDefaultService = UserDefaultService()
     private let userAPIUseCase = UserAPIUseCaseImpl(repository: UserAPIRepositoryImpl(provider: ProviderImpl()))
+    
+    private var isLoading: Bool = false
+    private var totalPage: Int32 = 0
+    private var currentPage: Int32 = 0
+    private var size: Int32 = 8
     
     lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         UICollectionViewCompositionalLayout { [weak self] section, env in
@@ -66,9 +75,27 @@ final class HomeListReactor: Reactor {
     // MARK: - Reactor Methods
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
+        case .changePage:
+            if isLoading {
+                return Observable.just(.skipAction)
+            } else {
+                if currentPage <= totalPage {
+                    guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.skipAction) }
+                    isLoading = true
+                    currentPage += 1
+                    return homeAPIUseCase.fetchHome(userId: userID, page: currentPage, size: size, sort: "viewCount,desc")
+                        .withUnretained(self)
+                        .map { (owner, response) in
+                            owner.appendSectionData(response: response)
+                            return .appendData
+                        }
+                } else {
+                    return Observable.just(.skipAction)
+                }
+            }
         case .viewWillAppear:
             guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
-            return homeAPIUseCase.fetchHome(userId: userID, page: 0, size: 10, sort: "viewCount,desc")
+            return homeAPIUseCase.fetchHome(userId: userID, page: currentPage, size: size, sort: "viewCount,desc")
                 .withUnretained(self)
                 .map { (owner, response) in
                     owner.setSection(response: response)
@@ -78,7 +105,7 @@ final class HomeListReactor: Reactor {
             return Observable.just(.moveToRecentScene(controller: controller))
         case .bookMarkButtonTapped(let indexPath):
             guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
-            var popUpData = cardSections.inputDataList[indexPath.row]
+            let popUpData = cardSections.inputDataList[indexPath.row]
             if popUpData.isBookmark {
                 return userAPIUseCase.deleteBookmarkPopUp(userID: userID, popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
@@ -91,14 +118,23 @@ final class HomeListReactor: Reactor {
     
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
+        newState.isReloadView = false
         switch mutation {
         case .moveToRecentScene(let controller):
             controller.navigationController?.popViewController(animated: true)
         case .loadView:
+            newState.isReloadView = true
             newState.sections = getSection()
         case .reloadView(let indexPath):
+            newState.isReloadView = true
             cardSections.inputDataList[indexPath.row].isBookmark.toggle()
             newState.sections = getSection()
+        case .skipAction:
+            newState.isReloadView = false
+        case .appendData:
+            newState.isReloadView = true
+            newState.sections = getSection()
+            isLoading = false
         }
         return newState
     }
@@ -122,6 +158,7 @@ final class HomeListReactor: Reactor {
                     isBookmark: response.bookmarkYn
                 )
             })
+            totalPage = response.customPopUpStoreTotalPages
         case .new:
             cardSections.inputDataList = response.newPopUpStoreList.map({ response in
                 return .init(
@@ -135,6 +172,7 @@ final class HomeListReactor: Reactor {
                     isBookmark: response.bookmarkYn
                 )
             })
+            totalPage = response.newPopUpStoreTotalPages
         case .popular:
             cardSections.inputDataList = response.popularPopUpStoreList.map({ response in
                 return .init(
@@ -148,6 +186,57 @@ final class HomeListReactor: Reactor {
                     isBookmark: response.bookmarkYn
                 )
             })
+            totalPage = response.popularPopUpStoreTotalPages
+        }
+    }
+    
+    func appendSectionData(response: GetHomeInfoResponse) {
+        switch popUpType {
+        case .curation:
+            let appendData: [HomeCardSectionCell.Input] = response.customPopUpStoreList.map({ response in
+                return .init(
+                    imagePath: response.mainImageUrl,
+                    id: response.id,
+                    category: response.category,
+                    title: response.name,
+                    address: response.address,
+                    startDate: response.startDate,
+                    endDate: response.endDate,
+                    isBookmark: response.bookmarkYn
+                )
+            })
+            cardSections.inputDataList.append(contentsOf: appendData)
+            totalPage = response.customPopUpStoreTotalPages
+        case .new:
+            let appendData: [HomeCardSectionCell.Input] = response.newPopUpStoreList.map({ response in
+                return .init(
+                    imagePath: response.mainImageUrl,
+                    id: response.id,
+                    category: response.category,
+                    title: response.name,
+                    address: response.address,
+                    startDate: response.startDate,
+                    endDate: response.endDate,
+                    isBookmark: response.bookmarkYn
+                )
+            })
+            cardSections.inputDataList.append(contentsOf: appendData)
+            totalPage = response.newPopUpStoreTotalPages
+        case .popular:
+            let appendData: [HomeCardSectionCell.Input] = response.popularPopUpStoreList.map({ response in
+                return .init(
+                    imagePath: response.mainImageUrl,
+                    id: response.id,
+                    category: response.category,
+                    title: response.name,
+                    address: response.address,
+                    startDate: response.startDate,
+                    endDate: response.endDate,
+                    isBookmark: response.bookmarkYn
+                )
+            })
+            cardSections.inputDataList.append(contentsOf: appendData)
+            totalPage = response.popularPopUpStoreTotalPages
         }
     }
 }
