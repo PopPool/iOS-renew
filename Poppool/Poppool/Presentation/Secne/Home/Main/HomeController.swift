@@ -140,6 +140,24 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         let cell = sections[indexPath.section].getCell(collectionView: collectionView, indexPath: indexPath)
+        guard let reactor = reactor else { return cell }
+        if let cell = cell as? HomeTitleSectionCell {
+            cell.detailButton.rx.tap
+                .withUnretained(self)
+                .map { (owner, _) in
+                    return Reactor.Action.detailButtonTapped(controller: owner, indexPath: indexPath)
+                }
+                .bind(to: reactor.action)
+                .disposed(by: cell.disposeBag)
+        }
+        
+        if let cell = cell as? HomeCardSectionCell {
+            cell.bookmarkButton.rx.tap
+                .map { Reactor.Action.bookMarkButtonTapped(indexPath: indexPath)}
+                .bind(to: reactor.action)
+                .disposed(by: cell.disposeBag)
+        }
+        
         return cell
     }
     

@@ -9,12 +9,13 @@ import UIKit
 
 import SnapKit
 import RxSwift
+import Kingfisher
 
 final class HomeCardSectionCell: UICollectionViewCell {
     
     // MARK: - Components
 
-    let disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
     
     private let imageView: UIImageView = {
         let view = UIImageView()
@@ -64,6 +65,11 @@ final class HomeCardSectionCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
     }
 }
 
@@ -137,18 +143,6 @@ extension HomeCardSectionCell: Inputable {
         dateLabel.setLineHeightText(text: date)
         let bookmarkImage = input.isBookmark ? UIImage(named: "icon_bookmark_fill") : UIImage(named: "icon_bookmark")
         bookmarkButton.setImage(bookmarkImage, for: .normal)
-        guard let imagePath = input.imagePath else { return }
-        imageService.tryDownload(filePaths: [imagePath])
-            .subscribe { [weak self] result in
-                guard let self = self else { return }
-                switch result {
-                case .success(let images):
-                    guard let image = images.first else { return }
-                    self.imageView.image = image
-                case .failure:
-                    Logger.log(message: "Image Downlaod Fail", category: .error)
-                }
-            }
-            .disposed(by: disposeBag)
+        imageView.setPPImage(path: input.imagePath)
     }
 }

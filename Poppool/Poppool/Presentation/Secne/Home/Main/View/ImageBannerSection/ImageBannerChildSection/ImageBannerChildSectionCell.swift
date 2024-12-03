@@ -18,7 +18,6 @@ final class ImageBannerChildSectionCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let view = UIImageView()
-        view.backgroundColor = .red
         return view
     }()
     
@@ -46,11 +45,11 @@ private extension ImageBannerChildSectionCell {
 
 extension ImageBannerChildSectionCell: Inputable {
     struct Input {
-        var image: UIImage?
+        var imagePath: String?
         var id: Int64
     }
     
     func injection(with input: Input) {
-        imageView.image = input.image
+        imageView.setPPImage(path: input.imagePath)
     }
 }

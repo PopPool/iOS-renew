@@ -57,8 +57,6 @@ final class ImageBannerSectionCell: UICollectionViewCell {
         }
     }()
     
-    private let imageService = PreSignedService()
-    
     // MARK: - init
     
     override init(frame: CGRect) {
@@ -176,20 +174,10 @@ extension ImageBannerSectionCell: Inputable {
     
     func injection(with input: Input) {
         pageControl.numberOfPages = input.imagePaths.count
-        imageService.tryDownload(filePaths: input.imagePaths)
-            .subscribe { [weak self] result in
-                guard let self = self else { return }
-                switch result {
-                case .success(let images):
-                    let datas = zip(images, input.idList)
-                    self.imageSection.inputDataList = datas.map { .init(image: $0.0, id: $0.1) }
-                    self.contentCollectionView.reloadData()
-                    self.startAutoScroll()
-                case .failure:
-                    Logger.log(message: "Image Downlaod Fail", category: .error)
-                }
-            }
-            .disposed(by: disposeBag)
+        let datas = zip(input.imagePaths, input.idList)
+        imageSection.inputDataList = datas.map { .init(imagePath: $0.0, id: $0.1) }
+        contentCollectionView.reloadData()
+        startAutoScroll()
     }
 }
 

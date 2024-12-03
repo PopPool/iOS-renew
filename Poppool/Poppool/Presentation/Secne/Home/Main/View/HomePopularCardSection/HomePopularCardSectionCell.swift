@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import RxSwift
+import Kingfisher
 
 final class HomePopularCardSectionCell: UICollectionViewCell {
     
@@ -98,19 +99,6 @@ extension HomePopularCardSectionCell: Inputable {
         let category = "#\(input.category ?? "")"
         categoryLabel.setLineHeightText(text: category)
         titleLabel.setLineHeightText(text: input.title)
-        
-        guard let imagePath = input.imagePath else { return }
-        imageService.tryDownload(filePaths: [imagePath])
-            .subscribe { [weak self] result in
-                guard let self = self else { return }
-                switch result {
-                case .success(let images):
-                    guard let image = images.first else { return }
-                    self.backGroundImageView.image = image
-                case .failure:
-                    Logger.log(message: "Image Downlaod Fail", category: .error)
-                }
-            }
-            .disposed(by: disposeBag)
+        backGroundImageView.setPPImage(path: input.imagePath)
     }
 }

@@ -17,7 +17,7 @@ final class AuthRepositoryImpl: AuthRepository {
     }
     
     func tryLogIn(userCredential: Encodable, socialType: String) -> Observable<LoginResponse> {
-        let endPoint = PopPoolAPIEndPoint.auth_tryLogin(with: userCredential, path: socialType)
+        let endPoint = AuthAPIEndPoint.auth_tryLogin(with: userCredential, path: socialType)
         return provider
             .requestData(with: endPoint, interceptor: nil)
             .map { responseDTO in

@@ -15,4 +15,5 @@ struct GetHomeInfoDataResponse: Decodable {
     let mainImageUrl: String?
     let startDate: String?
     let endDate: String?
+    let bookmarkYn: Bool
 }

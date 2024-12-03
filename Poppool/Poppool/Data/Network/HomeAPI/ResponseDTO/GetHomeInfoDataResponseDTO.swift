@@ -15,6 +15,7 @@ struct GetHomeInfoDataResponseDTO: Decodable {
     let mainImageUrl: String?
     let startDate: String?
     let endDate: String?
+    let bookmarkYn: Bool
 }
 
 extension GetHomeInfoDataResponseDTO {
@@ -26,7 +27,8 @@ extension GetHomeInfoDataResponseDTO {
             address: address,
             mainImageUrl: mainImageUrl,
             startDate: startDate,
-            endDate: endDate
+            endDate: endDate,
+            bookmarkYn: bookmarkYn
         )
     }
 }

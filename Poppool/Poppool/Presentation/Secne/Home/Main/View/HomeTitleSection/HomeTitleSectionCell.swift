@@ -14,7 +14,7 @@ final class HomeTitleSectionCell: UICollectionViewCell {
     
     // MARK: - Components
 
-    let disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
     
     private var blueLabel: PPLabel = {
         let label = PPLabel(style: .bold, fontSize: 16)
@@ -32,7 +32,7 @@ final class HomeTitleSectionCell: UICollectionViewCell {
         return label
     }()
     
-    private let detailButton: UIButton = {
+    let detailButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "icon_right_gray"), for: .normal)
         return button
@@ -46,6 +46,11 @@ final class HomeTitleSectionCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
     }
 }
 

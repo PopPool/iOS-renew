@@ -17,11 +17,14 @@ final class HomeReactor: Reactor {
     enum Action {
         case viewWillAppear
         case changeHeaderState(isDarkMode: Bool)
+        case detailButtonTapped(controller: BaseViewController, indexPath: IndexPath)
+        case bookMarkButtonTapped(indexPath: IndexPath)
     }
     
     enum Mutation {
         case loadView
         case setHedaerState(isDarkMode: Bool)
+        case moveToDetailScene(controller: BaseViewController, indexPath: IndexPath)
     }
     
     struct State {
@@ -37,7 +40,7 @@ final class HomeReactor: Reactor {
     var disposeBag = DisposeBag()
     
     private let homeApiUseCase = HomeUseCaseImpl()
-    
+    private let userAPIUseCase = UserAPIUseCaseImpl(repository: UserAPIRepositoryImpl(provider: ProviderImpl()))
     private let userDefaultService = UserDefaultService()
     
     lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
@@ -89,12 +92,49 @@ final class HomeReactor: Reactor {
                     owner.setCurationSection(response: response)
                     owner.setPopularSection(response: response)
                     owner.setNewSection(response: response)
-                    owner.isLoign = true
-                    print(response.customPopUpStoreList)
+                    owner.isLoign = response.loginYn
                     return .loadView
                 }
         case .changeHeaderState(let isDarkMode):
             return Observable.just(.setHedaerState(isDarkMode: isDarkMode))
+        case .detailButtonTapped(let controller, let indexPath):
+            return Observable.just(.moveToDetailScene(controller: controller, indexPath: indexPath))
+        case .bookMarkButtonTapped(let indexPath):
+            guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
+            let popUpData = getPopUpData(indexPath: indexPath)
+            if popUpData.isBookmark {
+                return Observable.concat([
+                    userAPIUseCase.deleteBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                        .andThen(Observable.just(.loadView)),
+                    homeApiUseCase.fetchHome(userId: userID, page: 0, size: 6, sort: "viewCount,desc")
+                        .withUnretained(self)
+                        .map { (owner, response) in
+                            owner.setBannerSection(response: response)
+                            owner.setCurationTitleSection(response: response)
+                            owner.setCurationSection(response: response)
+                            owner.setPopularSection(response: response)
+                            owner.setNewSection(response: response)
+                            owner.isLoign = response.loginYn
+                            return .loadView
+                        }
+                ])
+            } else {
+                return Observable.concat([
+                    userAPIUseCase.postBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                        .andThen(Observable.just(.loadView)),
+                    homeApiUseCase.fetchHome(userId: userID, page: 0, size: 6, sort: "viewCount,desc")
+                        .withUnretained(self)
+                        .map { (owner, response) in
+                            owner.setBannerSection(response: response)
+                            owner.setCurationTitleSection(response: response)
+                            owner.setCurationSection(response: response)
+                            owner.setPopularSection(response: response)
+                            owner.setNewSection(response: response)
+                            owner.isLoign = response.loginYn
+                            return .loadView
+                        }
+                ])
+            }
         }
     }
     
@@ -107,6 +147,9 @@ final class HomeReactor: Reactor {
             newState.sections = getSection()
         case .setHedaerState(let isDarkMode):
             newState.headerIsDarkMode = isDarkMode
+        case .moveToDetailScene(let controller, let indexPath):
+            let nextController = getDetailController(indexPath: indexPath)
+            controller.navigationController?.pushViewController(nextController, animated: true)
         }
         return newState
     }
@@ -170,7 +213,7 @@ final class HomeReactor: Reactor {
                 address: response.address,
                 startDate: response.startDate,
                 endDate: response.endDate,
-                isBookmark: false
+                isBookmark: response.bookmarkYn
             )
         })
     }
@@ -197,10 +240,54 @@ final class HomeReactor: Reactor {
                 address: response.address,
                 startDate: response.startDate,
                 endDate: response.endDate,
-                isBookmark: false
+                isBookmark: response.bookmarkYn
             )
         })
     }
+    
+    func getDetailController(indexPath: IndexPath) -> BaseViewController {
+        if isLoign {
+            switch indexPath.section {
+            case 2:
+                let controller = HomeListController()
+                controller.reactor = HomeListReactor(popUpType: .curation)
+                return controller
+            case 7:
+                let controller = HomeListController()
+                controller.reactor = HomeListReactor(popUpType: .popular)
+                return controller
+            default:
+                let controller = HomeListController()
+                controller.reactor = HomeListReactor(popUpType: .new)
+                return controller
+            }
+        } else {
+            switch indexPath.section {
+            case 2:
+                let controller = HomeListController()
+                controller.reactor = HomeListReactor(popUpType: .popular)
+                return controller
+            default:
+                let controller = HomeListController()
+                controller.reactor = HomeListReactor(popUpType: .new)
+                return controller
+            }
+        }
+    }
+    
+    func getPopUpData(indexPath: IndexPath) -> HomeCardSectionCell.Input {
+        if isLoign {
+            switch indexPath.section {
+            case 4:
+                return curationSection.inputDataList[indexPath.row]
+            default:
+                return newSection.inputDataList[indexPath.row]
+            }
+        } else {
+            switch indexPath.section {
+            default:
+                return newSection.inputDataList[indexPath.row]
+            }
+        }
+    }
 }
-
-

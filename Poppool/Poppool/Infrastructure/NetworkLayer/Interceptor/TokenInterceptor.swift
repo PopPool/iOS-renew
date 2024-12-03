@@ -24,7 +24,7 @@ final class TokenInterceptor: RequestInterceptor {
                 urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
                 completion(.success(urlRequest))
-            case .failure(let failure):
+            case .failure:
                 urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 completion(.success(urlRequest))
             }
