@@ -67,6 +67,7 @@
 		086DD8DA2CFF194700B97D3B /* UserAPIRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8D92CFF194700B97D3B /* UserAPIRepositoryImpl.swift */; };
 		086DD8DE2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */; };
 		086DD8E02CFF2C3700B97D3B /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8DF2CFF2C3700B97D3B /* UIImageView+.swift */; };
+		086DD8E32CFF356300B97D3B /* HomeCardGridSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8E22CFF356300B97D3B /* HomeCardGridSection.swift */; };
 		08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191342CF366670057BC04 /* UICollectionViewCell+.swift */; };
 		08B191382CF366680057BC04 /* UICollectionReusableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191352CF366670057BC04 /* UICollectionReusableView+.swift */; };
 		08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191362CF366670057BC04 /* UITableViewCell+.swift */; };
@@ -264,6 +265,7 @@
 		086DD8D92CFF194700B97D3B /* UserAPIRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIRepositoryImpl.swift; sourceTree = "<group>"; };
 		086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIUseCaseImpl.swift; sourceTree = "<group>"; };
 		086DD8DF2CFF2C3700B97D3B /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		086DD8E22CFF356300B97D3B /* HomeCardGridSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardGridSection.swift; sourceTree = "<group>"; };
 		08B191342CF366670057BC04 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		08B191352CF366670057BC04 /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
 		08B191362CF366670057BC04 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
@@ -727,7 +729,7 @@
 		086DD8CA2CFDFE9900B97D3B /* List */ = {
 			isa = PBXGroup;
 			children = (
-				086DD8CD2CFDFEB000B97D3B /* HomeListView.swift */,
+				086DD8E12CFF355200B97D3B /* View */,
 				086DD8CB2CFDFEA800B97D3B /* HomeListController.swift */,
 				086DD8CF2CFDFEB900B97D3B /* HomeListReactor.swift */,
 				086DD8D22CFDFF1500B97D3B /* HomePopUpType.swift */,
@@ -742,6 +744,15 @@
 				086DD8D72CFF185200B97D3B /* PostBookmarkPopUpRequestDTO.swift */,
 			);
 			path = UserAPI;
+			sourceTree = "<group>";
+		};
+		086DD8E12CFF355200B97D3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				086DD8CD2CFDFEB000B97D3B /* HomeListView.swift */,
+				086DD8E22CFF356300B97D3B /* HomeCardGridSection.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		08B191332CF366500057BC04 /* Extension */ = {
@@ -1394,6 +1405,7 @@
 				08B191912CF4A00E0057BC04 /* SignUpStep3Reactor.swift in Sources */,
 				083A259C2CF362090099B58E /* InOutputable.swift in Sources */,
 				BD9103652CF6149D00BBCCAE /* HomeAPIEndpoint.swift in Sources */,
+				086DD8E32CFF356300B97D3B /* HomeCardGridSection.swift in Sources */,
 				0841BABE2CFB5AA600049E31 /* Date?+.swift in Sources */,
 				083A258D2CF361F90099B58E /* ConventionCollectionViewCell.swift in Sources */,
 				BD91038D2CF614A900BBCCAE /* SignUpRepository.swift in Sources */,
