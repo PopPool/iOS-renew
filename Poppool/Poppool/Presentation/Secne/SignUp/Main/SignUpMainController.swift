@@ -177,7 +177,7 @@ extension SignUpMainController {
         // step3 category 이벤트
         step3Controller.reactor?.state
             .map({ state in
-                return Reactor.Action.changeCategory(categorys: state.selectedCategory, categoryTitles: state.selectedCategoryTitle)
+                return Reactor.Action.changeCategory(categorys: state.selectedCategory, categoryTitles: state.selectedCategoryTitle, categoryIDList: state.categoryIDList)
             })
             .bind(to: reactor.action)
             .disposed(by: disposeBag)

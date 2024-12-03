@@ -8,36 +8,42 @@
 import Foundation
 import RxSwift
 
-final class HomeUseCaseImpl: HomeUseCase {
-    var repository: HomeRepository
-    
-    init(repository: HomeRepository) {
-        self.repository = repository
-    }
+final class HomeUseCaseImpl {
+    var repository = HomeAPIRepository(provider: ProviderImpl())
     
     func fetchHome(
         userId: String,
-        pagination: PaginationRequestDTO
+        page: Int32?,
+        size: Int32?,
+        sort: String?
     ) -> Observable<GetHomeInfoResponse> {
-        return repository.fetchHome(userId: userId, pagination: pagination)
+        return repository.fetchHome(request: .init(userId: userId, page: page, size: size, sort: sort))
     }
     
     func fetchCustomPopUp(
         userId: String,
-        pagination: PaginationRequestDTO
+        page: Int32?,
+        size: Int32?,
+        sort: String?
     ) -> Observable<GetHomeInfoResponse> {
-        return repository.fetchCustomPopUp(userId: userId, pagination: pagination)
+        return repository.fetchCustomPopUp(request: .init(userId: userId, page: page, size: size, sort: sort))
     }
     
     func fetchNewPopUp(
-        pagination: PaginationRequestDTO
+        userId: String,
+        page: Int32?,
+        size: Int32?,
+        sort: String?
     ) -> Observable<GetHomeInfoResponse> {
-        return repository.fetchNewPopUp(pagination: pagination)
+        return repository.fetchNewPopUp(request: .init(userId: userId, page: page, size: size, sort: sort))
     }
     
     func fetchPopularPopUp(
-        pagination: PaginationRequestDTO
+        userId: String,
+        page: Int32?,
+        size: Int32?,
+        sort: String?
     ) -> Observable<GetHomeInfoResponse> {
-        return repository.fetchPopularPopUp(pagination: pagination)
+        return repository.fetchPopularPopUp(request: .init(userId: userId, page: page, size: size, sort: sort))
     }
 }

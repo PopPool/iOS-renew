@@ -13,9 +13,11 @@ final class SignUpCompleteReactor: Reactor {
     
     // MARK: - Reactor
     enum Action {
+        case completeButtonTapped(controller: BaseViewController)
     }
     
     enum Mutation {
+        case moveToHomeScene(controller: BaseViewController)
     }
     
     struct State {
@@ -36,13 +38,18 @@ final class SignUpCompleteReactor: Reactor {
     // MARK: - Reactor Methods
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
+        case .completeButtonTapped(let controller):
+            return Observable.just(.moveToHomeScene(controller: controller))
         }
     }
     
     func reduce(state: State, mutation: Mutation) -> State {
-        var newState = state
         switch mutation {
+        case .moveToHomeScene(let controller):
+            let homeTabbar = HomeController()
+            homeTabbar.reactor = HomeReactor()
+            controller.view.window?.rootViewController = homeTabbar
         }
-        return newState
+        return state
     }
 }

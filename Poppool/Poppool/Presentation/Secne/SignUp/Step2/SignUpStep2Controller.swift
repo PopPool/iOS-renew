@@ -54,6 +54,7 @@ extension SignUpStep2Controller {
             .disposed(by: disposeBag)
         
         mainView.textField.rx.text
+            .debounce(.milliseconds(300), scheduler: MainScheduler.asyncInstance)
             .map { Reactor.Action.inputNickName(text: $0)}
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
@@ -69,7 +70,11 @@ extension SignUpStep2Controller {
             .disposed(by: disposeBag)
         
         mainView.clearButton.rx.tap
-            .map { Reactor.Action.clearButtonTapped }
+            .withUnretained(self)
+            .map({ (owner, _) in
+                owner.mainView.textField.text = nil
+                return Reactor.Action.clearButtonTapped
+            })
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
@@ -96,17 +101,13 @@ extension SignUpStep2Controller {
                 owner.mainView.textDescriptionLabel.textColor = state.nickNameState.textColor
                 
                 // clearButton, Duplicated Button set
-                if state.isActiveInput {
-                    owner.mainView.duplicatedCheckButton.isHidden = true
-                    owner.mainView.clearButton.isHidden = false
-                } else {
-                    owner.mainView.duplicatedCheckButton.isHidden = false
-                    owner.mainView.clearButton.isHidden = true
-                }
+                owner.mainView.duplicatedCheckButton.isHidden = state.nickNameState.isHiddenCheckButton
+                owner.mainView.clearButton.isHidden = state.nickNameState.isHiddenClearButton
                 
                 // count Label set
                 if let nickName = state.nickName {
                     owner.mainView.textCountLabel.text = "\(nickName.count) / 10자"
+                    if nickName.count > 10 { owner.mainView.textFieldTrailingView.shake() }
                 }
                 switch state.nickNameState {
                 case .duplicated, .duplicatedActive, .korAndEng, .korAndEngActive, .length, .lengthActive:

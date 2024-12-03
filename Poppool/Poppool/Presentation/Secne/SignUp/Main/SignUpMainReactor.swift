@@ -23,7 +23,7 @@ final class SignUpMainReactor: Reactor {
         case step4SkipButtonTapped(controller: BaseTabmanController)
         case changeTerms(isMarketingAgree: Bool)
         case changeNickName(nickName: String?)
-        case changeCategory(categorys: [Int64], categoryTitles: [String])
+        case changeCategory(categorys: [Int64], categoryTitles: [String], categoryIDList: [Int64])
         case changeGender(gender: String?)
         case changeAge(age: Int?)
     }
@@ -37,7 +37,7 @@ final class SignUpMainReactor: Reactor {
         case moveToCompleteScene(controller: BaseTabmanController)
         case setTerms(isMarketingAgree: Bool)
         case setNickName(nickName: String?)
-        case setCategory(categorys: [Int64], categoryTitles: [String])
+        case setCategory(categorys: [Int64], categoryTitles: [String], categoryIDList: [Int64])
         case setGender(gender: String?)
         case setAge(age: Int?)
     }
@@ -49,6 +49,7 @@ final class SignUpMainReactor: Reactor {
         var categorys: [Int64] = []
         var categoryTitles: [String] = []
         var gender: String? = "선택안함"
+        var categoryIDList: [Int64] = []
         var age: Int?
     }
     
@@ -71,8 +72,8 @@ final class SignUpMainReactor: Reactor {
             return Observable.just(.setTerms(isMarketingAgree: isMarketingAgree))
         case .changeNickName(let nickName):
             return Observable.just(.setNickName(nickName: nickName))
-        case .changeCategory(let categorys, let titles):
-            return Observable.just(.setCategory(categorys: categorys, categoryTitles: titles))
+        case .changeCategory(let categorys, let titles, let categoryIDList):
+            return Observable.just(.setCategory(categorys: categorys, categoryTitles: titles, categoryIDList: categoryIDList))
         case .changeGender(let gender):
             return Observable.just(.setGender(gender: gender))
         case .changeAge(let age):
@@ -133,7 +134,9 @@ final class SignUpMainReactor: Reactor {
             }
             .disposed(by: disposeBag)
         case .skipStep3(let controller, let currentIndex):
-            newState.categorys = []
+            if newState.categoryIDList.count >= 5 {
+                newState.categorys = Array(newState.categoryIDList.shuffled().prefix(5))
+            }
             newState.currentIndex = currentIndex + 1
             controller.scrollToPage(.at(index: currentIndex + 1), animated: false)
         case .skipStep4(let controller):
@@ -143,7 +146,8 @@ final class SignUpMainReactor: Reactor {
             newState.isMarketingAgree = isMarketingAgree
         case .setNickName(let nickName):
             newState.nickName = nickName
-        case .setCategory(let categorys, let titles):
+        case .setCategory(let categorys, let titles, let categoryIDList):
+            newState.categoryIDList = categoryIDList
             newState.categorys = categorys
             newState.categoryTitles = titles
         case .setGender(let gender):

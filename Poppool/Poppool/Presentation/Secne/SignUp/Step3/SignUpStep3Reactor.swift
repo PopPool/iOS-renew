@@ -27,6 +27,7 @@ final class SignUpStep3Reactor: Reactor {
         var sections: [any Sectionable] = []
         var selectedCategory: [Int64] = []
         var selectedCategoryTitle: [String] = []
+        var categoryIDList: [Int64] = []
     }
     
     // MARK: - properties
@@ -34,6 +35,7 @@ final class SignUpStep3Reactor: Reactor {
     var initialState: State
     var disposeBag = DisposeBag()
     private let signUpAPIUseCase = SignUpUseCaseImpl(repository: SignUpRepositoryImpl(provider: ProviderImpl()))
+    private var cetegoryIDList: [Int64] = []
     
     lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         UICollectionViewCompositionalLayout { [weak self] section, env in
@@ -63,6 +65,7 @@ final class SignUpStep3Reactor: Reactor {
             return signUpAPIUseCase.fetchCategoryList()
                 .withUnretained(self)
                 .map { (owner, categorys) in
+                    owner.cetegoryIDList = categorys.map { $0.categoryId }
                     owner.categorySection.inputDataList = categorys.map({ category in
                         return .init(title: category.category, isSelected: false, id: category.categoryId)
                     })
@@ -89,6 +92,7 @@ final class SignUpStep3Reactor: Reactor {
         switch mutation {
         case .loadView:
             newState.sections = getSection()
+            newState.categoryIDList = cetegoryIDList
             newState.selectedCategory = categorySection.inputDataList.filter { $0.isSelected == true }.compactMap { $0.id }
             newState.selectedCategoryTitle = categorySection.inputDataList.filter { $0.isSelected == true }.compactMap { $0.title }
         }

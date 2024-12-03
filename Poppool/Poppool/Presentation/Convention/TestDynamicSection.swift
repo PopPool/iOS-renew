@@ -7,7 +7,12 @@
 
 import UIKit
 
+import RxSwift
+
 struct TestDynamicSection: Sectionable {
+    
+    var currentPage: PublishSubject<Int> = .init()
+    
     typealias CellType = TestDynamicCell
     
     var inputDataList: [CellType.Input]

@@ -17,7 +17,7 @@ class PPLabel: UILabel {
     ) {
         super.init(frame: .zero)
         self.font = .KorFont(style: style, size: fontSize)
-        var paragraphStyle = NSMutableParagraphStyle()
+        let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.3
         self.attributedText = NSMutableAttributedString(
             string: text,

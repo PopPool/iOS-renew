@@ -7,6 +7,7 @@
 
 import UIKit
 
+import RxSwift
 import SnapKit
 
 /// `Sectionable` 프로토콜은 컬렉션 뷰의 섹션 및 셀을 설정하기 위한 인터페이스를 정의합니다.
@@ -24,6 +25,9 @@ protocol Sectionable {
     
     /// 섹션에 추가될 Decoration View의 리스트를 정의합니다.
     var decorationItems: [any SectionDecorationItemable]? { get set }
+    
+    /// 섹션의 페이지
+    var currentPage: PublishSubject<Int> { get set }
     
     /// 주어진 섹션 인덱스와 레이아웃 환경을 바탕으로 `NSCollectionLayoutSection`을 반환합니다.
     ///
@@ -74,6 +78,10 @@ extension Sectionable {
     func getSection(section: Int, env: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         
         let section = setSection(section: section, env: env)
+        section.visibleItemsInvalidationHandler = { _, contentOffset, environment in
+            let bannerIndex = Int(max(0, round(contentOffset.x / environment.container.contentSize.width)))  // 음수가 되는 것을 방지하기 위해 max 사용
+            currentPage.onNext(bannerIndex)
+        }
         
         if let supplementaryItems = supplementaryItems {
             

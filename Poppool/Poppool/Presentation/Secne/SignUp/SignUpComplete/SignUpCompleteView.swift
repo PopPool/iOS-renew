@@ -51,34 +51,13 @@ final class SignUpCompleteView: UIView {
         return view
     }()
     
-    let categoryLabel: PPLabel = {
+    let descriptionLabel: PPLabel = {
         let label = PPLabel(style: .bold, fontSize: 15)
         label.textColor = .g600
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.textAlignment = .center
         return label
-    }()
-    
-    private let categorySubLabel: PPLabel = {
-        let label = PPLabel(style: .bold, fontSize: 15, text: "와")
-        label.textColor = .g600
-        return label
-    }()
-    
-    private let categoryStackView: UIStackView = {
-        let view = UIStackView()
-        return view
-    }()
-    
-    private let categoryBottomLabel: PPLabel = {
-        let label = PPLabel(style: .bold, fontSize: 15, text: "연관된 팝업스토어 정보를 안내해드릴게요.")
-        label.textColor = .g600
-        return label
-    }()
-    
-    let descriptionStackView: UIStackView = {
-        let view = UIStackView()
-        view.axis = .vertical
-        view.alignment = .center
-        return view
     }()
     
     let bottomButton: PPButton = {
@@ -121,17 +100,11 @@ private extension SignUpCompleteView {
             make.top.equalTo(imageView.snp.bottom).offset(32)
         }
         
-        
-        categoryStackView.addArrangedSubview(categoryLabel)
-        categoryStackView.addArrangedSubview(categorySubLabel)
-        
-        descriptionStackView.addArrangedSubview(categoryStackView)
-        descriptionStackView.addArrangedSubview(categoryBottomLabel)
-        
-        self.addSubview(descriptionStackView)
-        descriptionStackView.snp.makeConstraints { make in
+        self.addSubview(descriptionLabel)
+        descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(titleStackView.snp.bottom).offset(16)
-            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(20)
+            
         }
         
         self.addSubview(bottomButton)
