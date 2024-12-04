@@ -141,6 +141,8 @@
 		08DC62112CF8B446002A2F44 /* HomeAPIRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC62102CF8B446002A2F44 /* HomeAPIRequestDTO.swift */; };
 		08DC62132CF8B833002A2F44 /* Optional+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC62122CF8B833002A2F44 /* Optional+.swift */; };
 		BD226D512CF6DB290038C984 /* PPReturnHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD226D502CF6DB290038C984 /* PPReturnHeaderView.swift */; };
+		BD226D552CF6EBD40038C984 /* HomePopUpReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD226D542CF6EBD40038C984 /* HomePopUpReactor.swift */; };
+		BD226D572CF736DD0038C984 /* HomePopUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD226D562CF736DD0038C984 /* HomePopUpCollectionViewCell.swift */; };
 		BD9103612CF6149D00BBCCAE /* AuthAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91034E2CF6149D00BBCCAE /* AuthAPIEndPoint.swift */; };
 		BD9103622CF6149D00BBCCAE /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91034F2CF6149D00BBCCAE /* LoginResponseDTO.swift */; };
 		BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103512CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift */; };
@@ -336,6 +338,8 @@
 		08DC62102CF8B446002A2F44 /* HomeAPIRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIRequestDTO.swift; sourceTree = "<group>"; };
 		08DC62122CF8B833002A2F44 /* Optional+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+.swift"; sourceTree = "<group>"; };
 		BD226D502CF6DB290038C984 /* PPReturnHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPReturnHeaderView.swift; sourceTree = "<group>"; };
+		BD226D542CF6EBD40038C984 /* HomePopUpReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopUpReactor.swift; sourceTree = "<group>"; };
+		BD226D562CF736DD0038C984 /* HomePopUpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopUpCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD91034E2CF6149D00BBCCAE /* AuthAPIEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPIEndPoint.swift; sourceTree = "<group>"; };
 		BD91034F2CF6149D00BBCCAE /* LoginResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
 		BD9103512CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerPopUpStoreDTO.swift; sourceTree = "<group>"; };
@@ -609,8 +613,8 @@
 		083A25C22CF3635B0099B58E /* Secne */ = {
 			isa = PBXGroup;
 			children = (
-				0841BABF2CFB5EC700049E31 /* TabbarController */,
-				08DC62012CF8ABDA002A2F44 /* Home */,
+				4EC6DED12CFEF7F000584B55 /* Map */,
+				BD9103942CF61AAC00BBCCAE /* HomeMain */,
 				083A25C42CF363A10099B58E /* SignUp */,
 				083A25C32CF363650099B58E /* Login */,
 				BD9103912CF6166800BBCCAE /* Splash */,
@@ -960,14 +964,9 @@
 		08DC62082CF8ADB7002A2F44 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0841BAB22CFABEA900049E31 /* HomePopularCardSection */,
-				0841BAAD2CFA38CB00049E31 /* HomeCardSection */,
-				0841BAA62CFA353500049E31 /* HomeTitleSection */,
-				0841BAA12CFA319400049E31 /* SpacingSection */,
-				08DC62092CF8ADFF002A2F44 /* ImageBannerSection */,
-				0841BAB72CFAC41300049E31 /* SectionBackGroundDecorationView.swift */,
-				08DC62022CF8AC06002A2F44 /* HomeView.swift */,
-				0841BAB92CFAE5BE00049E31 /* HomeHeaderView.swift */,
+				4EC6DED22CFEF80500584B55 /* MapView.swift */,
+				4EC6DED42CFEF81C00584B55 /* MapViewController.swift */,
+				4EC6DED62CFEF82E00584B55 /* MapReactor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -975,8 +974,9 @@
 		08DC62092CF8ADFF002A2F44 /* ImageBannerSection */ = {
 			isa = PBXGroup;
 			children = (
-				0841BA9D2CFA085700049E31 /* ImageBannerSection */,
-				0841BA9E2CFA085F00049E31 /* ImageBannerChildSection */,
+				4EC6DEE12D00128B00584B55 /* MapPopUpStoreDTO.swift */,
+				4EC6DEE32D0012A900584B55 /* MapPopUpStore.swift */,
+				4EC6DEE52D00172D00584B55 /* MapAPIEndpoint.swift */,
 			);
 			path = ImageBannerSection;
 			sourceTree = "<group>";
