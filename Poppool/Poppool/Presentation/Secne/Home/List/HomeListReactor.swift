@@ -80,10 +80,9 @@ final class HomeListReactor: Reactor {
                 return Observable.just(.skipAction)
             } else {
                 if currentPage <= totalPage {
-                    guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.skipAction) }
                     isLoading = true
                     currentPage += 1
-                    return homeAPIUseCase.fetchHome(userId: userID, page: currentPage, size: size, sort: "viewCount,desc")
+                    return homeAPIUseCase.fetchHome(page: currentPage, size: size, sort: "viewCount,desc")
                         .withUnretained(self)
                         .map { (owner, response) in
                             owner.appendSectionData(response: response)
@@ -94,8 +93,7 @@ final class HomeListReactor: Reactor {
                 }
             }
         case .viewWillAppear:
-            guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
-            return homeAPIUseCase.fetchHome(userId: userID, page: currentPage, size: size, sort: "viewCount,desc")
+            return homeAPIUseCase.fetchHome(page: currentPage, size: size, sort: "viewCount,desc")
                 .withUnretained(self)
                 .map { (owner, response) in
                     owner.setSection(response: response)
@@ -104,13 +102,12 @@ final class HomeListReactor: Reactor {
         case .backButtonTapped(let controller):
             return Observable.just(.moveToRecentScene(controller: controller))
         case .bookMarkButtonTapped(let indexPath):
-            guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
             let popUpData = cardSections.inputDataList[indexPath.row]
             if popUpData.isBookmark {
-                return userAPIUseCase.deleteBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                return userAPIUseCase.deleteBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             } else {
-                return userAPIUseCase.postBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                return userAPIUseCase.postBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             }
         }

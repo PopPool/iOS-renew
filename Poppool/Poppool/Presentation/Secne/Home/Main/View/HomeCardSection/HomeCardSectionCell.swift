@@ -85,6 +85,8 @@ private extension HomeCardSectionCell {
             make.top.equalToSuperview()
             make.centerX.equalToSuperview()
         }
+        imageView.layer.cornerRadius = 4
+        imageView.clipsToBounds = true
         
         contentView.addSubview(categoryLabel)
         categoryLabel.snp.makeConstraints { make in

@@ -8,7 +8,6 @@
 import Foundation
 
 struct HomeAPIRequestDTO: Encodable {
-    var userId: String?
     var page: Int32?
     var size: Int32?
     var sort: String?

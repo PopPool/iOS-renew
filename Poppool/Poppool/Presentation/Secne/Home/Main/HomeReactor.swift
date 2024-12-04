@@ -84,8 +84,7 @@ final class HomeReactor: Reactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .viewWillAppear:
-            guard let userIDResult = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
-            return homeApiUseCase.fetchHome(userId: userIDResult, page: 0, size: 6, sort: "viewCount,desc")
+            return homeApiUseCase.fetchHome(page: 0, size: 6, sort: "viewCount,desc")
                 .withUnretained(self)
                 .map { (owner, response) in
                     owner.setBannerSection(response: response)
@@ -101,13 +100,12 @@ final class HomeReactor: Reactor {
         case .detailButtonTapped(let controller, let indexPath):
             return Observable.just(.moveToDetailScene(controller: controller, indexPath: indexPath))
         case .bookMarkButtonTapped(let indexPath):
-            guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
             var popUpData = getPopUpData(indexPath: indexPath)
             if popUpData.isBookmark {
-                return userAPIUseCase.deleteBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                return userAPIUseCase.deleteBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             } else {
-                return userAPIUseCase.postBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                return userAPIUseCase.postBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             }
         }

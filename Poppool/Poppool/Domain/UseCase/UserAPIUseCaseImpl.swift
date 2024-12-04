@@ -15,11 +15,11 @@ final class UserAPIUseCaseImpl {
         self.repository = repository
     }
     
-    func postBookmarkPopUp(userID: String, popUpID: Int64) -> Completable {
-        return repository.postBookmarkPopUp(userID: userID, request: .init(popUpStoreId: popUpID))
+    func postBookmarkPopUp(popUpID: Int64) -> Completable {
+        return repository.postBookmarkPopUp(request: .init(popUpStoreId: popUpID))
     }
     
-    func deleteBookmarkPopUp(userID: String, popUpID: Int64) -> Completable {
-        return repository.deleteBookmarkPopUp(userID: userID, request: .init(popUpStoreId: popUpID))
+    func deleteBookmarkPopUp(popUpID: Int64) -> Completable {
+        return repository.deleteBookmarkPopUp(request: .init(popUpStoreId: popUpID))
     }
 }

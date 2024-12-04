@@ -48,7 +48,6 @@ extension HomeController {
 // MARK: - SetUp
 private extension HomeController {
     func setUp() {
-        view.backgroundColor = .g50
         if let layout = reactor?.compositionalLayout {
             layout.register(SectionBackGroundDecorationView.self, forDecorationViewOfKind: "BackgroundView")
             mainView.contentCollectionView.collectionViewLayout = layout

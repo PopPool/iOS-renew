@@ -50,7 +50,7 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         
     }
     
-    private func updateWavePath() {
+    private func updateWavePath(animated: Bool = false) {
         guard let items = tabBar.items else { return }
         let tabWidth = tabBar.bounds.width / CGFloat(items.count)
         let selectedTabX = CGFloat(selectedIndex) * tabWidth
@@ -58,11 +58,11 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         let waveWidth: CGFloat = 24
         let leftPoint = selectedTabX + tabWidth / 2 - waveWidth / 2
         let cornerRadius: CGFloat = 12  // 둥근 코너 반지름
-        let path = UIBezierPath()
+        let newPath = UIBezierPath()
 
         // 시작점 - 왼쪽 둥근 부분
-        path.move(to: CGPoint(x: 0, y: -waveHeight))
-        path.addArc(
+        newPath.move(to: CGPoint(x: 0, y: -waveHeight))
+        newPath.addArc(
             withCenter: CGPoint(x: cornerRadius, y: -waveHeight + cornerRadius),
             radius: cornerRadius,
             startAngle: .pi, // 왼쪽 상단 180도
@@ -71,8 +71,8 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         )
 
         // 왼쪽 끝과 중앙을 부드럽게 연결 (라운드 처리)
-        path.addLine(to: CGPoint(x: leftPoint, y: -waveHeight))
-        path.addArc(
+        newPath.addLine(to: CGPoint(x: leftPoint, y: -waveHeight))
+        newPath.addArc(
             withCenter: CGPoint(x: selectedTabX + tabWidth / 2, y: -waveHeight),
             radius: 12,
             startAngle: .pi, // 왼쪽 180도
@@ -81,10 +81,10 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         )
 
         // 오른쪽 끝과 중앙을 부드럽게 연결 (라운드 처리)
-        path.addLine(to: CGPoint(x: tabBar.bounds.width - cornerRadius, y: -waveHeight))
+        newPath.addLine(to: CGPoint(x: tabBar.bounds.width - cornerRadius, y: -waveHeight))
 
         // 오른쪽 둥근 부분
-        path.addArc(
+        newPath.addArc(
             withCenter: CGPoint(x: tabBar.bounds.width - cornerRadius, y: -waveHeight + cornerRadius),
             radius: cornerRadius,
             startAngle: .pi * 1.5, // 오른쪽 하단 270도
@@ -93,12 +93,28 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         )
 
         // TabBar 하단을 덮는 직선
-        path.addLine(to: CGPoint(x: tabBar.bounds.width, y: tabBar.bounds.height))
-        path.addLine(to: CGPoint(x: 0, y: tabBar.bounds.height))
-        path.close()
+        newPath.addLine(to: CGPoint(x: tabBar.bounds.width, y: tabBar.bounds.height))
+        newPath.addLine(to: CGPoint(x: 0, y: tabBar.bounds.height))
+        newPath.close()
 
-        waveLayer.path = path.cgPath
+        if animated {
+            let animation = CABasicAnimation(keyPath: "path")
+            animation.fromValue = waveLayer.path
+            animation.toValue = newPath.cgPath
+            animation.duration = 0.3
+            animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+            waveLayer.add(animation, forKey: "pathAnimation")
+        }
+        waveLayer.path = newPath.cgPath
+
+        // 그림자 설정
+        waveLayer.shadowColor = UIColor.black.cgColor
+        waveLayer.shadowOpacity = 0.25 // 그림자의 투명도
+        waveLayer.shadowOffset = CGSize(width: 0, height: 4) // 그림자의 위치
+        waveLayer.shadowRadius = 6 // 그림자의 흐림 정도
+        waveLayer.masksToBounds = false
     }
+
 
     private func updateDotPosition(animated: Bool) {
         guard let items = tabBar.items else { return }
@@ -121,7 +137,7 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     // 탭 선택 시 애니메이션 적용
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        updateWavePath()
+        updateWavePath(animated: true)
         updateDotPosition(animated: true)
     }
     

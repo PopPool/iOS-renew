@@ -36,7 +36,7 @@ struct HomeCardGridSection: Sectionable {
         group.interItemSpacing = .flexible(16)
         // 섹션 생성
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = .init(top: 0, leading: 20, bottom: 0, trailing: 20)
+        section.contentInsets = .init(top: 24, leading: 20, bottom: 0, trailing: 20)
         section.interGroupSpacing = 24
         return section
     }
