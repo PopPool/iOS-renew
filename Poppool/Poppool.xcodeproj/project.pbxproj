@@ -68,6 +68,14 @@
 		086DD8DE2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */; };
 		086DD8E02CFF2C3700B97D3B /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8DF2CFF2C3700B97D3B /* UIImageView+.swift */; };
 		086DD8E32CFF356300B97D3B /* HomeCardGridSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8E22CFF356300B97D3B /* HomeCardGridSection.swift */; };
+		086DD92A2D0086AA00B97D3B /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9292D0086AA00B97D3B /* SearchController.swift */; };
+		086DD92C2D0086B100B97D3B /* SearchReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD92B2D0086B100B97D3B /* SearchReactor.swift */; };
+		086DD92E2D0086B900B97D3B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD92D2D0086B900B97D3B /* SearchView.swift */; };
+		086DD9302D0090E900B97D3B /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD92F2D0090E900B97D3B /* UITextField+.swift */; };
+		086DD9342D00962500B97D3B /* SearchTitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9332D00962500B97D3B /* SearchTitleSectionCell.swift */; };
+		086DD9362D00963900B97D3B /* SearchTitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9352D00963900B97D3B /* SearchTitleSection.swift */; };
+		086DD93B2D009A1C00B97D3B /* CancelableTagSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93A2D009A1C00B97D3B /* CancelableTagSection.swift */; };
+		086DD93D2D009A2600B97D3B /* CancelableTagSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93C2D009A2600B97D3B /* CancelableTagSectionCell.swift */; };
 		08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191342CF366670057BC04 /* UICollectionViewCell+.swift */; };
 		08B191382CF366680057BC04 /* UICollectionReusableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191352CF366670057BC04 /* UICollectionReusableView+.swift */; };
 		08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191362CF366670057BC04 /* UITableViewCell+.swift */; };
@@ -266,6 +274,14 @@
 		086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIUseCaseImpl.swift; sourceTree = "<group>"; };
 		086DD8DF2CFF2C3700B97D3B /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		086DD8E22CFF356300B97D3B /* HomeCardGridSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardGridSection.swift; sourceTree = "<group>"; };
+		086DD9292D0086AA00B97D3B /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		086DD92B2D0086B100B97D3B /* SearchReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReactor.swift; sourceTree = "<group>"; };
+		086DD92D2D0086B900B97D3B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		086DD92F2D0090E900B97D3B /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		086DD9332D00962500B97D3B /* SearchTitleSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTitleSectionCell.swift; sourceTree = "<group>"; };
+		086DD9352D00963900B97D3B /* SearchTitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTitleSection.swift; sourceTree = "<group>"; };
+		086DD93A2D009A1C00B97D3B /* CancelableTagSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableTagSection.swift; sourceTree = "<group>"; };
+		086DD93C2D009A2600B97D3B /* CancelableTagSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableTagSectionCell.swift; sourceTree = "<group>"; };
 		08B191342CF366670057BC04 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		08B191352CF366670057BC04 /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
 		08B191362CF366670057BC04 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
@@ -611,6 +627,7 @@
 			children = (
 				0841BABF2CFB5EC700049E31 /* TabbarController */,
 				08DC62012CF8ABDA002A2F44 /* Home */,
+				086DD9282D00869D00B97D3B /* Search */,
 				083A25C42CF363A10099B58E /* SignUp */,
 				083A25C32CF363650099B58E /* Login */,
 				BD9103912CF6166800BBCCAE /* Splash */,
@@ -755,6 +772,44 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		086DD9282D00869D00B97D3B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				086DD9312D0095DA00B97D3B /* View */,
+				086DD9292D0086AA00B97D3B /* SearchController.swift */,
+				086DD92B2D0086B100B97D3B /* SearchReactor.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		086DD9312D0095DA00B97D3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				086DD9372D0099FB00B97D3B /* CancelableTagSection */,
+				086DD9322D00960700B97D3B /* SearchTitleSection */,
+				086DD92D2D0086B900B97D3B /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		086DD9322D00960700B97D3B /* SearchTitleSection */ = {
+			isa = PBXGroup;
+			children = (
+				086DD9332D00962500B97D3B /* SearchTitleSectionCell.swift */,
+				086DD9352D00963900B97D3B /* SearchTitleSection.swift */,
+			);
+			path = SearchTitleSection;
+			sourceTree = "<group>";
+		};
+		086DD9372D0099FB00B97D3B /* CancelableTagSection */ = {
+			isa = PBXGroup;
+			children = (
+				086DD93A2D009A1C00B97D3B /* CancelableTagSection.swift */,
+				086DD93C2D009A2600B97D3B /* CancelableTagSectionCell.swift */,
+			);
+			path = CancelableTagSection;
+			sourceTree = "<group>";
+		};
 		08B191332CF366500057BC04 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -772,6 +827,7 @@
 				0841BABD2CFB5AA600049E31 /* Date?+.swift */,
 				086DD8C72CFDEA9200B97D3B /* UIView+.swift */,
 				086DD8DF2CFF2C3700B97D3B /* UIImageView+.swift */,
+				086DD92F2D0090E900B97D3B /* UITextField+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1335,6 +1391,7 @@
 				083A25B22CF362670099B58E /* NetworkError.swift in Sources */,
 				BD9103692CF6149D00BBCCAE /* HomeAPIRepository.swift in Sources */,
 				083A25832CF361EF0099B58E /* BaseViewController.swift in Sources */,
+				086DD9362D00963900B97D3B /* SearchTitleSection.swift in Sources */,
 				083A25922CF361F90099B58E /* ViewConvention.swift in Sources */,
 				08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */,
 				083A25B42CF362670099B58E /* Responsable.swift in Sources */,
@@ -1361,6 +1418,7 @@
 				BD91038B2CF614A900BBCCAE /* AuthRepository.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
 				08DC61F32CF75037002A2F44 /* KeyChainService.swift in Sources */,
+				086DD93B2D009A1C00B97D3B /* CancelableTagSection.swift in Sources */,
 				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
 				08B191B82CF6092F0057BC04 /* AuthServiceable.swift in Sources */,
 				0841BAB82CFAC41300049E31 /* SectionBackGroundDecorationView.swift in Sources */,
@@ -1376,6 +1434,7 @@
 				08B191862CF48A8B0057BC04 /* SignUpStep2Reactor.swift in Sources */,
 				08DC62052CF8AC0E002A2F44 /* HomeController.swift in Sources */,
 				BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */,
+				086DD92A2D0086AA00B97D3B /* SearchController.swift in Sources */,
 				BD91038A2CF614A900BBCCAE /* LoginResponse.swift in Sources */,
 				083A25BF2CF362770099B58E /* Logger.swift in Sources */,
 				08DC61FC2CF76862002A2F44 /* SignUpCompleteReactor.swift in Sources */,
@@ -1387,6 +1446,7 @@
 				086DD8C82CFDEA9200B97D3B /* UIView+.swift in Sources */,
 				083A25B62CF362670099B58E /* MultipartEndPoint.swift in Sources */,
 				08DC620B2CF8AE0F002A2F44 /* ImageBannerSection.swift in Sources */,
+				086DD9302D0090E900B97D3B /* UITextField+.swift in Sources */,
 				086DD8D62CFF182100B97D3B /* UserAPIEndPoint.swift in Sources */,
 				08B191942CF4A0F00057BC04 /* SignUpStep4View.swift in Sources */,
 				08B1918D2CF49FF70057BC04 /* SignUpStep3View.swift in Sources */,
@@ -1413,12 +1473,15 @@
 				08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */,
 				08B191882CF48FAE0057BC04 /* NickNameState.swift in Sources */,
 				08B191B22CF5C0A60057BC04 /* PPPicker.swift in Sources */,
+				086DD92E2D0086B900B97D3B /* SearchView.swift in Sources */,
 				0841BA822CF9F5DF00049E31 /* PreSignedService.swift in Sources */,
+				086DD92C2D0086B100B97D3B /* SearchReactor.swift in Sources */,
 				BD226D512CF6DB290038C984 /* PPReturnHeaderView.swift in Sources */,
 				08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */,
 				BD91036D2CF6149D00BBCCAE /* SignUpAPIEndpoint.swift in Sources */,
 				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
+				086DD93D2D009A2600B97D3B /* CancelableTagSectionCell.swift in Sources */,
 				086DD8DA2CFF194700B97D3B /* UserAPIRepositoryImpl.swift in Sources */,
 				083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */,
 				083A25BA2CF362670099B58E /* TokenInterceptor.swift in Sources */,
@@ -1448,6 +1511,7 @@
 				0841BA8E2CF9F8A100049E31 /* ImageBannerChildSection.swift in Sources */,
 				086DD8CC2CFDFEA800B97D3B /* HomeListController.swift in Sources */,
 				083A258E2CF361F90099B58E /* ConventionTableViewCell.swift in Sources */,
+				086DD9342D00962500B97D3B /* SearchTitleSectionCell.swift in Sources */,
 				08B191592CF41E610057BC04 /* SignUpMainController.swift in Sources */,
 				08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */,
 				0841BAB12CFA38F500049E31 /* HomeCardSectionCell.swift in Sources */,

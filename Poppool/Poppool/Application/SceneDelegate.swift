@@ -21,12 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         
-        let rootViewController = LoginController()
-        rootViewController.reactor = LoginReactor()
+//        let rootViewController = LoginController()
+//        rootViewController.reactor = LoginReactor()
         
         
-//        let rootViewController = HomeController()
-//        rootViewController.reactor = HomeReactor()
+        let rootViewController = SearchController()
+        rootViewController.reactor = SearchReactor()
         
         let navigationController = UINavigationController(rootViewController: rootViewController)
 //        let navigationController = WaveTabBarController()

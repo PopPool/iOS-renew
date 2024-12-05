@@ -116,6 +116,14 @@ extension HomeController {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        homeHeaderView.searchBarButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                Reactor.Action.searchButtonTapped(controller: owner)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         reactor.state
             .withUnretained(self)
             .subscribe { (owner, state) in

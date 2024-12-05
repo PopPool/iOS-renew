@@ -19,6 +19,7 @@ final class HomeReactor: Reactor {
         case changeHeaderState(isDarkMode: Bool)
         case detailButtonTapped(controller: BaseViewController, indexPath: IndexPath)
         case bookMarkButtonTapped(indexPath: IndexPath)
+        case searchButtonTapped(controller: BaseViewController)
     }
     
     enum Mutation {
@@ -26,6 +27,7 @@ final class HomeReactor: Reactor {
         case setHedaerState(isDarkMode: Bool)
         case moveToDetailScene(controller: BaseViewController, indexPath: IndexPath)
         case reloadView(indexPath: IndexPath)
+        case moveToSearchScene(controller: BaseViewController)
     }
     
     struct State {
@@ -108,6 +110,8 @@ final class HomeReactor: Reactor {
                 return userAPIUseCase.postBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             }
+        case .searchButtonTapped(let controller):
+            return Observable.just(.moveToSearchScene(controller: controller))
         }
     }
     
@@ -115,6 +119,10 @@ final class HomeReactor: Reactor {
         var newState = state
         newState.isReloadView = false
         switch mutation {
+        case .moveToSearchScene(let controller):
+            let nextController = SearchController()
+            nextController.reactor = SearchReactor()
+            controller.navigationController?.pushViewController(nextController, animated: true)
         case .loadView:
             newState.isReloadView = true
             newState.sections = getSection()

@@ -37,6 +37,7 @@ final class HomeHeaderView: UIView {
     private let searchLabel: PPLabel = {
         let label = PPLabel(style: .regular, fontSize: 14, text: "팝업스토어명을 입력해보세요")
         label.textColor = .w100
+        label.isUserInteractionEnabled = false
         return label
     }()
     
@@ -52,6 +53,7 @@ final class HomeHeaderView: UIView {
     
     func setHeaderState(isDarkMode: Bool) {
         blurView.isHidden = !isDarkMode
+        blurView.isUserInteractionEnabled = false
         if isDarkMode {
             searchBarButton.backgroundColor = .clear
             searchLabel.textColor = .w100
@@ -61,7 +63,7 @@ final class HomeHeaderView: UIView {
             noticeButton.setImage(image, for: .normal)
             noticeButton.tintColor = .white
         } else {
-            searchBarButton.backgroundColor = .g50
+            searchBarButton.backgroundColor = .white
             searchLabel.textColor = .g400
             searchIconImageView.image = UIImage(named: "icon_search_gray")
             searchIconImageView.tintColor = .blu500
