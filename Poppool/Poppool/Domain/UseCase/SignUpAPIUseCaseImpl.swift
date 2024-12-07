@@ -1,5 +1,5 @@
 //
-//  SignUpUseCaseImpl.swift
+//  SignUpAPIUseCaseImpl.swift
 //  Poppool
 //
 //  Created by Porori on 11/25/24.
@@ -8,14 +8,13 @@
 import Foundation
 import RxSwift
 
-final class SignUpUseCaseImpl: SignUpUseCase {
-    var repository: SignUpRepository
+final class SignUpAPIUseCaseImpl {
+    var repository: SignUpRepositoryImpl
     
-    init(repository: SignUpRepository) {
+    init(repository: SignUpRepositoryImpl) {
         self.repository = repository
     }
     func trySignUp(
-        userId: String,
         nickName: String,
         gender: String,
         age: Int32,
@@ -24,7 +23,6 @@ final class SignUpUseCaseImpl: SignUpUseCase {
         interests: [Int64]
     ) -> Completable {
         return repository.trySignUp(
-            userId: userId,
             nickName: nickName,
             gender: gender,
             age: age,

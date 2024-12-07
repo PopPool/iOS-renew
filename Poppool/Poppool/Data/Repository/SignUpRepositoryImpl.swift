@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-final class SignUpRepositoryImpl: SignUpRepository {
+final class SignUpRepositoryImpl {
     
     var provider: Provider
     
@@ -29,7 +29,6 @@ final class SignUpRepositoryImpl: SignUpRepository {
     }
     
     func trySignUp(
-        userId: String,
         nickName: String,
         gender: String,
         age: Int32,
@@ -38,7 +37,6 @@ final class SignUpRepositoryImpl: SignUpRepository {
         interests: [Int64]
     ) -> Completable {
         let endPoint = SignUpAPIEndpoint.signUp_trySignUp(with: .init(
-            userId: userId,
             nickname: nickName,
             gender: gender,
             age: age,
