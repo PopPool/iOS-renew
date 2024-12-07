@@ -32,10 +32,13 @@ final class PPSegmentedControl: UISegmentedControl {
         return view
     }()
     
-    init(type: SegmentedControlType, segments: [String], selectedSegmentIndex: Int) {
+    init(type: SegmentedControlType, segments: [String], selectedSegmentIndex: Int? = nil) {
         super.init(frame: .zero)
         setUpSegments(type: type, segments: segments)
-        self.selectedSegmentIndex = selectedSegmentIndex
+        if let selectedSegmentIndex = selectedSegmentIndex {
+            self.selectedSegmentIndex = selectedSegmentIndex
+        }
+        
     }
     
     required init?(coder: NSCoder) {

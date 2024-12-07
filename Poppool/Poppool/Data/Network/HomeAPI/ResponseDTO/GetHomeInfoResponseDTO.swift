@@ -10,13 +10,13 @@ import Foundation
 struct GetHomeInfoResponseDTO: Decodable {
     var bannerPopUpStoreList: [BannerPopUpStoreDTO]
     var nickname: String?
-    var customPopUpStoreList: [GetHomeInfoDataResponseDTO]
+    var customPopUpStoreList: [PopUpStoreResponseDTO]
     var customPopUpStoreTotalPages: Int32
     var customPopUpStoreTotalElements: Int64
-    var popularPopUpStoreList: [GetHomeInfoDataResponseDTO]
+    var popularPopUpStoreList: [PopUpStoreResponseDTO]
     var popularPopUpStoreTotalPages: Int32
     var popularPopUpStoreTotalElements: Int64
-    var newPopUpStoreList: [GetHomeInfoDataResponseDTO]
+    var newPopUpStoreList: [PopUpStoreResponseDTO]
     var newPopUpStoreTotalPages: Int32
     var newPopUpStoreTotalElements: Int64
     var loginYn: Bool

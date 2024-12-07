@@ -98,5 +98,16 @@ extension CancelableTagSectionCell: Inputable {
             titleLabel.textColor = .g400
             contentView.layer.borderColor = UIColor.g200.cgColor
         }
+        cancelButton.isHidden = !input.isCancelAble
+        
+        if input.isCancelAble {
+            contentStackView.snp.updateConstraints { make in
+                make.trailing.equalToSuperview().inset(8)
+            }
+        } else {
+            contentStackView.snp.updateConstraints { make in
+                make.trailing.equalToSuperview().inset(12)
+            }
+        }
     }
 }

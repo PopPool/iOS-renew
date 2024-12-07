@@ -63,7 +63,7 @@ final class HomeListReactor: Reactor {
             return getSection()[section].getSection(section: section, env: env)
         }
     }()
-    
+    private let spacing24Section = SpacingSection(inputDataList: [.init(spacing: 24)])
     private var cardSections = HomeCardGridSection(inputDataList: [])
     
     // MARK: - init
@@ -137,10 +137,11 @@ final class HomeListReactor: Reactor {
     }
     
     func getSection() -> [any Sectionable] {
-        return [cardSections]
+        return [spacing24Section,cardSections]
     }
     
     func setSection(response: GetHomeInfoResponse) {
+        let isLogin = response.loginYn
         switch popUpType {
         case .curation:
             cardSections.inputDataList = response.customPopUpStoreList.map({ response in
@@ -152,7 +153,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             totalPage = response.customPopUpStoreTotalPages
@@ -166,7 +168,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             totalPage = response.newPopUpStoreTotalPages
@@ -180,7 +183,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             totalPage = response.popularPopUpStoreTotalPages
@@ -188,6 +192,7 @@ final class HomeListReactor: Reactor {
     }
     
     func appendSectionData(response: GetHomeInfoResponse) {
+        let isLogin = response.loginYn
         switch popUpType {
         case .curation:
             let appendData: [HomeCardSectionCell.Input] = response.customPopUpStoreList.map({ response in
@@ -199,7 +204,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             cardSections.inputDataList.append(contentsOf: appendData)
@@ -214,7 +220,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             cardSections.inputDataList.append(contentsOf: appendData)
@@ -229,7 +236,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             cardSections.inputDataList.append(contentsOf: appendData)

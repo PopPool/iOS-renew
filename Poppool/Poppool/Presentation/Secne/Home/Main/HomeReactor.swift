@@ -102,7 +102,7 @@ final class HomeReactor: Reactor {
         case .detailButtonTapped(let controller, let indexPath):
             return Observable.just(.moveToDetailScene(controller: controller, indexPath: indexPath))
         case .bookMarkButtonTapped(let indexPath):
-            var popUpData = getPopUpData(indexPath: indexPath)
+            let popUpData = getPopUpData(indexPath: indexPath)
             if popUpData.isBookmark {
                 return userAPIUseCase.deleteBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
@@ -120,8 +120,8 @@ final class HomeReactor: Reactor {
         newState.isReloadView = false
         switch mutation {
         case .moveToSearchScene(let controller):
-            let nextController = SearchController()
-            nextController.reactor = SearchReactor()
+            let nextController = SearchMainController()
+            nextController.reactor = SearchMainReactor()
             controller.navigationController?.pushViewController(nextController, animated: true)
         case .loadView:
             newState.isReloadView = true
@@ -201,6 +201,7 @@ final class HomeReactor: Reactor {
     }
     
     func setCurationSection(response: GetHomeInfoResponse) {
+        let islogin = response.loginYn
         curationSection.inputDataList = response.customPopUpStoreList.map({ response in
             return .init(
                 imagePath: response.mainImageUrl,
@@ -210,7 +211,8 @@ final class HomeReactor: Reactor {
                 address: response.address,
                 startDate: response.startDate,
                 endDate: response.endDate,
-                isBookmark: response.bookmarkYn
+                isBookmark: response.bookmarkYn,
+                isLogin: islogin
             )
         })
     }
@@ -228,6 +230,7 @@ final class HomeReactor: Reactor {
     }
     
     func setNewSection(response: GetHomeInfoResponse) {
+        let islogin = response.loginYn
         newSection.inputDataList = response.newPopUpStoreList.map({ response in
             return .init(
                 imagePath: response.mainImageUrl,
@@ -237,7 +240,8 @@ final class HomeReactor: Reactor {
                 address: response.address,
                 startDate: response.startDate,
                 endDate: response.endDate,
-                isBookmark: response.bookmarkYn
+                isBookmark: response.bookmarkYn,
+                isLogin: islogin
             )
         })
     }

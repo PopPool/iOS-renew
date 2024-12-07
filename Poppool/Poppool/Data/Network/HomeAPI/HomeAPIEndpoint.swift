@@ -10,7 +10,7 @@ import Foundation
 struct HomeAPIEndpoint {
     
     static func fetchHome(
-        request: HomeAPIRequestDTO
+        request: SortedRequestDTO
     ) -> Endpoint<GetHomeInfoResponseDTO> {
         return Endpoint(
             baseURL: Secrets.popPoolBaseUrl.rawValue,
@@ -21,7 +21,7 @@ struct HomeAPIEndpoint {
     }
     
     static func fetchPopularPopUp(
-        request: HomeAPIRequestDTO
+        request: SortedRequestDTO
     ) -> Endpoint<GetHomeInfoResponseDTO> {
         return Endpoint(
             baseURL: Secrets.popPoolBaseUrl.rawValue,
@@ -32,7 +32,7 @@ struct HomeAPIEndpoint {
     }
     
     static func fetchNewPopUp(
-        request: HomeAPIRequestDTO
+        request: SortedRequestDTO
     ) -> Endpoint<GetHomeInfoResponseDTO> {
         return Endpoint(
             baseURL: Secrets.popPoolBaseUrl.rawValue,
@@ -43,7 +43,7 @@ struct HomeAPIEndpoint {
     }
     
     static func fetchCustomPopUp(
-        request: HomeAPIRequestDTO
+        request: SortedRequestDTO
     ) -> Endpoint<GetHomeInfoResponseDTO> {
         return Endpoint(
             baseURL: Secrets.popPoolBaseUrl.rawValue,

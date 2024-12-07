@@ -1,18 +1,17 @@
 //
-//  SearchView.swift
+//  SearchMainView.swift
 //  Poppool
 //
-//  Created by SeoJunYoung on 12/4/24.
+//  Created by SeoJunYoung on 12/7/24.
 //
 
 import UIKit
 
 import SnapKit
 
-final class SearchView: UIView {
+final class SearchMainView: UIView {
     
     // MARK: - Components
-    
     private let searchTrailingView: UIView = {
         let view = UIView()
         view.backgroundColor = .g50
@@ -63,11 +62,6 @@ final class SearchView: UIView {
         return view
     }()
     
-    let contentCollectionView: UICollectionView = {
-        let view = UICollectionView(frame: .zero, collectionViewLayout: .init())
-        return view
-    }()
-    
     // MARK: - init
     init() {
         super.init(frame: .zero)
@@ -80,10 +74,9 @@ final class SearchView: UIView {
 }
 
 // MARK: - SetUp
-private extension SearchView {
+private extension SearchMainView {
     
     func setUpConstraints() {
-        
         searchTrailingView.snp.makeConstraints { make in
             make.height.equalTo(37)
         }
@@ -114,12 +107,6 @@ private extension SearchView {
         
         clearButton.snp.makeConstraints { make in
             make.size.equalTo(16)
-        }
-        
-        self.addSubview(contentCollectionView)
-        contentCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(headerStackView.snp.bottom).offset(7)
-            make.leading.trailing.bottom.equalToSuperview()
         }
     }
 }

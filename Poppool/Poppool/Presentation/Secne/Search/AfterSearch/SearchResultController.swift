@@ -1,8 +1,8 @@
 //
-//  SearchController.swift
+//  SearchResultController.swift
 //  Poppool
 //
-//  Created by SeoJunYoung on 12/4/24.
+//  Created by SeoJunYoung on 12/7/24.
 //
 
 import UIKit
@@ -11,40 +11,36 @@ import SnapKit
 import RxCocoa
 import RxSwift
 import ReactorKit
-import RxGesture
 
-final class SearchController: BaseViewController, View {
+final class SearchResultController: BaseViewController, View {
     
-    typealias Reactor = SearchReactor
+    typealias Reactor = SearchResultReactor
     
     // MARK: - Properties
     var disposeBag = DisposeBag()
     
-    private var mainView = SearchView()
+    private var mainView = SearchResultView()
     private var sections: [any Sectionable] = []
+    private let cellTapped: PublishSubject<IndexPath> = .init()
 }
 
 // MARK: - Life Cycle
-extension SearchController {
+extension SearchResultController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tabBarController?.tabBar.isHidden = true
-    }
 }
 
 // MARK: - SetUp
-private extension SearchController {
+private extension SearchResultController {
     func setUp() {
         if let layout = reactor?.compositionalLayout {
             mainView.contentCollectionView.collectionViewLayout = layout
         }
         mainView.contentCollectionView.delegate = self
         mainView.contentCollectionView.dataSource = self
+        
         mainView.contentCollectionView.register(
             SearchTitleSectionCell.self,
             forCellWithReuseIdentifier: SearchTitleSectionCell.identifiers
@@ -54,8 +50,12 @@ private extension SearchController {
             forCellWithReuseIdentifier: SpacingSectionCell.identifiers
         )
         mainView.contentCollectionView.register(
-            CancelableTagSectionCell.self,
-            forCellWithReuseIdentifier: CancelableTagSectionCell.identifiers
+            SearchResultCountSectionCell.self,
+            forCellWithReuseIdentifier: SearchResultCountSectionCell.identifiers
+        )
+        mainView.contentCollectionView.register(
+            HomeCardSectionCell.self,
+            forCellWithReuseIdentifier: HomeCardSectionCell.identifiers
         )
         view.addSubview(mainView)
         mainView.snp.makeConstraints { make in
@@ -65,41 +65,36 @@ private extension SearchController {
 }
 
 // MARK: - Methods
-extension SearchController {
+extension SearchResultController {
     func bind(reactor: Reactor) {
         
-        mainView.rx.tapGesture()
+        cellTapped
             .withUnretained(self)
-            .subscribe { (owner, _) in
-                owner.mainView.endEditing(true)
-            }
-            .disposed(by: disposeBag)
-            
-        mainView.searchTextField.rx.controlEvent(.editingDidEndOnExit)
-            .withUnretained(self)
-            .map({ (owner, _) in
-                Reactor.Action.returnSearchKeyword(text: owner.mainView.searchTextField.text)
+            .map({ (owner, indexPath) in
+                Reactor.Action.cellTapped(controller: owner, indexPath: indexPath)
             })
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        
-        rx.viewWillAppear
-            .map { Reactor.Action.viewWillAppear }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
         reactor.state
             .withUnretained(self)
             .subscribe { (owner, state) in
-                owner.sections = state.sections
-                owner.mainView.contentCollectionView.reloadData()
+                if state.isEmptyResult {
+                    owner.mainView.emptyLabel.isHidden = false
+                    owner.mainView.contentCollectionView.isHidden = true
+                } else {
+                    owner.mainView.emptyLabel.isHidden = true
+                    owner.mainView.contentCollectionView.isHidden = false
+                    owner.sections = state.sections
+                    owner.mainView.contentCollectionView.reloadData()
+                }
             }
             .disposed(by: disposeBag)
     }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
-extension SearchController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension SearchResultController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sections.count
     }
@@ -114,26 +109,16 @@ extension SearchController: UICollectionViewDelegate, UICollectionViewDataSource
     ) -> UICollectionViewCell {
         let cell = sections[indexPath.section].getCell(collectionView: collectionView, indexPath: indexPath)
         guard let reactor = reactor else { return cell }
-        if let cell = cell as? SearchTitleSectionCell {
-            if indexPath.section == 1 {
-                cell.titleButton.rx.tap
-                    .map { Reactor.Action.recentSearchListAllDeleteButtonTapped }
-                    .bind(to: reactor.action)
-                    .disposed(by: cell.disposeBag)
-            }
-        }
-        if let cell = cell as? CancelableTagSectionCell {
-            if indexPath.section == 3 {
-                cell.cancelButton.rx.tap
-                    .map { Reactor.Action.recentSearchListDeleteButtonTapped(indexPath: indexPath)}
-                    .bind(to: reactor.action)
-                    .disposed(by: cell.disposeBag)
-            }
+        if let cell = cell as? HomeCardSectionCell {
+            cell.bookmarkButton.rx.tap
+                .map { Reactor.Action.bookmarkButtonTapped(indexPath: indexPath)}
+                .bind(to: reactor.action)
+                .disposed(by: cell.disposeBag)
         }
         return cell
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        mainView.endEditing(true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        cellTapped.onNext(indexPath)
     }
 }

@@ -13,25 +13,6 @@ final class AppleLoginService: NSObject, AuthServiceable {
     // 사용자 자격 증명 정보를 방출할 subject
     private var authServiceResponse: PublishSubject<AuthServiceResponse> = .init()
     
-    override init() {
-        super.init()
-        Logger.log(
-            message: "\(self) init",
-            category: .info,
-            fileName: #file,
-            line: #line
-        )
-    }
-    
-    deinit {
-        Logger.log(
-            message: "\(self) deinit",
-            category: .info,
-            fileName: #file,
-            line: #line
-        )
-    }
-    
     func fetchUserCredential() -> Observable<AuthServiceResponse> {
         performRequest()
         return authServiceResponse

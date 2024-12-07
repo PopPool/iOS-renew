@@ -135,6 +135,7 @@ extension HomeCardSectionCell: Inputable {
         var startDate: String?
         var endDate: String?
         var isBookmark: Bool
+        var isLogin: Bool
     }
     
     func injection(with input: Input) {
@@ -146,5 +147,6 @@ extension HomeCardSectionCell: Inputable {
         let bookmarkImage = input.isBookmark ? UIImage(named: "icon_bookmark_fill") : UIImage(named: "icon_bookmark")
         bookmarkButton.setImage(bookmarkImage, for: .normal)
         imageView.setPPImage(path: input.imagePath)
+        bookmarkButton.isHidden = !input.isLogin
     }
 }

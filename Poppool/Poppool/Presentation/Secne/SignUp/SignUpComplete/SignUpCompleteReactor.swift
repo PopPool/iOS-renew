@@ -46,8 +46,7 @@ final class SignUpCompleteReactor: Reactor {
     func reduce(state: State, mutation: Mutation) -> State {
         switch mutation {
         case .moveToHomeScene(let controller):
-            let homeTabbar = HomeController()
-            homeTabbar.reactor = HomeReactor()
+            let homeTabbar = WaveTabBarController()
             controller.view.window?.rootViewController = homeTabbar
         }
         return state

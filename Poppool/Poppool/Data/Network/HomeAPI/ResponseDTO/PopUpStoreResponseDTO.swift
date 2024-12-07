@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct GetHomeInfoDataResponseDTO: Decodable {
+struct PopUpStoreResponseDTO: Decodable {
     let id: Int64
-    let category: String?
+    let categoryName: String?
     let name: String?
     let address: String
     let mainImageUrl: String?
@@ -18,11 +18,11 @@ struct GetHomeInfoDataResponseDTO: Decodable {
     let bookmarkYn: Bool
 }
 
-extension GetHomeInfoDataResponseDTO {
-    func toDomain() -> GetHomeInfoDataResponse {
-        return GetHomeInfoDataResponse(
+extension PopUpStoreResponseDTO {
+    func toDomain() -> PopUpStoreResponse {
+        return PopUpStoreResponse(
             id: id,
-            category: category,
+            category: categoryName,
             name: name,
             address: address,
             mainImageUrl: mainImageUrl,

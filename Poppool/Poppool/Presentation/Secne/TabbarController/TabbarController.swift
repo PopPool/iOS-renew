@@ -47,7 +47,29 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLayoutSubviews()
         updateWavePath()
         updateDotPosition(animated: false)
+        updateItem()
+    }
+    
+    private func updateItem() {
+        let tabBarItemViews = tabBar.subviews.filter { $0.isUserInteractionEnabled }
         
+        if selectedIndex < tabBarItemViews.count {
+            let selectedView = tabBarItemViews[selectedIndex]
+            
+            // 애니메이션 적용
+            UIView.animate(
+                withDuration: 0.3,
+                delay: 0,
+                options: .transitionCrossDissolve,
+                animations: { [weak self] in
+                    guard let self = self else { return }
+                    for (index, otherView) in tabBarItemViews.enumerated() {
+                        if index != selectedIndex { otherView.transform = .identity }
+                    }
+                    selectedView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                }
+            )
+        }
     }
     
     private func updateWavePath(animated: Bool = false) {
@@ -98,12 +120,10 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         newPath.close()
 
         if animated {
-            let animation = CABasicAnimation(keyPath: "path")
-            animation.fromValue = waveLayer.path
-            animation.toValue = newPath.cgPath
-            animation.duration = 0.3
-            animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-            waveLayer.add(animation, forKey: "pathAnimation")
+            let transition = CATransition()
+            transition.type = .fade
+            transition.duration = 0.3
+            waveLayer.add(transition, forKey: "dissolveAnimation")
         }
         waveLayer.path = newPath.cgPath
 
@@ -114,7 +134,6 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         waveLayer.shadowRadius = 6 // 그림자의 흐림 정도
         waveLayer.masksToBounds = false
     }
-
 
     private func updateDotPosition(animated: Bool) {
         guard let items = tabBar.items else { return }
@@ -127,7 +146,12 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         )
         
         if animated {
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 1,
+                           delay: 0,
+                           usingSpringWithDamping: 0.7,
+                           initialSpringVelocity: 0.3,
+                           options: .curveEaseInOut,
+                           animations: {
                 self.dotView.center = targetCenter
             })
         } else {
@@ -139,6 +163,7 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         updateWavePath(animated: true)
         updateDotPosition(animated: true)
+        updateItem()
     }
     
     func setUp() {
@@ -175,7 +200,7 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let myPageController = BaseViewController()
         
-        let iconSize = CGSize(width: 36, height: 36)
+        let iconSize = CGSize(width: 32, height: 32)
         // 탭바 아이템 생성
         mapController.tabBarItem = UITabBarItem(
             title: "지도",
@@ -200,18 +225,25 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         viewControllers = [map, home, myPage]
         
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.2  // 기본 값보다 높은 라인 간격을 설정
+        
         // 폰트 설정
-        if let items = tabBar.items {
-            for item in items {
-                item.setTitleTextAttributes(
-                    [.font: UIFont.KorFont(style: .bold, size: 11)!],
-                    for: .normal
-                )
-                item.setTitleTextAttributes(
-                    [.font: UIFont.KorFont(style: .bold, size: 11)!],
-                    for: .selected
-                )
-            }
-        }
+        let appearance = UITabBarAppearance()
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [
+            .font: UIFont.KorFont(style: .bold, size: 11)!,
+            .paragraphStyle: paragraphStyle
+        ]
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
+            .font: UIFont.KorFont(style: .bold, size: 13)!,
+            .paragraphStyle: paragraphStyle
+        ]
+        
+        let verticalOffset: CGFloat = 4 // 원하는 간격 (양수: 아래로 이동, 음수: 위로 이동)
+        appearance.stackedLayoutAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: verticalOffset)
+        appearance.stackedLayoutAppearance.selected.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: verticalOffset)
+        
+        tabBar.standardAppearance = appearance
     }
+    
 }
