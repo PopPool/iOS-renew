@@ -47,32 +47,10 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLayoutSubviews()
         updateWavePath()
         updateDotPosition(animated: false)
-        updateItem()
-    }
-    
-    private func updateItem() {
-        let tabBarItemViews = tabBar.subviews.filter { $0.isUserInteractionEnabled }
         
-        if selectedIndex < tabBarItemViews.count {
-            let selectedView = tabBarItemViews[selectedIndex]
-            
-            // 애니메이션 적용
-            UIView.animate(
-                withDuration: 0.3,
-                delay: 0,
-                options: .transitionCrossDissolve,
-                animations: { [weak self] in
-                    guard let self = self else { return }
-                    for (index, otherView) in tabBarItemViews.enumerated() {
-                        if index != selectedIndex { otherView.transform = .identity }
-                    }
-                    selectedView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-                }
-            )
-        }
     }
     
-    private func updateWavePath(animated: Bool = false) {
+    private func updateWavePath() {
         guard let items = tabBar.items else { return }
         let tabWidth = tabBar.bounds.width / CGFloat(items.count)
         let selectedTabX = CGFloat(selectedIndex) * tabWidth
@@ -80,11 +58,11 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         let waveWidth: CGFloat = 24
         let leftPoint = selectedTabX + tabWidth / 2 - waveWidth / 2
         let cornerRadius: CGFloat = 12  // 둥근 코너 반지름
-        let newPath = UIBezierPath()
+        let path = UIBezierPath()
 
         // 시작점 - 왼쪽 둥근 부분
-        newPath.move(to: CGPoint(x: 0, y: -waveHeight))
-        newPath.addArc(
+        path.move(to: CGPoint(x: 0, y: -waveHeight))
+        path.addArc(
             withCenter: CGPoint(x: cornerRadius, y: -waveHeight + cornerRadius),
             radius: cornerRadius,
             startAngle: .pi, // 왼쪽 상단 180도
@@ -93,8 +71,8 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         )
 
         // 왼쪽 끝과 중앙을 부드럽게 연결 (라운드 처리)
-        newPath.addLine(to: CGPoint(x: leftPoint, y: -waveHeight))
-        newPath.addArc(
+        path.addLine(to: CGPoint(x: leftPoint, y: -waveHeight))
+        path.addArc(
             withCenter: CGPoint(x: selectedTabX + tabWidth / 2, y: -waveHeight),
             radius: 12,
             startAngle: .pi, // 왼쪽 180도
@@ -103,10 +81,10 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         )
 
         // 오른쪽 끝과 중앙을 부드럽게 연결 (라운드 처리)
-        newPath.addLine(to: CGPoint(x: tabBar.bounds.width - cornerRadius, y: -waveHeight))
+        path.addLine(to: CGPoint(x: tabBar.bounds.width - cornerRadius, y: -waveHeight))
 
         // 오른쪽 둥근 부분
-        newPath.addArc(
+        path.addArc(
             withCenter: CGPoint(x: tabBar.bounds.width - cornerRadius, y: -waveHeight + cornerRadius),
             radius: cornerRadius,
             startAngle: .pi * 1.5, // 오른쪽 하단 270도
@@ -115,24 +93,11 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         )
 
         // TabBar 하단을 덮는 직선
-        newPath.addLine(to: CGPoint(x: tabBar.bounds.width, y: tabBar.bounds.height))
-        newPath.addLine(to: CGPoint(x: 0, y: tabBar.bounds.height))
-        newPath.close()
+        path.addLine(to: CGPoint(x: tabBar.bounds.width, y: tabBar.bounds.height))
+        path.addLine(to: CGPoint(x: 0, y: tabBar.bounds.height))
+        path.close()
 
-        if animated {
-            let transition = CATransition()
-            transition.type = .fade
-            transition.duration = 0.3
-            waveLayer.add(transition, forKey: "dissolveAnimation")
-        }
-        waveLayer.path = newPath.cgPath
-
-        // 그림자 설정
-        waveLayer.shadowColor = UIColor.black.cgColor
-        waveLayer.shadowOpacity = 0.25 // 그림자의 투명도
-        waveLayer.shadowOffset = CGSize(width: 0, height: 4) // 그림자의 위치
-        waveLayer.shadowRadius = 6 // 그림자의 흐림 정도
-        waveLayer.masksToBounds = false
+        waveLayer.path = path.cgPath
     }
 
     private func updateDotPosition(animated: Bool) {
@@ -146,12 +111,7 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         )
         
         if animated {
-            UIView.animate(withDuration: 1,
-                           delay: 0,
-                           usingSpringWithDamping: 0.7,
-                           initialSpringVelocity: 0.3,
-                           options: .curveEaseInOut,
-                           animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.dotView.center = targetCenter
             })
         } else {
@@ -161,9 +121,8 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     // 탭 선택 시 애니메이션 적용
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        updateWavePath(animated: true)
+        updateWavePath()
         updateDotPosition(animated: true)
-        updateItem()
     }
     
     func setUp() {
@@ -200,7 +159,7 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let myPageController = BaseViewController()
         
-        let iconSize = CGSize(width: 32, height: 32)
+        let iconSize = CGSize(width: 36, height: 36)
         // 탭바 아이템 생성
         mapController.tabBarItem = UITabBarItem(
             title: "지도",
@@ -225,25 +184,18 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         viewControllers = [map, home, myPage]
         
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.2  // 기본 값보다 높은 라인 간격을 설정
-        
         // 폰트 설정
-        let appearance = UITabBarAppearance()
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [
-            .font: UIFont.KorFont(style: .bold, size: 11)!,
-            .paragraphStyle: paragraphStyle
-        ]
-        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
-            .font: UIFont.KorFont(style: .bold, size: 13)!,
-            .paragraphStyle: paragraphStyle
-        ]
-        
-        let verticalOffset: CGFloat = 4 // 원하는 간격 (양수: 아래로 이동, 음수: 위로 이동)
-        appearance.stackedLayoutAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: verticalOffset)
-        appearance.stackedLayoutAppearance.selected.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: verticalOffset)
-        
-        tabBar.standardAppearance = appearance
+        if let items = tabBar.items {
+            for item in items {
+                item.setTitleTextAttributes(
+                    [.font: UIFont.KorFont(style: .bold, size: 11)!],
+                    for: .normal
+                )
+                item.setTitleTextAttributes(
+                    [.font: UIFont.KorFont(style: .bold, size: 11)!],
+                    for: .selected
+                )
+            }
+        }
     }
-    
 }

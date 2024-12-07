@@ -130,7 +130,7 @@ private extension SignUpStep3View {
         
         self.addSubview(categoryCollectionView)
         categoryCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(subTitleDescriptionLabel.snp.bottom).offset(36)
+            make.top.equalTo(subTitleDescriptionLabel.snp.bottom)
             make.bottom.equalTo(buttonStackView.snp.top)
             make.leading.trailing.equalToSuperview()
         }

@@ -19,6 +19,24 @@ final class KakaoLoginService: AuthServiceable {
     
     var disposeBag = DisposeBag()
     
+    init() {
+        Logger.log(
+            message: "\(self) init",
+            category: .info,
+            fileName: #file,
+            line: #line
+        )
+    }
+    
+    deinit {
+        Logger.log(
+            message: "\(self) deinit",
+            category: .info,
+            fileName: #file,
+            line: #line
+        )
+    }
+    
     func unlink() -> Observable<Void> {
         return Observable.create { observer in
             UserApi.shared.unlink { error in

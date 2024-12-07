@@ -18,13 +18,13 @@ final class UserAPIRepositoryImpl {
         self.provider = provider
     }
  
-    func postBookmarkPopUp(request: PostBookmarkPopUpRequestDTO) -> Completable {
-        let endPoint = UserAPIEndPoint.postBookmarkPopUp(request: request)
+    func postBookmarkPopUp(userID: String, request: PostBookmarkPopUpRequestDTO) -> Completable {
+        let endPoint = UserAPIEndPoint.postBookmarkPopUp(userID: userID, request: request)
         return provider.request(with: endPoint, interceptor: tokenInterceptor)
     }
     
-    func deleteBookmarkPopUp(request: PostBookmarkPopUpRequestDTO) -> Completable {
-        let endPoint = UserAPIEndPoint.deleteBookmarkPopUp(request: request)
+    func deleteBookmarkPopUp(userID: String, request: PostBookmarkPopUpRequestDTO) -> Completable {
+        let endPoint = UserAPIEndPoint.deleteBookmarkPopUp(userID: userID, request: request)
         return provider.request(with: endPoint, interceptor: tokenInterceptor)
     }
 }
