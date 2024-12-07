@@ -43,7 +43,7 @@ final class SearchCategoryReactor: Reactor {
     var initialState: State
     var disposeBag = DisposeBag()
     var originCategoryList: [Int64]
-    private let signUpAPIUseCase = SignUpUseCaseImpl(repository: SignUpRepositoryImpl(provider: ProviderImpl()))
+    private let signUpAPIUseCase = SignUpAPIUseCaseImpl(repository: SignUpRepositoryImpl(provider: ProviderImpl()))
     private var tagSection = TagSection(inputDataList: [])
     lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         UICollectionViewCompositionalLayout { [weak self] section, env in

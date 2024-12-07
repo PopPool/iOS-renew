@@ -188,8 +188,7 @@
 		BD91036D2CF6149D00BBCCAE /* SignUpAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91035D2CF6149D00BBCCAE /* SignUpAPIEndpoint.swift */; };
 		BD91036E2CF6149D00BBCCAE /* SignUpRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91035E2CF6149D00BBCCAE /* SignUpRequestDTO.swift */; };
 		BD9103812CF614A900BBCCAE /* HomeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103702CF614A900BBCCAE /* HomeUseCaseImpl.swift */; };
-		BD9103822CF614A900BBCCAE /* SignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103712CF614A900BBCCAE /* SignUpUseCase.swift */; };
-		BD9103832CF614A900BBCCAE /* SignUpUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103722CF614A900BBCCAE /* SignUpUseCaseImpl.swift */; };
+		BD9103832CF614A900BBCCAE /* SignUpAPIUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103722CF614A900BBCCAE /* SignUpAPIUseCaseImpl.swift */; };
 		BD9103842CF614A900BBCCAE /* TryLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103732CF614A900BBCCAE /* TryLoginUseCase.swift */; };
 		BD9103852CF614A900BBCCAE /* TryLoginUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103742CF614A900BBCCAE /* TryLoginUseCaseImpl.swift */; };
 		BD9103862CF614A900BBCCAE /* BannerPopUpStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103762CF614A900BBCCAE /* BannerPopUpStore.swift */; };
@@ -198,7 +197,6 @@
 		BD9103892CF614A900BBCCAE /* PopUpStoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103792CF614A900BBCCAE /* PopUpStoreResponse.swift */; };
 		BD91038A2CF614A900BBCCAE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91037A2CF614A900BBCCAE /* LoginResponse.swift */; };
 		BD91038B2CF614A900BBCCAE /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91037C2CF614A900BBCCAE /* AuthRepository.swift */; };
-		BD91038D2CF614A900BBCCAE /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91037E2CF614A900BBCCAE /* SignUpRepository.swift */; };
 		BD9103922CF6166800BBCCAE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91038E2CF6166800BBCCAE /* SplashView.swift */; };
 		BD9103932CF6166800BBCCAE /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103902CF6166800BBCCAE /* SplashController.swift */; };
 		BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA41C02CF35AC0005EECF6 /* AppDelegate.swift */; };
@@ -416,8 +414,7 @@
 		BD91035D2CF6149D00BBCCAE /* SignUpAPIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAPIEndpoint.swift; sourceTree = "<group>"; };
 		BD91035E2CF6149D00BBCCAE /* SignUpRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRequestDTO.swift; sourceTree = "<group>"; };
 		BD9103702CF614A900BBCCAE /* HomeUseCaseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUseCaseImpl.swift; sourceTree = "<group>"; };
-		BD9103712CF614A900BBCCAE /* SignUpUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUseCase.swift; sourceTree = "<group>"; };
-		BD9103722CF614A900BBCCAE /* SignUpUseCaseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUseCaseImpl.swift; sourceTree = "<group>"; };
+		BD9103722CF614A900BBCCAE /* SignUpAPIUseCaseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAPIUseCaseImpl.swift; sourceTree = "<group>"; };
 		BD9103732CF614A900BBCCAE /* TryLoginUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryLoginUseCase.swift; sourceTree = "<group>"; };
 		BD9103742CF614A900BBCCAE /* TryLoginUseCaseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryLoginUseCaseImpl.swift; sourceTree = "<group>"; };
 		BD9103762CF614A900BBCCAE /* BannerPopUpStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerPopUpStore.swift; sourceTree = "<group>"; };
@@ -426,7 +423,6 @@
 		BD9103792CF614A900BBCCAE /* PopUpStoreResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpStoreResponse.swift; sourceTree = "<group>"; };
 		BD91037A2CF614A900BBCCAE /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		BD91037C2CF614A900BBCCAE /* AuthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
-		BD91037E2CF614A900BBCCAE /* SignUpRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
 		BD91038E2CF6166800BBCCAE /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		BD9103902CF6166800BBCCAE /* SplashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		BDCA41BD2CF35AC0005EECF6 /* Poppool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1264,8 +1260,7 @@
 			isa = PBXGroup;
 			children = (
 				BD9103702CF614A900BBCCAE /* HomeUseCaseImpl.swift */,
-				BD9103712CF614A900BBCCAE /* SignUpUseCase.swift */,
-				BD9103722CF614A900BBCCAE /* SignUpUseCaseImpl.swift */,
+				BD9103722CF614A900BBCCAE /* SignUpAPIUseCaseImpl.swift */,
 				BD9103732CF614A900BBCCAE /* TryLoginUseCase.swift */,
 				BD9103742CF614A900BBCCAE /* TryLoginUseCaseImpl.swift */,
 				086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */,
@@ -1291,7 +1286,6 @@
 			isa = PBXGroup;
 			children = (
 				BD91037C2CF614A900BBCCAE /* AuthRepository.swift */,
-				BD91037E2CF614A900BBCCAE /* SignUpRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1585,7 +1579,6 @@
 				0841BAB82CFAC41300049E31 /* SectionBackGroundDecorationView.swift in Sources */,
 				089952682D046CD80022AEF9 /* SearchResultReactor.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
-				BD9103822CF614A900BBCCAE /* SignUpUseCase.swift in Sources */,
 				086DD9402D01EEEB00B97D3B /* SearchCountTitleSection.swift in Sources */,
 				086DD8CE2CFDFEB000B97D3B /* HomeListView.swift in Sources */,
 				08B191C22CF615CA0057BC04 /* Secrets.swift in Sources */,
@@ -1602,7 +1595,7 @@
 				BD91038A2CF614A900BBCCAE /* LoginResponse.swift in Sources */,
 				083A25BF2CF362770099B58E /* Logger.swift in Sources */,
 				08DC61FC2CF76862002A2F44 /* SignUpCompleteReactor.swift in Sources */,
-				BD9103832CF614A900BBCCAE /* SignUpUseCaseImpl.swift in Sources */,
+				BD9103832CF614A900BBCCAE /* SignUpAPIUseCaseImpl.swift in Sources */,
 				08DC62072CF8AC14002A2F44 /* HomeReactor.swift in Sources */,
 				083A259A2CF362090099B58E /* SectionDecorationItem.swift in Sources */,
 				BD9103892CF614A900BBCCAE /* PopUpStoreResponse.swift in Sources */,
@@ -1636,7 +1629,6 @@
 				086DD8E32CFF356300B97D3B /* HomeCardGridSection.swift in Sources */,
 				0841BABE2CFB5AA600049E31 /* Date?+.swift in Sources */,
 				083A258D2CF361F90099B58E /* ConventionCollectionViewCell.swift in Sources */,
-				BD91038D2CF614A900BBCCAE /* SignUpRepository.swift in Sources */,
 				08DC620D2CF8AE16002A2F44 /* ImageBannerSectionCell.swift in Sources */,
 				08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */,
 				08B191882CF48FAE0057BC04 /* NickNameState.swift in Sources */,

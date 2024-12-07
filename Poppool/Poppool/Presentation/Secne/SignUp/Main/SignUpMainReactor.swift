@@ -57,7 +57,7 @@ final class SignUpMainReactor: Reactor {
     
     var initialState: State
     var disposeBag = DisposeBag()
-    private let signUpAPIUseCase = SignUpUseCaseImpl(repository: SignUpRepositoryImpl(provider: ProviderImpl()))
+    private let signUpAPIUseCase = SignUpAPIUseCaseImpl(repository: SignUpRepositoryImpl(provider: ProviderImpl()))
     private let userDefaultService = UserDefaultService()
     
     // MARK: - init
@@ -112,12 +112,10 @@ final class SignUpMainReactor: Reactor {
             newState.currentIndex = currentIndex - 1
             controller.scrollToPage(.at(index: currentIndex - 1), animated: false)
         case .moveToCompleteScene(let controller):
-            guard let userId = userDefaultService.fetch(key: "userID"),
-                  let socialType = userDefaultService.fetch(key: "socialType"),
+            guard let socialType = userDefaultService.fetch(key: "socialType"),
                   let nickName = newState.nickName,
                   let gender = newState.gender else { return newState }
             signUpAPIUseCase.trySignUp(
-                userId: userId,
                 nickName: nickName,
                 gender: gender,
                 age: Int32(newState.age ?? 30),
