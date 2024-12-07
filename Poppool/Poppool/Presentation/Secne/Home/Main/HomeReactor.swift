@@ -19,6 +19,7 @@ final class HomeReactor: Reactor {
         case changeHeaderState(isDarkMode: Bool)
         case detailButtonTapped(controller: BaseViewController, indexPath: IndexPath)
         case bookMarkButtonTapped(indexPath: IndexPath)
+        case searchButtonTapped(controller: BaseViewController)
     }
     
     enum Mutation {
@@ -26,6 +27,7 @@ final class HomeReactor: Reactor {
         case setHedaerState(isDarkMode: Bool)
         case moveToDetailScene(controller: BaseViewController, indexPath: IndexPath)
         case reloadView(indexPath: IndexPath)
+        case moveToSearchScene(controller: BaseViewController)
     }
     
     struct State {
@@ -84,8 +86,7 @@ final class HomeReactor: Reactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .viewWillAppear:
-            guard let userIDResult = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
-            return homeApiUseCase.fetchHome(userId: userIDResult, page: 0, size: 6, sort: "viewCount,desc")
+            return homeApiUseCase.fetchHome(page: 0, size: 6, sort: "viewCount,desc")
                 .withUnretained(self)
                 .map { (owner, response) in
                     owner.setBannerSection(response: response)
@@ -101,15 +102,16 @@ final class HomeReactor: Reactor {
         case .detailButtonTapped(let controller, let indexPath):
             return Observable.just(.moveToDetailScene(controller: controller, indexPath: indexPath))
         case .bookMarkButtonTapped(let indexPath):
-            guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
-            var popUpData = getPopUpData(indexPath: indexPath)
+            let popUpData = getPopUpData(indexPath: indexPath)
             if popUpData.isBookmark {
-                return userAPIUseCase.deleteBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                return userAPIUseCase.deleteBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             } else {
-                return userAPIUseCase.postBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                return userAPIUseCase.postBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             }
+        case .searchButtonTapped(let controller):
+            return Observable.just(.moveToSearchScene(controller: controller))
         }
     }
     
@@ -117,6 +119,10 @@ final class HomeReactor: Reactor {
         var newState = state
         newState.isReloadView = false
         switch mutation {
+        case .moveToSearchScene(let controller):
+            let nextController = SearchMainController()
+            nextController.reactor = SearchMainReactor()
+            controller.navigationController?.pushViewController(nextController, animated: true)
         case .loadView:
             newState.isReloadView = true
             newState.sections = getSection()
@@ -195,6 +201,7 @@ final class HomeReactor: Reactor {
     }
     
     func setCurationSection(response: GetHomeInfoResponse) {
+        let islogin = response.loginYn
         curationSection.inputDataList = response.customPopUpStoreList.map({ response in
             return .init(
                 imagePath: response.mainImageUrl,
@@ -204,7 +211,8 @@ final class HomeReactor: Reactor {
                 address: response.address,
                 startDate: response.startDate,
                 endDate: response.endDate,
-                isBookmark: response.bookmarkYn
+                isBookmark: response.bookmarkYn,
+                isLogin: islogin
             )
         })
     }
@@ -222,6 +230,7 @@ final class HomeReactor: Reactor {
     }
     
     func setNewSection(response: GetHomeInfoResponse) {
+        let islogin = response.loginYn
         newSection.inputDataList = response.newPopUpStoreList.map({ response in
             return .init(
                 imagePath: response.mainImageUrl,
@@ -231,7 +240,8 @@ final class HomeReactor: Reactor {
                 address: response.address,
                 startDate: response.startDate,
                 endDate: response.endDate,
-                isBookmark: response.bookmarkYn
+                isBookmark: response.bookmarkYn,
+                isLogin: islogin
             )
         })
     }

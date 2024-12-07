@@ -43,7 +43,6 @@ extension HomeListController {
 // MARK: - SetUp
 private extension HomeListController {
     func setUp() {
-        view.backgroundColor = .g50
         view.addSubview(mainView)
         mainView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
@@ -58,6 +57,10 @@ private extension HomeListController {
         mainView.contentCollectionView.register(
             HomeCardSectionCell.self,
             forCellWithReuseIdentifier: HomeCardSectionCell.identifiers
+        )
+        mainView.contentCollectionView.register(
+            SpacingSectionCell.self,
+            forCellWithReuseIdentifier: SpacingSectionCell.identifiers
         )
     }
 }

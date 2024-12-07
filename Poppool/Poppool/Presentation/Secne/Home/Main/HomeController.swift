@@ -48,7 +48,6 @@ extension HomeController {
 // MARK: - SetUp
 private extension HomeController {
     func setUp() {
-        view.backgroundColor = .g50
         if let layout = reactor?.compositionalLayout {
             layout.register(SectionBackGroundDecorationView.self, forDecorationViewOfKind: "BackgroundView")
             mainView.contentCollectionView.collectionViewLayout = layout
@@ -114,6 +113,14 @@ extension HomeController {
         headerIsDarkMode
             .distinctUntilChanged()
             .map { Reactor.Action.changeHeaderState(isDarkMode: $0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        homeHeaderView.searchBarButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                Reactor.Action.searchButtonTapped(controller: owner)
+            }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         

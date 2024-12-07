@@ -68,6 +68,39 @@
 		086DD8DE2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */; };
 		086DD8E02CFF2C3700B97D3B /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8DF2CFF2C3700B97D3B /* UIImageView+.swift */; };
 		086DD8E32CFF356300B97D3B /* HomeCardGridSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD8E22CFF356300B97D3B /* HomeCardGridSection.swift */; };
+		086DD92A2D0086AA00B97D3B /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9292D0086AA00B97D3B /* SearchController.swift */; };
+		086DD92C2D0086B100B97D3B /* SearchReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD92B2D0086B100B97D3B /* SearchReactor.swift */; };
+		086DD92E2D0086B900B97D3B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD92D2D0086B900B97D3B /* SearchView.swift */; };
+		086DD9302D0090E900B97D3B /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD92F2D0090E900B97D3B /* UITextField+.swift */; };
+		086DD9342D00962500B97D3B /* SearchTitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9332D00962500B97D3B /* SearchTitleSectionCell.swift */; };
+		086DD9362D00963900B97D3B /* SearchTitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9352D00963900B97D3B /* SearchTitleSection.swift */; };
+		086DD93B2D009A1C00B97D3B /* CancelableTagSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93A2D009A1C00B97D3B /* CancelableTagSection.swift */; };
+		086DD93D2D009A2600B97D3B /* CancelableTagSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93C2D009A2600B97D3B /* CancelableTagSectionCell.swift */; };
+		086DD9402D01EEEB00B97D3B /* SearchCountTitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93F2D01EEEB00B97D3B /* SearchCountTitleSection.swift */; };
+		086DD9422D01EEF700B97D3B /* SearchCountTitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9412D01EEF700B97D3B /* SearchCountTitleSectionCell.swift */; };
+		089952422D031E650022AEF9 /* SearchSortedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952412D031E650022AEF9 /* SearchSortedController.swift */; };
+		089952442D031E6D0022AEF9 /* SearchSortedReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952432D031E6D0022AEF9 /* SearchSortedReactor.swift */; };
+		089952462D031E740022AEF9 /* SearchSortedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952452D031E740022AEF9 /* SearchSortedView.swift */; };
+		089952492D033A1C0022AEF9 /* PopUpAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952482D033A1C0022AEF9 /* PopUpAPIEndPoint.swift */; };
+		0899524B2D033A9C0022AEF9 /* GetClosePopUpListResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0899524A2D033A9C0022AEF9 /* GetClosePopUpListResponseDTO.swift */; };
+		0899524D2D033AA70022AEF9 /* GetOpenPopUpListResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0899524C2D033AA70022AEF9 /* GetOpenPopUpListResponseDTO.swift */; };
+		0899524F2D033B5A0022AEF9 /* GetSearchPopUpListRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0899524E2D033B5A0022AEF9 /* GetSearchPopUpListRequestDTO.swift */; };
+		089952512D033C410022AEF9 /* GetSearchBottomPopUpListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952502D033C410022AEF9 /* GetSearchBottomPopUpListResponse.swift */; };
+		089952532D033C940022AEF9 /* PopUpAPIRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952522D033C940022AEF9 /* PopUpAPIRepositoryImpl.swift */; };
+		089952552D033D480022AEF9 /* PopUpAPIUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952542D033D480022AEF9 /* PopUpAPIUseCaseImpl.swift */; };
+		089952582D0347AC0022AEF9 /* SearchCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952572D0347AC0022AEF9 /* SearchCategoryController.swift */; };
+		0899525A2D0347B40022AEF9 /* SearchCategoryReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952592D0347B40022AEF9 /* SearchCategoryReactor.swift */; };
+		0899525C2D0347BD0022AEF9 /* SearchCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0899525B2D0347BD0022AEF9 /* SearchCategoryView.swift */; };
+		089952602D0366C40022AEF9 /* SearchMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0899525F2D0366C40022AEF9 /* SearchMainController.swift */; };
+		089952622D0366D30022AEF9 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952612D0366D30022AEF9 /* SearchMainView.swift */; };
+		089952642D0366DA0022AEF9 /* SearchMainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952632D0366DA0022AEF9 /* SearchMainReactor.swift */; };
+		089952662D046CCD0022AEF9 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952652D046CCD0022AEF9 /* SearchResultController.swift */; };
+		089952682D046CD80022AEF9 /* SearchResultReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952672D046CD80022AEF9 /* SearchResultReactor.swift */; };
+		0899526A2D046CDE0022AEF9 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952692D046CDE0022AEF9 /* SearchResultView.swift */; };
+		0899526C2D0473EC0022AEF9 /* GetSearchPopUpListResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0899526B2D0473EC0022AEF9 /* GetSearchPopUpListResponseDTO.swift */; };
+		0899526E2D0474340022AEF9 /* GetSearchPopUpListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0899526D2D0474340022AEF9 /* GetSearchPopUpListResponse.swift */; };
+		089952732D0475E90022AEF9 /* SearchResultCountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952722D0475E90022AEF9 /* SearchResultCountSection.swift */; };
+		089952752D0475F20022AEF9 /* SearchResultCountSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952742D0475F20022AEF9 /* SearchResultCountSectionCell.swift */; };
 		08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191342CF366670057BC04 /* UICollectionViewCell+.swift */; };
 		08B191382CF366680057BC04 /* UICollectionReusableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191352CF366670057BC04 /* UICollectionReusableView+.swift */; };
 		08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B191362CF366670057BC04 /* UITableViewCell+.swift */; };
@@ -138,7 +171,7 @@
 		08DC62072CF8AC14002A2F44 /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC62062CF8AC14002A2F44 /* HomeReactor.swift */; };
 		08DC620B2CF8AE0F002A2F44 /* ImageBannerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC620A2CF8AE0F002A2F44 /* ImageBannerSection.swift */; };
 		08DC620D2CF8AE16002A2F44 /* ImageBannerSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC620C2CF8AE16002A2F44 /* ImageBannerSectionCell.swift */; };
-		08DC62112CF8B446002A2F44 /* HomeAPIRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC62102CF8B446002A2F44 /* HomeAPIRequestDTO.swift */; };
+		08DC62112CF8B446002A2F44 /* SortedRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC62102CF8B446002A2F44 /* SortedRequestDTO.swift */; };
 		08DC62132CF8B833002A2F44 /* Optional+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC62122CF8B833002A2F44 /* Optional+.swift */; };
 		BD226D512CF6DB290038C984 /* PPReturnHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD226D502CF6DB290038C984 /* PPReturnHeaderView.swift */; };
 		BD226D552CF6EBD40038C984 /* HomePopUpReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD226D542CF6EBD40038C984 /* HomePopUpReactor.swift */; };
@@ -148,7 +181,7 @@
 		BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103512CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift */; };
 		BD9103642CF6149D00BBCCAE /* GetHomeInfoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103522CF6149D00BBCCAE /* GetHomeInfoResponseDTO.swift */; };
 		BD9103652CF6149D00BBCCAE /* HomeAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103532CF6149D00BBCCAE /* HomeAPIEndpoint.swift */; };
-		BD9103662CF6149D00BBCCAE /* GetHomeInfoDataResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103542CF6149D00BBCCAE /* GetHomeInfoDataResponseDTO.swift */; };
+		BD9103662CF6149D00BBCCAE /* PopUpStoreResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103542CF6149D00BBCCAE /* PopUpStoreResponseDTO.swift */; };
 		BD9103682CF6149D00BBCCAE /* AuthRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103572CF6149D00BBCCAE /* AuthRepositoryImpl.swift */; };
 		BD9103692CF6149D00BBCCAE /* HomeAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103582CF6149D00BBCCAE /* HomeAPIRepository.swift */; };
 		BD91036A2CF6149D00BBCCAE /* SignUpRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103592CF6149D00BBCCAE /* SignUpRepositoryImpl.swift */; };
@@ -164,7 +197,7 @@
 		BD9103862CF614A900BBCCAE /* BannerPopUpStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103762CF614A900BBCCAE /* BannerPopUpStore.swift */; };
 		BD9103872CF614A900BBCCAE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103772CF614A900BBCCAE /* Category.swift */; };
 		BD9103882CF614A900BBCCAE /* GetHomeInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103782CF614A900BBCCAE /* GetHomeInfoResponse.swift */; };
-		BD9103892CF614A900BBCCAE /* GetHomeInfoDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103792CF614A900BBCCAE /* GetHomeInfoDataResponse.swift */; };
+		BD9103892CF614A900BBCCAE /* PopUpStoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9103792CF614A900BBCCAE /* PopUpStoreResponse.swift */; };
 		BD91038A2CF614A900BBCCAE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91037A2CF614A900BBCCAE /* LoginResponse.swift */; };
 		BD91038B2CF614A900BBCCAE /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91037C2CF614A900BBCCAE /* AuthRepository.swift */; };
 		BD91038D2CF614A900BBCCAE /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91037E2CF614A900BBCCAE /* SignUpRepository.swift */; };
@@ -268,6 +301,39 @@
 		086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIUseCaseImpl.swift; sourceTree = "<group>"; };
 		086DD8DF2CFF2C3700B97D3B /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		086DD8E22CFF356300B97D3B /* HomeCardGridSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardGridSection.swift; sourceTree = "<group>"; };
+		086DD9292D0086AA00B97D3B /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		086DD92B2D0086B100B97D3B /* SearchReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReactor.swift; sourceTree = "<group>"; };
+		086DD92D2D0086B900B97D3B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		086DD92F2D0090E900B97D3B /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		086DD9332D00962500B97D3B /* SearchTitleSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTitleSectionCell.swift; sourceTree = "<group>"; };
+		086DD9352D00963900B97D3B /* SearchTitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTitleSection.swift; sourceTree = "<group>"; };
+		086DD93A2D009A1C00B97D3B /* CancelableTagSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableTagSection.swift; sourceTree = "<group>"; };
+		086DD93C2D009A2600B97D3B /* CancelableTagSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableTagSectionCell.swift; sourceTree = "<group>"; };
+		086DD93F2D01EEEB00B97D3B /* SearchCountTitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountTitleSection.swift; sourceTree = "<group>"; };
+		086DD9412D01EEF700B97D3B /* SearchCountTitleSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountTitleSectionCell.swift; sourceTree = "<group>"; };
+		089952412D031E650022AEF9 /* SearchSortedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSortedController.swift; sourceTree = "<group>"; };
+		089952432D031E6D0022AEF9 /* SearchSortedReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSortedReactor.swift; sourceTree = "<group>"; };
+		089952452D031E740022AEF9 /* SearchSortedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSortedView.swift; sourceTree = "<group>"; };
+		089952482D033A1C0022AEF9 /* PopUpAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAPIEndPoint.swift; sourceTree = "<group>"; };
+		0899524A2D033A9C0022AEF9 /* GetClosePopUpListResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClosePopUpListResponseDTO.swift; sourceTree = "<group>"; };
+		0899524C2D033AA70022AEF9 /* GetOpenPopUpListResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOpenPopUpListResponseDTO.swift; sourceTree = "<group>"; };
+		0899524E2D033B5A0022AEF9 /* GetSearchPopUpListRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchPopUpListRequestDTO.swift; sourceTree = "<group>"; };
+		089952502D033C410022AEF9 /* GetSearchBottomPopUpListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchBottomPopUpListResponse.swift; sourceTree = "<group>"; };
+		089952522D033C940022AEF9 /* PopUpAPIRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAPIRepositoryImpl.swift; sourceTree = "<group>"; };
+		089952542D033D480022AEF9 /* PopUpAPIUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAPIUseCaseImpl.swift; sourceTree = "<group>"; };
+		089952572D0347AC0022AEF9 /* SearchCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryController.swift; sourceTree = "<group>"; };
+		089952592D0347B40022AEF9 /* SearchCategoryReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryReactor.swift; sourceTree = "<group>"; };
+		0899525B2D0347BD0022AEF9 /* SearchCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryView.swift; sourceTree = "<group>"; };
+		0899525F2D0366C40022AEF9 /* SearchMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainController.swift; sourceTree = "<group>"; };
+		089952612D0366D30022AEF9 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
+		089952632D0366DA0022AEF9 /* SearchMainReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainReactor.swift; sourceTree = "<group>"; };
+		089952652D046CCD0022AEF9 /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
+		089952672D046CD80022AEF9 /* SearchResultReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultReactor.swift; sourceTree = "<group>"; };
+		089952692D046CDE0022AEF9 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		0899526B2D0473EC0022AEF9 /* GetSearchPopUpListResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchPopUpListResponseDTO.swift; sourceTree = "<group>"; };
+		0899526D2D0474340022AEF9 /* GetSearchPopUpListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchPopUpListResponse.swift; sourceTree = "<group>"; };
+		089952722D0475E90022AEF9 /* SearchResultCountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCountSection.swift; sourceTree = "<group>"; };
+		089952742D0475F20022AEF9 /* SearchResultCountSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCountSectionCell.swift; sourceTree = "<group>"; };
 		08B191342CF366670057BC04 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		08B191352CF366670057BC04 /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
 		08B191362CF366670057BC04 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
@@ -335,7 +401,7 @@
 		08DC62062CF8AC14002A2F44 /* HomeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReactor.swift; sourceTree = "<group>"; };
 		08DC620A2CF8AE0F002A2F44 /* ImageBannerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerSection.swift; sourceTree = "<group>"; };
 		08DC620C2CF8AE16002A2F44 /* ImageBannerSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerSectionCell.swift; sourceTree = "<group>"; };
-		08DC62102CF8B446002A2F44 /* HomeAPIRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIRequestDTO.swift; sourceTree = "<group>"; };
+		08DC62102CF8B446002A2F44 /* SortedRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedRequestDTO.swift; sourceTree = "<group>"; };
 		08DC62122CF8B833002A2F44 /* Optional+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+.swift"; sourceTree = "<group>"; };
 		BD226D502CF6DB290038C984 /* PPReturnHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPReturnHeaderView.swift; sourceTree = "<group>"; };
 		BD226D542CF6EBD40038C984 /* HomePopUpReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopUpReactor.swift; sourceTree = "<group>"; };
@@ -345,7 +411,7 @@
 		BD9103512CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerPopUpStoreDTO.swift; sourceTree = "<group>"; };
 		BD9103522CF6149D00BBCCAE /* GetHomeInfoResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomeInfoResponseDTO.swift; sourceTree = "<group>"; };
 		BD9103532CF6149D00BBCCAE /* HomeAPIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAPIEndpoint.swift; sourceTree = "<group>"; };
-		BD9103542CF6149D00BBCCAE /* GetHomeInfoDataResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomeInfoDataResponseDTO.swift; sourceTree = "<group>"; };
+		BD9103542CF6149D00BBCCAE /* PopUpStoreResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpStoreResponseDTO.swift; sourceTree = "<group>"; };
 		BD9103572CF6149D00BBCCAE /* AuthRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepositoryImpl.swift; sourceTree = "<group>"; };
 		BD9103582CF6149D00BBCCAE /* HomeAPIRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAPIRepository.swift; sourceTree = "<group>"; };
 		BD9103592CF6149D00BBCCAE /* SignUpRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -361,7 +427,7 @@
 		BD9103762CF614A900BBCCAE /* BannerPopUpStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerPopUpStore.swift; sourceTree = "<group>"; };
 		BD9103772CF614A900BBCCAE /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BD9103782CF614A900BBCCAE /* GetHomeInfoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomeInfoResponse.swift; sourceTree = "<group>"; };
-		BD9103792CF614A900BBCCAE /* GetHomeInfoDataResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomeInfoDataResponse.swift; sourceTree = "<group>"; };
+		BD9103792CF614A900BBCCAE /* PopUpStoreResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpStoreResponse.swift; sourceTree = "<group>"; };
 		BD91037A2CF614A900BBCCAE /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		BD91037C2CF614A900BBCCAE /* AuthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		BD91037E2CF614A900BBCCAE /* SignUpRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
@@ -613,8 +679,10 @@
 		083A25C22CF3635B0099B58E /* Secne */ = {
 			isa = PBXGroup;
 			children = (
+				0841BABF2CFB5EC700049E31 /* TabbarController */,
+				08DC62012CF8ABDA002A2F44 /* Home */,
+				086DD9282D00869D00B97D3B /* Search */,
 				4EC6DED12CFEF7F000584B55 /* Map */,
-				BD9103942CF61AAC00BBCCAE /* HomeMain */,
 				083A25C42CF363A10099B58E /* SignUp */,
 				083A25C32CF363650099B58E /* Login */,
 				BD9103912CF6166800BBCCAE /* Splash */,
@@ -759,6 +827,145 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		086DD9282D00869D00B97D3B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0899523F2D031E470022AEF9 /* Main */,
+				0899525E2D0366A20022AEF9 /* AfterSearch */,
+				0899525D2D0366950022AEF9 /* BeforeSearch */,
+				089952562D03478D0022AEF9 /* CategoryController */,
+				089952402D031E500022AEF9 /* SortedController */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		086DD9312D0095DA00B97D3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				086DD93E2D01EED200B97D3B /* SearchCountTitleSection */,
+				086DD9372D0099FB00B97D3B /* CancelableTagSection */,
+				086DD9322D00960700B97D3B /* SearchTitleSection */,
+				086DD92D2D0086B900B97D3B /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		086DD9322D00960700B97D3B /* SearchTitleSection */ = {
+			isa = PBXGroup;
+			children = (
+				086DD9332D00962500B97D3B /* SearchTitleSectionCell.swift */,
+				086DD9352D00963900B97D3B /* SearchTitleSection.swift */,
+			);
+			path = SearchTitleSection;
+			sourceTree = "<group>";
+		};
+		086DD9372D0099FB00B97D3B /* CancelableTagSection */ = {
+			isa = PBXGroup;
+			children = (
+				086DD93A2D009A1C00B97D3B /* CancelableTagSection.swift */,
+				086DD93C2D009A2600B97D3B /* CancelableTagSectionCell.swift */,
+			);
+			path = CancelableTagSection;
+			sourceTree = "<group>";
+		};
+		086DD93E2D01EED200B97D3B /* SearchCountTitleSection */ = {
+			isa = PBXGroup;
+			children = (
+				086DD93F2D01EEEB00B97D3B /* SearchCountTitleSection.swift */,
+				086DD9412D01EEF700B97D3B /* SearchCountTitleSectionCell.swift */,
+			);
+			path = SearchCountTitleSection;
+			sourceTree = "<group>";
+		};
+		0899523F2D031E470022AEF9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				089952612D0366D30022AEF9 /* SearchMainView.swift */,
+				0899525F2D0366C40022AEF9 /* SearchMainController.swift */,
+				089952632D0366DA0022AEF9 /* SearchMainReactor.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		089952402D031E500022AEF9 /* SortedController */ = {
+			isa = PBXGroup;
+			children = (
+				089952452D031E740022AEF9 /* SearchSortedView.swift */,
+				089952412D031E650022AEF9 /* SearchSortedController.swift */,
+				089952432D031E6D0022AEF9 /* SearchSortedReactor.swift */,
+			);
+			path = SortedController;
+			sourceTree = "<group>";
+		};
+		089952472D033A0E0022AEF9 /* PopUpAPI */ = {
+			isa = PBXGroup;
+			children = (
+				089952482D033A1C0022AEF9 /* PopUpAPIEndPoint.swift */,
+				0899524E2D033B5A0022AEF9 /* GetSearchPopUpListRequestDTO.swift */,
+				0899526B2D0473EC0022AEF9 /* GetSearchPopUpListResponseDTO.swift */,
+				0899524A2D033A9C0022AEF9 /* GetClosePopUpListResponseDTO.swift */,
+				0899524C2D033AA70022AEF9 /* GetOpenPopUpListResponseDTO.swift */,
+			);
+			path = PopUpAPI;
+			sourceTree = "<group>";
+		};
+		089952562D03478D0022AEF9 /* CategoryController */ = {
+			isa = PBXGroup;
+			children = (
+				0899525B2D0347BD0022AEF9 /* SearchCategoryView.swift */,
+				089952572D0347AC0022AEF9 /* SearchCategoryController.swift */,
+				089952592D0347B40022AEF9 /* SearchCategoryReactor.swift */,
+			);
+			path = CategoryController;
+			sourceTree = "<group>";
+		};
+		0899525D2D0366950022AEF9 /* BeforeSearch */ = {
+			isa = PBXGroup;
+			children = (
+				086DD9312D0095DA00B97D3B /* View */,
+				086DD9292D0086AA00B97D3B /* SearchController.swift */,
+				086DD92B2D0086B100B97D3B /* SearchReactor.swift */,
+			);
+			path = BeforeSearch;
+			sourceTree = "<group>";
+		};
+		0899525E2D0366A20022AEF9 /* AfterSearch */ = {
+			isa = PBXGroup;
+			children = (
+				089952762D0476590022AEF9 /* View */,
+				089952652D046CCD0022AEF9 /* SearchResultController.swift */,
+				089952672D046CD80022AEF9 /* SearchResultReactor.swift */,
+			);
+			path = AfterSearch;
+			sourceTree = "<group>";
+		};
+		0899526F2D0474430022AEF9 /* PopUpAPI */ = {
+			isa = PBXGroup;
+			children = (
+				089952502D033C410022AEF9 /* GetSearchBottomPopUpListResponse.swift */,
+				0899526D2D0474340022AEF9 /* GetSearchPopUpListResponse.swift */,
+			);
+			path = PopUpAPI;
+			sourceTree = "<group>";
+		};
+		089952712D0475D70022AEF9 /* SearchResultCountSection */ = {
+			isa = PBXGroup;
+			children = (
+				089952722D0475E90022AEF9 /* SearchResultCountSection.swift */,
+				089952742D0475F20022AEF9 /* SearchResultCountSectionCell.swift */,
+			);
+			path = SearchResultCountSection;
+			sourceTree = "<group>";
+		};
+		089952762D0476590022AEF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				089952712D0475D70022AEF9 /* SearchResultCountSection */,
+				089952692D046CDE0022AEF9 /* SearchResultView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		08B191332CF366500057BC04 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,6 +983,7 @@
 				0841BABD2CFB5AA600049E31 /* Date?+.swift */,
 				086DD8C72CFDEA9200B97D3B /* UIView+.swift */,
 				086DD8DF2CFF2C3700B97D3B /* UIImageView+.swift */,
+				086DD92F2D0090E900B97D3B /* UITextField+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -985,7 +1193,7 @@
 			isa = PBXGroup;
 			children = (
 				BD9103512CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift */,
-				BD9103542CF6149D00BBCCAE /* GetHomeInfoDataResponseDTO.swift */,
+				BD9103542CF6149D00BBCCAE /* PopUpStoreResponseDTO.swift */,
 				BD9103522CF6149D00BBCCAE /* GetHomeInfoResponseDTO.swift */,
 			);
 			path = ResponseDTO;
@@ -994,7 +1202,6 @@
 		08DC620F2CF8B37C002A2F44 /* RequestDTO */ = {
 			isa = PBXGroup;
 			children = (
-				08DC62102CF8B446002A2F44 /* HomeAPIRequestDTO.swift */,
 			);
 			path = RequestDTO;
 			sourceTree = "<group>";
@@ -1025,6 +1232,7 @@
 				BD9103582CF6149D00BBCCAE /* HomeAPIRepository.swift */,
 				BD9103592CF6149D00BBCCAE /* SignUpRepositoryImpl.swift */,
 				086DD8D92CFF194700B97D3B /* UserAPIRepositoryImpl.swift */,
+				089952522D033C940022AEF9 /* PopUpAPIRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1043,6 +1251,8 @@
 		BD9103602CF6149D00BBCCAE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				08DC62102CF8B446002A2F44 /* SortedRequestDTO.swift */,
+				089952472D033A0E0022AEF9 /* PopUpAPI */,
 				086DD8D42CFF181500B97D3B /* UserAPI */,
 				BD9103502CF6149D00BBCCAE /* AuthAPI */,
 				BD9103562CF6149D00BBCCAE /* HomeAPI */,
@@ -1060,6 +1270,7 @@
 				BD9103732CF614A900BBCCAE /* TryLoginUseCase.swift */,
 				BD9103742CF614A900BBCCAE /* TryLoginUseCaseImpl.swift */,
 				086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */,
+				089952542D033D480022AEF9 /* PopUpAPIUseCaseImpl.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1070,8 +1281,9 @@
 				BD9103762CF614A900BBCCAE /* BannerPopUpStore.swift */,
 				BD9103772CF614A900BBCCAE /* Category.swift */,
 				BD9103782CF614A900BBCCAE /* GetHomeInfoResponse.swift */,
-				BD9103792CF614A900BBCCAE /* GetHomeInfoDataResponse.swift */,
+				BD9103792CF614A900BBCCAE /* PopUpStoreResponse.swift */,
 				BD91037A2CF614A900BBCCAE /* LoginResponse.swift */,
+				0899526F2D0474430022AEF9 /* PopUpAPI */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1323,10 +1535,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089952662D046CCD0022AEF9 /* SearchResultController.swift in Sources */,
 				08B191962CF4A0FA0057BC04 /* SignUpStep4Controller.swift in Sources */,
 				0841BABC2CFB59E200049E31 /* String?+.swift in Sources */,
 				0841BA872CF9F62400049E31 /* PreSignedURLDTO.swift in Sources */,
 				086DD8DE2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift in Sources */,
+				089952492D033A1C0022AEF9 /* PopUpAPIEndPoint.swift in Sources */,
 				083A25C82CF363C00099B58E /* LoginController.swift in Sources */,
 				08B1913D2CF367EB0057BC04 /* Constants.swift in Sources */,
 				083A25B72CF362670099B58E /* RequestEndpoint.swift in Sources */,
@@ -1335,6 +1549,8 @@
 				083A25B22CF362670099B58E /* NetworkError.swift in Sources */,
 				BD9103692CF6149D00BBCCAE /* HomeAPIRepository.swift in Sources */,
 				083A25832CF361EF0099B58E /* BaseViewController.swift in Sources */,
+				089952752D0475F20022AEF9 /* SearchResultCountSectionCell.swift in Sources */,
+				086DD9362D00963900B97D3B /* SearchTitleSection.swift in Sources */,
 				083A25922CF361F90099B58E /* ViewConvention.swift in Sources */,
 				08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */,
 				083A25B42CF362670099B58E /* Responsable.swift in Sources */,
@@ -1344,6 +1560,8 @@
 				BD9103682CF6149D00BBCCAE /* AuthRepositoryImpl.swift in Sources */,
 				08DC61F82CF76843002A2F44 /* SignUpCompleteView.swift in Sources */,
 				BD9103612CF6149D00BBCCAE /* AuthAPIEndPoint.swift in Sources */,
+				086DD9422D01EEF700B97D3B /* SearchCountTitleSectionCell.swift in Sources */,
+				089952582D0347AC0022AEF9 /* SearchCategoryController.swift in Sources */,
 				0841BAAA2CFA354C00049E31 /* HomeTitleSectionCell.swift in Sources */,
 				08B191612CF430E70057BC04 /* PPProgressView.swift in Sources */,
 				083A25B32CF362670099B58E /* Requestable.swift in Sources */,
@@ -1353,6 +1571,7 @@
 				08DC62032CF8AC06002A2F44 /* HomeView.swift in Sources */,
 				BD9103622CF6149D00BBCCAE /* LoginResponseDTO.swift in Sources */,
 				BD9103922CF6166800BBCCAE /* SplashView.swift in Sources */,
+				0899526E2D0474340022AEF9 /* GetSearchPopUpListResponse.swift in Sources */,
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
 				086DD8E02CFF2C3700B97D3B /* UIImageView+.swift in Sources */,
@@ -1361,32 +1580,39 @@
 				BD91038B2CF614A900BBCCAE /* AuthRepository.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
 				08DC61F32CF75037002A2F44 /* KeyChainService.swift in Sources */,
+				086DD93B2D009A1C00B97D3B /* CancelableTagSection.swift in Sources */,
 				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
 				08B191B82CF6092F0057BC04 /* AuthServiceable.swift in Sources */,
 				0841BAB82CFAC41300049E31 /* SectionBackGroundDecorationView.swift in Sources */,
+				089952682D046CD80022AEF9 /* SearchResultReactor.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
 				BD9103822CF614A900BBCCAE /* SignUpUseCase.swift in Sources */,
+				086DD9402D01EEEB00B97D3B /* SearchCountTitleSection.swift in Sources */,
 				086DD8CE2CFDFEB000B97D3B /* HomeListView.swift in Sources */,
 				08B191C22CF615CA0057BC04 /* Secrets.swift in Sources */,
 				083A258C2CF361F90099B58E /* ControllerConvention.swift in Sources */,
 				0841BAA32CFA31A300049E31 /* SpacingSection.swift in Sources */,
 				08B191982CF4A1010057BC04 /* SignUpStep4Reactor.swift in Sources */,
+				089952602D0366C40022AEF9 /* SearchMainController.swift in Sources */,
 				08B1919E2CF4A7830057BC04 /* TagSectionCell.swift in Sources */,
 				BD9103862CF614A900BBCCAE /* BannerPopUpStore.swift in Sources */,
 				08B191862CF48A8B0057BC04 /* SignUpStep2Reactor.swift in Sources */,
 				08DC62052CF8AC0E002A2F44 /* HomeController.swift in Sources */,
 				BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */,
+				086DD92A2D0086AA00B97D3B /* SearchController.swift in Sources */,
 				BD91038A2CF614A900BBCCAE /* LoginResponse.swift in Sources */,
 				083A25BF2CF362770099B58E /* Logger.swift in Sources */,
 				08DC61FC2CF76862002A2F44 /* SignUpCompleteReactor.swift in Sources */,
 				BD9103832CF614A900BBCCAE /* SignUpUseCaseImpl.swift in Sources */,
 				08DC62072CF8AC14002A2F44 /* HomeReactor.swift in Sources */,
 				083A259A2CF362090099B58E /* SectionDecorationItem.swift in Sources */,
-				BD9103892CF614A900BBCCAE /* GetHomeInfoDataResponse.swift in Sources */,
+				BD9103892CF614A900BBCCAE /* PopUpStoreResponse.swift in Sources */,
 				083A258F2CF361F90099B58E /* ReactorConvention.swift in Sources */,
 				086DD8C82CFDEA9200B97D3B /* UIView+.swift in Sources */,
 				083A25B62CF362670099B58E /* MultipartEndPoint.swift in Sources */,
+				089952462D031E740022AEF9 /* SearchSortedView.swift in Sources */,
 				08DC620B2CF8AE0F002A2F44 /* ImageBannerSection.swift in Sources */,
+				086DD9302D0090E900B97D3B /* UITextField+.swift in Sources */,
 				086DD8D62CFF182100B97D3B /* UserAPIEndPoint.swift in Sources */,
 				08B191942CF4A0F00057BC04 /* SignUpStep4View.swift in Sources */,
 				08B1918D2CF49FF70057BC04 /* SignUpStep3View.swift in Sources */,
@@ -1396,14 +1622,17 @@
 				0841BAB42CFABED700049E31 /* HomePopularCardSection.swift in Sources */,
 				08DC61FA2CF7684F002A2F44 /* SignUpCompleteController.swift in Sources */,
 				08B191A42CF5A7030057BC04 /* PPSegmentedControl.swift in Sources */,
+				0899525C2D0347BD0022AEF9 /* SearchCategoryView.swift in Sources */,
 				08DC61F52CF765B5002A2F44 /* UserDefaultService.swift in Sources */,
 				08B191AE2CF5BFA60057BC04 /* AgeSelectedView.swift in Sources */,
 				BD9103842CF614A900BBCCAE /* TryLoginUseCase.swift in Sources */,
+				0899524D2D033AA70022AEF9 /* GetOpenPopUpListResponseDTO.swift in Sources */,
 				08DC62132CF8B833002A2F44 /* Optional+.swift in Sources */,
 				08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */,
 				08B1918F2CF4A0020057BC04 /* SignUpStep3Controller.swift in Sources */,
 				08B191912CF4A00E0057BC04 /* SignUpStep3Reactor.swift in Sources */,
 				083A259C2CF362090099B58E /* InOutputable.swift in Sources */,
+				089952642D0366DA0022AEF9 /* SearchMainReactor.swift in Sources */,
 				BD9103652CF6149D00BBCCAE /* HomeAPIEndpoint.swift in Sources */,
 				086DD8E32CFF356300B97D3B /* HomeCardGridSection.swift in Sources */,
 				0841BABE2CFB5AA600049E31 /* Date?+.swift in Sources */,
@@ -1413,26 +1642,35 @@
 				08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */,
 				08B191882CF48FAE0057BC04 /* NickNameState.swift in Sources */,
 				08B191B22CF5C0A60057BC04 /* PPPicker.swift in Sources */,
+				086DD92E2D0086B900B97D3B /* SearchView.swift in Sources */,
 				0841BA822CF9F5DF00049E31 /* PreSignedService.swift in Sources */,
+				086DD92C2D0086B100B97D3B /* SearchReactor.swift in Sources */,
 				BD226D512CF6DB290038C984 /* PPReturnHeaderView.swift in Sources */,
 				08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */,
 				BD91036D2CF6149D00BBCCAE /* SignUpAPIEndpoint.swift in Sources */,
+				0899526A2D046CDE0022AEF9 /* SearchResultView.swift in Sources */,
 				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
+				086DD93D2D009A2600B97D3B /* CancelableTagSectionCell.swift in Sources */,
 				086DD8DA2CFF194700B97D3B /* UserAPIRepositoryImpl.swift in Sources */,
 				083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */,
 				083A25BA2CF362670099B58E /* TokenInterceptor.swift in Sources */,
 				0841BAC32CFB600800049E31 /* TabbarController.swift in Sources */,
+				089952442D031E6D0022AEF9 /* SearchSortedReactor.swift in Sources */,
 				08B191B02CF5BFAE0057BC04 /* AgeSelectedReactor.swift in Sources */,
+				089952732D0475E90022AEF9 /* SearchResultCountSection.swift in Sources */,
 				08B191A02CF4AA0E0057BC04 /* Reactive+.swift in Sources */,
+				089952512D033C410022AEF9 /* GetSearchBottomPopUpListResponse.swift in Sources */,
 				0841BABA2CFAE5BE00049E31 /* HomeHeaderView.swift in Sources */,
 				0841BAAC2CFA35F300049E31 /* UILabel+.swift in Sources */,
 				BD91036A2CF6149D00BBCCAE /* SignUpRepositoryImpl.swift in Sources */,
 				BD91036C2CF6149D00BBCCAE /* GetCategoryListResponseDTO.swift in Sources */,
 				08B191672CF432220057BC04 /* PPCancelHeaderView.swift in Sources */,
 				BD9103812CF614A900BBCCAE /* HomeUseCaseImpl.swift in Sources */,
-				08DC62112CF8B446002A2F44 /* HomeAPIRequestDTO.swift in Sources */,
+				08DC62112CF8B446002A2F44 /* SortedRequestDTO.swift in Sources */,
 				08B191712CF4398D0057BC04 /* PPLabel.swift in Sources */,
+				0899524F2D033B5A0022AEF9 /* GetSearchPopUpListRequestDTO.swift in Sources */,
+				0899525A2D0347B40022AEF9 /* SearchCategoryReactor.swift in Sources */,
 				083A25B92CF362670099B58E /* FormDataInterceptor.swift in Sources */,
 				BD91036E2CF6149D00BBCCAE /* SignUpRequestDTO.swift in Sources */,
 				08B191632CF430F30057BC04 /* PPProgressIndicator.swift in Sources */,
@@ -1448,7 +1686,9 @@
 				0841BA8E2CF9F8A100049E31 /* ImageBannerChildSection.swift in Sources */,
 				086DD8CC2CFDFEA800B97D3B /* HomeListController.swift in Sources */,
 				083A258E2CF361F90099B58E /* ConventionTableViewCell.swift in Sources */,
+				086DD9342D00962500B97D3B /* SearchTitleSectionCell.swift in Sources */,
 				08B191592CF41E610057BC04 /* SignUpMainController.swift in Sources */,
+				0899526C2D0473EC0022AEF9 /* GetSearchPopUpListResponseDTO.swift in Sources */,
 				08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */,
 				0841BAB12CFA38F500049E31 /* HomeCardSectionCell.swift in Sources */,
 				BD91036B2CF6149D00BBCCAE /* CheckNickNameRequestDTO.swift in Sources */,
@@ -1456,11 +1696,14 @@
 				08B191842CF48A820057BC04 /* SignUpStep2View.swift in Sources */,
 				0841BA882CF9F62400049E31 /* PresignedURLRequestDTO.swift in Sources */,
 				0841BA8C2CF9F67100049E31 /* PreSignedAPIEndPoint.swift in Sources */,
-				BD9103662CF6149D00BBCCAE /* GetHomeInfoDataResponseDTO.swift in Sources */,
+				089952552D033D480022AEF9 /* PopUpAPIUseCaseImpl.swift in Sources */,
+				BD9103662CF6149D00BBCCAE /* PopUpStoreResponseDTO.swift in Sources */,
 				0841BA802CF9F34100049E31 /* ImageBannerChildSectionCell.swift in Sources */,
 				08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */,
 				083A25BB2CF362670099B58E /* Provider.swift in Sources */,
+				0899524B2D033A9C0022AEF9 /* GetClosePopUpListResponseDTO.swift in Sources */,
 				08B191A72CF5A9430057BC04 /* AgeSelectedButton.swift in Sources */,
+				089952622D0366D30022AEF9 /* SearchMainView.swift in Sources */,
 				BD9103872CF614A900BBCCAE /* Category.swift in Sources */,
 				083A25822CF361EF0099B58E /* BaseTabmanController.swift in Sources */,
 				BD9103852CF614A900BBCCAE /* TryLoginUseCaseImpl.swift in Sources */,
@@ -1472,6 +1715,8 @@
 				08B191822CF48A7B0057BC04 /* SignUpStep2Controller.swift in Sources */,
 				083A25912CF361F90099B58E /* TestDynamicSection.swift in Sources */,
 				086DD8D82CFF185200B97D3B /* PostBookmarkPopUpRequestDTO.swift in Sources */,
+				089952422D031E650022AEF9 /* SearchSortedController.swift in Sources */,
+				089952532D033C940022AEF9 /* PopUpAPIRepositoryImpl.swift in Sources */,
 				08B191A22CF4AE890057BC04 /* ToastMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

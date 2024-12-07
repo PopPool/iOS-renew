@@ -15,11 +15,11 @@ struct GetCategoryListResponseDTO: Codable {
 // MARK: - InterestResponse
 struct CategoryResponseDTO: Codable {
     let categoryId: Int64
-    let category: String
+    let categoryName: String
 }
 
 extension CategoryResponseDTO {
     func toDomain() -> Category {
-        return Category(categoryId: categoryId, category: category)
+        return Category(categoryId: categoryId, category: categoryName)
     }
 }

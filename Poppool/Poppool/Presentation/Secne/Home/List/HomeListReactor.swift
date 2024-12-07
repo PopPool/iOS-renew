@@ -63,7 +63,7 @@ final class HomeListReactor: Reactor {
             return getSection()[section].getSection(section: section, env: env)
         }
     }()
-    
+    private let spacing24Section = SpacingSection(inputDataList: [.init(spacing: 24)])
     private var cardSections = HomeCardGridSection(inputDataList: [])
     
     // MARK: - init
@@ -80,10 +80,9 @@ final class HomeListReactor: Reactor {
                 return Observable.just(.skipAction)
             } else {
                 if currentPage <= totalPage {
-                    guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.skipAction) }
                     isLoading = true
                     currentPage += 1
-                    return homeAPIUseCase.fetchHome(userId: userID, page: currentPage, size: size, sort: "viewCount,desc")
+                    return homeAPIUseCase.fetchHome(page: currentPage, size: size, sort: "viewCount,desc")
                         .withUnretained(self)
                         .map { (owner, response) in
                             owner.appendSectionData(response: response)
@@ -94,8 +93,7 @@ final class HomeListReactor: Reactor {
                 }
             }
         case .viewWillAppear:
-            guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
-            return homeAPIUseCase.fetchHome(userId: userID, page: currentPage, size: size, sort: "viewCount,desc")
+            return homeAPIUseCase.fetchHome(page: currentPage, size: size, sort: "viewCount,desc")
                 .withUnretained(self)
                 .map { (owner, response) in
                     owner.setSection(response: response)
@@ -104,13 +102,12 @@ final class HomeListReactor: Reactor {
         case .backButtonTapped(let controller):
             return Observable.just(.moveToRecentScene(controller: controller))
         case .bookMarkButtonTapped(let indexPath):
-            guard let userID = userDefaultService.fetch(key: "userID") else { return Observable.just(.loadView) }
             let popUpData = cardSections.inputDataList[indexPath.row]
             if popUpData.isBookmark {
-                return userAPIUseCase.deleteBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                return userAPIUseCase.deleteBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             } else {
-                return userAPIUseCase.postBookmarkPopUp(userID: userID, popUpID: popUpData.id)
+                return userAPIUseCase.postBookmarkPopUp(popUpID: popUpData.id)
                     .andThen(Observable.just(.reloadView(indexPath: indexPath)))
             }
         }
@@ -140,10 +137,11 @@ final class HomeListReactor: Reactor {
     }
     
     func getSection() -> [any Sectionable] {
-        return [cardSections]
+        return [spacing24Section,cardSections]
     }
     
     func setSection(response: GetHomeInfoResponse) {
+        let isLogin = response.loginYn
         switch popUpType {
         case .curation:
             cardSections.inputDataList = response.customPopUpStoreList.map({ response in
@@ -155,7 +153,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             totalPage = response.customPopUpStoreTotalPages
@@ -169,7 +168,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             totalPage = response.newPopUpStoreTotalPages
@@ -183,7 +183,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             totalPage = response.popularPopUpStoreTotalPages
@@ -191,6 +192,7 @@ final class HomeListReactor: Reactor {
     }
     
     func appendSectionData(response: GetHomeInfoResponse) {
+        let isLogin = response.loginYn
         switch popUpType {
         case .curation:
             let appendData: [HomeCardSectionCell.Input] = response.customPopUpStoreList.map({ response in
@@ -202,7 +204,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             cardSections.inputDataList.append(contentsOf: appendData)
@@ -217,7 +220,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             cardSections.inputDataList.append(contentsOf: appendData)
@@ -232,7 +236,8 @@ final class HomeListReactor: Reactor {
                     address: response.address,
                     startDate: response.startDate,
                     endDate: response.endDate,
-                    isBookmark: response.bookmarkYn
+                    isBookmark: response.bookmarkYn,
+                    isLogin: isLogin
                 )
             })
             cardSections.inputDataList.append(contentsOf: appendData)

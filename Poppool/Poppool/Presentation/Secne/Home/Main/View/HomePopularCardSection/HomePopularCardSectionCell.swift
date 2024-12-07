@@ -19,6 +19,23 @@ final class HomePopularCardSectionCell: UICollectionViewCell {
         return view
     }()
     
+    private let blurView: UIView = {
+        var view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 232, height: 332)
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor.init(hexCode: "#FFFFFF", alpha: 0).cgColor,
+            UIColor.init(hexCode: "#141414", alpha: 0.4).cgColor
+        ]
+        gradientLayer.locations = [0, 1]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)  // 시작점
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)    // 끝점
+        gradientLayer.bounds = view.bounds
+        gradientLayer.position = view.center
+        view.layer.addSublayer(gradientLayer)
+        return view
+    }()
+    
     private let dateLabel: PPLabel = {
         let label = PPLabel(style: .regular, fontSize: 16)
         label.textColor = .w100
@@ -64,6 +81,11 @@ private extension HomePopularCardSectionCell {
             make.edges.equalToSuperview()
         }
         
+        backGroundImageView.addSubview(blurView)
+        blurView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         backGroundImageView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.bottom.leading.trailing.equalToSuperview().inset(20)
@@ -81,6 +103,8 @@ private extension HomePopularCardSectionCell {
             make.bottom.equalTo(categoryLabel.snp.top).offset(-6)
             make.leading.trailing.equalToSuperview().inset(20)
         }
+        
+
     }
 }
 

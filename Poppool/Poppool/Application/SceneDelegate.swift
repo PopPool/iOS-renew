@@ -24,8 +24,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let rootViewController = LoginController()
 //        rootViewController.reactor = LoginReactor()
         
-//        let rootViewController = HomeController()
-//        rootViewController.reactor = HomeReactor()
+        
+        let rootViewController = SearchMainController()
+        rootViewController.reactor = SearchMainReactor()
+        
+//        let rootViewController = SignUpMainController()
+//        rootViewController.reactor = SignUpMainReactor()
         
 //        let navigationController = UINavigationController(rootViewController: rootViewController)
         let navigationController = WaveTabBarController()

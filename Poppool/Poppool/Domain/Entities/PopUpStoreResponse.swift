@@ -1,5 +1,5 @@
 //
-//  GetHomeInfoDataResponse.swift
+//  PopUpStoreResponse.swift
 //  Poppool
 //
 //  Created by Porori on 11/26/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GetHomeInfoDataResponse: Decodable {
+struct PopUpStoreResponse {
     let id: Int64
     let category: String?
     let name: String?

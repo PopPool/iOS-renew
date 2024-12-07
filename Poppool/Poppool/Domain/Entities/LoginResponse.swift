@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LoginResponse: Decodable {
+struct LoginResponse {
     var userId: String
     var grantType: String
     var accessToken: String
