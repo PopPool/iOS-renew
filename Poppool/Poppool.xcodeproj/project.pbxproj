@@ -36,6 +36,9 @@
 		083A25CA2CF363C60099B58E /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25C92CF363C60099B58E /* LoginReactor.swift */; };
 		083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A25CB2CF363CB0099B58E /* LoginView.swift */; };
 		083A25D02CF364B70099B58E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 083A25CF2CF364B70099B58E /* Alamofire */; };
+		083C860B2D073A15003F441C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C860A2D073A15003F441C /* DetailView.swift */; };
+		083C860D2D073A1C003F441C /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C860C2D073A1C003F441C /* DetailController.swift */; };
+		083C860F2D073A23003F441C /* DetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C860E2D073A23003F441C /* DetailReactor.swift */; };
 		0841BA802CF9F34100049E31 /* ImageBannerChildSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA7F2CF9F34100049E31 /* ImageBannerChildSectionCell.swift */; };
 		0841BA822CF9F5DF00049E31 /* PreSignedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA812CF9F5DF00049E31 /* PreSignedService.swift */; };
 		0841BA872CF9F62400049E31 /* PreSignedURLDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA842CF9F62300049E31 /* PreSignedURLDTO.swift */; };
@@ -265,6 +268,9 @@
 		083A25C72CF363C00099B58E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		083A25C92CF363C60099B58E /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
 		083A25CB2CF363CB0099B58E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		083C860A2D073A15003F441C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		083C860C2D073A1C003F441C /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		083C860E2D073A23003F441C /* DetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReactor.swift; sourceTree = "<group>"; };
 		0841BA7F2CF9F34100049E31 /* ImageBannerChildSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerChildSectionCell.swift; sourceTree = "<group>"; };
 		0841BA812CF9F5DF00049E31 /* PreSignedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSignedService.swift; sourceTree = "<group>"; };
 		0841BA842CF9F62300049E31 /* PreSignedURLDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSignedURLDTO.swift; sourceTree = "<group>"; };
@@ -677,6 +683,7 @@
 				083A25C42CF363A10099B58E /* SignUp */,
 				083A25C32CF363650099B58E /* Login */,
 				BD9103912CF6166800BBCCAE /* Splash */,
+				083C86092D073A08003F441C /* Detail */,
 			);
 			path = Secne;
 			sourceTree = "<group>";
@@ -703,6 +710,16 @@
 				08DC61F62CF76831002A2F44 /* SignUpComplete */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		083C86092D073A08003F441C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				083C860A2D073A15003F441C /* DetailView.swift */,
+				083C860C2D073A1C003F441C /* DetailController.swift */,
+				083C860E2D073A23003F441C /* DetailReactor.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		0841BA832CF9F61500049E31 /* PreSignedService */ = {
@@ -1587,11 +1604,13 @@
 				08B191982CF4A1010057BC04 /* SignUpStep4Reactor.swift in Sources */,
 				089952602D0366C40022AEF9 /* SearchMainController.swift in Sources */,
 				08B1919E2CF4A7830057BC04 /* TagSectionCell.swift in Sources */,
+				083C860B2D073A15003F441C /* DetailView.swift in Sources */,
 				BD9103862CF614A900BBCCAE /* BannerPopUpStore.swift in Sources */,
 				08B191862CF48A8B0057BC04 /* SignUpStep2Reactor.swift in Sources */,
 				08DC62052CF8AC0E002A2F44 /* HomeController.swift in Sources */,
 				BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */,
 				086DD92A2D0086AA00B97D3B /* SearchController.swift in Sources */,
+				083C860F2D073A23003F441C /* DetailReactor.swift in Sources */,
 				BD91038A2CF614A900BBCCAE /* LoginResponse.swift in Sources */,
 				083A25BF2CF362770099B58E /* Logger.swift in Sources */,
 				08DC61FC2CF76862002A2F44 /* SignUpCompleteReactor.swift in Sources */,
@@ -1675,6 +1694,7 @@
 				08B1917F2CF46DF20057BC04 /* TermsDetailView.swift in Sources */,
 				08B191412CF367FF0057BC04 /* UIFont+.swift in Sources */,
 				0841BA8E2CF9F8A100049E31 /* ImageBannerChildSection.swift in Sources */,
+				083C860D2D073A1C003F441C /* DetailController.swift in Sources */,
 				086DD8CC2CFDFEA800B97D3B /* HomeListController.swift in Sources */,
 				083A258E2CF361F90099B58E /* ConventionTableViewCell.swift in Sources */,
 				086DD9342D00962500B97D3B /* SearchTitleSectionCell.swift in Sources */,
