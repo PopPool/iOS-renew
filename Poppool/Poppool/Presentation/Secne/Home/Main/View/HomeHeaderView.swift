@@ -19,24 +19,18 @@ final class HomeHeaderView: UIView {
         return button
     }()
     
-    let noticeButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "icon_notice"), for: .normal)
-        return button
-    }()
-    
-    let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
+    let blurEffect = UIBlurEffect(style: .regular)
     lazy var blurView = UIVisualEffectView(effect: blurEffect)
     
     private let searchIconImageView: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "icon_search")
+        view.image = UIImage(named: "icon_search_black")
         return view
     }()
     
     private let searchLabel: PPLabel = {
         let label = PPLabel(style: .regular, fontSize: 14, text: "팝업스토어명을 입력해보세요")
-        label.textColor = .w100
+        label.textColor = .g1000
         label.isUserInteractionEnabled = false
         return label
     }()
@@ -50,42 +44,13 @@ final class HomeHeaderView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func setHeaderState(isDarkMode: Bool) {
-        blurView.isHidden = !isDarkMode
-        blurView.isUserInteractionEnabled = false
-        if isDarkMode {
-            searchBarButton.backgroundColor = .clear
-            searchLabel.textColor = .w100
-            searchIconImageView.image = UIImage(named: "icon_search")
-            searchIconImageView.tintColor = .white
-            let image = UIImage(named: "icon_notice")?.withRenderingMode(.alwaysTemplate)
-            noticeButton.setImage(image, for: .normal)
-            noticeButton.tintColor = .white
-        } else {
-            searchBarButton.backgroundColor = .white
-            searchLabel.textColor = .g400
-            searchIconImageView.image = UIImage(named: "icon_search_gray")
-            searchIconImageView.tintColor = .blu500
-            let image = UIImage(named: "icon_notice")?.withRenderingMode(.alwaysTemplate)
-            noticeButton.setImage(image, for: .normal)
-            noticeButton.tintColor = .g400
-        }
-    }
 }
 
 // MARK: - SetUp
 private extension HomeHeaderView {
     
     func setUpConstraints() {
-        self.addSubview(noticeButton)
-        noticeButton.snp.makeConstraints { make in
-            make.size.equalTo(32)
-            make.trailing.equalToSuperview().inset(16)
-            make.centerY.equalToSuperview()
-        }
-        
- 
+        blurView.isUserInteractionEnabled = false
         blurView.layer.cornerRadius = 4
         blurView.clipsToBounds = true
         searchBarButton.addSubview(blurView)
@@ -96,9 +61,8 @@ private extension HomeHeaderView {
         self.addSubview(searchBarButton)
         searchBarButton.snp.makeConstraints { make in
             make.height.equalTo(37)
-            make.leading.equalToSuperview().inset(20)
+            make.leading.trailing.equalToSuperview().inset(20)
             make.top.bottom.equalToSuperview()
-            make.trailing.equalTo(noticeButton.snp.leading).offset(-28)
         }
         
         searchBarButton.addSubview(searchIconImageView)
@@ -110,7 +74,7 @@ private extension HomeHeaderView {
         
         searchBarButton.addSubview(searchLabel)
         searchLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.centerY.equalTo(searchIconImageView)
             make.leading.equalTo(searchIconImageView.snp.trailing)
         }
     }

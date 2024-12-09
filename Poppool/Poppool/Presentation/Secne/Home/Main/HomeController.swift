@@ -27,6 +27,8 @@ final class HomeController: BaseViewController, View {
     }()
     
     private let headerBackgroundView: UIView = UIView()
+    let backGroundblurEffect = UIBlurEffect(style: .regular)
+    lazy var backGroundblurView = UIVisualEffectView(effect: backGroundblurEffect)
     
     private var sections: [any Sectionable] = []
     private let headerIsDarkMode: PublishSubject<Bool> = .init()
@@ -92,11 +94,18 @@ private extension HomeController {
             make.leading.trailing.equalToSuperview()
         }
         
+        headerBackgroundView.addSubview(backGroundblurView)
+        backGroundblurView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        backGroundblurView.isUserInteractionEnabled = false
+        
         view.addSubview(headerBackgroundView)
         headerBackgroundView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
             make.bottom.equalTo(homeHeaderView.snp.bottom).offset(7)
         }
+
         
         view.bringSubviewToFront(homeHeaderView)
     }
@@ -129,9 +138,7 @@ extension HomeController {
             .subscribe { (owner, state) in
                 owner.sections = state.sections
                 if state.isReloadView { owner.mainView.contentCollectionView.reloadData() }
-                let backgroundColor = state.headerIsDarkMode ? UIColor.clear : UIColor.white
-                owner.headerBackgroundView.backgroundColor = backgroundColor
-                owner.homeHeaderView.setHeaderState(isDarkMode: state.headerIsDarkMode)
+                owner.backGroundblurView.isHidden = state.headerIsDarkMode
             }
             .disposed(by: disposeBag)
     }
