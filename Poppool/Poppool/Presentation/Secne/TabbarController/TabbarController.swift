@@ -66,6 +66,7 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
                     for (index, otherView) in tabBarItemViews.enumerated() {
                         if index != selectedIndex { otherView.transform = .identity }
                     }
+                    // 아이콘 크기만 확대
                     selectedView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                 }
             )
@@ -231,11 +232,11 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
         // 폰트 설정
         let appearance = UITabBarAppearance()
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = [
-            .font: UIFont.KorFont(style: .bold, size: 11)!,
+            .font: UIFont.KorFont(style: .medium, size: 11)!,
             .paragraphStyle: paragraphStyle
         ]
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
-            .font: UIFont.KorFont(style: .bold, size: 13)!,
+            .font: UIFont.KorFont(style: .bold, size: 11)!,
             .paragraphStyle: paragraphStyle
         ]
         
