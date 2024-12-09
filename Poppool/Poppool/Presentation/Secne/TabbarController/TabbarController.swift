@@ -66,7 +66,6 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
                     for (index, otherView) in tabBarItemViews.enumerated() {
                         if index != selectedIndex { otherView.transform = .identity }
                     }
-                    // 아이콘 크기만 확대
                     selectedView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                 }
             )
