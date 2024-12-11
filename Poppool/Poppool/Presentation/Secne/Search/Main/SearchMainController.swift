@@ -47,6 +47,11 @@ extension SearchMainController {
         super.viewDidLoad()
         setUp()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
 }
 
 // MARK: - SetUp
@@ -68,10 +73,11 @@ extension SearchMainController {
         beforeController.reactor?.state
             .withUnretained(self)
             .subscribe(onNext: { (owner, state) in
+                owner.view.endEditing(true)
                 if let text = state.searchKeyWord {
-                    owner.scrollToPage(.at(index: 1), animated: false)
                     if let index = owner.currentIndex {
-                        if index == 0 { 
+                        if index == 0 {
+                            owner.scrollToPage(.at(index: 1), animated: false)
                             reactor.action.onNext(.returnSearchKeyWord(text: text))
                             owner.mainView.searchTextField.text = state.searchKeyWord
                         }
@@ -113,9 +119,18 @@ extension SearchMainController {
         
         mainView.cancelButton.rx.tap
             .withUnretained(self)
-            .subscribe { (owner, _) in
-                owner.navigationController?.popViewController(animated: true)
+            .map { (owner, _) in
+                owner.view.endEditing(true)
+                if owner.currentIndex == 1 {
+                    owner.mainView.searchTextField.text = nil
+                    owner.beforeController.reactor?.action.onNext(.resetSearchKeyWord)
+                    owner.scrollToPage(.at(index: 0), animated: false)
+                } else {
+                    owner.navigationController?.popViewController(animated: true)
+                }
+                return Reactor.Action.returnSearchKeyWord(text: nil)
             }
+            .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
         mainView.clearButton.rx.tap
@@ -130,7 +145,6 @@ extension SearchMainController {
             .withUnretained(self)
             .subscribe { (owner, state) in
                 if let text = state.searchKeyword {
-                    print(text)
                     owner.afterController.reactor?.action.onNext(.returnSearch(text: text))
                 }
             }

@@ -68,7 +68,7 @@ final class SearchResultReactor: Reactor {
         case .cellTapped(let controller, let indexPath):
             return Observable.just(.moveToDetailScene(controller: controller, indexPath: indexPath))
         case .returnSearch(let text):
-            titleSection.inputDataList = [.init(title: "$\(text)$이/가 포함된 팝업")]
+            titleSection.inputDataList = [.init(title: "\(text)이/가 포함된 팝업")]
             return popUpAPIUseCase.getSearchPopUpList(query: text)
                 .withUnretained(self)
                 .map { (owner, response) in

@@ -64,7 +64,7 @@ private extension SearchCategoryView {
         self.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(20)
-            make.top.equalToSuperview().inset(32)
+            make.top.equalToSuperview().inset(12)
         }
         
         self.addSubview(closeButton)
@@ -76,7 +76,7 @@ private extension SearchCategoryView {
         self.addSubview(contentCollectionView)
         contentCollectionView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.top.equalTo(titleLabel.snp.bottom).offset(24)
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
             make.height.equalTo(195)
         }
         self.addSubview(buttonStackView)
