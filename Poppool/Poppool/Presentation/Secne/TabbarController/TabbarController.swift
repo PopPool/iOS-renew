@@ -66,7 +66,7 @@ class WaveTabBarController: UITabBarController, UITabBarControllerDelegate {
                     for (index, otherView) in tabBarItemViews.enumerated() {
                         if index != selectedIndex { otherView.transform = .identity }
                     }
-                    selectedView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                    selectedView.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
                 }
             )
         }

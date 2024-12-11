@@ -27,6 +27,7 @@ final class SearchReactor: Reactor {
         case resetCategory
         case changePage
         case bookmarkButtonTapped(indexPath: IndexPath)
+        case resetSearchKeyWord
     }
     
     enum Mutation {
@@ -35,6 +36,7 @@ final class SearchReactor: Reactor {
         case moveToSortedScene(controller: BaseViewController)
         case moveToDetailScene(controller: BaseViewController, indexPath: IndexPath)
         case setSearchKeyWord(text: String?)
+        case resetSearchKeyWord
     }
     
     struct State {
@@ -96,6 +98,8 @@ final class SearchReactor: Reactor {
     func mutate(action: Action) -> Observable<Mutation> {
         let sort = sortedIndex == 0 ? "startDate,desc" : "viewCount,desc"
         switch action {
+        case .resetSearchKeyWord:
+            return Observable.just(.resetSearchKeyWord)
         case .changePage:
             if isLoading {
                 return Observable.just(.loadView)
@@ -205,25 +209,42 @@ final class SearchReactor: Reactor {
             controller.navigationController?.pushViewController(nextController, animated: true)
         case .setSearchKeyWord(let text):
             newState.searchKeyWord = text
+        case .resetSearchKeyWord:
+            newState.searchKeyWord = nil
+            newState.sections = getSection()
         }
         return newState
     }
     
     func getSection() -> [any Sectionable] {
-        return [
-            spacing24Section,
-            recentKeywordTitleSection,
-            spacing16Section,
-            recentKeywordSection,
-            spacing48Section,
-            searchTitleSection,
-            spacing16Section,
-            searchCategorySection,
-            spacing18Section,
-            searchSortedSection,
-            spacing16Section,
-            searchListSection
-        ]
+        let searchList = userDefaultService.fetchArray(key: "searchList") ?? []
+        if searchList.isEmpty {
+            return [
+                spacing24Section,
+                searchTitleSection,
+                spacing16Section,
+                searchCategorySection,
+                spacing18Section,
+                searchSortedSection,
+                spacing16Section,
+                searchListSection
+            ]
+        } else {
+            return [
+                spacing24Section,
+                recentKeywordTitleSection,
+                spacing16Section,
+                recentKeywordSection,
+                spacing48Section,
+                searchTitleSection,
+                spacing16Section,
+                searchCategorySection,
+                spacing18Section,
+                searchSortedSection,
+                spacing16Section,
+                searchListSection
+            ]
+        }
     }
     
     func setSearchList() {
