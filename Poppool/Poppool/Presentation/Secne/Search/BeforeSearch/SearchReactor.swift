@@ -125,7 +125,9 @@ final class SearchReactor: Reactor {
             resetSearchList()
             return Observable.just(.loadView)
         case .cellTapped(let indexPath, let controller):
-            switch indexPath.section {
+            let searchList = userDefaultService.fetchArray(key: "searchList") ?? []
+            let section = searchList.isEmpty ? indexPath.section + 4 : indexPath.section
+            switch section {
             case 3:
                 let text = recentKeywordSection.inputDataList[indexPath.row].title
                 appendSearchList(text: text)
