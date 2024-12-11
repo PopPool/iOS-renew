@@ -170,6 +170,7 @@ extension ImageBannerSectionCell: Inputable {
     struct Input {
         var imagePaths: [String]
         var idList: [Int64]
+        var isHiddenPauseButton: Bool = false
     }
     
     func injection(with input: Input) {
@@ -178,6 +179,10 @@ extension ImageBannerSectionCell: Inputable {
         imageSection.inputDataList = datas.map { .init(imagePath: $0.0, id: $0.1) }
         contentCollectionView.reloadData()
         startAutoScroll()
+        if input.isHiddenPauseButton {
+            stopButton.isHidden = true
+            stopAutoScroll()
+        }
     }
 }
 

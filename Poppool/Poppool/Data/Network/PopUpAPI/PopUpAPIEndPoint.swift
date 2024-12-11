@@ -37,4 +37,13 @@ struct PopUpAPIEndPoint {
             queryParameters: request
         )
     }
+    
+    static func getPopUpDetail(request: GetPopUpDetailRequestDTO) -> Endpoint<GetPopUpDetailResponseDTO> {
+        return Endpoint(
+            baseURL: Secrets.popPoolBaseUrl.rawValue,
+            path: "/popup/\(request.popUpStoreId)/detail",
+            method: .get,
+            queryParameters: request
+        )
+    }
 }
