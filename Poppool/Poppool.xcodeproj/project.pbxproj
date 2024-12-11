@@ -39,6 +39,13 @@
 		083C860B2D073A15003F441C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C860A2D073A15003F441C /* DetailView.swift */; };
 		083C860D2D073A1C003F441C /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C860C2D073A1C003F441C /* DetailController.swift */; };
 		083C860F2D073A23003F441C /* DetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C860E2D073A23003F441C /* DetailReactor.swift */; };
+		083C861C2D087337003F441C /* GetPopUpDetailRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C861B2D087337003F441C /* GetPopUpDetailRequestDTO.swift */; };
+		083C861E2D08737F003F441C /* GetPopUpDetailResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C861D2D08737F003F441C /* GetPopUpDetailResponseDTO.swift */; };
+		083C86202D087445003F441C /* GetPopUpDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C861F2D087445003F441C /* GetPopUpDetailResponse.swift */; };
+		083C86242D087A44003F441C /* DetailTitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86232D087A44003F441C /* DetailTitleSection.swift */; };
+		083C86262D087A4E003F441C /* DetailTitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86252D087A4E003F441C /* DetailTitleSectionCell.swift */; };
+		083C86292D088080003F441C /* DetailContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86282D088080003F441C /* DetailContentSection.swift */; };
+		083C862B2D08808C003F441C /* DetailContentSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C862A2D08808C003F441C /* DetailContentSectionCell.swift */; };
 		0841BA802CF9F34100049E31 /* ImageBannerChildSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA7F2CF9F34100049E31 /* ImageBannerChildSectionCell.swift */; };
 		0841BA822CF9F5DF00049E31 /* PreSignedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA812CF9F5DF00049E31 /* PreSignedService.swift */; };
 		0841BA872CF9F62400049E31 /* PreSignedURLDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA842CF9F62300049E31 /* PreSignedURLDTO.swift */; };
@@ -271,6 +278,13 @@
 		083C860A2D073A15003F441C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		083C860C2D073A1C003F441C /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		083C860E2D073A23003F441C /* DetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReactor.swift; sourceTree = "<group>"; };
+		083C861B2D087337003F441C /* GetPopUpDetailRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPopUpDetailRequestDTO.swift; sourceTree = "<group>"; };
+		083C861D2D08737F003F441C /* GetPopUpDetailResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPopUpDetailResponseDTO.swift; sourceTree = "<group>"; };
+		083C861F2D087445003F441C /* GetPopUpDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPopUpDetailResponse.swift; sourceTree = "<group>"; };
+		083C86232D087A44003F441C /* DetailTitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleSection.swift; sourceTree = "<group>"; };
+		083C86252D087A4E003F441C /* DetailTitleSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleSectionCell.swift; sourceTree = "<group>"; };
+		083C86282D088080003F441C /* DetailContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentSection.swift; sourceTree = "<group>"; };
+		083C862A2D08808C003F441C /* DetailContentSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentSectionCell.swift; sourceTree = "<group>"; };
 		0841BA7F2CF9F34100049E31 /* ImageBannerChildSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerChildSectionCell.swift; sourceTree = "<group>"; };
 		0841BA812CF9F5DF00049E31 /* PreSignedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSignedService.swift; sourceTree = "<group>"; };
 		0841BA842CF9F62300049E31 /* PreSignedURLDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSignedURLDTO.swift; sourceTree = "<group>"; };
@@ -715,11 +729,59 @@
 		083C86092D073A08003F441C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				083C860A2D073A15003F441C /* DetailView.swift */,
+				083C86212D087A14003F441C /* View */,
 				083C860C2D073A1C003F441C /* DetailController.swift */,
 				083C860E2D073A23003F441C /* DetailReactor.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		083C86192D087316003F441C /* RequestDTO */ = {
+			isa = PBXGroup;
+			children = (
+				0899524E2D033B5A0022AEF9 /* GetSearchPopUpListRequestDTO.swift */,
+				083C861B2D087337003F441C /* GetPopUpDetailRequestDTO.swift */,
+			);
+			path = RequestDTO;
+			sourceTree = "<group>";
+		};
+		083C861A2D08731C003F441C /* ResponseDTO */ = {
+			isa = PBXGroup;
+			children = (
+				0899526B2D0473EC0022AEF9 /* GetSearchPopUpListResponseDTO.swift */,
+				0899524A2D033A9C0022AEF9 /* GetClosePopUpListResponseDTO.swift */,
+				0899524C2D033AA70022AEF9 /* GetOpenPopUpListResponseDTO.swift */,
+				083C861D2D08737F003F441C /* GetPopUpDetailResponseDTO.swift */,
+			);
+			path = ResponseDTO;
+			sourceTree = "<group>";
+		};
+		083C86212D087A14003F441C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				083C86272D088069003F441C /* DetailContentSection */,
+				083C86222D087A37003F441C /* DetailTitleSection */,
+				083C860A2D073A15003F441C /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		083C86222D087A37003F441C /* DetailTitleSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C86232D087A44003F441C /* DetailTitleSection.swift */,
+				083C86252D087A4E003F441C /* DetailTitleSectionCell.swift */,
+			);
+			path = DetailTitleSection;
+			sourceTree = "<group>";
+		};
+		083C86272D088069003F441C /* DetailContentSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C86282D088080003F441C /* DetailContentSection.swift */,
+				083C862A2D08808C003F441C /* DetailContentSectionCell.swift */,
+			);
+			path = DetailContentSection;
 			sourceTree = "<group>";
 		};
 		0841BA832CF9F61500049E31 /* PreSignedService */ = {
@@ -909,10 +971,8 @@
 			isa = PBXGroup;
 			children = (
 				089952482D033A1C0022AEF9 /* PopUpAPIEndPoint.swift */,
-				0899524E2D033B5A0022AEF9 /* GetSearchPopUpListRequestDTO.swift */,
-				0899526B2D0473EC0022AEF9 /* GetSearchPopUpListResponseDTO.swift */,
-				0899524A2D033A9C0022AEF9 /* GetClosePopUpListResponseDTO.swift */,
-				0899524C2D033AA70022AEF9 /* GetOpenPopUpListResponseDTO.swift */,
+				083C861A2D08731C003F441C /* ResponseDTO */,
+				083C86192D087316003F441C /* RequestDTO */,
 			);
 			path = PopUpAPI;
 			sourceTree = "<group>";
@@ -952,6 +1012,7 @@
 			children = (
 				089952502D033C410022AEF9 /* GetSearchBottomPopUpListResponse.swift */,
 				0899526D2D0474340022AEF9 /* GetSearchPopUpListResponse.swift */,
+				083C861F2D087445003F441C /* GetPopUpDetailResponse.swift */,
 			);
 			path = PopUpAPI;
 			sourceTree = "<group>";
@@ -1211,13 +1272,6 @@
 			path = ResponseDTO;
 			sourceTree = "<group>";
 		};
-		08DC620F2CF8B37C002A2F44 /* RequestDTO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestDTO;
-			sourceTree = "<group>";
-		};
 		BD9103502CF6149D00BBCCAE /* AuthAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1231,7 +1285,6 @@
 			isa = PBXGroup;
 			children = (
 				BD9103532CF6149D00BBCCAE /* HomeAPIEndpoint.swift */,
-				08DC620F2CF8B37C002A2F44 /* RequestDTO */,
 				08DC620E2CF8B36D002A2F44 /* ResponseDTO */,
 			);
 			path = HomeAPI;
@@ -1549,6 +1602,7 @@
 				08B191962CF4A0FA0057BC04 /* SignUpStep4Controller.swift in Sources */,
 				0841BABC2CFB59E200049E31 /* String?+.swift in Sources */,
 				0841BA872CF9F62400049E31 /* PreSignedURLDTO.swift in Sources */,
+				083C86262D087A4E003F441C /* DetailTitleSectionCell.swift in Sources */,
 				086DD8DE2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift in Sources */,
 				089952492D033A1C0022AEF9 /* PopUpAPIEndPoint.swift in Sources */,
 				083A25C82CF363C00099B58E /* LoginController.swift in Sources */,
@@ -1556,6 +1610,7 @@
 				083A25B72CF362670099B58E /* RequestEndpoint.swift in Sources */,
 				083A25B82CF362670099B58E /* IndicatorMaker.swift in Sources */,
 				08B191B62CF6092B0057BC04 /* AppleLoginService.swift in Sources */,
+				083C86202D087445003F441C /* GetPopUpDetailResponse.swift in Sources */,
 				083A25B22CF362670099B58E /* NetworkError.swift in Sources */,
 				BD9103692CF6149D00BBCCAE /* HomeAPIRepository.swift in Sources */,
 				083A25832CF361EF0099B58E /* BaseViewController.swift in Sources */,
@@ -1577,6 +1632,7 @@
 				083A25B32CF362670099B58E /* Requestable.swift in Sources */,
 				BD9103932CF6166800BBCCAE /* SplashController.swift in Sources */,
 				08B1916A2CF434B80057BC04 /* SignUpStep1Controller.swift in Sources */,
+				083C861C2D087337003F441C /* GetPopUpDetailRequestDTO.swift in Sources */,
 				BD9103882CF614A900BBCCAE /* GetHomeInfoResponse.swift in Sources */,
 				08DC62032CF8AC06002A2F44 /* HomeView.swift in Sources */,
 				BD9103622CF6149D00BBCCAE /* LoginResponseDTO.swift in Sources */,
@@ -1600,6 +1656,7 @@
 				086DD8CE2CFDFEB000B97D3B /* HomeListView.swift in Sources */,
 				08B191C22CF615CA0057BC04 /* Secrets.swift in Sources */,
 				083A258C2CF361F90099B58E /* ControllerConvention.swift in Sources */,
+				083C86242D087A44003F441C /* DetailTitleSection.swift in Sources */,
 				0841BAA32CFA31A300049E31 /* SpacingSection.swift in Sources */,
 				08B191982CF4A1010057BC04 /* SignUpStep4Reactor.swift in Sources */,
 				089952602D0366C40022AEF9 /* SearchMainController.swift in Sources */,
@@ -1631,6 +1688,7 @@
 				08B191B42CF609260057BC04 /* KakaoLoginService.swift in Sources */,
 				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
 				0841BAB42CFABED700049E31 /* HomePopularCardSection.swift in Sources */,
+				083C86292D088080003F441C /* DetailContentSection.swift in Sources */,
 				08DC61FA2CF7684F002A2F44 /* SignUpCompleteController.swift in Sources */,
 				08B191A42CF5A7030057BC04 /* PPSegmentedControl.swift in Sources */,
 				0899525C2D0347BD0022AEF9 /* SearchCategoryView.swift in Sources */,
@@ -1659,6 +1717,7 @@
 				08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */,
 				BD91036D2CF6149D00BBCCAE /* SignUpAPIEndpoint.swift in Sources */,
 				0899526A2D046CDE0022AEF9 /* SearchResultView.swift in Sources */,
+				083C861E2D08737F003F441C /* GetPopUpDetailResponseDTO.swift in Sources */,
 				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
 				086DD93D2D009A2600B97D3B /* CancelableTagSectionCell.swift in Sources */,
@@ -1702,6 +1761,7 @@
 				0899526C2D0473EC0022AEF9 /* GetSearchPopUpListResponseDTO.swift in Sources */,
 				08B1917D2CF46DE30057BC04 /* TermsDetailController.swift in Sources */,
 				0841BAB12CFA38F500049E31 /* HomeCardSectionCell.swift in Sources */,
+				083C862B2D08808C003F441C /* DetailContentSectionCell.swift in Sources */,
 				BD91036B2CF6149D00BBCCAE /* CheckNickNameRequestDTO.swift in Sources */,
 				0841BAAF2CFA38EA00049E31 /* HomeCardSection.swift in Sources */,
 				08B191842CF48A820057BC04 /* SignUpStep2View.swift in Sources */,

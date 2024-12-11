@@ -33,4 +33,8 @@ final class PopUpAPIUseCaseImpl {
     func getSearchPopUpList(query: String?) -> Observable<GetSearchPopUpListResponse> {
         return repository.getSearchPopUpList(request: .init(query: query)).map { $0.toDomain() }
     }
+    
+    func getPopUpDetail(commentType: String?, popUpStoredId: Int64) -> Observable<GetPopUpDetailResponse> {
+        return repository.getPopUpDetail(request: .init(commentType: commentType, popUpStoreId: popUpStoredId)).map { $0.toDomain() }
+    }
 }
