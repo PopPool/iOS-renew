@@ -13,4 +13,5 @@ struct GetSearchPopUpListRequestDTO: Encodable {
     var size: Int32?
     var sort: String?
     var query: String?
+    var sortCode: String?
 }

@@ -60,6 +60,14 @@ extension DetailController {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        mainView.commentPostButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                Reactor.Action.commentButtonTapped(controller: owner)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         reactor.state
             .withUnretained(self)
             .subscribe { (owner, state) in

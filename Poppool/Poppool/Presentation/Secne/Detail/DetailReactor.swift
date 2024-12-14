@@ -16,10 +16,12 @@ final class DetailReactor: Reactor {
     // MARK: - Reactor
     enum Action {
         case viewWillAppear
+        case commentButtonTapped(controller: BaseViewController)
     }
     
     enum Mutation {
         case loadView
+        case moveToCommentTypeSelectedScene(controller: BaseViewController)
     }
     
     struct State {
@@ -64,6 +66,8 @@ final class DetailReactor: Reactor {
         switch action {
         case .viewWillAppear:
             return setContent()
+        case .commentButtonTapped(let controller):
+            return Observable.just(.moveToCommentTypeSelectedScene(controller: controller))
         }
     }
     
@@ -72,6 +76,32 @@ final class DetailReactor: Reactor {
         switch mutation {
         case .loadView:
             newState.sections = getSection()
+        case .moveToCommentTypeSelectedScene(let controller):
+            let nextController = CommentSelectedController()
+            nextController.reactor = CommentSelectedReactor()
+            controller.presentPanModal(nextController)
+            nextController.reactor?.state
+                .withUnretained(nextController)
+                .subscribe(onNext: { (nextController, state) in
+                    switch state.selectedType {
+                    case .cancel:
+                        nextController.dismiss(animated: true)
+                    case .normal:
+                        nextController.dismiss(animated: true) {
+                            let commentController = NormalCommentAddController()
+                            commentController.reactor = NormalCommentAddReactor()
+                            controller.navigationController?.pushViewController(commentController, animated: true)
+                        }
+                    case .insta:
+                        nextController.dismiss(animated: true) {
+                            let commentController = BaseViewController()
+                            controller.navigationController?.pushViewController(commentController, animated: true)
+                        }
+                    case .none:
+                        break
+                    }
+                })
+                .disposed(by: disposeBag)
         }
         return newState
     }

@@ -25,14 +25,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        rootViewController.reactor = LoginReactor()
         
         
-//        let rootViewController = DetailController()
-//        rootViewController.reactor = DetailReactor(popUpID: 8)
+        let rootViewController = DetailController()
+        rootViewController.reactor = DetailReactor(popUpID: 8)
         
 //        let rootViewController = SearchMainController()
 //        rootViewController.reactor = SearchMainReactor()
         
-//        let navigationController = UINavigationController(rootViewController: rootViewController)
-        let navigationController = WaveTabBarController()
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+//        let navigationController = WaveTabBarController()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

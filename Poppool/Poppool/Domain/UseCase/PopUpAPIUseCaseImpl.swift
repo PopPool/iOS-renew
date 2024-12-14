@@ -22,7 +22,7 @@ final class PopUpAPIUseCaseImpl {
         if !categories.isEmpty {
             categoryString = categories.map { String($0) + "," }.reduce("", +)
         }
-        let request = GetSearchPopUpListRequestDTO(categories: categoryString, page: page, size: size, sort: sort)
+        let request = GetSearchPopUpListRequestDTO(categories: categoryString, page: page, size: size, sortCode: sort)
         if isOpen {
             return repository.getOpenPopUpList(request: request).map { $0.toDomain() }
         } else {
