@@ -33,6 +33,7 @@ final class DetailReactor: Reactor {
     var initialState: State
     var disposeBag = DisposeBag()
     private let popUpID: Int64
+    private var popUpName: String?
     
     private let popUpAPIUseCase = PopUpAPIUseCaseImpl(repository: PopUpAPIRepositoryImpl(provider: ProviderImpl()))
     lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
@@ -89,12 +90,13 @@ final class DetailReactor: Reactor {
                     case .normal:
                         nextController.dismiss(animated: true) {
                             let commentController = NormalCommentAddController()
-                            commentController.reactor = NormalCommentAddReactor()
+                            commentController.reactor = NormalCommentAddReactor(popUpID: self.popUpID, popUpName: self.popUpName ?? "")
                             controller.navigationController?.pushViewController(commentController, animated: true)
                         }
                     case .insta:
                         nextController.dismiss(animated: true) {
-                            let commentController = BaseViewController()
+                            let commentController = InstaCommentAddController()
+                            commentController.reactor = InstaCommentAddReactor()
                             controller.navigationController?.pushViewController(commentController, animated: true)
                         }
                     case .none:
@@ -128,9 +130,11 @@ final class DetailReactor: Reactor {
                 
                 // titleSection
                 owner.titleSection.inputDataList = [.init(title: response.name, isBookMark: response.bookmarkYn)]
+                owner.popUpName = response.name
                 
                 // contentSection
                 owner.contentSection.inputDataList = [.init(content: response.desc)]
+                print(response.commentList)
                 return .loadView
             }
     }

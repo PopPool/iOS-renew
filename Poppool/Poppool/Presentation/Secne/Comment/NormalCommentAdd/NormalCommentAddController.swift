@@ -108,16 +108,27 @@ extension NormalCommentAddController {
             })
             .disposed(by: disposeBag)
         
-        
+        mainView.saveButton.rx.tap
+            .withUnretained(self)
+            .map { (owner, _) in
+                owner.mainView.endEditing(true)
+                return Reactor.Action.saveButtonTapped(controller: owner)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
         
         reactor.state
             .withUnretained(self)
             .subscribe { (owner, state) in
-                let text = state.text ?? ""
-                if (10...500).contains(text.count) {
-                    owner.mainView.saveButton.isEnabled = true
-                } else {
+                if state.isSaving {
                     owner.mainView.saveButton.isEnabled = false
+                } else {
+                    let text = state.text ?? ""
+                    if (10...500).contains(text.count) {
+                        owner.mainView.saveButton.isEnabled = true
+                    } else {
+                        owner.mainView.saveButton.isEnabled = false
+                    }
                 }
                 owner.sections = state.sections
                 if state.isReloadView { owner.mainView.contentCollectionView.reloadData() }

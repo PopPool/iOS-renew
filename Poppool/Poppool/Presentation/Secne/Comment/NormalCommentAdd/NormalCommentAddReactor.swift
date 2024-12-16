@@ -22,6 +22,7 @@ final class NormalCommentAddReactor: Reactor {
         case imageDeleteButtonTapped(indexPath: IndexPath)
         case backButtonTapped(controller: BaseViewController)
         case inputComment(text: String?)
+        case saveButtonTapped(controller: BaseViewController)
     }
     
     enum Mutation {
@@ -29,18 +30,26 @@ final class NormalCommentAddReactor: Reactor {
         case showImagePicker(controller: BaseViewController)
         case showCheckModal(controller: BaseViewController)
         case setComment(text: String?)
+        case save(controller: BaseViewController)
     }
     
     struct State {
         var sections: [any Sectionable] = []
         var text: String?
         var isReloadView: Bool = true
+        var isSaving: Bool = false
     }
     
     // MARK: - properties
     
     var initialState: State
     var disposeBag = DisposeBag()
+    private var popUpID: Int64
+    private var popUpName: String
+    
+    private let commentAPIUseCase = CommentAPIUseCaseImpl(repository: CommentAPIRepository(provider: ProviderImpl()))
+    private let imageService = PreSignedService()
+    
     lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         UICollectionViewCompositionalLayout { [weak self] section, env in
             guard let self = self else {
@@ -65,8 +74,10 @@ final class NormalCommentAddReactor: Reactor {
     private let spacing16Section = SpacingSection(inputDataList: [.init(spacing: 16)])
     private let spacing32Section = SpacingSection(inputDataList: [.init(spacing: 32)])
     // MARK: - init
-    init() {
+    init(popUpID: Int64, popUpName: String) {
         self.initialState = State()
+        self.popUpID = popUpID
+        self.popUpName = popUpName
     }
     
     // MARK: - Reactor Methods
@@ -86,6 +97,8 @@ final class NormalCommentAddReactor: Reactor {
             return Observable.just(.showCheckModal(controller: controller))
         case .inputComment(let text):
             return Observable.just(.setComment(text: text))
+        case .saveButtonTapped(let controller):
+            return Observable.just(.save(controller: controller))
         }
     }
     
@@ -124,6 +137,31 @@ final class NormalCommentAddReactor: Reactor {
                 .disposed(by: nextController.disposeBag)
         case .setComment(let text):
             newState.text = text
+        case .save(let controller):
+            newState.isSaving = true
+            if imageSection.dataCount == 1 {
+                commentAPIUseCase.postCommentAdd(popUpStoreId: self.popUpID, content: newState.text, commentType: "NORMAL", imageUrlList: [])
+                    .subscribe {
+                        controller.navigationController?.popViewController(animated: true)
+                    }
+                    .disposed(by: disposeBag)
+            } else {
+                let images = imageSection.inputDataList.compactMap { $0.image }.enumerated().map { $0 }
+                let uuid = UUID().uuidString
+                let pathList = images.map { "PopUpComment/\(popUpName)/\(uuid)/\($0.offset).jpg" }
+                
+                imageService.tryUpload(datas: images.map { .init(filePath: "PopUpComment/\(popUpName)/\(uuid)/\($0.offset).jpg", image: $0.element)})
+                    .subscribe(onSuccess: { [weak self] _ in
+                        guard let self = self else { return }
+                        self.commentAPIUseCase.postCommentAdd(popUpStoreId: self.popUpID, content: newState.text, commentType: "NORMAL", imageUrlList: pathList)
+                            .subscribe(onDisposed: {
+                                controller.navigationController?.popViewController(animated: true)
+                            })
+                            .disposed(by: disposeBag)
+                    })
+                    .disposed(by: disposeBag)
+            }
+            
         }
         return newState
     }

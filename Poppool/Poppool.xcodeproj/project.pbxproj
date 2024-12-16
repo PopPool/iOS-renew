@@ -63,6 +63,17 @@
 		083C86592D0DEFC3003F441C /* CommentCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86582D0DEFC3003F441C /* CommentCheckView.swift */; };
 		083C865B2D0DEFCF003F441C /* CommentCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C865A2D0DEFCF003F441C /* CommentCheckController.swift */; };
 		083C865D2D0DEFD5003F441C /* CommentCheckReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C865C2D0DEFD5003F441C /* CommentCheckReactor.swift */; };
+		083C86602D0EC496003F441C /* InstaCommentAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C865F2D0EC496003F441C /* InstaCommentAddView.swift */; };
+		083C86622D0EC49E003F441C /* InstaCommentAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86612D0EC49E003F441C /* InstaCommentAddController.swift */; };
+		083C86642D0EC4A5003F441C /* InstaCommentAddReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86632D0EC4A5003F441C /* InstaCommentAddReactor.swift */; };
+		083C86692D0ECB47003F441C /* InstaGuideSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86682D0ECB47003F441C /* InstaGuideSection.swift */; };
+		083C866B2D0ECB4F003F441C /* InstaGuideSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C866A2D0ECB4F003F441C /* InstaGuideSectionCell.swift */; };
+		083C866E2D0ECB87003F441C /* InstaGuideChildSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C866D2D0ECB87003F441C /* InstaGuideChildSection.swift */; };
+		083C86702D0ECB8E003F441C /* InstaGuideChildSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C866F2D0ECB8E003F441C /* InstaGuideChildSectionCell.swift */; };
+		083C86732D0EE2B1003F441C /* CommentAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86722D0EE2B1003F441C /* CommentAPIEndPoint.swift */; };
+		083C86762D0EE2CF003F441C /* PostCommentRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86752D0EE2CF003F441C /* PostCommentRequestDTO.swift */; };
+		083C86782D0EE382003F441C /* CommentAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86772D0EE382003F441C /* CommentAPIRepository.swift */; };
+		083C867A2D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86792D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift */; };
 		0841BA802CF9F34100049E31 /* ImageBannerChildSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA7F2CF9F34100049E31 /* ImageBannerChildSectionCell.swift */; };
 		0841BA822CF9F5DF00049E31 /* PreSignedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA812CF9F5DF00049E31 /* PreSignedService.swift */; };
 		0841BA872CF9F62400049E31 /* PreSignedURLDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA842CF9F62300049E31 /* PreSignedURLDTO.swift */; };
@@ -105,6 +116,7 @@
 		086DD93D2D009A2600B97D3B /* CancelableTagSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93C2D009A2600B97D3B /* CancelableTagSectionCell.swift */; };
 		086DD9402D01EEEB00B97D3B /* SearchCountTitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93F2D01EEEB00B97D3B /* SearchCountTitleSection.swift */; };
 		086DD9422D01EEF700B97D3B /* SearchCountTitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9412D01EEF700B97D3B /* SearchCountTitleSectionCell.swift */; };
+		088DE2442D104EE70030FA9E /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 088DE2432D104EE70030FA9E /* SwiftSoup */; };
 		089952422D031E650022AEF9 /* SearchSortedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952412D031E650022AEF9 /* SearchSortedController.swift */; };
 		089952442D031E6D0022AEF9 /* SearchSortedReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952432D031E6D0022AEF9 /* SearchSortedReactor.swift */; };
 		089952462D031E740022AEF9 /* SearchSortedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952452D031E740022AEF9 /* SearchSortedView.swift */; };
@@ -319,6 +331,17 @@
 		083C86582D0DEFC3003F441C /* CommentCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCheckView.swift; sourceTree = "<group>"; };
 		083C865A2D0DEFCF003F441C /* CommentCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCheckController.swift; sourceTree = "<group>"; };
 		083C865C2D0DEFD5003F441C /* CommentCheckReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCheckReactor.swift; sourceTree = "<group>"; };
+		083C865F2D0EC496003F441C /* InstaCommentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCommentAddView.swift; sourceTree = "<group>"; };
+		083C86612D0EC49E003F441C /* InstaCommentAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCommentAddController.swift; sourceTree = "<group>"; };
+		083C86632D0EC4A5003F441C /* InstaCommentAddReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCommentAddReactor.swift; sourceTree = "<group>"; };
+		083C86682D0ECB47003F441C /* InstaGuideSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaGuideSection.swift; sourceTree = "<group>"; };
+		083C866A2D0ECB4F003F441C /* InstaGuideSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaGuideSectionCell.swift; sourceTree = "<group>"; };
+		083C866D2D0ECB87003F441C /* InstaGuideChildSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaGuideChildSection.swift; sourceTree = "<group>"; };
+		083C866F2D0ECB8E003F441C /* InstaGuideChildSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaGuideChildSectionCell.swift; sourceTree = "<group>"; };
+		083C86722D0EE2B1003F441C /* CommentAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPIEndPoint.swift; sourceTree = "<group>"; };
+		083C86752D0EE2CF003F441C /* PostCommentRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentRequestDTO.swift; sourceTree = "<group>"; };
+		083C86772D0EE382003F441C /* CommentAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPIRepository.swift; sourceTree = "<group>"; };
+		083C86792D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPIUseCaseImpl.swift; sourceTree = "<group>"; };
 		0841BA7F2CF9F34100049E31 /* ImageBannerChildSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerChildSectionCell.swift; sourceTree = "<group>"; };
 		0841BA812CF9F5DF00049E31 /* PreSignedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSignedService.swift; sourceTree = "<group>"; };
 		0841BA842CF9F62300049E31 /* PreSignedURLDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSignedURLDTO.swift; sourceTree = "<group>"; };
@@ -513,6 +536,7 @@
 				BDCA420A2CF35FB1005EECF6 /* Pageboy in Frameworks */,
 				08B191BE2CF609AE0057BC04 /* RxKakaoSDKUser in Frameworks */,
 				BDCA42012CF35EFE005EECF6 /* RxKeyboard in Frameworks */,
+				088DE2442D104EE70030FA9E /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,6 +849,7 @@
 				083C86572D0DEFB1003F441C /* CommentCheck */,
 				083C86342D0C7EE3003F441C /* CommentSelected */,
 				083C863B2D0C8BAF003F441C /* NormalCommentAdd */,
+				083C865E2D0EC47B003F441C /* InstaComment */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -905,6 +930,69 @@
 				083C865C2D0DEFD5003F441C /* CommentCheckReactor.swift */,
 			);
 			path = CommentCheck;
+			sourceTree = "<group>";
+		};
+		083C865E2D0EC47B003F441C /* InstaComment */ = {
+			isa = PBXGroup;
+			children = (
+				083C86652D0ECB23003F441C /* View */,
+				083C86612D0EC49E003F441C /* InstaCommentAddController.swift */,
+				083C86632D0EC4A5003F441C /* InstaCommentAddReactor.swift */,
+			);
+			path = InstaComment;
+			sourceTree = "<group>";
+		};
+		083C86652D0ECB23003F441C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				083C86662D0ECB2B003F441C /* InstaGuideSection */,
+				083C865F2D0EC496003F441C /* InstaCommentAddView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		083C86662D0ECB2B003F441C /* InstaGuideSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C866C2D0ECB7B003F441C /* InstaGuideChildSection */,
+				083C86672D0ECB3C003F441C /* InstaGuideSection */,
+			);
+			path = InstaGuideSection;
+			sourceTree = "<group>";
+		};
+		083C86672D0ECB3C003F441C /* InstaGuideSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C86682D0ECB47003F441C /* InstaGuideSection.swift */,
+				083C866A2D0ECB4F003F441C /* InstaGuideSectionCell.swift */,
+			);
+			path = InstaGuideSection;
+			sourceTree = "<group>";
+		};
+		083C866C2D0ECB7B003F441C /* InstaGuideChildSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C866D2D0ECB87003F441C /* InstaGuideChildSection.swift */,
+				083C866F2D0ECB8E003F441C /* InstaGuideChildSectionCell.swift */,
+			);
+			path = InstaGuideChildSection;
+			sourceTree = "<group>";
+		};
+		083C86712D0EE2A3003F441C /* CommentAPI */ = {
+			isa = PBXGroup;
+			children = (
+				083C86722D0EE2B1003F441C /* CommentAPIEndPoint.swift */,
+				083C86742D0EE2B8003F441C /* RequestDTO */,
+			);
+			path = CommentAPI;
+			sourceTree = "<group>";
+		};
+		083C86742D0EE2B8003F441C /* RequestDTO */ = {
+			isa = PBXGroup;
+			children = (
+				083C86752D0EE2CF003F441C /* PostCommentRequestDTO.swift */,
+			);
+			path = RequestDTO;
 			sourceTree = "<group>";
 		};
 		0841BA832CF9F61500049E31 /* PreSignedService */ = {
@@ -1421,6 +1509,7 @@
 				BD9103592CF6149D00BBCCAE /* SignUpRepositoryImpl.swift */,
 				086DD8D92CFF194700B97D3B /* UserAPIRepositoryImpl.swift */,
 				089952522D033C940022AEF9 /* PopUpAPIRepositoryImpl.swift */,
+				083C86772D0EE382003F441C /* CommentAPIRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1439,6 +1528,7 @@
 		BD9103602CF6149D00BBCCAE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				083C86712D0EE2A3003F441C /* CommentAPI */,
 				08DC62102CF8B446002A2F44 /* SortedRequestDTO.swift */,
 				089952472D033A0E0022AEF9 /* PopUpAPI */,
 				086DD8D42CFF181500B97D3B /* UserAPI */,
@@ -1458,6 +1548,7 @@
 				BD9103742CF614A900BBCCAE /* TryLoginUseCaseImpl.swift */,
 				086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */,
 				089952542D033D480022AEF9 /* PopUpAPIUseCaseImpl.swift */,
+				083C86792D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1582,6 +1673,7 @@
 				08B191B92CF609AE0057BC04 /* RxKakaoSDK */,
 				08B191BB2CF609AE0057BC04 /* RxKakaoSDKAuth */,
 				08B191BD2CF609AE0057BC04 /* RxKakaoSDKUser */,
+				088DE2432D104EE70030FA9E /* SwiftSoup */,
 			);
 			productName = Poppool;
 			productReference = BDCA41BD2CF35AC0005EECF6 /* Poppool.app */;
@@ -1668,6 +1760,7 @@
 				BDCA420B2CF35FD2005EECF6 /* XCRemoteSwiftPackageReference "RxGesture" */,
 				BDCA420E2CF35FF5005EECF6 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				088DE2422D104EE70030FA9E /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = BDCA41BE2CF35AC0005EECF6 /* Products */;
 			projectDirPath = "";
@@ -1733,6 +1826,7 @@
 				083A25B72CF362670099B58E /* RequestEndpoint.swift in Sources */,
 				083A25B82CF362670099B58E /* IndicatorMaker.swift in Sources */,
 				08B191B62CF6092B0057BC04 /* AppleLoginService.swift in Sources */,
+				083C866B2D0ECB4F003F441C /* InstaGuideSectionCell.swift in Sources */,
 				083C86202D087445003F441C /* GetPopUpDetailResponse.swift in Sources */,
 				083A25B22CF362670099B58E /* NetworkError.swift in Sources */,
 				BD9103692CF6149D00BBCCAE /* HomeAPIRepository.swift in Sources */,
@@ -1760,17 +1854,20 @@
 				BD9103882CF614A900BBCCAE /* GetHomeInfoResponse.swift in Sources */,
 				08DC62032CF8AC06002A2F44 /* HomeView.swift in Sources */,
 				BD9103622CF6149D00BBCCAE /* LoginResponseDTO.swift in Sources */,
+				083C86642D0EC4A5003F441C /* InstaCommentAddReactor.swift in Sources */,
 				BD9103922CF6166800BBCCAE /* SplashView.swift in Sources */,
 				0899526E2D0474340022AEF9 /* GetSearchPopUpListResponse.swift in Sources */,
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
 				086DD8E02CFF2C3700B97D3B /* UIImageView+.swift in Sources */,
 				08B191AC2CF5BF9D0057BC04 /* AgeSelectedController.swift in Sources */,
+				083C86622D0EC49E003F441C /* InstaCommentAddController.swift in Sources */,
 				08B1919C2CF4A77C0057BC04 /* TagSection.swift in Sources */,
 				BD91038B2CF614A900BBCCAE /* AuthRepository.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
 				08DC61F32CF75037002A2F44 /* KeyChainService.swift in Sources */,
 				086DD93B2D009A1C00B97D3B /* CancelableTagSection.swift in Sources */,
+				083C866E2D0ECB87003F441C /* InstaGuideChildSection.swift in Sources */,
 				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
 				08B191B82CF6092F0057BC04 /* AuthServiceable.swift in Sources */,
 				0841BAB82CFAC41300049E31 /* SectionBackGroundDecorationView.swift in Sources */,
@@ -1790,6 +1887,7 @@
 				BD9103862CF614A900BBCCAE /* BannerPopUpStore.swift in Sources */,
 				08B191862CF48A8B0057BC04 /* SignUpStep2Reactor.swift in Sources */,
 				08DC62052CF8AC0E002A2F44 /* HomeController.swift in Sources */,
+				083C86702D0ECB8E003F441C /* InstaGuideChildSectionCell.swift in Sources */,
 				083C865D2D0DEFD5003F441C /* CommentCheckReactor.swift in Sources */,
 				BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */,
 				086DD92A2D0086AA00B97D3B /* SearchController.swift in Sources */,
@@ -1807,6 +1905,7 @@
 				089952462D031E740022AEF9 /* SearchSortedView.swift in Sources */,
 				08DC620B2CF8AE0F002A2F44 /* ImageBannerSection.swift in Sources */,
 				086DD9302D0090E900B97D3B /* UITextField+.swift in Sources */,
+				083C867A2D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift in Sources */,
 				086DD8D62CFF182100B97D3B /* UserAPIEndPoint.swift in Sources */,
 				08B191942CF4A0F00057BC04 /* SignUpStep4View.swift in Sources */,
 				08B1918D2CF49FF70057BC04 /* SignUpStep3View.swift in Sources */,
@@ -1827,6 +1926,7 @@
 				08B191AE2CF5BFA60057BC04 /* AgeSelectedView.swift in Sources */,
 				BD9103842CF614A900BBCCAE /* TryLoginUseCase.swift in Sources */,
 				0899524D2D033AA70022AEF9 /* GetOpenPopUpListResponseDTO.swift in Sources */,
+				083C86602D0EC496003F441C /* InstaCommentAddView.swift in Sources */,
 				08DC62132CF8B833002A2F44 /* Optional+.swift in Sources */,
 				083C863D2D0C8BC4003F441C /* NormalCommentAddController.swift in Sources */,
 				08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */,
@@ -1850,6 +1950,8 @@
 				08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */,
 				BD91036D2CF6149D00BBCCAE /* SignUpAPIEndpoint.swift in Sources */,
 				0899526A2D046CDE0022AEF9 /* SearchResultView.swift in Sources */,
+				083C86692D0ECB47003F441C /* InstaGuideSection.swift in Sources */,
+				083C86762D0EE2CF003F441C /* PostCommentRequestDTO.swift in Sources */,
 				083C861E2D08737F003F441C /* GetPopUpDetailResponseDTO.swift in Sources */,
 				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
@@ -1859,6 +1961,7 @@
 				083A25BA2CF362670099B58E /* TokenInterceptor.swift in Sources */,
 				0841BAC32CFB600800049E31 /* TabbarController.swift in Sources */,
 				089952442D031E6D0022AEF9 /* SearchSortedReactor.swift in Sources */,
+				083C86782D0EE382003F441C /* CommentAPIRepository.swift in Sources */,
 				08B191B02CF5BFAE0057BC04 /* AgeSelectedReactor.swift in Sources */,
 				083C863F2D0C8BCE003F441C /* NormalCommentAddView.swift in Sources */,
 				083C86452D0DCDE9003F441C /* AddCommentTitleSectionCell.swift in Sources */,
@@ -1907,6 +2010,7 @@
 				BD9103662CF6149D00BBCCAE /* PopUpStoreResponseDTO.swift in Sources */,
 				0841BA802CF9F34100049E31 /* ImageBannerChildSectionCell.swift in Sources */,
 				083C86592D0DEFC3003F441C /* CommentCheckView.swift in Sources */,
+				083C86732D0EE2B1003F441C /* CommentAPIEndPoint.swift in Sources */,
 				08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */,
 				083C86542D0DD7E9003F441C /* AddCommentSection.swift in Sources */,
 				083A25BB2CF362670099B58E /* Provider.swift in Sources */,
@@ -2287,6 +2391,14 @@
 				minimumVersion = 5.10.1;
 			};
 		};
+		088DE2422D104EE70030FA9E /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.6;
+			};
+		};
 		BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -2382,6 +2494,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		088DE2432D104EE70030FA9E /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 088DE2422D104EE70030FA9E /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
 		};
 		08B191B92CF609AE0057BC04 /* RxKakaoSDK */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -60,7 +60,7 @@ struct GetPopUpDetailCommentResponseDTO: Decodable {
     let likeYn: Bool
     let likeCount: Int64
     let createDateTime: String?
-    let commentImageList: [GetPopUpDetailImageResponseDTO]
+    let commentImageList: [GetPopUpDetailImageResponseDTO]?
 }
 
 extension GetPopUpDetailCommentResponseDTO {
@@ -73,7 +73,7 @@ extension GetPopUpDetailCommentResponseDTO {
             likeYn: likeYn,
             likeCount: likeCount,
             createDateTime: createDateTime,
-            commentImageList: commentImageList.map { $0.toDomain()}
+            commentImageList: commentImageList == nil ? [] : commentImageList!.map { $0.toDomain()}
         )
     }
 }
