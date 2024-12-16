@@ -35,8 +35,6 @@ class PreSignedService {
     
     func tryUpload(datas: [PresignedURLRequest]) -> Single<Void> {
         
-        let methodDisposeBag = DisposeBag()
-        
         return Single.create { [weak self] observer in
             guard let self = self else {
                 return Disposables.create()
@@ -59,12 +57,12 @@ class PreSignedService {
                             print("Image upload failed: \(error.localizedDescription)")
                             observer(.failure(error))
                         })
-                        .disposed(by: methodDisposeBag)
+                        .disposed(by: self.disposeBag)
                 } onError: { error in
                     print("getUploadLinks Fail: \(error.localizedDescription)")
                     observer(.failure(error))
                 }
-                .disposed(by: methodDisposeBag)
+                .disposed(by: disposeBag)
             return Disposables.create()
         }
     }
@@ -143,18 +141,23 @@ private extension PreSignedService {
             if let imageData = image.jpegData(compressionQuality: 0),
                let url = URL(string: url)
             {
-                let request = AF.upload(imageData, to: url, method: .put).response { response in
-                    switch response.result {
-                    case .success:
-                        single(.success(()))
-                    case .failure(let error):
-                        single(.failure(error))
+                // Content-Type 헤더 설정
+                let headers: HTTPHeaders = [
+                    "Content-Type": "image/jpeg"
+                ]
+
+                AF.upload(imageData, to: url, method: .put, headers: headers)
+                    .response { response in
+                        switch response.result {
+                        case .success:
+                            print("success")
+                            single(.success(()))
+                        case .failure(let error):
+                            print("failure")
+                            single(.failure(error))
+                        }
                     }
-                }
-                
-                return Disposables.create {
-                    request.cancel()
-                }
+                return Disposables.create()
             } else {
                 single(.failure(NSError(domain: "InvalidDataOrURL", code: -1, userInfo: nil)))
                 return Disposables.create()

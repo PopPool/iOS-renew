@@ -96,7 +96,7 @@ final class SearchReactor: Reactor {
     
     // MARK: - Reactor Methods
     func mutate(action: Action) -> Observable<Mutation> {
-        let sort = sortedIndex == 0 ? "startDate,desc" : "viewCount,desc"
+        let sort = sortedIndex == 0 ? "NEWEST" : "MOST_VIEWED,MOST_COMMENTED,MOST_BOOKMARKED"
         switch action {
         case .resetSearchKeyWord:
             return Observable.just(.resetSearchKeyWord)

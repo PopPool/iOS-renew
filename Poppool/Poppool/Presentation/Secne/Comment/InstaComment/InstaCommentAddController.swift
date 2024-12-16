@@ -1,8 +1,8 @@
 //
-//  DetailController.swift
+//  InstaCommentAddController.swift
 //  Poppool
 //
-//  Created by SeoJunYoung on 12/9/24.
+//  Created by SeoJunYoung on 12/15/24.
 //
 
 import UIKit
@@ -11,21 +11,21 @@ import SnapKit
 import RxCocoa
 import RxSwift
 import ReactorKit
+import SwiftSoup
 
-final class DetailController: BaseViewController, View {
+final class InstaCommentAddController: BaseViewController, View {
     
-    typealias Reactor = DetailReactor
+    typealias Reactor = InstaCommentAddReactor
     
     // MARK: - Properties
     var disposeBag = DisposeBag()
     
-    private var mainView = DetailView()
-    
+    private var mainView = InstaCommentAddView()
     private var sections: [any Sectionable] = []
 }
 
 // MARK: - Life Cycle
-extension DetailController {
+extension InstaCommentAddController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -33,38 +33,45 @@ extension DetailController {
 }
 
 // MARK: - SetUp
-private extension DetailController {
+private extension InstaCommentAddController {
     func setUp() {
         if let layout = reactor?.compositionalLayout {
             mainView.contentCollectionView.collectionViewLayout = layout
         }
         mainView.contentCollectionView.delegate = self
         mainView.contentCollectionView.dataSource = self
-        mainView.contentCollectionView.register(ImageBannerSectionCell.self, forCellWithReuseIdentifier: ImageBannerSectionCell.identifiers)
-        mainView.contentCollectionView.register(SpacingSectionCell.self, forCellWithReuseIdentifier: SpacingSectionCell.identifiers)
-        mainView.contentCollectionView.register(DetailTitleSectionCell.self, forCellWithReuseIdentifier: DetailTitleSectionCell.identifiers)
-        mainView.contentCollectionView.register(DetailContentSectionCell.self, forCellWithReuseIdentifier: DetailContentSectionCell.identifiers)
+        mainView.contentCollectionView.register(InstaGuideSectionCell.self, forCellWithReuseIdentifier: InstaGuideSectionCell.identifiers)
+        view.backgroundColor = .g50
         view.addSubview(mainView)
         mainView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
 }
 
 // MARK: - Methods
-extension DetailController {
+extension InstaCommentAddController {
     func bind(reactor: Reactor) {
+        
+        SceneDelegate.appDidBecomeActive
+            .subscribe { _ in
+                if let url = UIPasteboard.general.string {
+//                    guard let url = URL(string: url) else { return }
+//                    self.crawl(url: url)
+//                    self.fetchHTML(url: url)
+                } else {
+                    print("Clipboard is empty or does not contain text")
+                }
+            }
+            .disposed(by: disposeBag)
+        
         rx.viewWillAppear
             .map { Reactor.Action.viewWillAppear }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
-        mainView.commentPostButton.rx.tap
-            .withUnretained(self)
-            .map { (owner, _) in
-                Reactor.Action.commentButtonTapped(controller: owner)
-            }
+        mainView.instaButton.rx.tap
+            .map { Reactor.Action.instaButtonTapped }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
@@ -79,7 +86,7 @@ extension DetailController {
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
-extension DetailController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension InstaCommentAddController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sections.count
     }
@@ -94,7 +101,7 @@ extension DetailController: UICollectionViewDelegate, UICollectionViewDataSource
     ) -> UICollectionViewCell {
         let cell = sections[indexPath.section].getCell(collectionView: collectionView, indexPath: indexPath)
         guard let reactor = reactor else { return cell }
+        
         return cell
     }
-
 }

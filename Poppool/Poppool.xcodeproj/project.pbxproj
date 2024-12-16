@@ -46,6 +46,34 @@
 		083C86262D087A4E003F441C /* DetailTitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86252D087A4E003F441C /* DetailTitleSectionCell.swift */; };
 		083C86292D088080003F441C /* DetailContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86282D088080003F441C /* DetailContentSection.swift */; };
 		083C862B2D08808C003F441C /* DetailContentSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C862A2D08808C003F441C /* DetailContentSectionCell.swift */; };
+		083C86362D0C7EF4003F441C /* CommentSelectedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86352D0C7EF4003F441C /* CommentSelectedController.swift */; };
+		083C86382D0C7EFC003F441C /* CommentSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86372D0C7EFC003F441C /* CommentSelectedView.swift */; };
+		083C863A2D0C7F0A003F441C /* CommentSelectedReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86392D0C7F0A003F441C /* CommentSelectedReactor.swift */; };
+		083C863D2D0C8BC4003F441C /* NormalCommentAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C863C2D0C8BC4003F441C /* NormalCommentAddController.swift */; };
+		083C863F2D0C8BCE003F441C /* NormalCommentAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C863E2D0C8BCE003F441C /* NormalCommentAddView.swift */; };
+		083C86412D0C8BD8003F441C /* NormalCommentAddReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86402D0C8BD8003F441C /* NormalCommentAddReactor.swift */; };
+		083C86452D0DCDE9003F441C /* AddCommentTitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86442D0DCDE8003F441C /* AddCommentTitleSectionCell.swift */; };
+		083C86472D0DCDFB003F441C /* AddCommentTitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86462D0DCDFB003F441C /* AddCommentTitleSection.swift */; };
+		083C864A2D0DCF96003F441C /* AddCommentDescriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86492D0DCF96003F441C /* AddCommentDescriptionSection.swift */; };
+		083C864C2D0DCF9B003F441C /* AddCommentDescriptionSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C864B2D0DCF9B003F441C /* AddCommentDescriptionSectionCell.swift */; };
+		083C864F2D0DD3A6003F441C /* AddCommentImageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C864E2D0DD3A6003F441C /* AddCommentImageSection.swift */; };
+		083C86512D0DD3AB003F441C /* AddCommentImageSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86502D0DD3AB003F441C /* AddCommentImageSectionCell.swift */; };
+		083C86542D0DD7E9003F441C /* AddCommentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86532D0DD7E9003F441C /* AddCommentSection.swift */; };
+		083C86562D0DD7EE003F441C /* AddCommentSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86552D0DD7EE003F441C /* AddCommentSectionCell.swift */; };
+		083C86592D0DEFC3003F441C /* CommentCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86582D0DEFC3003F441C /* CommentCheckView.swift */; };
+		083C865B2D0DEFCF003F441C /* CommentCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C865A2D0DEFCF003F441C /* CommentCheckController.swift */; };
+		083C865D2D0DEFD5003F441C /* CommentCheckReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C865C2D0DEFD5003F441C /* CommentCheckReactor.swift */; };
+		083C86602D0EC496003F441C /* InstaCommentAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C865F2D0EC496003F441C /* InstaCommentAddView.swift */; };
+		083C86622D0EC49E003F441C /* InstaCommentAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86612D0EC49E003F441C /* InstaCommentAddController.swift */; };
+		083C86642D0EC4A5003F441C /* InstaCommentAddReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86632D0EC4A5003F441C /* InstaCommentAddReactor.swift */; };
+		083C86692D0ECB47003F441C /* InstaGuideSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86682D0ECB47003F441C /* InstaGuideSection.swift */; };
+		083C866B2D0ECB4F003F441C /* InstaGuideSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C866A2D0ECB4F003F441C /* InstaGuideSectionCell.swift */; };
+		083C866E2D0ECB87003F441C /* InstaGuideChildSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C866D2D0ECB87003F441C /* InstaGuideChildSection.swift */; };
+		083C86702D0ECB8E003F441C /* InstaGuideChildSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C866F2D0ECB8E003F441C /* InstaGuideChildSectionCell.swift */; };
+		083C86732D0EE2B1003F441C /* CommentAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86722D0EE2B1003F441C /* CommentAPIEndPoint.swift */; };
+		083C86762D0EE2CF003F441C /* PostCommentRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86752D0EE2CF003F441C /* PostCommentRequestDTO.swift */; };
+		083C86782D0EE382003F441C /* CommentAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86772D0EE382003F441C /* CommentAPIRepository.swift */; };
+		083C867A2D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C86792D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift */; };
 		0841BA802CF9F34100049E31 /* ImageBannerChildSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA7F2CF9F34100049E31 /* ImageBannerChildSectionCell.swift */; };
 		0841BA822CF9F5DF00049E31 /* PreSignedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA812CF9F5DF00049E31 /* PreSignedService.swift */; };
 		0841BA872CF9F62400049E31 /* PreSignedURLDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841BA842CF9F62300049E31 /* PreSignedURLDTO.swift */; };
@@ -88,6 +116,7 @@
 		086DD93D2D009A2600B97D3B /* CancelableTagSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93C2D009A2600B97D3B /* CancelableTagSectionCell.swift */; };
 		086DD9402D01EEEB00B97D3B /* SearchCountTitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93F2D01EEEB00B97D3B /* SearchCountTitleSection.swift */; };
 		086DD9422D01EEF700B97D3B /* SearchCountTitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9412D01EEF700B97D3B /* SearchCountTitleSectionCell.swift */; };
+		088DE2442D104EE70030FA9E /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 088DE2432D104EE70030FA9E /* SwiftSoup */; };
 		089952422D031E650022AEF9 /* SearchSortedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952412D031E650022AEF9 /* SearchSortedController.swift */; };
 		089952442D031E6D0022AEF9 /* SearchSortedReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952432D031E6D0022AEF9 /* SearchSortedReactor.swift */; };
 		089952462D031E740022AEF9 /* SearchSortedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952452D031E740022AEF9 /* SearchSortedView.swift */; };
@@ -285,6 +314,34 @@
 		083C86252D087A4E003F441C /* DetailTitleSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleSectionCell.swift; sourceTree = "<group>"; };
 		083C86282D088080003F441C /* DetailContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentSection.swift; sourceTree = "<group>"; };
 		083C862A2D08808C003F441C /* DetailContentSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentSectionCell.swift; sourceTree = "<group>"; };
+		083C86352D0C7EF4003F441C /* CommentSelectedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSelectedController.swift; sourceTree = "<group>"; };
+		083C86372D0C7EFC003F441C /* CommentSelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSelectedView.swift; sourceTree = "<group>"; };
+		083C86392D0C7F0A003F441C /* CommentSelectedReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSelectedReactor.swift; sourceTree = "<group>"; };
+		083C863C2D0C8BC4003F441C /* NormalCommentAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCommentAddController.swift; sourceTree = "<group>"; };
+		083C863E2D0C8BCE003F441C /* NormalCommentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCommentAddView.swift; sourceTree = "<group>"; };
+		083C86402D0C8BD8003F441C /* NormalCommentAddReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCommentAddReactor.swift; sourceTree = "<group>"; };
+		083C86442D0DCDE8003F441C /* AddCommentTitleSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentTitleSectionCell.swift; sourceTree = "<group>"; };
+		083C86462D0DCDFB003F441C /* AddCommentTitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentTitleSection.swift; sourceTree = "<group>"; };
+		083C86492D0DCF96003F441C /* AddCommentDescriptionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentDescriptionSection.swift; sourceTree = "<group>"; };
+		083C864B2D0DCF9B003F441C /* AddCommentDescriptionSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentDescriptionSectionCell.swift; sourceTree = "<group>"; };
+		083C864E2D0DD3A6003F441C /* AddCommentImageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentImageSection.swift; sourceTree = "<group>"; };
+		083C86502D0DD3AB003F441C /* AddCommentImageSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentImageSectionCell.swift; sourceTree = "<group>"; };
+		083C86532D0DD7E9003F441C /* AddCommentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentSection.swift; sourceTree = "<group>"; };
+		083C86552D0DD7EE003F441C /* AddCommentSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentSectionCell.swift; sourceTree = "<group>"; };
+		083C86582D0DEFC3003F441C /* CommentCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCheckView.swift; sourceTree = "<group>"; };
+		083C865A2D0DEFCF003F441C /* CommentCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCheckController.swift; sourceTree = "<group>"; };
+		083C865C2D0DEFD5003F441C /* CommentCheckReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCheckReactor.swift; sourceTree = "<group>"; };
+		083C865F2D0EC496003F441C /* InstaCommentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCommentAddView.swift; sourceTree = "<group>"; };
+		083C86612D0EC49E003F441C /* InstaCommentAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCommentAddController.swift; sourceTree = "<group>"; };
+		083C86632D0EC4A5003F441C /* InstaCommentAddReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCommentAddReactor.swift; sourceTree = "<group>"; };
+		083C86682D0ECB47003F441C /* InstaGuideSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaGuideSection.swift; sourceTree = "<group>"; };
+		083C866A2D0ECB4F003F441C /* InstaGuideSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaGuideSectionCell.swift; sourceTree = "<group>"; };
+		083C866D2D0ECB87003F441C /* InstaGuideChildSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaGuideChildSection.swift; sourceTree = "<group>"; };
+		083C866F2D0ECB8E003F441C /* InstaGuideChildSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaGuideChildSectionCell.swift; sourceTree = "<group>"; };
+		083C86722D0EE2B1003F441C /* CommentAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPIEndPoint.swift; sourceTree = "<group>"; };
+		083C86752D0EE2CF003F441C /* PostCommentRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentRequestDTO.swift; sourceTree = "<group>"; };
+		083C86772D0EE382003F441C /* CommentAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPIRepository.swift; sourceTree = "<group>"; };
+		083C86792D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPIUseCaseImpl.swift; sourceTree = "<group>"; };
 		0841BA7F2CF9F34100049E31 /* ImageBannerChildSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerChildSectionCell.swift; sourceTree = "<group>"; };
 		0841BA812CF9F5DF00049E31 /* PreSignedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSignedService.swift; sourceTree = "<group>"; };
 		0841BA842CF9F62300049E31 /* PreSignedURLDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSignedURLDTO.swift; sourceTree = "<group>"; };
@@ -479,6 +536,7 @@
 				BDCA420A2CF35FB1005EECF6 /* Pageboy in Frameworks */,
 				08B191BE2CF609AE0057BC04 /* RxKakaoSDKUser in Frameworks */,
 				BDCA42012CF35EFE005EECF6 /* RxKeyboard in Frameworks */,
+				088DE2442D104EE70030FA9E /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +756,7 @@
 				083A25C32CF363650099B58E /* Login */,
 				BD9103912CF6166800BBCCAE /* Splash */,
 				083C86092D073A08003F441C /* Detail */,
+				083C86332D0C7EDB003F441C /* Comment */,
 			);
 			path = Secne;
 			sourceTree = "<group>";
@@ -782,6 +841,158 @@
 				083C862A2D08808C003F441C /* DetailContentSectionCell.swift */,
 			);
 			path = DetailContentSection;
+			sourceTree = "<group>";
+		};
+		083C86332D0C7EDB003F441C /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				083C86572D0DEFB1003F441C /* CommentCheck */,
+				083C86342D0C7EE3003F441C /* CommentSelected */,
+				083C863B2D0C8BAF003F441C /* NormalCommentAdd */,
+				083C865E2D0EC47B003F441C /* InstaComment */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		083C86342D0C7EE3003F441C /* CommentSelected */ = {
+			isa = PBXGroup;
+			children = (
+				083C86372D0C7EFC003F441C /* CommentSelectedView.swift */,
+				083C86352D0C7EF4003F441C /* CommentSelectedController.swift */,
+				083C86392D0C7F0A003F441C /* CommentSelectedReactor.swift */,
+			);
+			path = CommentSelected;
+			sourceTree = "<group>";
+		};
+		083C863B2D0C8BAF003F441C /* NormalCommentAdd */ = {
+			isa = PBXGroup;
+			children = (
+				083C86422D0DCD9B003F441C /* View */,
+				083C863C2D0C8BC4003F441C /* NormalCommentAddController.swift */,
+				083C86402D0C8BD8003F441C /* NormalCommentAddReactor.swift */,
+			);
+			path = NormalCommentAdd;
+			sourceTree = "<group>";
+		};
+		083C86422D0DCD9B003F441C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				083C864D2D0DD317003F441C /* AddCommentImageSection */,
+				083C86432D0DCDD5003F441C /* AddCommentTitleSection */,
+				083C86482D0DCF7A003F441C /* AddCommentDescriptionSection */,
+				083C86522D0DD7D1003F441C /* AddCommentSection */,
+				083C863E2D0C8BCE003F441C /* NormalCommentAddView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		083C86432D0DCDD5003F441C /* AddCommentTitleSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C86442D0DCDE8003F441C /* AddCommentTitleSectionCell.swift */,
+				083C86462D0DCDFB003F441C /* AddCommentTitleSection.swift */,
+			);
+			path = AddCommentTitleSection;
+			sourceTree = "<group>";
+		};
+		083C86482D0DCF7A003F441C /* AddCommentDescriptionSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C86492D0DCF96003F441C /* AddCommentDescriptionSection.swift */,
+				083C864B2D0DCF9B003F441C /* AddCommentDescriptionSectionCell.swift */,
+			);
+			path = AddCommentDescriptionSection;
+			sourceTree = "<group>";
+		};
+		083C864D2D0DD317003F441C /* AddCommentImageSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C864E2D0DD3A6003F441C /* AddCommentImageSection.swift */,
+				083C86502D0DD3AB003F441C /* AddCommentImageSectionCell.swift */,
+			);
+			path = AddCommentImageSection;
+			sourceTree = "<group>";
+		};
+		083C86522D0DD7D1003F441C /* AddCommentSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C86532D0DD7E9003F441C /* AddCommentSection.swift */,
+				083C86552D0DD7EE003F441C /* AddCommentSectionCell.swift */,
+			);
+			path = AddCommentSection;
+			sourceTree = "<group>";
+		};
+		083C86572D0DEFB1003F441C /* CommentCheck */ = {
+			isa = PBXGroup;
+			children = (
+				083C86582D0DEFC3003F441C /* CommentCheckView.swift */,
+				083C865A2D0DEFCF003F441C /* CommentCheckController.swift */,
+				083C865C2D0DEFD5003F441C /* CommentCheckReactor.swift */,
+			);
+			path = CommentCheck;
+			sourceTree = "<group>";
+		};
+		083C865E2D0EC47B003F441C /* InstaComment */ = {
+			isa = PBXGroup;
+			children = (
+				083C86652D0ECB23003F441C /* View */,
+				083C86612D0EC49E003F441C /* InstaCommentAddController.swift */,
+				083C86632D0EC4A5003F441C /* InstaCommentAddReactor.swift */,
+			);
+			path = InstaComment;
+			sourceTree = "<group>";
+		};
+		083C86652D0ECB23003F441C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				083C86662D0ECB2B003F441C /* InstaGuideSection */,
+				083C865F2D0EC496003F441C /* InstaCommentAddView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		083C86662D0ECB2B003F441C /* InstaGuideSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C866C2D0ECB7B003F441C /* InstaGuideChildSection */,
+				083C86672D0ECB3C003F441C /* InstaGuideSection */,
+			);
+			path = InstaGuideSection;
+			sourceTree = "<group>";
+		};
+		083C86672D0ECB3C003F441C /* InstaGuideSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C86682D0ECB47003F441C /* InstaGuideSection.swift */,
+				083C866A2D0ECB4F003F441C /* InstaGuideSectionCell.swift */,
+			);
+			path = InstaGuideSection;
+			sourceTree = "<group>";
+		};
+		083C866C2D0ECB7B003F441C /* InstaGuideChildSection */ = {
+			isa = PBXGroup;
+			children = (
+				083C866D2D0ECB87003F441C /* InstaGuideChildSection.swift */,
+				083C866F2D0ECB8E003F441C /* InstaGuideChildSectionCell.swift */,
+			);
+			path = InstaGuideChildSection;
+			sourceTree = "<group>";
+		};
+		083C86712D0EE2A3003F441C /* CommentAPI */ = {
+			isa = PBXGroup;
+			children = (
+				083C86722D0EE2B1003F441C /* CommentAPIEndPoint.swift */,
+				083C86742D0EE2B8003F441C /* RequestDTO */,
+			);
+			path = CommentAPI;
+			sourceTree = "<group>";
+		};
+		083C86742D0EE2B8003F441C /* RequestDTO */ = {
+			isa = PBXGroup;
+			children = (
+				083C86752D0EE2CF003F441C /* PostCommentRequestDTO.swift */,
+			);
+			path = RequestDTO;
 			sourceTree = "<group>";
 		};
 		0841BA832CF9F61500049E31 /* PreSignedService */ = {
@@ -1298,6 +1509,7 @@
 				BD9103592CF6149D00BBCCAE /* SignUpRepositoryImpl.swift */,
 				086DD8D92CFF194700B97D3B /* UserAPIRepositoryImpl.swift */,
 				089952522D033C940022AEF9 /* PopUpAPIRepositoryImpl.swift */,
+				083C86772D0EE382003F441C /* CommentAPIRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1316,6 +1528,7 @@
 		BD9103602CF6149D00BBCCAE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				083C86712D0EE2A3003F441C /* CommentAPI */,
 				08DC62102CF8B446002A2F44 /* SortedRequestDTO.swift */,
 				089952472D033A0E0022AEF9 /* PopUpAPI */,
 				086DD8D42CFF181500B97D3B /* UserAPI */,
@@ -1335,6 +1548,7 @@
 				BD9103742CF614A900BBCCAE /* TryLoginUseCaseImpl.swift */,
 				086DD8DD2CFF19C400B97D3B /* UserAPIUseCaseImpl.swift */,
 				089952542D033D480022AEF9 /* PopUpAPIUseCaseImpl.swift */,
+				083C86792D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1459,6 +1673,7 @@
 				08B191B92CF609AE0057BC04 /* RxKakaoSDK */,
 				08B191BB2CF609AE0057BC04 /* RxKakaoSDKAuth */,
 				08B191BD2CF609AE0057BC04 /* RxKakaoSDKUser */,
+				088DE2432D104EE70030FA9E /* SwiftSoup */,
 			);
 			productName = Poppool;
 			productReference = BDCA41BD2CF35AC0005EECF6 /* Poppool.app */;
@@ -1545,6 +1760,7 @@
 				BDCA420B2CF35FD2005EECF6 /* XCRemoteSwiftPackageReference "RxGesture" */,
 				BDCA420E2CF35FF5005EECF6 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				088DE2422D104EE70030FA9E /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = BDCA41BE2CF35AC0005EECF6 /* Products */;
 			projectDirPath = "";
@@ -1610,6 +1826,7 @@
 				083A25B72CF362670099B58E /* RequestEndpoint.swift in Sources */,
 				083A25B82CF362670099B58E /* IndicatorMaker.swift in Sources */,
 				08B191B62CF6092B0057BC04 /* AppleLoginService.swift in Sources */,
+				083C866B2D0ECB4F003F441C /* InstaGuideSectionCell.swift in Sources */,
 				083C86202D087445003F441C /* GetPopUpDetailResponse.swift in Sources */,
 				083A25B22CF362670099B58E /* NetworkError.swift in Sources */,
 				BD9103692CF6149D00BBCCAE /* HomeAPIRepository.swift in Sources */,
@@ -1617,6 +1834,7 @@
 				089952752D0475F20022AEF9 /* SearchResultCountSectionCell.swift in Sources */,
 				086DD9362D00963900B97D3B /* SearchTitleSection.swift in Sources */,
 				083A25922CF361F90099B58E /* ViewConvention.swift in Sources */,
+				083C864F2D0DD3A6003F441C /* AddCommentImageSection.swift in Sources */,
 				08B191372CF366680057BC04 /* UICollectionViewCell+.swift in Sources */,
 				083A25B42CF362670099B58E /* Responsable.swift in Sources */,
 				0841BAA82CFA354500049E31 /* HomeTitleSection.swift in Sources */,
@@ -1636,23 +1854,27 @@
 				BD9103882CF614A900BBCCAE /* GetHomeInfoResponse.swift in Sources */,
 				08DC62032CF8AC06002A2F44 /* HomeView.swift in Sources */,
 				BD9103622CF6149D00BBCCAE /* LoginResponseDTO.swift in Sources */,
+				083C86642D0EC4A5003F441C /* InstaCommentAddReactor.swift in Sources */,
 				BD9103922CF6166800BBCCAE /* SplashView.swift in Sources */,
 				0899526E2D0474340022AEF9 /* GetSearchPopUpListResponse.swift in Sources */,
 				08B191392CF366680057BC04 /* UITableViewCell+.swift in Sources */,
 				083A25992CF362090099B58E /* Sectionable.swift in Sources */,
 				086DD8E02CFF2C3700B97D3B /* UIImageView+.swift in Sources */,
 				08B191AC2CF5BF9D0057BC04 /* AgeSelectedController.swift in Sources */,
+				083C86622D0EC49E003F441C /* InstaCommentAddController.swift in Sources */,
 				08B1919C2CF4A77C0057BC04 /* TagSection.swift in Sources */,
 				BD91038B2CF614A900BBCCAE /* AuthRepository.swift in Sources */,
 				083A25902CF361F90099B58E /* TestDynamicCell.swift in Sources */,
 				08DC61F32CF75037002A2F44 /* KeyChainService.swift in Sources */,
 				086DD93B2D009A1C00B97D3B /* CancelableTagSection.swift in Sources */,
+				083C866E2D0ECB87003F441C /* InstaGuideChildSection.swift in Sources */,
 				08B1917A2CF452B30057BC04 /* SignUpTermsView.swift in Sources */,
 				08B191B82CF6092F0057BC04 /* AuthServiceable.swift in Sources */,
 				0841BAB82CFAC41300049E31 /* SectionBackGroundDecorationView.swift in Sources */,
 				089952682D046CD80022AEF9 /* SearchResultReactor.swift in Sources */,
 				BDCA41C52CF35AC0005EECF6 /* TestViewController.swift in Sources */,
 				086DD9402D01EEEB00B97D3B /* SearchCountTitleSection.swift in Sources */,
+				083C864C2D0DCF9B003F441C /* AddCommentDescriptionSectionCell.swift in Sources */,
 				086DD8CE2CFDFEB000B97D3B /* HomeListView.swift in Sources */,
 				08B191C22CF615CA0057BC04 /* Secrets.swift in Sources */,
 				083A258C2CF361F90099B58E /* ControllerConvention.swift in Sources */,
@@ -1665,6 +1887,8 @@
 				BD9103862CF614A900BBCCAE /* BannerPopUpStore.swift in Sources */,
 				08B191862CF48A8B0057BC04 /* SignUpStep2Reactor.swift in Sources */,
 				08DC62052CF8AC0E002A2F44 /* HomeController.swift in Sources */,
+				083C86702D0ECB8E003F441C /* InstaGuideChildSectionCell.swift in Sources */,
+				083C865D2D0DEFD5003F441C /* CommentCheckReactor.swift in Sources */,
 				BD9103632CF6149D00BBCCAE /* BannerPopUpStoreDTO.swift in Sources */,
 				086DD92A2D0086AA00B97D3B /* SearchController.swift in Sources */,
 				083C860F2D073A23003F441C /* DetailReactor.swift in Sources */,
@@ -1681,22 +1905,30 @@
 				089952462D031E740022AEF9 /* SearchSortedView.swift in Sources */,
 				08DC620B2CF8AE0F002A2F44 /* ImageBannerSection.swift in Sources */,
 				086DD9302D0090E900B97D3B /* UITextField+.swift in Sources */,
+				083C867A2D0EE3BB003F441C /* CommentAPIUseCaseImpl.swift in Sources */,
 				086DD8D62CFF182100B97D3B /* UserAPIEndPoint.swift in Sources */,
 				08B191942CF4A0F00057BC04 /* SignUpStep4View.swift in Sources */,
 				08B1918D2CF49FF70057BC04 /* SignUpStep3View.swift in Sources */,
 				BD9103642CF6149D00BBCCAE /* GetHomeInfoResponseDTO.swift in Sources */,
 				08B191B42CF609260057BC04 /* KakaoLoginService.swift in Sources */,
 				BDCA41C12CF35AC0005EECF6 /* AppDelegate.swift in Sources */,
+				083C863A2D0C7F0A003F441C /* CommentSelectedReactor.swift in Sources */,
 				0841BAB42CFABED700049E31 /* HomePopularCardSection.swift in Sources */,
+				083C86362D0C7EF4003F441C /* CommentSelectedController.swift in Sources */,
 				083C86292D088080003F441C /* DetailContentSection.swift in Sources */,
 				08DC61FA2CF7684F002A2F44 /* SignUpCompleteController.swift in Sources */,
+				083C864A2D0DCF96003F441C /* AddCommentDescriptionSection.swift in Sources */,
 				08B191A42CF5A7030057BC04 /* PPSegmentedControl.swift in Sources */,
 				0899525C2D0347BD0022AEF9 /* SearchCategoryView.swift in Sources */,
+				083C865B2D0DEFCF003F441C /* CommentCheckController.swift in Sources */,
+				083C86382D0C7EFC003F441C /* CommentSelectedView.swift in Sources */,
 				08DC61F52CF765B5002A2F44 /* UserDefaultService.swift in Sources */,
 				08B191AE2CF5BFA60057BC04 /* AgeSelectedView.swift in Sources */,
 				BD9103842CF614A900BBCCAE /* TryLoginUseCase.swift in Sources */,
 				0899524D2D033AA70022AEF9 /* GetOpenPopUpListResponseDTO.swift in Sources */,
+				083C86602D0EC496003F441C /* InstaCommentAddView.swift in Sources */,
 				08DC62132CF8B833002A2F44 /* Optional+.swift in Sources */,
+				083C863D2D0C8BC4003F441C /* NormalCommentAddController.swift in Sources */,
 				08B1916E2CF434CF0057BC04 /* SignUpStep1Reactor.swift in Sources */,
 				08B1918F2CF4A0020057BC04 /* SignUpStep3Controller.swift in Sources */,
 				08B191912CF4A00E0057BC04 /* SignUpStep3Reactor.swift in Sources */,
@@ -1709,6 +1941,7 @@
 				08DC620D2CF8AE16002A2F44 /* ImageBannerSectionCell.swift in Sources */,
 				08B1915B2CF41E690057BC04 /* SignUpMainReactor.swift in Sources */,
 				08B191882CF48FAE0057BC04 /* NickNameState.swift in Sources */,
+				083C86562D0DD7EE003F441C /* AddCommentSectionCell.swift in Sources */,
 				08B191B22CF5C0A60057BC04 /* PPPicker.swift in Sources */,
 				086DD92E2D0086B900B97D3B /* SearchView.swift in Sources */,
 				0841BA822CF9F5DF00049E31 /* PreSignedService.swift in Sources */,
@@ -1717,6 +1950,8 @@
 				08B1913F2CF367FA0057BC04 /* UIColor+.swift in Sources */,
 				BD91036D2CF6149D00BBCCAE /* SignUpAPIEndpoint.swift in Sources */,
 				0899526A2D046CDE0022AEF9 /* SearchResultView.swift in Sources */,
+				083C86692D0ECB47003F441C /* InstaGuideSection.swift in Sources */,
+				083C86762D0EE2CF003F441C /* PostCommentRequestDTO.swift in Sources */,
 				083C861E2D08737F003F441C /* GetPopUpDetailResponseDTO.swift in Sources */,
 				08B1916C2CF434C30057BC04 /* SignUpStep1View.swift in Sources */,
 				083A25BC2CF362670099B58E /* ProviderImpl.swift in Sources */,
@@ -1726,7 +1961,11 @@
 				083A25BA2CF362670099B58E /* TokenInterceptor.swift in Sources */,
 				0841BAC32CFB600800049E31 /* TabbarController.swift in Sources */,
 				089952442D031E6D0022AEF9 /* SearchSortedReactor.swift in Sources */,
+				083C86782D0EE382003F441C /* CommentAPIRepository.swift in Sources */,
 				08B191B02CF5BFAE0057BC04 /* AgeSelectedReactor.swift in Sources */,
+				083C863F2D0C8BCE003F441C /* NormalCommentAddView.swift in Sources */,
+				083C86452D0DCDE9003F441C /* AddCommentTitleSectionCell.swift in Sources */,
+				083C86412D0C8BD8003F441C /* NormalCommentAddReactor.swift in Sources */,
 				089952732D0475E90022AEF9 /* SearchResultCountSection.swift in Sources */,
 				08B191A02CF4AA0E0057BC04 /* Reactive+.swift in Sources */,
 				089952512D033C410022AEF9 /* GetSearchBottomPopUpListResponse.swift in Sources */,
@@ -1770,7 +2009,10 @@
 				089952552D033D480022AEF9 /* PopUpAPIUseCaseImpl.swift in Sources */,
 				BD9103662CF6149D00BBCCAE /* PopUpStoreResponseDTO.swift in Sources */,
 				0841BA802CF9F34100049E31 /* ImageBannerChildSectionCell.swift in Sources */,
+				083C86592D0DEFC3003F441C /* CommentCheckView.swift in Sources */,
+				083C86732D0EE2B1003F441C /* CommentAPIEndPoint.swift in Sources */,
 				08B1913B2CF366A00057BC04 /* UIApplication+.swift in Sources */,
+				083C86542D0DD7E9003F441C /* AddCommentSection.swift in Sources */,
 				083A25BB2CF362670099B58E /* Provider.swift in Sources */,
 				0899524B2D033A9C0022AEF9 /* GetClosePopUpListResponseDTO.swift in Sources */,
 				08B191A72CF5A9430057BC04 /* AgeSelectedButton.swift in Sources */,
@@ -1782,6 +2024,7 @@
 				083A25CC2CF363CB0099B58E /* LoginView.swift in Sources */,
 				083A259B2CF362090099B58E /* SectionSupplementaryItem.swift in Sources */,
 				086DD8D02CFDFEB900B97D3B /* HomeListReactor.swift in Sources */,
+				083C86472D0DCDFB003F441C /* AddCommentTitleSection.swift in Sources */,
 				0841BAB62CFABEDC00049E31 /* HomePopularCardSectionCell.swift in Sources */,
 				08B191822CF48A7B0057BC04 /* SignUpStep2Controller.swift in Sources */,
 				083A25912CF361F90099B58E /* TestDynamicSection.swift in Sources */,
@@ -1789,6 +2032,7 @@
 				089952422D031E650022AEF9 /* SearchSortedController.swift in Sources */,
 				089952532D033C940022AEF9 /* PopUpAPIRepositoryImpl.swift in Sources */,
 				08B191A22CF4AE890057BC04 /* ToastMaker.swift in Sources */,
+				083C86512D0DD3AB003F441C /* AddCommentImageSectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2147,6 +2391,14 @@
 				minimumVersion = 5.10.1;
 			};
 		};
+		088DE2422D104EE70030FA9E /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.6;
+			};
+		};
 		BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -2242,6 +2494,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		088DE2432D104EE70030FA9E /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 088DE2422D104EE70030FA9E /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
 		};
 		08B191B92CF609AE0057BC04 /* RxKakaoSDK */ = {
 			isa = XCSwiftPackageProductDependency;

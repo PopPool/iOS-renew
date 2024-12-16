@@ -37,6 +37,7 @@ extension Requestable {
         if let bodyParameters = try bodyParameters?.toDictionary() {
             if !bodyParameters.isEmpty {
                 urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: bodyParameters)
+                print(bodyParameters)
             }
         }
         // httpMethod

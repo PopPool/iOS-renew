@@ -18,6 +18,11 @@ final class DetailView: UIView {
         return view
     }()
     
+    let commentPostButton: PPButton = {
+        let button = PPButton(style: .primary, text: "코멘트 작성하기")
+        return button
+    }()
+    
     // MARK: - init
     init() {
         super.init(frame: .zero)
@@ -33,9 +38,15 @@ final class DetailView: UIView {
 private extension DetailView {
     
     func setUpConstraints() {
+        self.addSubview(commentPostButton)
+        commentPostButton.snp.makeConstraints { make in
+            make.bottom.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(52)
+        }
         self.addSubview(contentCollectionView)
         contentCollectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(commentPostButton.snp.top)
         }
     }
 }

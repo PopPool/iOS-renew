@@ -84,6 +84,8 @@ extension AppleLoginService: ASAuthorizationControllerPresentationContextProvidi
             guard let convertAuthorizationCode = String(data: authorizationCode, encoding: .utf8) else {
                 return
             }
+            Logger.log(message: "IDToken: \(idToken)", category: .info)
+            Logger.log(message: "Auth Code: \(convertAuthorizationCode)", category: .info)
             authServiceResponse.onNext(.init(idToken: idToken, authorizationCode: convertAuthorizationCode))
         default:
             break
