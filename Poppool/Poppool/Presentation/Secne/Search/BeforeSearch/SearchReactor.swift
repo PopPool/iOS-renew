@@ -192,7 +192,14 @@ final class SearchReactor: Reactor {
             nextController.reactor?.state
                 .withUnretained(self)
                 .subscribe(onNext: { (owner, state) in
-                    if state.isSave { owner.action.onNext(.changeCategory(categoryList: state.categoryIDList, categoryTitleList: state.categoryTitleList))}
+                    if state.isSave {
+                        if state.categoryTitleList.isEmpty {
+                            owner.searchCategorySection.inputDataList = [.init(title: "카테고리", isSelected: false, isCancelAble: false)]
+                        } else {
+                            owner.action.onNext(.changeCategory(categoryList: state.categoryIDList, categoryTitleList: state.categoryTitleList))
+                        }
+                        
+                    }
                     if state.isReset { owner.action.onNext(.resetCategory)}
                 })
                 .disposed(by: nextController.disposeBag)
