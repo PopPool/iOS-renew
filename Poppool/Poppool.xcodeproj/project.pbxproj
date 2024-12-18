@@ -117,6 +117,7 @@
 		086DD9402D01EEEB00B97D3B /* SearchCountTitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD93F2D01EEEB00B97D3B /* SearchCountTitleSection.swift */; };
 		086DD9422D01EEF700B97D3B /* SearchCountTitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD9412D01EEF700B97D3B /* SearchCountTitleSectionCell.swift */; };
 		088DE2442D104EE70030FA9E /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 088DE2432D104EE70030FA9E /* SwiftSoup */; };
+		088DE2472D12DB5C0030FA9E /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 088DE2462D12DB5C0030FA9E /* GoogleMaps */; };
 		089952422D031E650022AEF9 /* SearchSortedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952412D031E650022AEF9 /* SearchSortedController.swift */; };
 		089952442D031E6D0022AEF9 /* SearchSortedReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952432D031E6D0022AEF9 /* SearchSortedReactor.swift */; };
 		089952462D031E740022AEF9 /* SearchSortedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089952452D031E740022AEF9 /* SearchSortedView.swift */; };
@@ -588,6 +589,7 @@
 				08B191BA2CF609AE0057BC04 /* RxKakaoSDK in Frameworks */,
 				08B191BC2CF609AE0057BC04 /* RxKakaoSDKAuth in Frameworks */,
 				083A25D02CF364B70099B58E /* Alamofire in Frameworks */,
+				088DE2472D12DB5C0030FA9E /* GoogleMaps in Frameworks */,
 				BDCA42102CF35FF5005EECF6 /* Lottie in Frameworks */,
 				BDCA41FE2CF35EE7005EECF6 /* ReactorKit in Frameworks */,
 				BDCA41F22CF35D0D005EECF6 /* SnapKit in Frameworks */,
@@ -1817,6 +1819,7 @@
 				08B191BB2CF609AE0057BC04 /* RxKakaoSDKAuth */,
 				08B191BD2CF609AE0057BC04 /* RxKakaoSDKUser */,
 				088DE2432D104EE70030FA9E /* SwiftSoup */,
+				088DE2462D12DB5C0030FA9E /* GoogleMaps */,
 			);
 			productName = Poppool;
 			productReference = BDCA41BD2CF35AC0005EECF6 /* Poppool.app */;
@@ -1904,6 +1907,7 @@
 				BDCA420E2CF35FF5005EECF6 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				083A25CE2CF364B70099B58E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				088DE2422D104EE70030FA9E /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				088DE2452D12DB5C0030FA9E /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 			);
 			productRefGroup = BDCA41BE2CF35AC0005EECF6 /* Products */;
 			projectDirPath = "";
@@ -2571,6 +2575,14 @@
 				minimumVersion = 2.7.6;
 			};
 		};
+		088DE2452D12DB5C0030FA9E /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.2.0;
+			};
+		};
 		BDCA41F02CF35D0D005EECF6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -2671,6 +2683,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 088DE2422D104EE70030FA9E /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		088DE2462D12DB5C0030FA9E /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 088DE2452D12DB5C0030FA9E /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
 		};
 		08B191B92CF609AE0057BC04 /* RxKakaoSDK */ = {
 			isa = XCSwiftPackageProductDependency;
