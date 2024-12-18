@@ -10,14 +10,16 @@ import UIKit
 import RxKakaoSDKAuth
 import KakaoSDKAuth
 import RxKakaoSDKCommon
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        RxKakaoSDK.initSDK(appKey: Secrets.kakaoAuthAppkey.rawValue, loggingEnable: false)
-        return true
-    }
+            RxKakaoSDK.initSDK(appKey: Secrets.kakaoAuthAppkey.rawValue, loggingEnable: false)
+            GMSServices.provideAPIKey(Secrets.popPoolApiKey.rawValue)
+            return true
+        }
 
     // MARK: UISceneSession Lifecycle
 
